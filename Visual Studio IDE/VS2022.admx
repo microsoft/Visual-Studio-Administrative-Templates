@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<policyDefinitions revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <!--Microsoft Visual Studio 2022 version 17.0-->
+  <policyNamespaces>
+    <target namespace="Microsoft.Policies.VisualStudio" prefix="vs2022"/>
+    <using namespace="Microsoft.Policies.Windows" prefix="windows"/>
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0"/>
+  <supportedOn>
+    <definitions>
+      <definition displayName="$(string.SUPPORTED_WIN10_V2022_17_0)" name="SUPPORTED_WIN10_V2022_17_0"/>
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category displayName="$(string.microsoft_visualstudio)" name="microsoft_visualstudio"/>
+    <category displayName="$(string.SetupSettings_group)" name="SetupSettings">
+      <parentCategory ref="microsoft_visualstudio"/>
+    </category>    
+    <category displayName="$(string.TrustSettings_group)" name="TrustSettings">
+      <parentCategory ref="microsoft_visualstudio"/>
+    </category>
+  </categories>
+  <policies>
+    <policy class="Both" displayName="$(string.EnableService)" explainText="$(string.EnableService_Explain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="EnableService" presentation="$(presentation.EnableService)" valueName="EnableService">
+      <parentCategory ref="TrustSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy class="Both" displayName="$(string.DisallowUserTrustDecisions)" explainText="$(string.DisallowUserTrustDecisions_Explain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="DisallowUserTrustDecisions" presentation="$(presentation.DisallowUserTrustDecisions)" valueName="DisallowUserTrustDecisions">
+      <parentCategory ref="TrustSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy class="Both" displayName="$(string.EnableEventLogging)" explainText="$(string.EnableEventLogging_Explain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="EnableEventLogging" presentation="$(presentation.EnableEventLogging)" valueName="EnableEventLogging">
+      <parentCategory ref="TrustSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy class="Both" displayName="$(string.EnableRestrictedMode)" explainText="$(string.EnableRestrictedMode_Explain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="EnableRestrictedMode" presentation="$(presentation.EnableRestrictedMode)" valueName="EnableRestrictedMode">
+      <parentCategory ref="TrustSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy> 
+    <policy class="Both" displayName="$(string.SkipRepositoryChecks)" explainText="$(string.SkipRepositoryChecks_Explain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="SkipRepositoryChecks" presentation="$(presentation.SkipRepositoryChecks)" valueName="SkipRepositoryChecks">
+      <parentCategory ref="TrustSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy class="Both" displayName="$(string.TrustWellKnownLocations)" explainText="$(string.TrustWellKnownLocations_Explain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="TrustWellKnownLocations" presentation="$(presentation.TrustWellKnownLocations)" valueName="TrustWellKnownLocations">
+      <parentCategory ref="TrustSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy class="Both" displayName="$(string.Patterns)" explainText="$(string.Patterns_Explain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust\TrustPolicies\TrustedRepositories" name="Patterns" presentation="$(presentation.Patterns)">
+      <parentCategory ref="TrustSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <elements>
+        <list explicitValue="false" id="PatternsDesc" key="Software\Policies\Microsoft\VisualStudio\VsTrust\TrustPolicies\TrustedRepositories\Patterns"/>
+      </elements>
+    </policy>
+    <policy class="Both" displayName="$(string.KeepDownloadedPayloads)" explainText="$(string.KeepDownloadedPayloads_Explain)" key="Software\Policies\Microsoft\VisualStudio\Setup" name="KeepDownloadedPayloads" presentation="$(presentation.KeepDownloadedPayloads)" valueName="KeepDownloadedPayloads">
+      <parentCategory ref="SetupSettings"/>
+      <supportedOn ref="SUPPORTED_WIN10_V2022_17_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>    
+  </policies>
+</policyDefinitions>
