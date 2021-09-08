@@ -12,8 +12,8 @@ On Windows, you can test locally by leveraging the Windows Local Group Policy Ed
 
 ### Step 1: Download the templates
 
-- Clone the repository or download the latest release.
-- Browse the files till you find the applicable .admx file.
+- Clone the repository or download the latest release
+- Browse the files till you find the applicable .admx file
 
 ### Step 2: Insert templates into the Windows policy definitions folder
 
@@ -29,10 +29,13 @@ On Windows, you can test locally by leveraging the Windows Local Group Policy Ed
 ### Step 3: Test using the Local Group Policy Editor
 - Open the Windows Local Group Policy Editor
 - Navigate to the **Administrative Templates > Microsoft Visual Studio** node
+- Apply the desired policy changes to Visual Studio
+- Ensure the new group policy changes are applied to the respective product's path:
+   
+   > Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\
+- Restart your Visual Studio instance to pickup the new policy changes
 
-Once on this node, you should see all the applicable policy settings for Visual Studio.
-
-**Note:** Depending on your company's policy, you'll need to to force a group policy update via **gpupdate.exe**
+**Note:** Depending on your company's policy, you might need to to force a group policy update via **gpupdate.exe** to apply changes
 
 
 ## Contributing
