@@ -6,8 +6,8 @@
 	<description/>
 	<resources>
 		<stringTable>
-			<string id="SUPPORTED_WIN10_V2022_17_0">Microsoft Visual Studio 2022 version 17.0, Windows 7 or later</string>
-			<string id="SUPPORTED_WIN10_V2022_17_1">Microsoft Visual Studio 2022 version 17.1, Windows 7 or later</string>
+			<string id="SUPPORTED_WIN10_V2022_17_0">Microsoft Visual Studio 2022 version 17.0, Windows 10 or later</string>
+			<string id="SUPPORTED_WIN10_V2022_17_1">Microsoft Visual Studio 2022 version 17.1, Windows 10 or later</string>
 			<string id="microsoft_visualstudio">Microsoft Visual Studio</string>
 			<string id="SetupSettings_group">Setup</string>
 			<string id="TrustSettings_group">Trust Settings</string>
