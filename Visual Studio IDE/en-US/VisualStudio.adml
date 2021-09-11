@@ -14,8 +14,9 @@
       <string id="VisualStudioProductName201720192022">Visual Studio 2017, 2019, and 2022</string>
       <string id="VisualStudioCategoryName">Visual Studio</string>
       <string id="VisualStudioUpdateCategoryName">Updates</string>
-      <string id="SetupSettingsCategoryName">Setup</string>
+      <string id="SetupSettingsCategoryName">Setup Settings</string>
       <string id="TrustSettingsCategoryName">Trust Settings</string>
+      <string id="FeedbackSettingsCategoryName">Feedback Settings</string>
       <string id="ChannelUpdateDisabledName">Disable All Updates</string>
       <string id="ChannelUpdateDisabledExplain">This setting will disable all updates for Visual Studio.</string>
       <string id="AutoDisabledName">Disable Auto Updates</string>
@@ -71,6 +72,10 @@ Enabled by default.
 For more information, see: aka.ms/foobar</string>
       <string id="TelemetryOptIn">Enable the Visual Studio Customer Experience Improvement Program</string>
       <string id="TelemetryOptInExplain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry</string>
+      <string id="DisableFeedbackDialog">Disable the send-a-smile feature</string>
+      <string id="DisableFeedbackDialogExplain">This policy disables the Visual Studio send-a-smile feature.</string>
+      <string id="DisableScreenshotCapture">Disables send-a-smile 's screenshot capability</string>
+      <string id="DisableScreenshotCaptureExplain">This policy disables the screenshot capability in the send-a-smile feature.</string>
     </stringTable>
     <presentationTable>
       <presentation id="EnableService"/>

@@ -40,6 +40,9 @@
         <category name="TrustSettings" displayName="$(string.TrustSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
+        <category name="FeedbackSettings" displayName="$(string.FeedbackSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
     </categories>
     <policies>
         <policy name="ChannelUpdateDisabled" class="Machine" displayName="$(string.ChannelUpdateDisabledName)" explainText="$(string.ChannelUpdateDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="ChannelUpdateDisabled">
@@ -139,9 +142,29 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy name="OptIn" class="Machine" displayName="$(string.TelemetryOptIn)" explainText="$(string.TelemetryOptInExplain)" key="Software\Policies\Microsoft\VisualStudio\SQM" valueName="OptIn">
+        <policy name="OptIn" class="Both" displayName="$(string.TelemetryOptIn)" explainText="$(string.TelemetryOptInExplain)" key="Software\Policies\Microsoft\VisualStudio\SQM" valueName="OptIn">
             <parentCategory ref="TrustSettings"/>
             <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy name="DisableFeedbackDialog" class="Both" displayName="$(string.DisableFeedbackDialog)" explainText="$(string.DisableFeedbackDialogExplain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableFeedbackDialog">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017And2019And2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy name="DisableScreenshotCapture" class="Both" displayName="$(string.DisableScreenshotCapture)" explainText="$(string.DisableScreenshotCaptureExplain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableScreenshotCapture">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017And2019And2022"/>
             <enabledValue>
                 <decimal value="1"/>
             </enabledValue>
