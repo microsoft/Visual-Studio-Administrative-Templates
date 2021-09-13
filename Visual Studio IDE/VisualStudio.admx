@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0"
+    xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+    <policyNamespaces>
+        <target prefix="VisualStudio" namespace="Microsoft.Policies.VisualStudio" />
+        <using namespace="Microsoft.Policies.Windows" prefix="windows"/>
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" />
+    <supportedOn>
+        <products>
+            <product name="VisualStudio" displayName="$(string.VisualStudioProductName)">
+                <majorVersion name="VisualStudio2017" displayName="$(string.VisualStudioProductName2017)" versionIndex="15" />
+                <majorVersion name="VisualStudio2019" displayName="$(string.VisualStudioProductName2019)" versionIndex="16" />
+                <majorVersion name="VisualStudio2022" displayName="$(string.VisualStudioProductName2022)" versionIndex="17">
+                    <minorVersion name="VisualStudio2017_1" displayName="$(string.VisualStudioProductName2022_1)" versionIndex="1"/>
+                </majorVersion>
+            </product>
+        </products>
+        <definitions>
+            <definition name="VisualStudio2017And2019And2022" displayName="$(string.VisualStudioProductName201720192022)">
+                <and>
+                    <reference ref="VisualStudio2017"/>
+                    <reference ref="VisualStudio2019"/>
+                    <reference ref="VisualStudio2022"/>
+                </and>
+            </definition>
+        </definitions>
+    </supportedOn>
+    <categories>
+        <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)">
+        </category>
+        <category name="VisualStudioUpdates" displayName="$(string.VisualStudioUpdateCategoryName)">
+            <parentCategory ref="VisualStudio" />
+        </category>
+        <category name="SetupSettings" displayName="$(string.SetupSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
+        <category name="TrustSettings" displayName="$(string.TrustSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
+        <category name="FeedbackSettings" displayName="$(string.FeedbackSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
+    </categories>
+    <policies>
+        <policy name="ChannelUpdateDisabled" class="Machine" displayName="$(string.ChannelUpdateDisabledName)" explainText="$(string.ChannelUpdateDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="ChannelUpdateDisabled">
+            <parentCategory ref="VisualStudioUpdates" />
+            <supportedOn ref="VisualStudio2017And2019And2022" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="AutoUpdateDisabled" class="Machine" displayName="$(string.AutoDisabledName)" explainText="$(string.AutoDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="AutoUpdateDisabled">
+            <parentCategory ref="VisualStudioUpdates" />
+            <supportedOn ref="VisualStudio2017And2019And2022" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="BackgroundDownloadDisabled" class="Machine" displayName="$(string.BackgroundDisabledName)" explainText="$(string.BackgroundDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="BackgroundDownloadDisabled">
+            <parentCategory ref="VisualStudioUpdates" />
+            <supportedOn ref="VisualStudio2017And2019And2022" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy class="Both" displayName="$(string.DisallowUserTrustDecisions)" explainText="$(string.DisallowUserTrustDecisionsExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="DisallowUserTrustDecisions" presentation="$(presentation.DisallowUserTrustDecisions)" valueName="DisallowUserTrustDecisions">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy class="Both" displayName="$(string.EnableEventLogging)" explainText="$(string.EnableEventLoggingExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="EnableEventLogging" presentation="$(presentation.EnableEventLogging)" valueName="EnableEventLogging">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy class="Both" displayName="$(string.EnableRestrictedMode)" explainText="$(string.EnableRestrictedModeExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="EnableRestrictedMode" presentation="$(presentation.EnableRestrictedMode)" valueName="EnableRestrictedMode">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy class="Both" displayName="$(string.SkipRepositoryChecks)" explainText="$(string.SkipRepositoryChecksExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="SkipRepositoryChecks" presentation="$(presentation.SkipRepositoryChecks)" valueName="SkipRepositoryChecks">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy class="Both" displayName="$(string.TrustWellKnownLocations)" explainText="$(string.TrustWellKnownLocationsExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="TrustWellKnownLocations" presentation="$(presentation.TrustWellKnownLocations)" valueName="TrustWellKnownLocations">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy class="Both" displayName="$(string.Patterns)" explainText="$(string.PatternsExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust\TrustPolicies\TrustedRepositories" name="Patterns" presentation="$(presentation.Patterns)">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <elements>
+                <list explicitValue="false" id="PatternsDesc" key="Software\Policies\Microsoft\VisualStudio\VsTrust\TrustPolicies\TrustedRepositories\Patterns"/>
+            </elements>
+        </policy>
+        <policy class="Both" displayName="$(string.KeepDownloadedPayloads)" explainText="$(string.KeepDownloadedPayloadsExplain)" key="Software\Policies\Microsoft\VisualStudio\Setup" name="KeepDownloadedPayloads" presentation="$(presentation.KeepDownloadedPayloads)" valueName="KeepDownloadedPayloads">
+            <parentCategory ref="SetupSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy name="OptIn" class="Both" displayName="$(string.TelemetryOptIn)" explainText="$(string.TelemetryOptInExplain)" key="Software\Policies\Microsoft\VisualStudio\SQM" valueName="OptIn">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy name="DisableFeedbackDialog" class="Both" displayName="$(string.DisableFeedbackDialog)" explainText="$(string.DisableFeedbackDialogExplain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableFeedbackDialog">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017And2019And2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy name="DisableScreenshotCapture" class="Both" displayName="$(string.DisableScreenshotCapture)" explainText="$(string.DisableScreenshotCaptureExplain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableScreenshotCapture">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017And2019And2022"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+    </policies>
+</policyDefinitions>

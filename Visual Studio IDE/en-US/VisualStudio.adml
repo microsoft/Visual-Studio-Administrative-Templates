@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0"
+  xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Visual Studio</displayName>
+  <description>Manage features for Visual Studio.</description>
+  <resources>
+    <stringTable>
+      <string id="VisualStudioProductName">Visual Studio</string>
+      <string id="VisualStudioProductName2017">Visual Studio 2017</string>
+      <string id="VisualStudioProductName2019">Visual Studio 2019</string>
+      <string id="VisualStudioProductName2022">Visual Studio 2022</string>
+      <string id="VisualStudioProductName2022_1">Visual Studio 2022 17.1</string>
+      <string id="VisualStudioProductName201720192022">Visual Studio 2017, 2019, and 2022</string>
+      <string id="VisualStudioCategoryName">Visual Studio</string>
+      <string id="VisualStudioUpdateCategoryName">Updates</string>
+      <string id="SetupSettingsCategoryName">Setup Settings</string>
+      <string id="TrustSettingsCategoryName">Trust Settings</string>
+      <string id="FeedbackSettingsCategoryName">Feedback Settings</string>
+      <string id="ChannelUpdateDisabledName">Disable All Updates</string>
+      <string id="ChannelUpdateDisabledExplain">This setting will disable all updates for Visual Studio.</string>
+      <string id="AutoDisabledName">Disable Auto Updates</string>
+      <string id="AutoDisabledExplain">This setting will disable automatic updates for Visual Studio.</string>
+      <string id="BackgroundDisabledName">Disable Background Updates</string>
+      <string id="BackgroundDisabledExplain">This setting will disable background updates to Visual Studio.</string>
+      <string id="DisallowUserTrustDecisions">Disable the ability to trust new locations</string>
+      <string id="DisallowUserTrustDecisionsExplain">This policy configures the end users ability to add new locations (e.g. trusted path or trusted repository) to the list of trusted locations. 
+			
+Enabling this policy means only previously trusted locations can leverage the full Visual Studio experience. Users will be limited to opening untrusted content inside restricted mode (if enabled).
+
+Disabled by default.</string>
+      <string id="EnableEventLogging">Enable event logging</string>
+      <string id="EnableEventLoggingExplain">This policy enables event logging to the Windows Event Viewer.
+			
+Disabled by default.</string>
+      <string id="EnableRestrictedMode">Enable the usage of restricted mode</string>
+      <string id="EnableRestrictedModeExplain">This policy enables the usage of restricted mode.
+			
+Enabling this policy means users will be presented with a new option inside the trust dialog that allows them to open untrusted content inside restricted mode (e.g. a code browsing experience that minimizes the risks of remote code execution).
+
+Disabled by default.</string>
+      <string id="EnableService">Require a trust decision before opening content</string>
+      <string id="EnableServiceExplain">This policy enables a trust check before opening content inside Visual Studio. 
+
+Enabling this policy means a modal dialog will be shown whenever a user attempts to open content not previously trusted. The dialog will ask users to trust content or open inside restricted mode (if enabled).
+
+Disabled by default.</string>
+      <string id="SkipRepositoryChecks">Allow git repositories to be used as trusted locations</string>
+      <string id="SkipRepositoryChecksExplain">This policy configures the end users ability to use remote repositories as trusted locations.
+
+Enabling this policy provides developers with the ability to trust repositories and repository owners in additon to folder paths.
+
+Disabled by default.</string>
+      <string id="TrustWellKnownLocations">Skip trust checks for temporary locations created by Visual Studio</string>
+      <string id="TrustWellKnownLocationsExplain">This policy configures the ability to skip trust checks on locations automatically created by Visual Studio. 
+			
+Enabling This policy will help minimize potentially unnecesarry distractions as this temporary locations are needed for providing Visual Studio functionality.
+
+Enabled by default.</string>
+      <string id="Patterns">List of trusted repositories or repository owners</string>
+      <string id="PatternsExplain">Trust related dialogs are not shown when opening repositories from these locations.
+
+Example value for trusting all repositories from Microsoft:
+
+Value: https://github.com/Microsoft/</string>
+      <string id="PatternsDesc">Trusted Locations of trusted repositories or repository owners</string>
+      <string id="KeepDownloadedPayloads">Keep package payloads after installation</string>
+      <string id="KeepDownloadedPayloadsExplain">Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.
+
+Enabled by default.
+
+For more information, see: aka.ms/foobar</string>
+      <string id="TelemetryOptIn">Enable the Visual Studio Customer Experience Improvement Program</string>
+      <string id="TelemetryOptInExplain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry</string>
+      <string id="DisableFeedbackDialog">Disable the send-a-smile feature</string>
+      <string id="DisableFeedbackDialogExplain">This policy disables the Visual Studio send-a-smile feature.</string>
+      <string id="DisableScreenshotCapture">Disables send-a-smile 's screenshot capability</string>
+      <string id="DisableScreenshotCaptureExplain">This policy disables the screenshot capability in the send-a-smile feature.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="EnableService"/>
+      <presentation id="DisallowUserTrustDecisions"/>
+      <presentation id="EnableEventLogging"/>
+      <presentation id="EnableRestrictedMode"/>
+      <presentation id="SkipRepositoryChecks"/>
+      <presentation id="TrustWellKnownLocations"/>
+      <presentation id="Patterns">
+        <listBox refId="PatternsDesc">Set value name to the repository or repository owner you want to trust. 
+
+Provide the full repository URL for trusting a single repository or a partial URL to trust everything from a specific repository owner.</listBox>
+      </presentation>
+      <presentation id="KeepDownloadedPayloads"/>
+    </presentationTable>
+</resources>
+</policyDefinitionResources>
