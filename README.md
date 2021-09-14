@@ -23,7 +23,7 @@ On Windows, you can test locally by leveraging the Windows Local Group Policy Ed
 - Navigate to the **en-US** (or the applicable langue) folder
    
    > C:\Windows\PolicyDefinitions\en-US
-- Navigate into the applicable language folder next to .admx file selected in Step 1
+- Navigate into the applicable languge folder next to .admx file selected in Step 1
 - Copy the .adml file into the respective **Policydefinitions** folder
 
 ### Step 3: Test using the Local Group Policy Editor
@@ -36,6 +36,7 @@ On Windows, you can test locally by leveraging the Windows Local Group Policy Ed
 - Restart your Visual Studio instance to pickup the new policy changes
 
 **Note:** Depending on your company's policy, you might need to to force a group policy update via **gpupdate.exe** to apply changes
+
 
 ## Contributing
 
