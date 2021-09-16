@@ -172,5 +172,15 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
+        <policy name="IntelliCodeRemoteAnalysisDisabled" class="Machine" displayName="$(string.IntelliCodeRemoteAnalysisDisabledName)" explainText="$(string.IntelliCodeRemoteAnalysisDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" valueName="DisableRemoteAnalysis">
+            <parentCategory ref="TrustSettings" />
+            <supportedOn ref="VisualStudio2017And2019And2022" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
     </policies>
 </policyDefinitions>
