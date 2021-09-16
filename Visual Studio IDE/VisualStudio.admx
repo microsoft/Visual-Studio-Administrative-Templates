@@ -14,7 +14,7 @@
                 <majorVersion name="VisualStudio2017" displayName="$(string.VisualStudioProductName2017)" versionIndex="15" />
                 <majorVersion name="VisualStudio2019" displayName="$(string.VisualStudioProductName2019)" versionIndex="16" />
                 <majorVersion name="VisualStudio2022" displayName="$(string.VisualStudioProductName2022)" versionIndex="17">
-                    <minorVersion name="VisualStudio2017_1" displayName="$(string.VisualStudioProductName2022_1)" versionIndex="1"/>
+                    <minorVersion name="VisualStudio2022_1" displayName="$(string.VisualStudioProductName2022_1)" versionIndex="1"/>
                 </majorVersion>
             </product>
         </products>
