@@ -45,6 +45,8 @@ Disabled by default.</string>
 Enabling this policy means a modal dialog will be shown whenever a user attempts to open content not previously trusted. The dialog will ask users to trust content or open inside restricted mode (if enabled).
 
 Disabled by default.</string>
+      <string id="IntelliCodeRemoteAnalysisDisabledName">Disable IntelliCode custom model training</string>
+      <string id="IntelliCodeRemoteAnalysisDisabledExplain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
       <string id="SkipRepositoryChecks">Allow git repositories to be used as trusted locations</string>
       <string id="SkipRepositoryChecksExplain">This policy configures the end users ability to use remote repositories as trusted locations.
 
