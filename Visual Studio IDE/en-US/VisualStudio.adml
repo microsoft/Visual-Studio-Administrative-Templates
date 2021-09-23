@@ -11,12 +11,14 @@
       <string id="VisualStudioProductName2019">Visual Studio 2019</string>
       <string id="VisualStudioProductName2022">Visual Studio 2022</string>
       <string id="VisualStudioProductName2022_1">Visual Studio 2022 17.1</string>
+      <string id="VisualStudioProductName20192022">Visual Studio 2019, and 2022</string>
       <string id="VisualStudioProductName201720192022">Visual Studio 2017, 2019, and 2022</string>
       <string id="VisualStudioCategoryName">Visual Studio</string>
-      <string id="VisualStudioUpdateCategoryName">Updates</string>
+      <string id="FeedbackSettingsCategoryName">Feedback Settings</string>
+      <string id="PrivacySettingsCategoryName">Privacy Settings</string>
       <string id="SetupSettingsCategoryName">Setup Settings</string>
       <string id="TrustSettingsCategoryName">Trust Settings</string>
-      <string id="FeedbackSettingsCategoryName">Feedback Settings</string>
+      <string id="UpdateSettingsCategoryName">Updates</string>
       <string id="ChannelUpdateDisabledName">Disable All Updates</string>
       <string id="ChannelUpdateDisabledExplain">This setting will disable all updates for Visual Studio.</string>
       <string id="AutoDisabledName">Disable Auto Updates</string>
@@ -45,6 +47,8 @@ Disabled by default.</string>
 Enabling this policy means a modal dialog will be shown whenever a user attempts to open content not previously trusted. The dialog will ask users to trust content or open inside restricted mode (if enabled).
 
 Disabled by default.</string>
+      <string id="IntelliCodeRemoteAnalysisDisabledName">Disable IntelliCode custom model training</string>
+      <string id="IntelliCodeRemoteAnalysisDisabledExplain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
       <string id="SkipRepositoryChecks">Allow git repositories to be used as trusted locations</string>
       <string id="SkipRepositoryChecksExplain">This policy configures the end users ability to use remote repositories as trusted locations.
 
