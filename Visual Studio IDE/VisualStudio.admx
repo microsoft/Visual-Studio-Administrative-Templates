@@ -19,6 +19,12 @@
             </product>
         </products>
         <definitions>
+            <definition name="VisualStudio2019And2022" displayName="$(string.VisualStudioProductName20192022)">
+                <and>
+                    <reference ref="VisualStudio2019"/>
+                    <reference ref="VisualStudio2022"/>
+                </and>
+            </definition>
             <definition name="VisualStudio2017And2019And2022" displayName="$(string.VisualStudioProductName201720192022)">
                 <and>
                     <reference ref="VisualStudio2017"/>
@@ -31,8 +37,11 @@
     <categories>
         <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)">
         </category>
-        <category name="VisualStudioUpdates" displayName="$(string.VisualStudioUpdateCategoryName)">
-            <parentCategory ref="VisualStudio" />
+        <category name="FeedbackSettings" displayName="$(string.FeedbackSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
+        <category name="PrivacySettings" displayName="$(string.PrivacySettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
         </category>
         <category name="SetupSettings" displayName="$(string.SetupSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
@@ -40,8 +49,8 @@
         <category name="TrustSettings" displayName="$(string.TrustSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
-        <category name="FeedbackSettings" displayName="$(string.FeedbackSettingsCategoryName)">
-            <parentCategory ref="VisualStudio"/>
+        <category name="VisualStudioUpdates" displayName="$(string.UpdateSettingsCategoryName)">
+            <parentCategory ref="VisualStudio" />
         </category>
     </categories>
     <policies>
@@ -173,8 +182,8 @@
             </disabledValue>
         </policy>
         <policy name="IntelliCodeRemoteAnalysisDisabled" class="Machine" displayName="$(string.IntelliCodeRemoteAnalysisDisabledName)" explainText="$(string.IntelliCodeRemoteAnalysisDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" valueName="DisableRemoteAnalysis">
-            <parentCategory ref="TrustSettings" />
-            <supportedOn ref="VisualStudio2017And2019And2022" />
+            <parentCategory ref="PrivacySettings" />
+            <supportedOn ref="VisualStudio2019And2022" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
