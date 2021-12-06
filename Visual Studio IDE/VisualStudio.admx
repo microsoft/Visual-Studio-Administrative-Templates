@@ -43,19 +43,16 @@
         <category name="PrivacySettings" displayName="$(string.PrivacySettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
-        <category name="SetupSettings" displayName="$(string.SetupSettingsCategoryName)">
+        <category name="InstallandUpdateSettings" displayName="$(string.InstallandUpdateSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
         <category name="TrustSettings" displayName="$(string.TrustSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
-        <category name="VisualStudioUpdates" displayName="$(string.UpdateSettingsCategoryName)">
-            <parentCategory ref="VisualStudio" />
-        </category>
     </categories>
     <policies>
         <policy name="ChannelUpdateDisabled" class="Machine" displayName="$(string.ChannelUpdateDisabledName)" explainText="$(string.ChannelUpdateDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="ChannelUpdateDisabled">
-            <parentCategory ref="VisualStudioUpdates" />
+            <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017And2019And2022" />
             <enabledValue>
                 <decimal value="1" />
@@ -65,7 +62,7 @@
             </disabledValue>
         </policy>
         <policy name="AutoUpdateDisabled" class="Machine" displayName="$(string.AutoDisabledName)" explainText="$(string.AutoDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="AutoUpdateDisabled">
-            <parentCategory ref="VisualStudioUpdates" />
+            <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017And2019And2022" />
             <enabledValue>
                 <decimal value="1" />
@@ -75,7 +72,7 @@
             </disabledValue>
         </policy>
         <policy name="BackgroundDownloadDisabled" class="Machine" displayName="$(string.BackgroundDisabledName)" explainText="$(string.BackgroundDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="BackgroundDownloadDisabled">
-            <parentCategory ref="VisualStudioUpdates" />
+            <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017And2019And2022" />
             <enabledValue>
                 <decimal value="1" />
@@ -142,7 +139,7 @@
             </elements>
         </policy>
         <policy class="Both" displayName="$(string.KeepDownloadedPayloads)" explainText="$(string.KeepDownloadedPayloadsExplain)" key="Software\Policies\Microsoft\VisualStudio\Setup" name="KeepDownloadedPayloads" presentation="$(presentation.KeepDownloadedPayloads)" valueName="KeepDownloadedPayloads">
-            <parentCategory ref="SetupSettings"/>
+            <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2022"/>
             <enabledValue>
                 <decimal value="1"/>

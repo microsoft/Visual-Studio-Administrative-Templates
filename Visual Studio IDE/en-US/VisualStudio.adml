@@ -16,9 +16,8 @@
       <string id="VisualStudioCategoryName">Visual Studio</string>
       <string id="FeedbackSettingsCategoryName">Feedback Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
-      <string id="SetupSettingsCategoryName">Setup Settings</string>
+      <string id="InstallandUpdateSettingsCategoryName">Install and Update Settings</string>
       <string id="TrustSettingsCategoryName">Trust Settings</string>
-      <string id="UpdateSettingsCategoryName">Updates</string>
       <string id="ChannelUpdateDisabledName">Disable All Updates</string>
       <string id="ChannelUpdateDisabledExplain">This setting will disable all updates for Visual Studio.</string>
       <string id="AutoDisabledName">Disable Auto Updates</string>
