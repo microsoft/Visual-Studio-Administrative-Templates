@@ -111,6 +111,16 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
+        <policy class="Machine" displayName="$(string.EnableService)" explainText="$(string.EnableServiceExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="EnableService" presentation="$(presentation.EnableService)" valueName="EnableService">
+            <parentCategory ref="TrustSettings"/>
+            <supportedOn ref="VisualStudio2022_1"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>        
         <policy class="Machine" displayName="$(string.SkipRepositoryChecks)" explainText="$(string.SkipRepositoryChecksExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="SkipRepositoryChecks" presentation="$(presentation.SkipRepositoryChecks)" valueName="SkipRepositoryChecks">
             <parentCategory ref="TrustSettings"/>
             <supportedOn ref="VisualStudio2022_1"/>
