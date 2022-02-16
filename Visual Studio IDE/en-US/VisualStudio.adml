@@ -17,19 +17,12 @@
       <string id="FeedbackSettingsCategoryName">Feedback Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
       <string id="InstallandUpdateSettingsCategoryName">Install and Update Settings</string>
-      <string id="TrustSettingsCategoryName">Trust Settings</string>
       <string id="ChannelUpdateDisabledName">Disable All Updates</string>
       <string id="ChannelUpdateDisabledExplain">This setting will disable all updates for Visual Studio.</string>
       <string id="AutoDisabledName">Disable Auto Updates</string>
       <string id="AutoDisabledExplain">This setting will disable automatic updates for Visual Studio.</string>
       <string id="BackgroundDisabledName">Disable Background Updates</string>
       <string id="BackgroundDisabledExplain">This setting will disable background updates to Visual Studio.</string>
-      <string id="EnableService">Require a trust decision before opening content</string>
-      <string id="EnableServiceExplain">This policy enables a trust check before opening content inside Visual Studio. 
-
-Enabling this policy means a modal dialog will be shown whenever a user attempts to open content not previously trusted. The dialog will ask users to trust content or open inside restricted mode (if enabled).
-
-Disabled by default.</string>
       <string id="IntelliCodeRemoteAnalysisDisabledName">Disable IntelliCode custom model training</string>
       <string id="IntelliCodeRemoteAnalysisDisabledExplain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
       <string id="KeepDownloadedPayloads">Keep package payloads after installation</string>
@@ -46,7 +39,6 @@ For more information, see: aka.ms/foobar</string>
       <string id="DisableScreenshotCaptureExplain">This policy disables the screenshot capability in the send-a-smile feature.</string>
     </stringTable>
     <presentationTable>
-      <presentation id="EnableService"/>
       <presentation id="KeepDownloadedPayloads"/>
     </presentationTable>
 </resources>

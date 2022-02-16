@@ -46,9 +46,6 @@
         <category name="InstallandUpdateSettings" displayName="$(string.InstallandUpdateSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
-        <category name="TrustSettings" displayName="$(string.TrustSettingsCategoryName)">
-            <parentCategory ref="VisualStudio"/>
-        </category>
     </categories>
     <policies>
         <policy name="ChannelUpdateDisabled" class="Machine" displayName="$(string.ChannelUpdateDisabledName)" explainText="$(string.ChannelUpdateDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="ChannelUpdateDisabled">
@@ -79,16 +76,6 @@
             </enabledValue>
             <disabledValue>
                 <decimal value="0" />
-            </disabledValue>
-        </policy>
-        <policy class="Machine" displayName="$(string.EnableService)" explainText="$(string.EnableServiceExplain)" key="Software\Policies\Microsoft\VisualStudio\VsTrust" name="EnableService" presentation="$(presentation.EnableService)" valueName="EnableService">
-            <parentCategory ref="TrustSettings"/>
-            <supportedOn ref="VisualStudio2022_1"/>
-            <enabledValue>
-                <decimal value="1"/>
-            </enabledValue>
-            <disabledValue>
-                <decimal value="0"/>
             </disabledValue>
         </policy>
         <policy class="Both" displayName="$(string.KeepDownloadedPayloads)" explainText="$(string.KeepDownloadedPayloadsExplain)" key="Software\Policies\Microsoft\VisualStudio\Setup" name="KeepDownloadedPayloads" presentation="$(presentation.KeepDownloadedPayloads)" valueName="KeepDownloadedPayloads">
