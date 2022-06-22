@@ -6,6 +6,7 @@
   <description>Manage features for Visual Studio.</description>
   <resources>
     <stringTable>
+      <string id="SUPPORTED_VS2017"></string>
       <string id="VisualStudioProductName">Visual Studio</string>
       <string id="VisualStudioProductName2017">Visual Studio 2017</string>
       <string id="VisualStudioProductName2019">Visual Studio 2019</string>
@@ -32,14 +33,27 @@ Enabled by default.
 
 For more information, see: aka.ms/foobar</string>
       <string id="TelemetryOptIn">Enable the Visual Studio Customer Experience Improvement Program</string>
-      <string id="TelemetryOptInExplain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry</string>
+      <string id="TelemetryOptInExplain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry.</string>
       <string id="DisableFeedbackDialog">Disable the send-a-smile feature</string>
       <string id="DisableFeedbackDialogExplain">This policy disables the Visual Studio send-a-smile feature.</string>
-      <string id="DisableScreenshotCapture">Disables send-a-smile 's screenshot capability</string>
+      <string id="DisableScreenshotCapture">Disables send-a-smile's screenshot capability</string>
       <string id="DisableScreenshotCaptureExplain">This policy disables the screenshot capability in the send-a-smile feature.</string>
+      <string id="LiveShareSettingsCategoryName">Live Share Settings</string>
+      <string id="LiveShareDomainName">Allow only company domain accounts</string>
+      <string id="LiveShareDomainNameExplain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access.Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains.</string>
+      <string id="LiveShareDirectConnectionModeName">Require direct connection</string>
+      <string id="LiveShareDirectConnectionModeExplain">Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.</string>
+      <string id="LiveShareDisableAnonymousGuestsName">Disable anonymous guests</string>
+      <string id="LiveShareDisableAnonymousGuestsExplain">Disallow anonymous guests from joining a session. We already have the “Live Share: Anonymous Guest Approval” setting, and so this policy is effectively just enforcing that to “reject”. </string>
+    
     </stringTable>
     <presentationTable>
       <presentation id="KeepDownloadedPayloads"/>
+      <presentation id="DomainBoxTitle">
+			  <textBox refId="domainTextbox">
+			    <label>Enter domain name:</label>
+			  </textBox>
+	  </presentation>
     </presentationTable>
 </resources>
 </policyDefinitionResources>

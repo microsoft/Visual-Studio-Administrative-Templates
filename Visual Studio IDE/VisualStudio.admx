@@ -35,8 +35,7 @@
         </definitions>
     </supportedOn>
     <categories>
-        <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)">
-        </category>
+        <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)" />
         <category name="FeedbackSettings" displayName="$(string.FeedbackSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
@@ -44,6 +43,9 @@
             <parentCategory ref="VisualStudio"/>
         </category>
         <category name="InstallandUpdateSettings" displayName="$(string.InstallandUpdateSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
+        <category name="LiveShareSettings" displayName="$(string.LiveShareSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
     </categories>
@@ -120,6 +122,33 @@
         </policy>        
         <policy name="IntelliCodeRemoteAnalysisDisabled" class="Machine" displayName="$(string.IntelliCodeRemoteAnalysisDisabledName)" explainText="$(string.IntelliCodeRemoteAnalysisDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" valueName="DisableRemoteAnalysis">
             <parentCategory ref="PrivacySettings" />
+            <supportedOn ref="VisualStudio2019And2022" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="LiveShareDomainName" class="Machine" displayName="$(string.LiveShareDomainName)" explainText="$(string.LiveShareDomainNameExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare" presentation="$(presentation.DomainBoxTitle)" valueName="LiveShareDomainName">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019And2022" />
+            <elements>
+         <text id="domainTextbox" valueName="domainName" />   
+       </elements>
+        </policy>
+		<policy name="DirectConnectionMode" class="Machine" displayName="$(string.LiveShareDirectConnectionModeName)" explainText="$(string.LiveShareDirectConnectionModeExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare" valueName="DirectConnectionMode">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019And2022" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+		<policy name="DisableAnonymousGuests" class="Machine" displayName="$(string.LiveShareDisableAnonymousGuestsName)" explainText="$(string.LiveShareDisableAnonymousGuestsExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare" valueName="AnonymousGuest">
+            <parentCategory ref="LiveShareSettings" />
             <supportedOn ref="VisualStudio2019And2022" />
             <enabledValue>
                 <decimal value="1" />
