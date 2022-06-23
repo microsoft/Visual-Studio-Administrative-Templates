@@ -7,39 +7,96 @@
   <resources>
     <stringTable>
       <string id="VisualStudioProductName">Visual Studio</string>
-      <string id="VisualStudioProductName2017">Visual Studio 2017</string>
-      <string id="VisualStudioProductName2019">Visual Studio 2019</string>
-      <string id="VisualStudioProductName2022">Visual Studio 2022</string>
-      <string id="VisualStudioProductName2022_1">Visual Studio 2022 17.1</string>
-      <string id="VisualStudioProductName20192022">Visual Studio 2019, and 2022</string>
-      <string id="VisualStudioProductName201720192022">Visual Studio 2017, 2019, and 2022</string>
+
+      <!-- Category Names -->
       <string id="VisualStudioCategoryName">Visual Studio</string>
       <string id="FeedbackSettingsCategoryName">Feedback Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
       <string id="InstallandUpdateSettingsCategoryName">Install and Update Settings</string>
-      <string id="ChannelUpdateDisabledName">Disable All Updates</string>
-      <string id="ChannelUpdateDisabledExplain">This setting will disable all updates for Visual Studio.</string>
-      <string id="AutoDisabledName">Disable Auto Updates</string>
-      <string id="AutoDisabledExplain">This setting will disable automatic updates for Visual Studio.</string>
-      <string id="BackgroundDisabledName">Disable Background Updates</string>
-      <string id="BackgroundDisabledExplain">This setting will disable background updates to Visual Studio.</string>
-      <string id="IntelliCodeRemoteAnalysisDisabledName">Disable IntelliCode custom model training</string>
-      <string id="IntelliCodeRemoteAnalysisDisabledExplain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
-      <string id="KeepDownloadedPayloads">Keep package payloads after installation</string>
-      <string id="KeepDownloadedPayloadsExplain">Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.
+      
+      <!-- The VS catalog Product Names. -->
+      <string id="VisualStudioProductName2017">Visual Studio 2017</string>
+      <string id="VisualStudioProductName2019">Visual Studio 2019</string>
+      <string id="VisualStudioProductName2022">Visual Studio 2022</string>
+
+      <!-- The VS catalog with minor versions. -->
+      <string id="VisualStudioProductName2022_1">Visual Studio 2022, 17.1</string>
+      <string id="VisualStudioProductName2022_4">Visual Studio 2022, 17.4</string>
+
+      <!-- Convey a particular version and higher. -->
+      <string id="VisualStudio2017">At least Visual Studio 2017</string>
+      <string id="VisualStudio2019">At least Visual Studio 2019</string>
+      <string id="VisualStudio2022">At least Visual Studio 2022</string>
+      <string id="VisualStudio2022_1">At least Visual Studio 2022, 17.1</string>
+      <string id="VisualStudio2022_4">At least Visual Studio 2022, 17.4</string>
+
+      <!-- Convey a particular version and distribution. -->
+      <string id="VisualStudio2022_Enterprise_Professional">At least Visual Studio 2022, Enterprise and Professional only</string>
+      
+      <!-- Policy Names and Explain Text for each policy. -->
+      <string id="RemoveOutOfSupport_DisplayName">Remove Out of Support Components</string>
+      <string id="RemoveOutOfSupport_Explain">This setting will automatically remove all components from the Visual Studio installation that have transitioned out of support.</string>
+      
+      <string id="CachePath_DisplayName">Package Manifest and Payload Cache Path</string>
+      <string id="CachePath_Explain">The directory where package manifests and, optionally, payloads are stored.
+
+The Visual Studio Installer enforces a 50 character limit for the path.
+
+For more information, see https://aka.ms/DisableOrMovePackageCache</string>
+  
+      <string id="BackgroundDownloadDisabled_DisplayName">Disable Downloading Updates Automatically</string>
+      <string id="BackgroundDownloadDisabled_Explain">Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.</string>
+      
+      <string id="SharedInstallationPath_DisplayName">Package Manifest and Payload Cache Path</string>
+      <string id="SharedInstallationPath_Explain">The directory where some packages shared across versions of instances of Visual Studio are installed. You can change the value anytime, but it will only affect future installs. Any products already installed to the old location must not be moved or they might not function correctly.
+
+The Visual Studio Installer enforces a 150 character limit for the path.</string>
+
+      <string id="KeepDownloadedPayloads_DisplayName">Keep package payloads after installation</string>
+      <string id="KeepDownloadedPayloads_Explain">Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.
 
 Enabled by default.
 
-For more information, see: aka.ms/foobar</string>
-      <string id="TelemetryOptIn">Enable the Visual Studio Customer Experience Improvement Program</string>
-      <string id="TelemetryOptInExplain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry</string>
-      <string id="DisableFeedbackDialog">Disable the send-a-smile feature</string>
-      <string id="DisableFeedbackDialogExplain">This policy disables the Visual Studio send-a-smile feature.</string>
-      <string id="DisableScreenshotCapture">Disables send-a-smile 's screenshot capability</string>
-      <string id="DisableScreenshotCaptureExplain">This policy disables the screenshot capability in the send-a-smile feature.</string>
+For more information, see: https://aka.ms/DisableOrMovePackageCache</string>
+
+      <string id="AdministratorUpdatesEnabled_DisplayName">Apply Administrator Updates</string>
+      <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be applied to the client computer. If this value is missing or is set to 0, administrator updates will be blocked. This value is for administrative use.
+
+For more information, see https://aka.ms/EnableAdminUpdates.
+
+If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not, AdministratorUpdatesEnabled is respected.</string>
+
+      <string id="AdministratorUpdatesOptOut_DisplayName">Opt Out of Administrator Updates</string>
+      <string id="AdministratorUpdatesOptOut_Explain">Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. </string>
+
+      <string id="UpdateConfigurationFile_DisplayName">Custom Path to the Update Config</string>
+      <string id="UpdateConfigurationFile_Explain">The custom file path to the update configuration file used for configuring Administrative Updates. For more information, see https://aka.ms/MethodsForConfiguringAdminUpdates.</string>
+
+      <string id="DisableFeedbackDialog_DisplayName">Disable the send-a-smile feature</string>
+      <string id="DisableFeedbackDialog_Explain">This policy disables the Visual Studio send-a-smile feature.</string>
+      <string id="DisableScreenshotCapture_DisplayName">Disables send-a-smile 's screenshot capability</string>
+      <string id="DisableScreenshotCapture_Explain">This policy disables the screenshot capability in the send-a-smile feature.</string>
+      <string id="TelemetryOptIn_DisplayName">Enable the Visual Studio Customer Experience Improvement Program</string>
+      <string id="TelemetryOptIn_Explain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry</string>
+      <string id="IntelliCodeRemoteAnalysisDisabled_DisplayName">Disable IntelliCode custom model training</string>
+      <string id="IntelliCodeRemoteAnalysisDisabled_Explain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
     </stringTable>
     <presentationTable>
-      <presentation id="KeepDownloadedPayloads"/>
+      <presentation id="CachePath">
+        <textBox refId="CachePath_TextBox">
+          <label>Package Manifest and Payload Cache Path</label>
+        </textBox>
+      </presentation>
+      <presentation id="SharedInstallationPath">
+        <textBox refId="SharedInstallationPath_TextBox">
+          <label>Shared Installation Path</label>
+        </textBox>
+      </presentation>
+      <presentation id="UpdateConfigurationFile">
+        <textBox refId="UpdateConfigurationFile_TextBox">
+          <label>Custom Path to the Update Config</label>
+        </textBox>
+      </presentation>
     </presentationTable>
 </resources>
 </policyDefinitionResources>
