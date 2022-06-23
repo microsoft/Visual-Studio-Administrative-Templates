@@ -41,8 +41,7 @@
         </definitions>
     </supportedOn>
     <categories>
-        <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)">
-        </category>
+        <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)" />
         <category name="FeedbackSettings" displayName="$(string.FeedbackSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
@@ -52,8 +51,40 @@
         <category name="InstallandUpdateSettings" displayName="$(string.InstallandUpdateSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
+        <category name="LiveShareSettings" displayName="$(string.LiveShareSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
     </categories>
     <policies>
+        
+        <!-- Feedback Settings -->
+        <policy name="DisableFeedbackDialog" 
+            class="Both" 
+            displayName="$(string.DisableFeedbackDialog_DisplayName)" 
+            explainText="$(string.DisableFeedbackDialog_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Feedback" 
+            valueName="DisableFeedbackDialog">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy name="DisableScreenshotCapture" class="Both" displayName="$(string.DisableScreenshotCapture_DisplayName)" explainText="$(string.DisableScreenshotCapture_Explain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableScreenshotCapture">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        
+        <!-- Install and Update Settings -->
         <policy name="RemoveOutOfSupport" class="Both" displayName="$(string.RemoveOutOfSupport_DisplayName)" explainText="$(string.RemoveOutOfSupport_Explain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="RemoveOos">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2022_4_AndHigher" />
@@ -69,7 +100,7 @@
             class="Both"
             displayName="$(string.CachePath_DisplayName)"
             explainText="$(string.CachePath_Explain)"
-            presentation="$(presentation.CachePath)"
+            presentation="$(presentation.CachePath_PresentationId)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017AndHigher" />
@@ -101,7 +132,7 @@
             class="Both"
             displayName="$(string.SharedInstallationPath_DisplayName)"
             explainText="$(string.SharedInstallationPath_Explain)"
-            presentation="$(presentation.SharedInstallationPath)"
+            presentation="$(presentation.SharedInstallationPath_PresenationId)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017AndHigher" />
@@ -163,7 +194,7 @@
             class="Both"
             displayName="$(string.UpdateConfigurationFile_DisplayName)"
             explainText="$(string.UpdateConfigurationFile_Explain)"
-            presentation="$(presentation.UpdateConfigurationFile)"
+            presentation="$(presentation.UpdateConfigurationFile_PresentationId)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017AndHigher" />
@@ -175,31 +206,52 @@
                 <text id="UpdateConfigurationFile_TextBox" valueName="UpdateConfigurationFile" expandable="true"/>
             </elements>
         </policy>   
-        <policy name="DisableFeedbackDialog" 
-            class="Both" 
-            displayName="$(string.DisableFeedbackDialog_DisplayName)" 
-            explainText="$(string.DisableFeedbackDialog_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Feedback" 
-            valueName="DisableFeedbackDialog">
-            <parentCategory ref="FeedbackSettings"/>
-            <supportedOn ref="VisualStudio2017AndHigher"/>
+
+        <!-- LiveShare Settings -->
+        <policy name="LiveShareDomainName" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DomainName_DisplayName)" 
+            explainText="$(string.LiveShare_DomainName_Explain)" 
+            presentation="$(presentation.LiveShare_DomainName_PresentationId)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"> 
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <elements>
+                <text id="LiveShare_DomainName_TextBox" valueName="LiveShareDomainName" />   
+            </elements>
+        </policy>
+        <policy name="DirectConnectionMode" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DirectConnectionMode_DisplayName)" 
+            explainText="$(string.LiveShare_DirectConnectionMode_Explain)" 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare" 
+            valueName="DirectConnectionMode">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
             <enabledValue>
-                <decimal value="1"/>
+                <decimal value="1" />
             </enabledValue>
             <disabledValue>
-                <decimal value="0"/>
+                <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy name="DisableScreenshotCapture" class="Both" displayName="$(string.DisableScreenshotCapture_DisplayName)" explainText="$(string.DisableScreenshotCapture_Explain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableScreenshotCapture">
-            <parentCategory ref="FeedbackSettings"/>
-            <supportedOn ref="VisualStudio2017AndHigher"/>
+        <policy name="DisableAnonymousGuests" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DisableAnonymousGuests_DisplayName)"
+            explainText="$(string.LiveShare_DisableAnonymousGuests_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
+            valueName="AnonymousGuest">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
             <enabledValue>
-                <decimal value="1"/>
+                <decimal value="1" />
             </enabledValue>
             <disabledValue>
-                <decimal value="0"/>
+                <decimal value="0" />
             </disabledValue>
         </policy>
+        
+        <!-- Privacy Settings -->
         <policy name="TelemetryOptIn" class="Machine" displayName="$(string.TelemetryOptIn_DisplayName)" explainText="$(string.TelemetryOptIn_Explain)" key="Software\Policies\Microsoft\VisualStudio\SQM" valueName="OptIn">
             <parentCategory ref="PrivacySettings"/>
             <supportedOn ref="VisualStudio2022"/>
