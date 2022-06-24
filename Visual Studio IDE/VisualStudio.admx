@@ -58,7 +58,8 @@
     <policies>
         
         <!-- Feedback Settings -->
-        <policy name="DisableFeedbackDialog" 
+        <policy 
+            name="DisableFeedbackDialog" 
             class="Both" 
             displayName="$(string.DisableFeedbackDialog_DisplayName)" 
             explainText="$(string.DisableFeedbackDialog_Explain)" 
@@ -73,7 +74,12 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy name="DisableScreenshotCapture" class="Both" displayName="$(string.DisableScreenshotCapture_DisplayName)" explainText="$(string.DisableScreenshotCapture_Explain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableScreenshotCapture">
+        <policy 
+            name="DisableScreenshotCapture" 
+            class="Both" displayName="$(string.DisableScreenshotCapture_DisplayName)" 
+            explainText="$(string.DisableScreenshotCapture_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Feedback" 
+            valueName="DisableScreenshotCapture">
             <parentCategory ref="FeedbackSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
             <enabledValue>
@@ -85,7 +91,13 @@
         </policy>
         
         <!-- Install and Update Settings -->
-        <policy name="RemoveOutOfSupport" class="Both" displayName="$(string.RemoveOutOfSupport_DisplayName)" explainText="$(string.RemoveOutOfSupport_Explain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="RemoveOos">
+        <policy 
+            name="RemoveOutOfSupport" 
+            class="Machine" 
+            displayName="$(string.RemoveOutOfSupport_DisplayName)" 
+            explainText="$(string.RemoveOutOfSupport_Explain)" 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="RemoveOos">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2022_4_AndHigher" />
             <enabledValue>
@@ -97,7 +109,7 @@
         </policy>
         <policy 
             name="CachePath"
-            class="Both"
+            class="Machine"
             displayName="$(string.CachePath_DisplayName)"
             explainText="$(string.CachePath_Explain)"
             presentation="$(presentation.CachePath_PresentationId)"
@@ -112,7 +124,8 @@
                 <text id="CachePath_TextBox" valueName="CachePath" expandable="true"/>
             </elements>
         </policy>
-        <policy name="BackgroundDownloadDisabled" 
+        <policy 
+            name="BackgroundDownloadDisabled" 
             class="Both"
             displayName="$(string.BackgroundDownloadDisabled_DisplayName)"
             explainText="$(string.BackgroundDownloadDisabled_Explain)"
@@ -144,7 +157,8 @@
                 <text id="SharedInstallationPath_TextBox" valueName="SharedInstallationPath" expandable="true"/>
             </elements>
         </policy>
-        <policy name="KeepDownloadedPayloads" 
+        <policy 
+            name="KeepDownloadedPayloads" 
             class="Both" 
             displayName="$(string.KeepDownloadedPayloads_DisplayName)" 
             explainText="$(string.KeepDownloadedPayloads_Explain)" 
@@ -159,7 +173,8 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy name="AdministratorUpdatesEnabled" 
+        <policy 
+            name="AdministratorUpdatesEnabled" 
             class="Both" 
             displayName="$(string.AdministratorUpdatesEnabled_DisplayName)" 
             explainText="$(string.AdministratorUpdatesEnabled_Explain)" 
@@ -174,7 +189,8 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy name="AdministratorUpdatesOptOut" 
+        <policy 
+            name="AdministratorUpdatesOptOut" 
             class="Both" 
             displayName="$(string.AdministratorUpdatesOptOut_DisplayName)" 
             explainText="$(string.AdministratorUpdatesOptOut_Explain)" 
@@ -208,7 +224,8 @@
         </policy>   
 
         <!-- LiveShare Settings -->
-        <policy name="LiveShareDomainName" 
+        <policy 
+            name="LiveShareDomainName" 
             class="Machine" 
             displayName="$(string.LiveShare_DomainName_DisplayName)" 
             explainText="$(string.LiveShare_DomainName_Explain)" 
@@ -220,7 +237,8 @@
                 <text id="LiveShare_DomainName_TextBox" valueName="LiveShareDomainName" />   
             </elements>
         </policy>
-        <policy name="DirectConnectionMode" 
+        <policy 
+            name="DirectConnectionMode" 
             class="Machine" 
             displayName="$(string.LiveShare_DirectConnectionMode_DisplayName)" 
             explainText="$(string.LiveShare_DirectConnectionMode_Explain)" 
@@ -235,7 +253,8 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy name="DisableAnonymousGuests" 
+        <policy 
+            name="DisableAnonymousGuests" 
             class="Machine" 
             displayName="$(string.LiveShare_DisableAnonymousGuests_DisplayName)"
             explainText="$(string.LiveShare_DisableAnonymousGuests_Explain)"
@@ -252,7 +271,13 @@
         </policy>
         
         <!-- Privacy Settings -->
-        <policy name="TelemetryOptIn" class="Machine" displayName="$(string.TelemetryOptIn_DisplayName)" explainText="$(string.TelemetryOptIn_Explain)" key="Software\Policies\Microsoft\VisualStudio\SQM" valueName="OptIn">
+        <policy 
+            name="TelemetryOptIn" 
+            class="Machine" 
+            displayName="$(string.TelemetryOptIn_DisplayName)" 
+            explainText="$(string.TelemetryOptIn_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\SQM" 
+            valueName="OptIn">
             <parentCategory ref="PrivacySettings"/>
             <supportedOn ref="VisualStudio2022"/>
             <enabledValue>
@@ -262,7 +287,13 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>        
-        <policy name="IntelliCodeRemoteAnalysisDisabled" class="Machine" displayName="$(string.IntelliCodeRemoteAnalysisDisabled_DisplayName)" explainText="$(string.IntelliCodeRemoteAnalysisDisabled_Explain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" valueName="DisableRemoteAnalysis">
+        <policy 
+            name="IntelliCodeRemoteAnalysisDisabled" 
+            class="Machine" 
+            displayName="$(string.IntelliCodeRemoteAnalysisDisabled_DisplayName)" 
+            explainText="$(string.IntelliCodeRemoteAnalysisDisabled_Explain)" 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" 
+            valueName="DisableRemoteAnalysis">
             <parentCategory ref="PrivacySettings" />
             <supportedOn ref="VisualStudio2019AndHigher" />
             <enabledValue>
