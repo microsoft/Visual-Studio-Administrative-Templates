@@ -15,28 +15,33 @@
                 <majorVersion name="VisualStudio2019" displayName="$(string.VisualStudioProductName2019)" versionIndex="16" />
                 <majorVersion name="VisualStudio2022" displayName="$(string.VisualStudioProductName2022)" versionIndex="17">
                     <minorVersion name="VisualStudio2022_1" displayName="$(string.VisualStudioProductName2022_1)" versionIndex="1"/>
+                    <minorVersion name="VisualStudio2022_4" displayName="$(string.VisualStudioProductName2022_4)" versionIndex="4"/>
                 </majorVersion>
             </product>
         </products>
         <definitions>
-            <definition name="VisualStudio2019And2022" displayName="$(string.VisualStudioProductName20192022)">
+            <definition name="VisualStudio2019AndHigher" displayName="$(string.VisualStudio2019)">
                 <and>
                     <reference ref="VisualStudio2019"/>
                     <reference ref="VisualStudio2022"/>
                 </and>
             </definition>
-            <definition name="VisualStudio2017And2019And2022" displayName="$(string.VisualStudioProductName201720192022)">
+            <definition name="VisualStudio2017AndHigher" displayName="$(string.VisualStudio2017)">
                 <and>
                     <reference ref="VisualStudio2017"/>
                     <reference ref="VisualStudio2019"/>
                     <reference ref="VisualStudio2022"/>
                 </and>
             </definition>
+            <definition name="VisualStudio2022AndHigher" displayName="$(string.VisualStudio2022)">
+                <and>
+                    <reference ref="VisualStudio2022"/>
+                </and>
+            </definition>
         </definitions>
     </supportedOn>
     <categories>
-        <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)">
-        </category>
+        <category name="VisualStudio" displayName="$(string.VisualStudioCategoryName)" />
         <category name="FeedbackSettings" displayName="$(string.FeedbackSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
@@ -46,11 +51,55 @@
         <category name="InstallandUpdateSettings" displayName="$(string.InstallandUpdateSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
+        <category name="LiveShareSettings" displayName="$(string.LiveShareSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
     </categories>
     <policies>
-        <policy name="ChannelUpdateDisabled" class="Machine" displayName="$(string.ChannelUpdateDisabledName)" explainText="$(string.ChannelUpdateDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="ChannelUpdateDisabled">
+        
+        <!-- Feedback Settings -->
+        <policy 
+            name="DisableFeedbackDialog" 
+            class="Both" 
+            displayName="$(string.DisableFeedbackDialog_DisplayName)" 
+            explainText="$(string.DisableFeedbackDialog_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Feedback" 
+            valueName="DisableFeedbackDialog">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy 
+            name="DisableScreenshotCapture" 
+            class="Both" displayName="$(string.DisableScreenshotCapture_DisplayName)" 
+            explainText="$(string.DisableScreenshotCapture_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Feedback" 
+            valueName="DisableScreenshotCapture">
+            <parentCategory ref="FeedbackSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        
+        <!-- Install and Update Settings -->
+        <policy 
+            name="RemoveOutOfSupport" 
+            class="Machine" 
+            displayName="$(string.RemoveOutOfSupport_DisplayName)" 
+            explainText="$(string.RemoveOutOfSupport_Explain)" 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="RemoveOos">
             <parentCategory ref="InstallandUpdateSettings" />
-            <supportedOn ref="VisualStudio2017And2019And2022" />
+            <supportedOn ref="VisualStudio2022AndHigher" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -58,9 +107,32 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy name="AutoUpdateDisabled" class="Machine" displayName="$(string.AutoDisabledName)" explainText="$(string.AutoDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="AutoUpdateDisabled">
+        <policy 
+            name="CachePath"
+            class="Machine"
+            displayName="$(string.CachePath_DisplayName)"
+            explainText="$(string.CachePath_Explain)"
+            presentation="$(presentation.CachePath_PresentationId)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
-            <supportedOn ref="VisualStudio2017And2019And2022" />
+            <supportedOn ref="VisualStudio2017AndHigher" />
+            
+            <elements>
+                <!--This value will be stored as a REG_EXPAND_SZ, a null-terminated string that can contain unexpanded
+                    references to environment variables (for example, "%PATH%") -->
+                <!--Text is limited to 1023 chars by admx and 50 characters by Visual Studio Installer -->
+                <text id="CachePath_TextBox" valueName="CachePath" expandable="true"/>
+            </elements>
+        </policy>
+        <policy 
+            name="BackgroundDownloadDisabled" 
+            class="Both"
+            displayName="$(string.BackgroundDownloadDisabled_DisplayName)"
+            explainText="$(string.BackgroundDownloadDisabled_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
+            valueName="BackgroundDownloadDisabled">
+            <parentCategory ref="InstallandUpdateSettings" />
+            <supportedOn ref="VisualStudio2017AndHigher" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -68,19 +140,32 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy name="BackgroundDownloadDisabled" class="Machine" displayName="$(string.BackgroundDisabledName)" explainText="$(string.BackgroundDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" valueName="BackgroundDownloadDisabled">
+        <policy 
+            name="SharedInstallationPath"
+            class="Both"
+            displayName="$(string.SharedInstallationPath_DisplayName)"
+            explainText="$(string.SharedInstallationPath_Explain)"
+            presentation="$(presentation.SharedInstallationPath_PresenationId)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
-            <supportedOn ref="VisualStudio2017And2019And2022" />
-            <enabledValue>
-                <decimal value="1" />
-            </enabledValue>
-            <disabledValue>
-                <decimal value="0" />
-            </disabledValue>
+            <supportedOn ref="VisualStudio2017AndHigher" />
+            
+            <elements>
+                <!--This value will be stored as a REG_EXPAND_SZ, a null-terminated string that can contain unexpanded
+                    references to environment variables (for example, "%PATH%") -->
+                <!--Text is limited to 1023 chars by admx and 150 characters by Visual Studio Installer -->
+                <text id="SharedInstallationPath_TextBox" valueName="SharedInstallationPath" expandable="true"/>
+            </elements>
         </policy>
-        <policy class="Both" displayName="$(string.KeepDownloadedPayloads)" explainText="$(string.KeepDownloadedPayloadsExplain)" key="Software\Policies\Microsoft\VisualStudio\Setup" name="KeepDownloadedPayloads" presentation="$(presentation.KeepDownloadedPayloads)" valueName="KeepDownloadedPayloads">
+        <policy 
+            name="KeepDownloadedPayloads" 
+            class="Both" 
+            displayName="$(string.KeepDownloadedPayloads_DisplayName)" 
+            explainText="$(string.KeepDownloadedPayloads_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="KeepDownloadedPayloads">
             <parentCategory ref="InstallandUpdateSettings"/>
-            <supportedOn ref="VisualStudio2022"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
             <enabledValue>
                 <decimal value="1"/>
             </enabledValue>
@@ -88,9 +173,15 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy name="DisableFeedbackDialog" class="Both" displayName="$(string.DisableFeedbackDialog)" explainText="$(string.DisableFeedbackDialogExplain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableFeedbackDialog">
-            <parentCategory ref="FeedbackSettings"/>
-            <supportedOn ref="VisualStudio2017And2019And2022"/>
+        <policy 
+            name="AdministratorUpdatesEnabled" 
+            class="Both" 
+            displayName="$(string.AdministratorUpdatesEnabled_DisplayName)" 
+            explainText="$(string.AdministratorUpdatesEnabled_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="AdministratorUpdatesEnabled">
+            <parentCategory ref="InstallandUpdateSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
             <enabledValue>
                 <decimal value="1"/>
             </enabledValue>
@@ -98,9 +189,15 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy name="DisableScreenshotCapture" class="Both" displayName="$(string.DisableScreenshotCapture)" explainText="$(string.DisableScreenshotCaptureExplain)" key="Software\Policies\Microsoft\VisualStudio\Feedback" valueName="DisableScreenshotCapture">
-            <parentCategory ref="FeedbackSettings"/>
-            <supportedOn ref="VisualStudio2017And2019And2022"/>
+        <policy 
+            name="AdministratorUpdatesOptOut" 
+            class="Both" 
+            displayName="$(string.AdministratorUpdatesOptOut_DisplayName)" 
+            explainText="$(string.AdministratorUpdatesOptOut_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="AdministratorUpdatesOptOut">
+            <parentCategory ref="InstallandUpdateSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
             <enabledValue>
                 <decimal value="1"/>
             </enabledValue>
@@ -108,7 +205,79 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy name="OptIn" class="Machine" displayName="$(string.TelemetryOptIn)" explainText="$(string.TelemetryOptInExplain)" key="Software\Policies\Microsoft\VisualStudio\SQM" valueName="OptIn">
+        <policy 
+            name="UpdateConfigurationFile"
+            class="Both"
+            displayName="$(string.UpdateConfigurationFile_DisplayName)"
+            explainText="$(string.UpdateConfigurationFile_Explain)"
+            presentation="$(presentation.UpdateConfigurationFile_PresentationId)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
+            <parentCategory ref="InstallandUpdateSettings" />
+            <supportedOn ref="VisualStudio2017AndHigher" />
+            
+            <elements>
+                <!--This value will be stored as a REG_EXPAND_SZ, a null-terminated string that can contain unexpanded
+                    references to environment variables (for example, "%PATH%") -->
+                <!--Text is limited to 1023 chars by admx -->
+                <text id="UpdateConfigurationFile_TextBox" valueName="UpdateConfigurationFile" expandable="true"/>
+            </elements>
+        </policy>   
+
+        <!-- LiveShare Settings -->
+        <policy 
+            name="LiveShareDomainName" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DomainName_DisplayName)" 
+            explainText="$(string.LiveShare_DomainName_Explain)" 
+            presentation="$(presentation.LiveShare_DomainName_PresentationId)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"> 
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <elements>
+                <text id="LiveShare_DomainName_TextBox" valueName="LiveShareDomainName" />   
+            </elements>
+        </policy>
+        <policy 
+            name="DirectConnectionMode" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DirectConnectionMode_DisplayName)" 
+            explainText="$(string.LiveShare_DirectConnectionMode_Explain)" 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare" 
+            valueName="DirectConnectionMode">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy 
+            name="DisableAnonymousGuests" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DisableAnonymousGuests_DisplayName)"
+            explainText="$(string.LiveShare_DisableAnonymousGuests_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
+            valueName="AnonymousGuest">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        
+        <!-- Privacy Settings -->
+        <policy 
+            name="TelemetryOptIn" 
+            class="Machine" 
+            displayName="$(string.TelemetryOptIn_DisplayName)" 
+            explainText="$(string.TelemetryOptIn_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\SQM" 
+            valueName="OptIn">
             <parentCategory ref="PrivacySettings"/>
             <supportedOn ref="VisualStudio2022"/>
             <enabledValue>
@@ -118,9 +287,15 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>        
-        <policy name="IntelliCodeRemoteAnalysisDisabled" class="Machine" displayName="$(string.IntelliCodeRemoteAnalysisDisabledName)" explainText="$(string.IntelliCodeRemoteAnalysisDisabledExplain)" key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" valueName="DisableRemoteAnalysis">
+        <policy 
+            name="IntelliCodeRemoteAnalysisDisabled" 
+            class="Machine" 
+            displayName="$(string.IntelliCodeRemoteAnalysisDisabled_DisplayName)" 
+            explainText="$(string.IntelliCodeRemoteAnalysisDisabled_Explain)" 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" 
+            valueName="DisableRemoteAnalysis">
             <parentCategory ref="PrivacySettings" />
-            <supportedOn ref="VisualStudio2019And2022" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
