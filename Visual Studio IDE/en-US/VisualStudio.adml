@@ -26,11 +26,11 @@
       <string id="VisualStudioProductName2022_4">Visual Studio 2022, 17.4</string>
 
       <!-- Convey a particular version and higher. -->
-      <string id="VisualStudio2017">At least Visual Studio 2017</string>
-      <string id="VisualStudio2019">At least Visual Studio 2019</string>
-      <string id="VisualStudio2022">At least Visual Studio 2022</string>
-      <string id="VisualStudio2022_1">At least Visual Studio 2022, 17.1</string>
-      <string id="VisualStudio2022_4">At least Visual Studio 2022, 17.4</string>
+      <string id="VisualStudio2017">Visual Studio 2017 and higher.</string>
+      <string id="VisualStudio2019">Visual Studio 2019 and higher.</string>
+      <string id="VisualStudio2022">Visual Studio 2022 and higher.</string>
+      <string id="VisualStudio2022_1">Visual Studio 2022, 17.1 and higher.</string>
+      <string id="VisualStudio2022_4">Visual Studio 2022, 17.4 and higher.</string>
 
       <!-- Convey a particular version and distribution. -->
       <string id="VisualStudio2022_Enterprise_Professional">At least Visual Studio 2022, Enterprise and Professional only</string>
@@ -112,10 +112,10 @@ If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not
 
       <!-- LiveShare Presentations -->
       <presentation id="LiveShare_DomainName_PresentationId">
-			  <textBox refId="LiveShare_DomainName_TextBox">
-			    <label>Enter Domain Name:</label>
-			  </textBox>
-	  </presentation>
+      <textBox refId="LiveShare_DomainName_TextBox">
+        <label>Enter Domain Name:</label>
+        </textBox>
+    </presentation>
     </presentationTable>
 </resources>
 </policyDefinitionResources>

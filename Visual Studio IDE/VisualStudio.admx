@@ -33,9 +33,9 @@
                     <reference ref="VisualStudio2022"/>
                 </and>
             </definition>
-            <definition name="VisualStudio2022_4_AndHigher" displayName="$(string.VisualStudio2022_4)">
+            <definition name="VisualStudio2022AndHigher" displayName="$(string.VisualStudio2022)">
                 <and>
-                    <reference ref="VisualStudio2022_4"/>
+                    <reference ref="VisualStudio2022"/>
                 </and>
             </definition>
         </definitions>
@@ -99,7 +99,7 @@
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" 
             valueName="RemoveOos">
             <parentCategory ref="InstallandUpdateSettings" />
-            <supportedOn ref="VisualStudio2022_4_AndHigher" />
+            <supportedOn ref="VisualStudio2022AndHigher" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
