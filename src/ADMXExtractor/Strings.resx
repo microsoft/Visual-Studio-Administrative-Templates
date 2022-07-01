@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BrowseForFolderDescriptionText" xml:space="preserve">
+    <value>Select a folder to store the extracted files</value>
+  </data>
+  <data name="FileExtractionSuccess" xml:space="preserve">
+    <value>Files extracted successfully.</value>
+  </data>
+  <data name="LicenseTermsCheckBoxText" xml:space="preserve">
+    <value>Click here to accept the Microsoft Software License Terms.</value>
+  </data>
+  <data name="LicenseTermsContinueButtonText" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="LicenseTermsText" xml:space="preserve">
+    <value>PLEASE NOTE: Microsoft Corporation (or based on where you live, one of its affiliates) licenses this supplement to you. You may use it with each validly licensed copy of Microsoft Office software (the “software”). You may not use the supplement if you do not have a license for the software. The license terms for the software apply to your use of this supplement. Microsoft provides support services for the supplement as described at www.support.microsoft.com/common/international.aspx.
+
+请注意：Microsoft Corporation（或 Microsoft Corporation 在您所在地的关联公司）现授予您本补充程序的许可证。您可以随 Microsoft Office 软件（“软件”）的每份获得有效许可的副本使用一份本补充程序。如果您没有软件的许可证，则不得使用本补充程序。该软件的许可条款在您使用本补充程序时适用。Microsoft 为本补充程序提供支持服务；相关说明请参见www.support.microsoft.com/common/international.aspx。
+
+請注意：Microsoft 公司 (或其關係企業，視　貴用戶所居住的地點而定) 授權　貴用戶使用本增補程式。　貴用戶擁有之每份有效授權的 Microsoft 軟體（「軟體」），均得使用一份 Microsoft Office 增補程式。若　貴用戶未取得軟體授權，即不得使用本增補程式。使用本增補程式時，亦須遵守軟體之授權條款。Microsoft 為「增補程式」提供支援服務之相關說明，請參閱 www.support.microsoft.com/common/international.aspx。
+
+LET OP: Microsoft Corporation (of, afhankelijk van waar u woont, een van haar gelieerde ondernemingen) geeft dit supplement aan u in licentie. U mag dit gebruiken bij elk geldig in licentie gegeven exemplaar van Microsoft Office software (de 'software'). U mag dit supplement niet gebruiken als u geen licentie hebt voor de software. De licentievoorwaarden voor de software zijn van toepassing op uw gebruik van dit supplement. Microsoft biedt productondersteuning voor dit supplement zoals wordt beschreven op www.support.microsoft.com/common/international.aspx.
+
+REMARQUE : Microsoft Corporation (ou en fonction du lieu où vous vivez, l’un de ses affiliés) vous accorde une licence pour ce supplément. Vous pouvez utiliser une copie de ce supplément avec chaque copie concédée sous licence du logiciel Microsoft Office (le « logiciel »). Vous n’êtes pas autorisé à utiliser ce supplément si vous n’êtes pas titulaire d’une licence pour le logiciel. Les conditions de licence pour le logiciel s’appliquent à l’utilisation de ce supplément. Microsoft fournit des services d’assistance technique pour le supplément disponibles sur le site www.support.microsoft.com/common/international.aspx.
+
+BITTE BEACHTEN SIE FOLGENDES: Microsoft Corporation (oder eine andere Microsoft-Konzerngesellschaft, wenn diese an dem Ort, an dem Sie die Software erwerben, die Software lizenziert) lizenziert diese Softwareergänzung an Sie. Sie sind berechtigt, die Softwareergänzung mit jeder ordnungsgemäß lizenzierten Kopie von Software Microsoft Office (die „Software“) zu verwenden. Sie sind nicht berechtigt, die Softwareergänzung zu verwenden, wenn Sie keine Lizenz für die Software haben. Die Lizenzbestimmungen für die Software gelten für Ihre Verwendung dieser Softwareergänzung. Microsoft stellt Supportleistungen für die Softwareergänzung bereit, die unter www.support.microsoft.com/common/international.aspx beschrieben werden.
+
+ATTENZIONE: Microsoft Corporation (o, in base al luogo di residenza del licenziatario, una delle sue consociate) concede in licenza al licenziatario il presente supplemento. Il licenziatario potrà utilizzarlo con ciascuna copia validamente concessa in licenza del software Microsoft Office (il “software”). Il licenziatario non potrà utilizzare il supplemento qualora non disponga di una licenza per il software. Le condizioni di licenza per il software si applicano all’utilizzo del presente supplemento da parte del licenziatario. Microsoft fornisce servizi di supporto tecnico per il supplemento come descritto all’indirizzo www.support.microsoft.com/common/international.aspx.
+
+注意 : Microsoft Corporation (以下「マイクロソフト」といいます) は、本追加ソフトウェアに関するライセンスをお客様に供与します。お客様は、Microsoft Office ソフトウェアの有効なライセンス取得済み複製 (以下「本ソフトウェア」といいます) 1 つごとに、これを使用できます。本ソフトウェアのライセンスを取得していない場合は、本追加ソフトウェアを使用することはできません。本ソフトウェアのライセンス条項は、本追加ソフトウェアの使用にも適用されます。マイクロソフトは、本追加ソフトウェアに対し www.support.microsoft.com/common/international.aspx で説明されるサポート サービスを提供します。
+
+참고: Microsoft Corporation(또는 거주 지역에 따라 계열사 중 하나)은 귀하에게 본 추가 구성 요소의 사용권을 부여합니다. 적법하게 사용권이 허여된 Microsoft Office 소프트웨어의 각 사본에 본 추가 구성 요소를(“소프트웨어”)와 함께 사용할 수 있습니다. 해당 소프트웨어 사용권이 없는 경우에는 추가 구성 요소도 사용할 수 없습니다. 본 추가 구성 요소 사용 시 해당 소프트웨어 사용권 조항 내용이 적용됩니다. Microsoft는 www.support.microsoft.com/common/international.aspx에 기술된 대로 추가 구성 요소에 대한 지원 서비스를 제공합니다.
+
+OBSERVE QUE: A Microsoft Corporation (ou de acordo com o local onde você reside, uma de suas afiliadas) licencia este suplemento para você. Você poderá usá-lo com cada cópia válida licenciada do software da Microsoft Office (o “software”). Você não poderá usar o suplemento se não tiver uma licença para o software. Os termos da licença do software se aplicam ao uso deste suplemento. A Microsoft fornece serviços de suporte para o suplemento conforme descrito em www.support.microsoft.com/common/international.aspx.
+
+ПРИМЕЧАНИЕ. Корпорация Microsoft (или одно из ее аффилированных лиц, в зависимости от места вашего проживания) предоставляет вам данное дополнение к лицензии. Вы имеете право использовать его с каждой лицензионной копией программного обеспечения Microsoft Office («программное обеспечение»). Вы не имеете права использовать дополнение, если у вас нет лицензии на программное обеспечение. Условия лицензии на использование программного обеспечения распространяются и на использование вами данного дополнения. Корпорация Майкрософт предоставляет техническую поддержку дополнения, как указано на веб-узле www.support.microsoft.com/common/international.aspx.
+
+TENGA EN CUENTA: Microsoft Corporation (o, en función del lugar en el que usted resida, una de las sociedades de su grupo) le concede a usted la licencia de este suplemento. Podrá utilizarlo con cada copia licenciada válida del software de Microsoft Office (el “software”). Queda prohibida la utilización del software si no dispone de una licencia para el mismo. Los términos de la licencia para el software se aplican al uso que usted haga de este suplemento. Microsoft presta servicios de soporte técnico para el suplemento, tal y como se describe en www.support.microsoft.com/common/international.aspx.</value>
+  </data>
+  <data name="LicenseTermsTitle" xml:space="preserve">
+    <value>Please accept the Microsoft Software License Terms in order to continue the installation.</value>
+  </data>
+</root>

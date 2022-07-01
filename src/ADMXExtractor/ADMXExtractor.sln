@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32630.91
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADMXExtractor", "ADMXExtractor.csproj", "{2BBB4588-D771-4F87-8E07-AB65C7D82B6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E93709FE-83DB-4A6C-B862-0F48C8581981}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SettingFiles", "SettingFiles", "{F8F05BB8-D3A6-4573-BA2A-080E083C011A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "admx", "admx", "{7039A98B-36FD-4232-BD51-68763944DCA0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\settingFiles\admx\VisualStudio.admx = ..\..\settingFiles\admx\VisualStudio.admx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en-US", "en-US", "{F9A23265-7429-4557-BBAB-E118BD9BCF20}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\settingFiles\admx\en-US\VisualStudio.adml = ..\..\settingFiles\admx\en-US\VisualStudio.adml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BBB4588-D771-4F87-8E07-AB65C7D82B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBB4588-D771-4F87-8E07-AB65C7D82B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBB4588-D771-4F87-8E07-AB65C7D82B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBB4588-D771-4F87-8E07-AB65C7D82B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8F05BB8-D3A6-4573-BA2A-080E083C011A} = {E93709FE-83DB-4A6C-B862-0F48C8581981}
+		{7039A98B-36FD-4232-BD51-68763944DCA0} = {F8F05BB8-D3A6-4573-BA2A-080E083C011A}
+		{F9A23265-7429-4557-BBAB-E118BD9BCF20} = {7039A98B-36FD-4232-BD51-68763944DCA0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB7F245A-20E8-41EE-BB24-491EFA8F14E2}
+	EndGlobalSection
+EndGlobal
