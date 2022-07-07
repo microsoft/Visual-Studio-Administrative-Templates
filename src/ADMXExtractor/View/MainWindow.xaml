@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ADMXExtractor"
         mc:Ignorable="d"
-        Height="500" Width="800">
+        Height="500"
+        Width="800"
+        MinWidth="650">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -37,8 +39,7 @@
         <Grid Margin="30, 0, 30, 0"
               Grid.Row="2" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="4*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <CheckBox x:Name="LicenseTermsCheckBox" 
@@ -50,13 +51,8 @@
                     CornerRadius="0"
                     BorderThickness="1" />
             </CheckBox>
-            <TextBlock x:Name="CheckBoxText" 
-                       Grid.Column="1" 
-                       HorizontalAlignment="Left"
-                      VerticalAlignment="Center"
-                       Margin="-80, 0, 0, 4" />
             <Button x:Name="LicenseTermsContinueButton"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center" 
                     Style="{StaticResource RegularButtonStyle}" 

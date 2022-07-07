@@ -21,7 +21,7 @@ namespace ADMXExtractor
             Title = NonLocalizableWindowTitle;
             LicenseTermsTitle.Text = Strings.LicenseTermsTitle;
             LicenseTerms.Text = Strings.LicenseTermsText;
-            CheckBoxText.Text = Strings.LicenseTermsCheckBoxText;
+            LicenseTermsCheckBox.Content = Strings.LicenseTermsCheckBoxText;
             LicenseTermsContinueButton.Content = Strings.LicenseTermsContinueButtonText;
             LicenseTermsContinueButton.IsEnabled = false;
         }
@@ -73,8 +73,9 @@ namespace ADMXExtractor
                 }
 
                 System.Windows.MessageBox.Show(messageBoxText, NonLocalizableWindowTitle, MessageBoxButton.OK, messageBoxImage, MessageBoxResult.OK);
-                Close();
             }
+
+            Close();
         }
 
         /// <summary>
