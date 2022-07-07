@@ -62,9 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\SuccessWindow.xaml.cs">
-      <DependentUpon>SuccessWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="View\Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,10 +78,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\SuccessWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -118,7 +111,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy.exe /d /s /e /i /y"$(ProjectDir)\..\..\settingFiles\*.*" "$(TargetDir)"
+    <PostBuildEvent>xcopy /d /s /i /y "$(ProjectDir)..\..\settingFiles\*.*" "$(TargetDir)"
 </PostBuildEvent>
   </PropertyGroup>
 </Project>

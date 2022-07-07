@@ -70,6 +70,15 @@ namespace ADMXExtractor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to extract files. {0}.
+        /// </summary>
+        internal static string FileExtractionFailure {
+            get {
+                return ResourceManager.GetString("FileExtractionFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Files extracted successfully..
         /// </summary>
         internal static string FileExtractionSuccess {
@@ -97,9 +106,12 @@ namespace ADMXExtractor {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PLEASE NOTE: Microsoft Corporation (or based on where you live, one of its affiliates) licenses this supplement to you. You may use it with each validly licensed copy of Microsoft Office software (the “software”). You may not use the supplement if you do not have a license for the software. The license terms for the software apply to your use of this supplement. Microsoft provides support services for the supplement as described at www.support.microsoft.com/common/international.aspx.
+        ///   Looks up a localized string similar to MIT License
         ///
-        ///请注意：Microsoft Corpor [rest of string was truncated]&quot;;.
+        ///Copyright (c) Microsoft Corporation.
+        ///
+        ///Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        ///The above copyright not [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LicenseTermsText {
             get {
