@@ -2,9 +2,7 @@
 using System;
 using System.Windows;
 using System.Windows.Forms;
-using System.Runtime;
 using System.IO;
-using System.Windows.Media;
 
 namespace ADMXExtractor
 {
@@ -13,7 +11,10 @@ namespace ADMXExtractor
     /// </summary>
     public partial class MainWindow : Window
     {
+        private const string AdmxDirectoryName = "admx";
         private const string NonLocalizableWindowTitle = "Visual Studio Administrative Templates";
+        private const string WinDirEnvironmentVariable = "WinDir";
+        private const string PolicyDefinitionsDirectoryName = "PolicyDefinitions";
 
         public MainWindow()
         {
@@ -24,18 +25,29 @@ namespace ADMXExtractor
             LicenseTermsCheckBox.Content = Strings.LicenseTermsCheckBoxText;
             LicenseTermsContinueButton.Content = Strings.LicenseTermsContinueButtonText;
             LicenseTermsContinueButton.IsEnabled = false;
+
+            SetUncheckedButton();
         }
 
         private void LicenseTermsCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             // When checked, enable the "Continue" Button
             LicenseTermsContinueButton.IsEnabled = true;
+            LicenseTermsContinueButton.Focusable = true;
+            LicenseTermsContinueButton.Opacity = 1;
         }
 
         private void LicenseTermsCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
+            SetUncheckedButton();
+        }
+
+        private void SetUncheckedButton()
+        {
             // When checked, enable the "Continue" Button
             LicenseTermsContinueButton.IsEnabled = false;
+            LicenseTermsContinueButton.Focusable = false;
+            LicenseTermsContinueButton.Opacity = .5;
         }
 
         private void LicenseTermsContinueButton_Click(object sender, RoutedEventArgs e)
@@ -45,8 +57,8 @@ namespace ADMXExtractor
             var browseForFolder = new FolderBrowserDialog();
             browseForFolder.RootFolder = Environment.SpecialFolder.MyComputer;
 
-            var winDirPath = Environment.GetEnvironmentVariable("WinDir");
-            var policyDefinitionPath = Path.Combine(winDirPath, "PolicyDefinitions");
+            var winDirPath = Environment.GetEnvironmentVariable(WinDirEnvironmentVariable);
+            var policyDefinitionPath = Path.Combine(winDirPath, PolicyDefinitionsDirectoryName);
             browseForFolder.SelectedPath = Directory.Exists(policyDefinitionPath) ? policyDefinitionPath : winDirPath;
 
             browseForFolder.Description = Strings.BrowseForFolderDescriptionText;
@@ -54,7 +66,7 @@ namespace ADMXExtractor
             if (browseForFolder.ShowDialog() is System.Windows.Forms.DialogResult.OK)
             {
                 // Extract the ADMX and ADSM files to the selected directory.
-                var source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "admx");
+                var source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AdmxDirectoryName);
                 var selected = browseForFolder.SelectedPath;
 
                 string messageBoxText;
