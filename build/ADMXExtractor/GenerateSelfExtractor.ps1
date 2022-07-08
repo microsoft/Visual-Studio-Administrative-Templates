@@ -62,12 +62,6 @@ Function Get-ZipArgs ($zipTarget, $admxTargetFolder) {
     # no compression, extremely fast extract speed.
     $zipArgs += "-mx=0 -mmt=4"
 
-    # decent compression, slow extract speed.
-    # $zipArgs += "-m0=BCJ2 -m1=LZMA:d26:fb96:lc8:pb1 -m2=LZMA:fb96 -m3=LZMA:fb96 -mb0:1 -mb0s1:2 -mb0s2:3 -mhc=on"
-
-    # decent compression, slightly faster extract speed.
-    # $zipArgs += "-m0=LZMA:a0:d26:fb96:lc8:pb1 -mx=1 -mmt=4"
-
     return $zipArgs
 }
 

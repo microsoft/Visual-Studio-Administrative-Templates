@@ -1,4 +1,7 @@
-﻿using System.Diagnostics;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+using System.Diagnostics;
 using System;
 using System.Windows;
 using System.Windows.Forms;
@@ -74,7 +77,7 @@ namespace ADMXExtractor
                 try
                 {
                     ProcessXcopy(source, selected);
-                    
+
                     messageBoxText = Strings.FileExtractionSuccess;
                     messageBoxImage = (MessageBoxImage)MessageBoxIcon.Information;
                 }

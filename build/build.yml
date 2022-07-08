@@ -1,0 +1,67 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT license.
+
+
+# Build
+# Sign with VSSign
+# Create Self-Extracting Exe
+# Sign Self-Extracting Exe
+
+
+# This continuous integration pipeline is triggered anytime a user pushes code to the repo.
+# This pipeline publishes the Wpf project, then signs the binaries according to the signing profiles.
+pool:
+  name: VSEngSS-MicroBuild2019-1ES
+  demands:
+  - msbuild
+  - visualstudio
+
+trigger: none
+
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  projectName: ADMXExtractor
+  projectDirectory: src\ADMXExtractor
+  projectFullPath: src\ADMXExtractor\ADMXExtractor.sln
+  publishDir: Release\net472\x86\publish\
+  logFileName: MyWpfAppSigningLog.txt
+
+
+steps:
+- checkout: self
+  submodules: true
+  persistCredentials: true
+
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 5.8.1
+
+- task: NuGetAuthenticate@0
+  displayName: "NuGet Authenticate"
+  inputs:
+    nuGetServiceConnections: VSSetup-PubSuiteConnection
+
+- task: UseDotNet@2
+  displayName: Install .NET Core SDK
+  inputs:
+    packageType: sdk
+    version: 5.0.202
+
+- script: dotnet restore $(projectFullPath) /v:diag /bl:"$(build.ArtifactStagingDirectory)/build_logs/restore.binlog"
+  displayName: dotnet restore
+
+- script: dotnet build  $(projectFullPath) -c $(buildConfiguration)  /v:diag /bl:"$(Build.ArtifactStagingDirectory)/build_logs/publish.binlog"
+  displayName: dotnet build
+
+- task: ms-vseng.MicroBuildtasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
+  displayName: Install Signing Plugin
+  inputs:
+    signType: '$(SignType)'
+    zipSources: false
+ build\
+- task: MSBuild@1
+  displayName: Sign the ADMXExtractor
+  inputs:
+    solution: build\ADMXExtractor\ADMXExtractor.signproj
+    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(Build.StagingDirectory)\$(projectName)\ /p:TargetFileToSign=$(Build.StagingDirectory)\$(projectName)\$(projectName).exe'

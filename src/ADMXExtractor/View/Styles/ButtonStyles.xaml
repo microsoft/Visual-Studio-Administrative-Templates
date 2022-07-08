@@ -14,7 +14,7 @@
                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
         </Border>
     </ControlTemplate>
-    
+
     <SolidColorBrush x:Key="ButtonDisabledBackgroundBrush" Color="#E2E2E2" />
     <SolidColorBrush x:Key="ButtonDisabledBorderBrush" Color="#E2E2E2" />
     <SolidColorBrush x:Key="ButtonDisabledForegroundBrush" Color="#7E7E7E" />
@@ -34,7 +34,7 @@
     <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="#007ACC" />
     <SolidColorBrush x:Key="ButtonPressedBorderBrush" Color="#007ACC" />
     <SolidColorBrush x:Key="ButtonPressedForegroundBrush" Color="#FFFFFF" />
-    
+
     <Style x:Key="RegularButtonBaseStyle" TargetType="{x:Type Button}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="BorderBrush" Value="#FF707070"  />
@@ -64,7 +64,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
+
     <Style x:Key="RegularButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource RegularButtonBaseStyle}">
         <Setter Property="Padding" Value="0" />
         <Setter Property="Width" Value="78" />
