@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net472</TargetFramework>
     <UseWPF>true</UseWPF>
-	<AssemblyTitle>Visual Studio Admin Templates</AssemblyTitle>
+    <AssemblyTitle>Visual Studio Admin Templates</AssemblyTitle>
   </PropertyGroup>
 
   <ItemGroup>

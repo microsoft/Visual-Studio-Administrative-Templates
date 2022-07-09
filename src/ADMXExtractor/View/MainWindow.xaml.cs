@@ -16,7 +16,6 @@ namespace ADMXExtractor
     {
         private const string AdmxDirectoryName = "admx";
         private const string NonLocalizableWindowTitle = "Visual Studio Administrative Templates";
-        private const string WinDirEnvironmentVariable = "WinDir";
         private const string PolicyDefinitionsDirectoryName = "PolicyDefinitions";
 
         public MainWindow()
@@ -60,66 +59,75 @@ namespace ADMXExtractor
             var browseForFolder = new FolderBrowserDialog();
             browseForFolder.RootFolder = Environment.SpecialFolder.MyComputer;
 
-            var winDirPath = Environment.GetEnvironmentVariable(WinDirEnvironmentVariable);
+            var winDirPath = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
             var policyDefinitionPath = Path.Combine(winDirPath, PolicyDefinitionsDirectoryName);
             browseForFolder.SelectedPath = Directory.Exists(policyDefinitionPath) ? policyDefinitionPath : winDirPath;
 
             browseForFolder.Description = Strings.BrowseForFolderDescriptionText;
 
-            if (browseForFolder.ShowDialog() is System.Windows.Forms.DialogResult.OK)
+            var dialogResult = browseForFolder.ShowDialog();
+            if (!dialogResult.Equals(System.Windows.Forms.DialogResult.OK))
             {
-                // Extract the ADMX and ADSM files to the selected directory.
-                var source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AdmxDirectoryName);
-                var selected = browseForFolder.SelectedPath;
-
-                string messageBoxText;
-                MessageBoxImage messageBoxImage;
-                try
-                {
-                    ProcessXcopy(source, selected);
-
-                    messageBoxText = Strings.FileExtractionSuccess;
-                    messageBoxImage = (MessageBoxImage)MessageBoxIcon.Information;
-                }
-                catch (Exception ex)
-                {
-                    messageBoxText = string.Format(Strings.FileExtractionFailure, ex.Message);
-                    messageBoxImage = (MessageBoxImage)MessageBoxIcon.Warning;
-                }
-
-                System.Windows.MessageBox.Show(messageBoxText, NonLocalizableWindowTitle, MessageBoxButton.OK, messageBoxImage, MessageBoxResult.OK);
+                // If the user closes the FolderBrowserDialog by clicking "Cancel" or by clicking the "X" in the upper right corner,
+                // exit the application.
+                Close();
             }
+
+            // Extract the ADMX and ADSM files to the selected directory.
+            var source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AdmxDirectoryName);
+            var selected = browseForFolder.SelectedPath;
+
+            string messageBoxText;
+            MessageBoxImage messageBoxImage;
+            try
+            {
+                CopyFiles(source, selected);
+                messageBoxText = Strings.FileExtractionSuccess;
+                messageBoxImage = (MessageBoxImage)MessageBoxIcon.Information;
+            }
+            catch (Exception ex)
+            {
+                messageBoxText = string.Format(Strings.FileExtractionFailure, ex.Message);
+                messageBoxImage = (MessageBoxImage)MessageBoxIcon.Warning;
+            }
+            
+            System.Windows.MessageBox.Show(messageBoxText, NonLocalizableWindowTitle, MessageBoxButton.OK, messageBoxImage, MessageBoxResult.OK);
 
             Close();
         }
 
         /// <summary>
-        /// Xcopy files and folders from bin to the targetDirectory
+        /// Copy files and folders from the source directory to the destination directory
         /// </summary>
-        /// <remarks>
-        /// /d: [:MM-DD-YYYY] Copies source files changed on or after the specified date only. If you do not include a MM-DD-YYYY value, xcopy
-        ///     copies all Source files that are newer than existing Destination files. This command-line option allows you to update files that have changed.
-        /// /s: Copies directories and subdirectories, unless they are empty. If you omit /s, xcopy works within a single directory.
-        /// /i: If Source is a directory or contains wildcards and Destination does not exist, xcopy assumes Destination
-        ///     specifies a directory name and creates a new directory. Then, xcopy copies all specified files into the new directory. 
-        ///     By default, xcopy prompts you to specify whether Destination is a file or a directory.
-        /// </remarks>
-        /// <param name="source"></param>
-        /// <param name="destination"></param>
-        private void ProcessXcopy(string source, string destination)
+        /// <param name="source">The path to the source folder to copy.</param>
+        /// <param name="destination">The path to the destination folder.</param>
+        private void CopyFiles(string sourceDir, string destinationDir)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo()
-            {
-                Arguments = $"\"{source}\" \"{destination}\" /d /s /i",
-                CreateNoWindow = false,
-                FileName = "xcopy",
-                UseShellExecute = false,
-                WindowStyle = ProcessWindowStyle.Hidden,
-            };
+            // Get information about the source directory
+            var dir = new DirectoryInfo(sourceDir);
 
-            using (Process exeProcess = Process.Start(startInfo))
+            // Check if the source directory exists
+            if (!dir.Exists)
+                throw new DirectoryNotFoundException($"Source directory not found: {dir.FullName}");
+
+            // Cache directories before we start copying
+            var dirs = dir.GetDirectories();
+
+            // Create the destination directory
+            Directory.CreateDirectory(destinationDir);
+
+            // Get the files in the source directory and copy to the destination directory
+            foreach (FileInfo file in dir.GetFiles())
             {
-                exeProcess.WaitForExit();
+                string targetFilePath = Path.Combine(destinationDir, file.Name);
+                file.CopyTo(targetFilePath);
+            }
+
+            // If recursive and copying subdirectories, recursively call this method
+            foreach (DirectoryInfo subDir in dirs)
+            {
+                string newDestinationDir = Path.Combine(destinationDir, subDir.Name);
+                CopyFiles(subDir.FullName, newDestinationDir);
             }
         }
     }

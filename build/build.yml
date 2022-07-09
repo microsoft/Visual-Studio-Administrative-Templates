@@ -46,7 +46,7 @@ steps:
   displayName: Install .NET Core SDK
   inputs:
     packageType: sdk
-    version: 5.0.202
+    useGlobalJson: true
 
 - script: dotnet restore $(projectFullPath) /v:diag /bl:"$(build.ArtifactStagingDirectory)/build_logs/restore.binlog"
   displayName: dotnet restore
@@ -59,7 +59,7 @@ steps:
   inputs:
     signType: '$(SignType)'
     zipSources: false
- build\
+
 - task: MSBuild@1
   displayName: Sign the ADMXExtractor
   inputs:

@@ -18,16 +18,16 @@
 
     <Grid Background="#F1F1F1">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="10*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock x:Name="LicenseTermsTitle" 
                    Grid.Row="0" 
-                   Padding="20,0,20,0"
+                   Padding="20,20,20,0"
                    VerticalAlignment="Center" />
         <ScrollViewer Grid.Row="1" 
-                      Padding="10"
+                      Padding="0, 20, 0, 0"
                       BorderBrush="White"
                       BorderThickness="5">
             <TextBlock x:Name="LicenseTerms" 
@@ -35,11 +35,11 @@
                          TextWrapping="Wrap"
                          Padding="20,0,20,0"/>
         </ScrollViewer>
-        <Grid Margin="30, 0, 30, 0"
+        <Grid Margin="30, 0, 30, 30"
               Grid.Row="2" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*" />
-                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
             <CheckBox x:Name="LicenseTermsCheckBox" 
                       Grid.Column="0" 
