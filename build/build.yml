@@ -27,6 +27,7 @@ variables:
   projectFullPath: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
   publishDir: Release\net472\x86\publish\
   logFileName: MyWpfAppSigningLog.txt
+  finalDrop: $(Build.StagingDirectory)\finalDrop
   # Set in Pipeline SignType: test  
 
 steps:
@@ -80,10 +81,10 @@ steps:
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: build/ADMXExtractor/GenerateSelfSExtractor.ps1
-    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -RootTarget $(Build.StagingDirectory)\drop
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop)
 
 - task: PublishBuildArtifacts@1
   displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
   inputs:
-    PathtoPublish: $(Build.StagingDirectory)\drop
+    PathtoPublish: $(finalDrop)
     ArtifactName: exe

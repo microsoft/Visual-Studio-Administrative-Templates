@@ -7,15 +7,15 @@
 
 .PARAMETER $ArtifactsDir
     The root artifact directory where the ADMXExtractor build is located.
-    e.g. $ArtifactsDir = D:\Visual-Studio-Administrative-Templates\src\ADMXExtractor
+    e.g. $ArtifactsDir = D:\Visual-Studio-Administrative-Templates\artifacts\ADMXExtractor
 
 .PARAMETER $RootDir
     The repo root directory.
     e.g. $RootDir = D:\Visual-Studio-Administrative-Templates
 
-.PARAMETER $RootTarget
+.PARAMETER $ArtifactFinalDropTarget
     The target path for where to output the finished ADMX Self-extracting exe.
-    e.g. $RootTarget
+    e.g. $ArtifactFinalDropTarget = D:\Visual-Studio-Administrative-Templates\artifacts\finaldrop
 
 
 Start-Process -FilePath "C:\Program Files\7-Zip\7z.exe" -ArgumentList "a", "D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z", "-r", "D:\Visual-Studio-Administrative-Templates\artifacts\ADMXExtractor", "-mx=0 -mmt=4" 
@@ -42,7 +42,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$RootTarget,
+    [string]$ArtifactsDropTarget,
 )
 
 # helper functions
@@ -65,10 +65,10 @@ Function Get-ZipArgs ($directoryOfFilesToZip, $zipTarget) {
     return $zipArgs
 }
 
-Function Get-BoxToolArgs ($boxManifestTarget, $outputExeTarget, $boxstubTarget) {
+Function Get-BoxToolArgs ($boxManifestFilePath, $outputExeTarget, $boxstubTarget) {
     $boxtoolArgs = @()
     $boxtoolArgs += "-i"
-    $boxtoolArgs += "$boxManifestTarget"
+    $boxtoolArgs += "$boxManifestFilePath"
     $boxtoolArgs += "-o"
     $boxtoolArgs += "$outputExeTarget"
     $boxtoolArgs += "-s"
@@ -83,11 +83,13 @@ Function Get-Id ($packageId, $xml) {
 }
 # end helper functions
 
-
 # RootDir: D:\Visual-Studio-Administrative-Templates\   
 # ArtifactsDir: $(Build.StagingDirectory)\ADMXExtractor
 # RootTarget: $(Build.StagingDirectory)\drop
 
+# At this point in the script, ArtifactsDir has:
+# ADMXExtractor.exe
+# ADMXExtractor.exe.config
 
 $outputName = "VisualStudioAdminTemplates"
 $outputNameWithExtension = $outputName + ".exe"
@@ -104,13 +106,14 @@ Write-Verbose "Bootstrapper externals tool root: $bootstrapperToolRoot"
 # zip up admx contents to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
 $zipTool = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z", "7z.exe")
 $directoryOfFilesToZip = [System.IO.Path]::Combine($ArtifactsDir, "admx", "*.*")
-$zipDropDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
-$zipArgs = Get-ZipArgs $directoryOfFilesToZip $zipDropDirectory
+$zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
+$zipArgs = Get-ZipArgs $directoryOfFilesToZip $zipFileToDropInArtifactsDirectory
 
 Write-Verbose "Calling Zip tool: $zipTool"
-Write-Verbose "Directory of files to zip:  $directoryOfFilesToZip"
-Write-Verbose "Drop directory: $zipDropDirectory"
 Write-Verbose "Argument List: $zipArgs"
+
+Write-Verbose "Directory of files to zip:  $directoryOfFilesToZip"
+Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifactsDirectory"
 
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
@@ -120,27 +123,43 @@ if ($zipRun.ExitCode -ne 0)
     exit 1
 }
 
-# prepare and copy box_manifest.xml
+# At this point in the script, ArtifactsDir has:
+# ADMXExtractor.exe
+# ADMXExtractor.exe.config
+# admx.7z
+
+# Copy box_manifest.xml from $RootDir\build\ADMXExtractor to $ArtifactsDir
 $boxManifestSource = [System.IO.Path]::Combine($RootDir, "build", "ADMXExtractor", "box_manifest.xml")
-$boxManifestTarget = [System.IO.Path]::Combine($artifacts, "box_manifest.xml")
+$boxManifestTarget = [System.IO.Path]::Combine($ArtifactsDir, "box_manifest.xml")
 $manifestContentXml = [xml](Get-Content $boxManifestSource)
-Set-RootForExecuteFile $manifestContentXml $outputName
+
+# in box_manifest, replace %root% with the location of the ADMXInstaller.exe
+#  <ExecuteFile>%root%\ADMXInstaller.exe</ExecuteFile> ->  <ExecuteFile>$ArtifactsDir\ADMXInstaller.exe</ExecuteFile>
+Set-RootForExecuteFile $manifestContentXml $ArtifactsDir
 $manifestContentXml.Save("$boxManifestTarget")
 
-# box zipped item
-$admxExtractorTargetRoot = $RootTarget
-$outputExeTarget = [System.IO.Path]::Combine($admxExtractorTargetRoot, $outputNameWithExtension)
+# At this point in the script, ArtifactsDir has:
+# ADMXExtractor.exe
+# ADMXExtractor.exe.config
+# admx.7z
+# box_manifest.xml
+
+# Copy the BoxStub.exe to the ArtifactFinalDropTarget
+
 $boxstubSource = [System.IO.Path]::Combine($bootstrapperToolRoot, "box", "boxstub.exe")
-$boxstubTarget = [System.IO.Path]::Combine($admxExtractorTargetRoot, "boxstub.exe")
+$boxstubTarget = [System.IO.Path]::Combine($ArtifactsDir, "boxstub.exe")
 Copy-Item $boxstubSource -Destination $boxstubTarget
 
-$boxtoolTool = [System.IO.Path]::Combine($bootstrapperToolRoot, "box", "boxtool.exe")
+# boxManifestTarget = $ArtifactsDir\box_manifest.xml
+# outputExeTarget = $ArtifactsDropTarget\VisualStudioAdminTemplates.exe
+$outputExeTarget = [System.IO.Path]::Combine($ArtifactsDropTarget, $outputNameWithExtension)
+$boxToolPath = [System.IO.Path]::Combine($bootstrapperToolRoot, "box", "boxtool.exe")
 $boxtoolArgs = Get-BoxToolArgs $boxManifestTarget $outputExeTarget $boxstubTarget
 
-Write-Verbose "Calling BoxTool: $boxtoolTool"
+Write-Verbose "Calling BoxTool: $boxToolPath"
 Write-Verbose "Argument List: $boxtoolArgs"
 
-$boxtoolRun = Start-Process -FilePath $boxtoolTool -ArgumentList $boxtoolArgs -PassThru -Wait
+$boxtoolRun = Start-Process -FilePath $boxToolPath -ArgumentList $boxtoolArgs -PassThru -Wait
 if ($boxtoolRun.ExitCode -ne 0)
 {
     Write-Verbose 'BoxTool failed.'
