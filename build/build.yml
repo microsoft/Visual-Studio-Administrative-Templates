@@ -19,6 +19,7 @@ pool:
 trigger: none
 
 variables:
+  TeamName: VSSetup
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
@@ -26,7 +27,7 @@ variables:
   projectFullPath: src\ADMXExtractor\ADMXExtractor.sln
   publishDir: Release\net472\x86\publish\
   logFileName: MyWpfAppSigningLog.txt
-
+  # Set in Pipeline SignType: test  
 
 steps:
 - checkout: self
@@ -48,20 +49,17 @@ steps:
     packageType: sdk
     useGlobalJson: true
 
-- script: dotnet restore $(projectFullPath) /v:diag /bl:"$(build.ArtifactStagingDirectory)/build_logs/restore.binlog"
-  displayName: dotnet restore
-
-- script: dotnet build  $(projectFullPath) -c $(buildConfiguration)  /v:diag /bl:"$(Build.ArtifactStagingDirectory)/build_logs/publish.binlog"
-  displayName: dotnet build
-
 - task: ms-vseng.MicroBuildtasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
   displayName: Install Signing Plugin
   inputs:
-    signType: '$(SignType)'
     zipSources: false
+    feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+    SignType: ${{ variables.SignType }}
 
 - task: MSBuild@1
-  displayName: Sign the ADMXExtractor
+  displayName: Build ADMXExtractor.csproj
   inputs:
-    solution: build\ADMXExtractor\ADMXExtractor.signproj
-    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(Build.StagingDirectory)\$(projectName)\ /p:TargetFileToSign=$(Build.StagingDirectory)\$(projectName)\$(projectName).exe'
+    solution: src\ADMXEXtractor\ADMXExtractor.csproj
+    msbuildArguments: >
+      /v:diag
+      /p:OutDir=$(Build.StagingDirectory)\$(projectName)\

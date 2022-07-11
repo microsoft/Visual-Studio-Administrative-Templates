@@ -8,6 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudioEng.MicroBuild.Core" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+ 
+ <ItemGroup>
+	<FilesToSign Include="$(OutDir)\ADMXExtractor.exe">
+	  <Authenticode>Microsoft400</Authenticode>
+	  <StrongName>StrongName</StrongName>
+	</FilesToSign>
+	  <FilesToSign Include="$(OutDir)\ADMXExtractor.exe.config">
+		  <Authenticode>Microsoft400</Authenticode>
+		  <StrongName>StrongName</StrongName>
+	  </FilesToSign>
+  </ItemGroup>
+
+	<ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
 
