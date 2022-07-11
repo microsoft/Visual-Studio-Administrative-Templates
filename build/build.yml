@@ -67,15 +67,6 @@ steps:
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
 
-- task: NuGetCommand@2
-  displayName: NuGet restore build\ADMXExtractor\nuget.config
-  inputs:
-    restoreSolution: $(Build.SourcesDirectory)\build\ADMXExtractor\nuget.config
-    restoreDirectory: $(Build.SourcesDirectory)/packages
-    feedsToUse: config
-    nugetConfigPath: $(Build.SourcesDirectory)\build\ADMXExtractor\nuget.config
-    externalFeedCredentials: 'VSSetup-PubSuiteConnection'
-
 - task: PowerShell@2
   name: GenerateSelfExtractor
   displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.

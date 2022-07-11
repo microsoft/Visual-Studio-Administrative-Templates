@@ -99,6 +99,11 @@ Function Get-Id ($packageId, $xml) {
 # ADMXExtractor.exe
 # ADMXExtractor.exe.config
 
+Write-Verbose "ArtifactsDir: $ArtifactsDir"
+Write-Verbose "RootDir: $RootDir"
+Write-Verbose "ArtifactsDropTarget: $ArtifactsDropTarget"
+Write-Verbose "OutputNameWithExtension: $OutputNameWithExtension"
+
 # get tool root locations
 $scriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition  # The root directory of this script
 $nugetPkgsConfig = [System.IO.Path]::Combine($scriptRoot, "packages.config")
