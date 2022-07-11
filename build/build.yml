@@ -58,6 +58,8 @@ steps:
   inputs:
     restoreSolution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
     restoreDirectory: $(Build.SourcesDirectory)\packages
+    feedsToUse: config
+    nugetConfigPath: $(Build.SourcesDirectory)\nuget.config    
     externalFeedCredentials: 'VSSetup-PubSuiteConnection'
 
 - task: MSBuild@1
