@@ -11,7 +11,7 @@
 # This continuous integration pipeline is triggered anytime a user pushes code to the repo.
 # This pipeline publishes the Wpf project, then signs the binaries according to the signing profiles.
 pool:
-  name: VSEngSS-MicroBuild2019-1ES
+  name: 'VSEngSS-MicroBuild2022-1ES'
   demands:
   - msbuild
   - visualstudio
@@ -34,9 +34,10 @@ steps:
   submodules: true
   persistCredentials: true
 
-- task: NuGetToolInstaller@1
+- task: NuGetToolInstaller@0
+  displayName: Install NuGet
   inputs:
-    versionSpec: 5.8.1
+    versionSpec: '5.8.1'
 
 - task: NuGetAuthenticate@0
   displayName: "NuGet Authenticate"
@@ -64,3 +65,22 @@ steps:
     msbuildArguments: >
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
+
+- task: NuGetCommand@2
+  displayName: NuGet restore Engine.sln
+  inputs:
+    restoreSolution: $(Build.SourcesDirectory)\build\ADMXExtractor\nuget.config
+    restoreDirectory: $(Build.SourcesDirectory)/packages
+    feedsToUse: config
+    nugetConfigPath: $(Build.SourcesDirectory)\build\ADMXExtractor\nuget.config
+    externalFeedCredentials: 'VSSetup-PubSuiteConnection'
+
+
+- task: PowerShell@2
+  name: GenerateSelfExtractor
+  displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.
+        inputs:
+            workingDirectory: $(Build.SourcesDirectory)
+            filePath: build/ADMXExctractor/GenerateSelfSExtractor.ps1
+            arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(System.ArtifactsDirectory)\drop -RootTarget $(Build.ArtifactStagingDirectory)
+    
