@@ -23,8 +23,8 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
-  projectDirectory: src\ADMXExtractor
-  projectFullPath: src\ADMXExtractor\ADMXExtractor.sln
+  projectDirectory: $(Build.SourcesDirectory)\src\ADMXExtractor
+  projectFullPath: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
   publishDir: Release\net472\x86\publish\
   logFileName: MyWpfAppSigningLog.txt
   # Set in Pipeline SignType: test  
@@ -48,6 +48,7 @@ steps:
   inputs:
     packageType: sdk
     useGlobalJson: true
+    workingDirectory: $(Build.SourcesDirectory)
 
 - task: ms-vseng.MicroBuildtasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
   displayName: Install Signing Plugin
@@ -59,7 +60,7 @@ steps:
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
   inputs:
-    solution: src\ADMXEXtractor\ADMXExtractor.csproj
+    solution: $(Build.SourcesDirectory)\src\ADMXEXtractor\ADMXExtractor.csproj
     msbuildArguments: >
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
