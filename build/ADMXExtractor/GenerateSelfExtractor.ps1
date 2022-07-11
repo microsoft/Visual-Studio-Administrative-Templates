@@ -17,6 +17,10 @@
     The target path for where to output the finished ADMX Self-extracting exe.
     e.g. $ArtifactFinalDropTarget = D:\Visual-Studio-Administrative-Templates\artifacts\finaldrop
 
+.PARAMETER $OutputNameWithExtension
+    The final ADMX Self-extracting exe.
+    e.g. $OutputNameWithExtension = VisualStudioAdministrativeTemplates.exe
+
 
 Start-Process -FilePath "C:\Program Files\7-Zip\7z.exe" -ArgumentList "a", "D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z", "-r", "D:\Visual-Studio-Administrative-Templates\artifacts\ADMXExtractor", "-mx=0 -mmt=4" 
 
@@ -43,6 +47,10 @@ param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
     [string]$ArtifactsDropTarget,
+
+    [Parameter()]
+    [ValidateNotNullOrEmpty()]
+    [string]$OutputNameWithExtension,
 )
 
 # helper functions
@@ -90,9 +98,6 @@ Function Get-Id ($packageId, $xml) {
 # At this point in the script, ArtifactsDir has:
 # ADMXExtractor.exe
 # ADMXExtractor.exe.config
-
-$outputName = "VisualStudioAdminTemplates"
-$outputNameWithExtension = $outputName + ".exe"
 
 # get tool root locations
 $scriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition  # The root directory of this script
@@ -152,7 +157,7 @@ Copy-Item $boxstubSource -Destination $boxstubTarget
 
 # boxManifestTarget = $ArtifactsDir\box_manifest.xml
 # outputExeTarget = $ArtifactsDropTarget\VisualStudioAdminTemplates.exe
-$outputExeTarget = [System.IO.Path]::Combine($ArtifactsDropTarget, $outputNameWithExtension)
+$outputExeTarget = [System.IO.Path]::Combine($ArtifactsDropTarget, $OutputNameWithExtension)
 $boxToolPath = [System.IO.Path]::Combine($bootstrapperToolRoot, "box", "boxtool.exe")
 $boxtoolArgs = Get-BoxToolArgs $boxManifestTarget $outputExeTarget $boxstubTarget
 
