@@ -1,12 +1,9 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT license.
 
-
 # Build
-# Sign with VSSign
 # Create Self-Extracting Exe
 # Sign Self-Extracting Exe
-
 
 # This continuous integration pipeline is triggered anytime a user pushes code to the repo.
 # This pipeline publishes the Wpf project, then signs the binaries according to the signing profiles.
