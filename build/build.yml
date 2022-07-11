@@ -62,12 +62,12 @@ steps:
   displayName: NuGet restore ADMXExtractor.sln
   inputs:
     restoreSolution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
-    restoreDirectory: $(Build.SourcesDirectory)/packages
+    restoreDirectory: $(Build.SourcesDirectory)\packages
 
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
   inputs:
-    solution: $(Build.SourcesDirectory)\src\ADMXEXtractor\ADMXExtractor.csproj
+    solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
     msbuildArguments: >
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
