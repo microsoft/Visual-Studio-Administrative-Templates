@@ -52,12 +52,12 @@ Function Set-RootForExecuteFile ($xml, $outputName)
     $executeFile.InnerText = $executeFile.InnerText.Replace("%root%", "$outputName")
 }
 
-Function Get-ZipArgs ($zipTarget, $admxTargetFolder) {
+Function Get-ZipArgs ($directoryOfFilesToZip, $zipTarget) {
     $zipArgs = @()
     $zipArgs += "a"
     $zipArgs += "$zipTarget"
     # recursivly search the target folder
-    $zipArgs += "-r $admxTargetFolder"
+    $zipArgs += "-r $directoryOfFilesToZip"
 
     # no compression, extremely fast extract speed.
     $zipArgs += "-mx=0 -mmt=4"
@@ -76,13 +76,24 @@ Function Get-BoxToolArgs ($boxManifestTarget, $outputExeTarget, $boxstubTarget) 
 
     return $boxtoolArgs
 }
+
+Function Get-Id ($packageId, $xml) {
+    $p = $xml.SelectNodes("/packages/package") | Where-Object { $_.id -eq "$packageId"} | Select-Object -Index 0
+    return "$packageId" + "." + $p.version.ToString()
+}
 # end helper functions
+
+
+# RootDir: D:\Visual-Studio-Administrative-Templates\   
+# ArtifactsDir: $(Build.StagingDirectory)\ADMXExtractor
+# RootTarget: $(Build.StagingDirectory)\drop
+
 
 $outputName = "VisualStudioAdminTemplates"
 $outputNameWithExtension = $outputName + ".exe"
 
 # get tool root locations
-$scriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition # supported by PS2+
+$scriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition  # The root directory of this script
 $nugetPkgsConfig = [System.IO.Path]::Combine($scriptRoot, "packages.config")
 $nugetPkgsConfigXml = [xml](Get-Content $nugetPkgsConfig)
 $bootstrapperToolId = Get-Id "VS.Setup.BootstrapperExternals" $nugetPkgsConfigXml
@@ -90,26 +101,21 @@ $bootstrapperToolRoot = [System.IO.Path]::Combine($RootDir, "packages", $bootstr
 
 Write-Verbose "Bootstrapper externals tool root: $bootstrapperToolRoot"
 
-# copy ADMXExtractor from d:\Visual-Studio-Administrative-Templates\src\ADMXExtractor\bin\Release to d:\Visual-Studio-Administrative-Templates\artifacts\ADMXExtractor
-$admxExtractorTargetFolder = [System.IO.Path]::Combine($RootTarget, "ADMXExtractor")  
-if (!(Test-Path -path $admxExtractorTargetFolder)) {New-Item $admxExtractorTargetFolder -Type Directory}
-$admxExtractorToolRoot = [System.IO.Path]::Combine($ArtifactsDir, "ADMXExtractor", "bin", "release")
-
-Write-Verbose "Copying ADMXExtractor from $admxExtractorToolRoot to $admxExtractorTargetFolder"
-robocopy $admxExtractorToolRoot $admxExtractorTargetFolder /s
-
 # zip up admx contents to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
 $zipTool = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z", "7z.exe")
-$zipTarget = [System.IO.Path]::Combine($artifacts, "admx.7z")
-$zipArgs = Get-ZipArgs $zipTarget $admxExtractorTargetFolder
+$directoryOfFilesToZip = [System.IO.Path]::Combine($ArtifactsDir, "admx", "*.*")
+$zipDropDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
+$zipArgs = Get-ZipArgs $directoryOfFilesToZip $zipDropDirectory
 
 Write-Verbose "Calling Zip tool: $zipTool"
+Write-Verbose "Directory of files to zip:  $directoryOfFilesToZip"
+Write-Verbose "Drop directory: $zipDropDirectory"
 Write-Verbose "Argument List: $zipArgs"
 
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
-    Write-Verbose '7 zip failed.'
+    Write-Verbose 'Failed to zip the directory of admx files: $directoryOfFilesToZip.'
     Remove-Item -Recurse -Force $TempDirectory
     exit 1
 }
