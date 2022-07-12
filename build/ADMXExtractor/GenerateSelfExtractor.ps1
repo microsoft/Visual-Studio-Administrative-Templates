@@ -104,10 +104,6 @@ Write-Verbose "RootDir: $RootDir"
 Write-Verbose "ArtifactsDropTarget: $ArtifactsDropTarget"
 Write-Verbose "OutputNameWithExtension: $OutputNameWithExtension"
 
-$admxDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx")
-$admxExists = Test-Path $admxDirectory
-Write-Verbose "The admx files root exists: $admxExists"
-
 # get tool root locations
 $nugetPkgsConfig = [System.IO.Path]::Combine($RootDir, "packages.config")
 $nugetPkgsConfigXml = [xml](Get-Content $nugetPkgsConfig)
@@ -126,7 +122,7 @@ $zipExists = Test-Path $zipToolRoot
 Write-Verbose "The 7z tool root exists: $zipExists"
 
 $zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
-$directoryOfFilesToZip = [System.IO.Path]::Combine($ArtifactsDir, "admx", "*.*")
+$directoryOfFilesToZip = [System.IO.Path]::Combine($RootDir, "settingFiles" "admx", "*.*")
 $zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
 $zipArgs = Get-ZipArgs $directoryOfFilesToZip $zipFileToDropInArtifactsDirectory
 
