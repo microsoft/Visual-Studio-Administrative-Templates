@@ -147,7 +147,7 @@ if ($zipRun.ExitCode -ne 0)
 # Replace the %root% token with the location of the ADMXInstaller.exe in box_manifest.xml
 $boxManifestSource = [System.IO.Path]::Combine($RootDir, "build", "ADMXExtractor", "box_manifest.xml")
 $manifestContentXml = [xml](Get-Content $boxManifestSource)
-Set-RootForExecuteFile $manifestContentXml $ArtifactsDir
+# Set-RootForExecuteFile $manifestContentXml $ArtifactsDir
 
 # copy the box_manifest.xml to $ArtifactsDir
 $boxManifestTarget = [System.IO.Path]::Combine($ArtifactsDir, "box_manifest.xml")
