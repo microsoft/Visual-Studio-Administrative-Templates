@@ -72,7 +72,7 @@ steps:
     solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
     msbuildArguments: >
       /v:diag
-      /p:OutDir=$(Build.StagingDirectory)\
+      /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
@@ -80,7 +80,7 @@ steps:
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
 
 - task: MSBuild@1
   displayName: Sign packages

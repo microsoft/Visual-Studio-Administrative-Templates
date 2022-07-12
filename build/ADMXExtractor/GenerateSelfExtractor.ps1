@@ -121,7 +121,8 @@ Write-Verbose "7z tool root: $zipToolRoot"
 
 $zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
 $zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
-$zipArgs = Get-ZipArgs $ArtifactsDir $zipFileToDropInArtifactsDirectory
+$everythingInArtifactsDir = [System.IO.Path]::Combine($ArtifactsDir, "*.*")
+$zipArgs = Get-ZipArgs $everythingInArtifactsDir $zipFileToDropInArtifactsDirectory
 
 Write-Verbose "Calling Zip tool: $zipTool"
 Write-Verbose "Argument List: $zipArgs"
