@@ -113,10 +113,15 @@ $bootstrapperToolRoot = [System.IO.Path]::Combine($RootDir, "packages", $bootstr
 Write-Verbose "Bootstrapper externals tool root: $bootstrapperToolRoot"
 
 $exists = Test-Path $bootstrapperToolRoot
-Write-Verbose "The bootstrapper externals tool rool exists: $exists"
+Write-Verbose "The bootstrapper tool root exists: $exists"
 
 # zip up admx contents to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
-$zipTool = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z", "7z.exe")
+$zipToolRoot = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z")
+Write-Verbose "7z tool root: $zipToolRoot"
+$zipExists = Test-Path $zipToolRoot
+Write-Verbose "The 7z tool root exists: $zipExists"
+
+$zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
 $directoryOfFilesToZip = [System.IO.Path]::Combine($ArtifactsDir, "admx", "*.*")
 $zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
 $zipArgs = Get-ZipArgs $directoryOfFilesToZip $zipFileToDropInArtifactsDirectory
@@ -130,7 +135,7 @@ Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifacts
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
-    Write-Verbose 'Failed to zip the directory of admx files: $directoryOfFilesToZip.'
+    Write-Verbose "Failed to zip the directory of admx files: $directoryOfFilesToZip."
     Remove-Item -Recurse -Force $TempDirectory
     exit 1
 }
