@@ -50,7 +50,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$OutputNameWithExtension,
+    [string]$OutputNameWithExtension
 )
 
 # helper functions
