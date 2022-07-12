@@ -113,19 +113,19 @@ Write-Verbose "Bootstrapper externals tool root: $bootstrapperToolRoot"
 
 
 # Copy the admx directory to the artifacts directory
-$admxDirectory = [System.IO.Path]::Combine($RootDir, "settingFiles", "admx")
-$xcopyResult = xcopy $admxDirectory $ArtifactsDir
-if ($xcopyResult.ExitCode -ne 0)
+$admxDirectory = [System.IO.Path]::Combine($RootDir, "settingFiles")
+$robocopyResult = robocopy $admxDirectory $ArtifactsDir /e
+if ($robocopyResult.ExitCode -ne 0)
 {
     Write-Verbose "Failed to copy the $admxDirectory to $ArtifactsDir"
-    Write-Verbose "Exit code: $xcopyResult.ExitCode"
+    Write-Verbose "Exit code: $robocopyResult.ExitCode"
     Remove-Item -Recurse -Force $ArtifactsDir
     exit 1
 }
 Write-Verbose "XCopy $admxDirectory successful."
 
 
-# zip up admx contents to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
+# zip up contents of $ArtifactsDir to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
 $zipToolRoot = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z")
 Write-Verbose "7z tool root: $zipToolRoot"
 
