@@ -25,4 +25,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\*.*&quot; &quot;$(TargetDir)&quot;" />
+  </Target>
+
 </Project>
