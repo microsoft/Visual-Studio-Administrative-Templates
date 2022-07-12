@@ -73,7 +73,7 @@ steps:
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: build/ADMXExtractor/GenerateSelfExtractor.ps1
-    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension)
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
 
 - task: MSBuild@1
   displayName: Sign packages
