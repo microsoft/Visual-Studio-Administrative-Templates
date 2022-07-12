@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <BoxCreate>
-  <ExecuteFile>%root%\ADMXInstaller.exe</ExecuteFile>
+  <ExecuteFile>%root%\ADMXExtractor.exe</ExecuteFile>
   <Container>
     <Payload Compressed="true">admx.7z</Payload>
   </Container>
