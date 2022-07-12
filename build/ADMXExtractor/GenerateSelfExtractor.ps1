@@ -113,6 +113,9 @@ $bootstrapperToolRoot = [System.IO.Path]::Combine($RootDir, "packages", $bootstr
 
 Write-Verbose "Bootstrapper externals tool root: $bootstrapperToolRoot"
 
+$exists = Test-Path $bootstrapperToolRoot
+Write-Verbose "The bootstrapper externals tool rool exists: $exists"
+
 # zip up admx contents to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
 $zipTool = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z", "7z.exe")
 $directoryOfFilesToZip = [System.IO.Path]::Combine($ArtifactsDir, "admx", "*.*")
