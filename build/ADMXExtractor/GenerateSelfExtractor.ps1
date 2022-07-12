@@ -122,7 +122,7 @@ $zipExists = Test-Path $zipToolRoot
 Write-Verbose "The 7z tool root exists: $zipExists"
 
 $zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
-$directoryOfFilesToZip = [System.IO.Path]::Combine($RootDir, "settingFiles" "admx", "*.*")
+$directoryOfFilesToZip = [System.IO.Path]::Combine($RootDir, "settingFiles", "admx", "*.*")
 $zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
 $zipArgs = Get-ZipArgs $directoryOfFilesToZip $zipFileToDropInArtifactsDirectory
 
@@ -145,14 +145,13 @@ if ($zipRun.ExitCode -ne 0)
 # ADMXExtractor.exe.config
 # admx.7z
 
-# Copy box_manifest.xml from $RootDir\build\ADMXExtractor to $ArtifactsDir
+# Replace the %root% token with the location of the ADMXInstaller.exe in box_manifest.xml
 $boxManifestSource = [System.IO.Path]::Combine($RootDir, "build", "ADMXExtractor", "box_manifest.xml")
-$boxManifestTarget = [System.IO.Path]::Combine($ArtifactsDir, "box_manifest.xml")
 $manifestContentXml = [xml](Get-Content $boxManifestSource)
-
-# in box_manifest, replace %root% with the location of the ADMXInstaller.exe
-#  <ExecuteFile>%root%\ADMXInstaller.exe</ExecuteFile> ->  <ExecuteFile>$ArtifactsDir\ADMXInstaller.exe</ExecuteFile>
 Set-RootForExecuteFile $manifestContentXml $ArtifactsDir
+
+# copy the box_manifest.xml to $ArtifactsDir
+$boxManifestTarget = [System.IO.Path]::Combine($ArtifactsDir, "box_manifest.xml")
 $manifestContentXml.Save("$boxManifestTarget")
 
 # At this point in the script, ArtifactsDir has:
