@@ -109,22 +109,29 @@ $nugetPkgsConfig = [System.IO.Path]::Combine($RootDir, "packages.config")
 $nugetPkgsConfigXml = [xml](Get-Content $nugetPkgsConfig)
 $bootstrapperToolId = Get-Id "VS.Setup.BootstrapperExternals" $nugetPkgsConfigXml
 $bootstrapperToolRoot = [System.IO.Path]::Combine($RootDir, "packages", $bootstrapperToolId, "externals")
-
 Write-Verbose "Bootstrapper externals tool root: $bootstrapperToolRoot"
 
-$exists = Test-Path $bootstrapperToolRoot
-Write-Verbose "The bootstrapper tool root exists: $exists"
+
+# Copy the admx directory to the artifacts directory
+$admxDirectory = [System.IO.Path]::Combine($RootDir, "settingFiles", "admx")
+$xcopyResult = xcopy $admxDirectory $ArtifactsDir
+if ($xcopyResult.ExitCode -ne 0)
+{
+    Write-Verbose "Failed to copy the $admxDirectory to $ArtifactsDir"
+    Write-Verbose "Exit code: $xcopyResult.ExitCode"
+    Remove-Item -Recurse -Force $ArtifactsDir
+    exit 1
+}
+Write-Verbose "XCopy $admxDirectory successful."
+
 
 # zip up admx contents to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
 $zipToolRoot = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z")
 Write-Verbose "7z tool root: $zipToolRoot"
-$zipExists = Test-Path $zipToolRoot
-Write-Verbose "The 7z tool root exists: $zipExists"
 
 $zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
-$directoryOfFilesToZip = [System.IO.Path]::Combine($RootDir, "settingFiles", "admx", "*.*")
 $zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
-$zipArgs = Get-ZipArgs $directoryOfFilesToZip $zipFileToDropInArtifactsDirectory
+$zipArgs = Get-ZipArgs $ArtifactsDir $zipFileToDropInArtifactsDirectory
 
 Write-Verbose "Calling Zip tool: $zipTool"
 Write-Verbose "Argument List: $zipArgs"
