@@ -6,13 +6,7 @@
     <UseWPF>true</UseWPF>
     <AssemblyTitle>Visual Studio Admin Templates</AssemblyTitle>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudioEng.MicroBuild.Core" Version="1.0.0" />
-	<PackageReference Include="VS.Setup.BootstrapperExternals" Version="3.0.36-dev17-gc537e0d9" />
-  </ItemGroup>
- 
-	<ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
 
