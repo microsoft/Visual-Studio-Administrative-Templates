@@ -104,6 +104,10 @@ Write-Verbose "RootDir: $RootDir"
 Write-Verbose "ArtifactsDropTarget: $ArtifactsDropTarget"
 Write-Verbose "OutputNameWithExtension: $OutputNameWithExtension"
 
+$admxDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx")
+$admxExists = Test-Path $admxDirectory
+Write-Verbose "The admx files root exists: $admxExists"
+
 # get tool root locations
 $nugetPkgsConfig = [System.IO.Path]::Combine($RootDir, "packages.config")
 $nugetPkgsConfigXml = [xml](Get-Content $nugetPkgsConfig)
@@ -136,7 +140,7 @@ $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wai
 if ($zipRun.ExitCode -ne 0)
 {
     Write-Verbose "Failed to zip the directory of admx files: $directoryOfFilesToZip."
-    Remove-Item -Recurse -Force $TempDirectory
+    Remove-Item -Recurse -Force $ArtifactsDir
     exit 1
 }
 
