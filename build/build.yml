@@ -72,7 +72,7 @@ steps:
   displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
-    filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1"
+    filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
     arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
 
 - task: MSBuild@1
