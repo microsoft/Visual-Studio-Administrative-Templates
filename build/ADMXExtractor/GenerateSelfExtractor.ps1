@@ -94,8 +94,12 @@ Function Get-Id ($packageId, $xml) {
 # RootDir: D:\Visual-Studio-Administrative-Templates\   
 # ArtifactsDir: $(Build.StagingDirectory)\ADMXExtractor
 # RootTarget: $(Build.StagingDirectory)\drop
+$admxPath = [System.IO.Path]::Combine($ArtifactsDir, "admx")
+$testResult = Test-Path $admxPath
+Write-Verbose "admx path exists: $testResult"
 
 # At this point in the script, ArtifactsDir has:
+# admx\
 # ADMXExtractor.exe
 # ADMXExtractor.exe.config
 
@@ -110,20 +114,6 @@ $nugetPkgsConfigXml = [xml](Get-Content $nugetPkgsConfig)
 $bootstrapperToolId = Get-Id "VS.Setup.BootstrapperExternals" $nugetPkgsConfigXml
 $bootstrapperToolRoot = [System.IO.Path]::Combine($RootDir, "packages", $bootstrapperToolId, "externals")
 Write-Verbose "Bootstrapper externals tool root: $bootstrapperToolRoot"
-
-
-# Copy the admx directory to the artifacts directory
-$admxDirectory = [System.IO.Path]::Combine($RootDir, "settingFiles")
-$robocopyResult = robocopy $admxDirectory $ArtifactsDir /e
-if ($robocopyResult.ExitCode -ne 0)
-{
-    Write-Verbose "Failed to copy the $admxDirectory to $ArtifactsDir"
-    Write-Verbose "Exit code: $robocopyResult.ExitCode"
-    Remove-Item -Recurse -Force $ArtifactsDir
-    exit 1
-}
-Write-Verbose "XCopy $admxDirectory successful."
-
 
 # zip up contents of $ArtifactsDir to D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z
 $zipToolRoot = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z")
@@ -148,6 +138,7 @@ if ($zipRun.ExitCode -ne 0)
 }
 
 # At this point in the script, ArtifactsDir has:
+# admx\
 # ADMXExtractor.exe
 # ADMXExtractor.exe.config
 # admx.7z
@@ -162,6 +153,7 @@ $boxManifestTarget = [System.IO.Path]::Combine($ArtifactsDir, "box_manifest.xml"
 $manifestContentXml.Save("$boxManifestTarget")
 
 # At this point in the script, ArtifactsDir has:
+# admx\
 # ADMXExtractor.exe
 # ADMXExtractor.exe.config
 # admx.7z
