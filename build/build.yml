@@ -51,13 +51,20 @@ steps:
     workingDirectory: $(Build.SourcesDirectory)
 
 - task: NuGetCommand@2
-  displayName: NuGet restore ADMXExtractor.sln
+  displayName: NuGet restore packages.config
   inputs:
     restoreSolution: $(Build.SourcesDirectory)\packages.config
     restoreDirectory: $(Build.SourcesDirectory)\packages
     feedsToUse: config
     nugetConfigPath: $(Build.SourcesDirectory)\nuget.config    
     externalFeedCredentials: 'VSSetup-PubSuiteConnection'
+
+- task: NuGetCommand@2
+  displayName: NuGet restore ADMXExtractor.sln
+  inputs:
+    restoreSolution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
+    restoreDirectory: $(Build.SourcesDirectory)\packages
+    feedsToUse: config
 
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
