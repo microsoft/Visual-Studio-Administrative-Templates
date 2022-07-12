@@ -105,8 +105,7 @@ Write-Verbose "ArtifactsDropTarget: $ArtifactsDropTarget"
 Write-Verbose "OutputNameWithExtension: $OutputNameWithExtension"
 
 # get tool root locations
-$scriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition  # The root directory of this script
-$nugetPkgsConfig = [System.IO.Path]::Combine($scriptRoot, "packages.config")
+$nugetPkgsConfig = [System.IO.Path]::Combine($RootDir, "packages.config")
 $nugetPkgsConfigXml = [xml](Get-Content $nugetPkgsConfig)
 $bootstrapperToolId = Get-Id "VS.Setup.BootstrapperExternals" $nugetPkgsConfigXml
 $bootstrapperToolRoot = [System.IO.Path]::Combine($RootDir, "packages", $bootstrapperToolId, "externals")
