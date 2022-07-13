@@ -1,0 +1,61 @@
+﻿<Window x:Class="ADMXExtractor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Height="500"
+        Width="800"
+        MinWidth="650">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="#F1F1F1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="LicenseTermsTitle" 
+                   Grid.Row="0" 
+                   Padding="20,20,20,0"
+                   VerticalAlignment="Center" />
+        <ScrollViewer Grid.Row="1" 
+                      Padding="0, 20, 0, 0"
+                      BorderBrush="White"
+                      BorderThickness="5">
+            <TextBlock x:Name="LicenseTerms" 
+                         HorizontalAlignment="Left"
+                         TextWrapping="Wrap"
+                         Padding="20,0,20,0"/>
+        </ScrollViewer>
+        <Grid Margin="30, 0, 30, 30"
+              Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <CheckBox x:Name="LicenseTermsCheckBox" 
+                      Grid.Column="0" 
+                      Checked="LicenseTermsCheckBox_Checked"
+                      Unchecked="LicenseTermsCheckBox_Unchecked"
+                      VerticalAlignment="Center">
+                <Border 
+                    CornerRadius="0"
+                    BorderThickness="1" />
+            </CheckBox>
+            <Button x:Name="LicenseTermsContinueButton"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center" 
+                    Style="{StaticResource RegularButtonStyle}" 
+                    Click="LicenseTermsContinueButton_Click" />
+        </Grid>
+    </Grid>
+</Window>
