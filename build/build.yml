@@ -76,7 +76,7 @@ steps:
       dotnet tool install --tool-path . nbgv
       $version = .\nbgv get-version -v Version
       Write-Host "Setting Version to $version"
-              Write-Host "##vso[task.setvariable variable=Version;]$version"
+      Write-Host "##vso[task.setvariable variable=Version;]$version"
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
