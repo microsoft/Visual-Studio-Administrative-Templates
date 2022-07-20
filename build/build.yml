@@ -25,7 +25,7 @@ variables:
   publishDir: Release\net472\x86\publish\
   logFileName: MyWpfAppSigningLog.txt
   finalDrop: $(Build.StagingDirectory)\finalDrop
-  outputNameWithoutVersion: VisualStudioAdminTemplates
+  outputNameWithExtension: VisualStudioAdminTemplates.exe
   # Set in Pipeline SignType: test  
 
 steps:
@@ -37,7 +37,7 @@ steps:
   displayName: Install NuGet
   inputs:
     versionSpec: '5.8.1'
-    
+
 - task: NuGetAuthenticate@0
   displayName: "NuGet Authenticate"
   inputs:
@@ -65,14 +65,6 @@ steps:
     restoreDirectory: $(Build.SourcesDirectory)\packages
     feedsToUse: config
 
-- task: MSBuild@1
-  displayName: Build ADMXExtractor.csproj
-  inputs:
-    solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
-    msbuildArguments: >
-      /v:diag
-      /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
-
 - task: PowerShell@1  
   displayName: Install the Nerdbank Versioning tool and set the Version
   inputs:
@@ -83,19 +75,28 @@ steps:
       Write-Host "Setting Version to $version"
       Write-Host "##vso[task.setvariable variable=Version;]$version"
 
+- task: MSBuild@1
+  displayName: Build ADMXExtractor.csproj
+  inputs:
+    solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
+    msbuildArguments: >
+      /v:diag
+      /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
+      /p:Version=$(Version)
+
 - task: PowerShell@2
   name: GenerateSelfExtractor
   displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithoutVersion)_$(Version).exe -Verbose
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
 
 - task: MSBuild@1
   displayName: Sign packages
   inputs:
     solution: build\ADMXExtractor\ADMXExtractor.signproj
-    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithoutVersion)_$(Version).exe'
+    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithExtension).exe'
 
 - task: PublishBuildArtifacts@1
   displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
