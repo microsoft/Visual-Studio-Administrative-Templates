@@ -57,7 +57,6 @@ steps:
     restoreDirectory: $(Build.SourcesDirectory)\packages
     feedsToUse: config
     nugetConfigPath: $(Build.SourcesDirectory)\nuget.config    
-    externalFeedCredentials: 'VSSetup-PubSuiteConnection'
 
 - task: NuGetCommand@2
   displayName: NuGet restore ADMXExtractor.sln
@@ -66,6 +65,16 @@ steps:
     restoreDirectory: $(Build.SourcesDirectory)\packages
     feedsToUse: config
 
+- task: PowerShell@1  
+  displayName: Install the Nerdbank Versioning tool and set the Version
+  inputs:
+    scriptType: 'inlineScript'
+    inlineScript: |
+      dotnet tool install --tool-path . nbgv
+      $version = .\nbgv get-version -v Version
+      Write-Host "Setting Version to $version"
+      Write-Host "##vso[task.setvariable variable=Version;]$version"
+
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
   inputs:
@@ -73,6 +82,7 @@ steps:
     msbuildArguments: >
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
+      /p:Version=$(Version)
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
