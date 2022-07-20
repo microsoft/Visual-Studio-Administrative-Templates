@@ -17,6 +17,7 @@ trigger: none
 
 variables:
   TeamName: VSSetup
+  signType: Test
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
@@ -78,7 +79,7 @@ steps:
 - task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
   displayName: Install Signing Plugin
   inputs:
-    signType: ${{ parameters.SignType }}
+    signType: $(signType)
     zipSources: false
 
 - task: MSBuild@1
