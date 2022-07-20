@@ -25,7 +25,7 @@ variables:
   publishDir: Release\net472\x86\publish\
   logFileName: MyWpfAppSigningLog.txt
   finalDrop: $(Build.StagingDirectory)\finalDrop
-  outputNameWithExtension: VisualStudioAdminTemplates.exe
+  outputNameWithoutVersion: VisualStudioAdminTemplates
   # Set in Pipeline SignType: test  
 
 steps:
@@ -74,19 +74,27 @@ steps:
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
 
+- task: PowerShell@1  
+  displayName: Install the Nerdbank Versioning tool and set the Version
+  inputs:
+    scriptType: 'inlineScript'
+    inlineScript: |
+      dotnet tool install --tool-path . nbgv
+      $version = .\nbgv get-version -v Version
+
 - task: PowerShell@2
   name: GenerateSelfExtractor
   displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithoutVersion)_$(version).exe -Verbose
 
 - task: MSBuild@1
   displayName: Sign packages
   inputs:
     solution: build\ADMXExtractor\ADMXExtractor.signproj
-    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithExtension)'
+    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithoutVersion)_$(version).exe'
 
 - task: PublishBuildArtifacts@1
   displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
