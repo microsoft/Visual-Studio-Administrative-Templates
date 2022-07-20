@@ -75,6 +75,12 @@ steps:
       Write-Host "Setting Version to $version"
       Write-Host "##vso[task.setvariable variable=Version;]$version"
 
+- task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
+  displayName: Install Signing Plugin
+  inputs:
+    signType: Real
+    zipSources: false
+
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
   inputs:
@@ -83,6 +89,7 @@ steps:
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
       /p:Version=$(Version)
+      /p:FilesToSign=$(Build.StagingDirectory)\$(projectName)\ADMXExtractor.exe
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
