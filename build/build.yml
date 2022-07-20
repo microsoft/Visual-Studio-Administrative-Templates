@@ -17,7 +17,7 @@ trigger: none
 
 variables:
   TeamName: VSSetup
-  signType: Test
+  signType: Real
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
@@ -27,7 +27,6 @@ variables:
   logFileName: MyWpfAppSigningLog.txt
   finalDrop: $(Build.StagingDirectory)\finalDrop
   outputNameWithExtension: VisualStudioAdminTemplates.exe
-  # Set in Pipeline SignType: test  
 
 steps:
 - checkout: self
