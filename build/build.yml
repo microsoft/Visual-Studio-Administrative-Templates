@@ -92,4 +92,4 @@ steps:
   displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
   inputs:
     PathtoPublish: $(finalDrop)
-    ArtifactName: exe
+    ArtifactName: exe    
