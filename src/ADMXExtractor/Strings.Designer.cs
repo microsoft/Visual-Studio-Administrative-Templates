@@ -88,7 +88,7 @@ namespace ADMXExtractor {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click here to accept the Microsoft Software License Terms..
+        ///   Looks up a localized string similar to By checking here you accept the Microsoft Software License Terms..
         /// </summary>
         internal static string LicenseTermsCheckBoxText {
             get {

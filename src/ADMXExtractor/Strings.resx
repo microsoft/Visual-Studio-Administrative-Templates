@@ -128,7 +128,7 @@
     <value>Files extracted successfully.</value>
   </data>
   <data name="LicenseTermsCheckBoxText" xml:space="preserve">
-    <value>Click here to accept the Microsoft Software License Terms.</value>
+    <value>By checking here you accept the Microsoft Software License Terms.</value>
   </data>
   <data name="LicenseTermsContinueButtonText" xml:space="preserve">
     <value>Continue</value>
