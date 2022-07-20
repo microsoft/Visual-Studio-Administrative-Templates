@@ -75,6 +75,8 @@ steps:
     inlineScript: |
       dotnet tool install --tool-path . nbgv
       $version = .\nbgv get-version -v Version
+      Write-Host "Setting Version to $version"
+              Write-Host "##vso[task.setvariable variable=Version;]$version"
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
@@ -82,13 +84,13 @@ steps:
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithoutVersion)_$(version).exe -Verbose
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithoutVersion)_$(Version).exe -Verbose
 
 - task: MSBuild@1
   displayName: Sign packages
   inputs:
     solution: build\ADMXExtractor\ADMXExtractor.signproj
-    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithoutVersion)_$(version).exe'
+    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithoutVersion)_$(Version).exe'
 
 - task: PublishBuildArtifacts@1
   displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
