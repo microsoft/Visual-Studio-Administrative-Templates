@@ -37,6 +37,11 @@ steps:
   displayName: Install NuGet
   inputs:
     versionSpec: '5.8.1'
+    
+- task: NuGetAuthenticate@0
+  displayName: "NuGet Authenticate"
+  inputs:
+    nuGetServiceConnections: VSSetup-PubSuiteConnection
 
 - task: UseDotNet@2
   displayName: Install .NET Core SDK
