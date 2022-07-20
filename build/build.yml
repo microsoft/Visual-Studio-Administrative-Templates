@@ -1,17 +1,14 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT license.
 
-
 # Build
-# Sign with VSSign
 # Create Self-Extracting Exe
 # Sign Self-Extracting Exe
-
 
 # This continuous integration pipeline is triggered anytime a user pushes code to the repo.
 # This pipeline publishes the Wpf project, then signs the binaries according to the signing profiles.
 pool:
-  name: VSEngSS-MicroBuild2019-1ES
+  name: VSEngSS-MicroBuild2022-1ES
   demands:
   - msbuild
   - visualstudio
@@ -23,10 +20,12 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
-  projectDirectory: src\ADMXExtractor
-  projectFullPath: src\ADMXExtractor\ADMXExtractor.sln
+  projectDirectory: $(Build.SourcesDirectory)\src\ADMXExtractor
+  projectFullPath: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
   publishDir: Release\net472\x86\publish\
   logFileName: MyWpfAppSigningLog.txt
+  finalDrop: $(Build.StagingDirectory)\finalDrop
+  outputNameWithExtension: VisualStudioAdminTemplates.exe
   # Set in Pipeline SignType: test  
 
 steps:
@@ -34,9 +33,10 @@ steps:
   submodules: true
   persistCredentials: true
 
-- task: NuGetToolInstaller@1
+- task: NuGetToolInstaller@0
+  displayName: Install NuGet
   inputs:
-    versionSpec: 5.8.1
+    versionSpec: '5.8.1'
 
 - task: NuGetAuthenticate@0
   displayName: "NuGet Authenticate"
@@ -48,18 +48,48 @@ steps:
   inputs:
     packageType: sdk
     useGlobalJson: true
+    workingDirectory: $(Build.SourcesDirectory)
 
-- task: ms-vseng.MicroBuildtasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
-  displayName: Install Signing Plugin
+- task: NuGetCommand@2
+  displayName: NuGet restore packages.config
   inputs:
-    zipSources: false
-    feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
-    SignType: ${{ variables.SignType }}
+    restoreSolution: $(Build.SourcesDirectory)\packages.config
+    restoreDirectory: $(Build.SourcesDirectory)\packages
+    feedsToUse: config
+    nugetConfigPath: $(Build.SourcesDirectory)\nuget.config    
+    externalFeedCredentials: 'VSSetup-PubSuiteConnection'
+
+- task: NuGetCommand@2
+  displayName: NuGet restore ADMXExtractor.sln
+  inputs:
+    restoreSolution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
+    restoreDirectory: $(Build.SourcesDirectory)\packages
+    feedsToUse: config
 
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
   inputs:
-    solution: src\ADMXEXtractor\ADMXExtractor.csproj
+    solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
     msbuildArguments: >
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
+
+- task: PowerShell@2
+  name: GenerateSelfExtractor
+  displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.
+  inputs:
+    workingDirectory: $(Build.SourcesDirectory)
+    filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
+
+- task: MSBuild@1
+  displayName: Sign packages
+  inputs:
+    solution: build\ADMXExtractor\ADMXExtractor.signproj
+    msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithExtension)'
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
+  inputs:
+    PathtoPublish: $(finalDrop)
+    ArtifactName: exe    
