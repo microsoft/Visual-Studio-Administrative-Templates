@@ -25,6 +25,12 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <FilesToSign Include="$(TargetFileToSign)">
+        <Authenticode>Microsoft400</Authenticode>
+    </FilesToSign>
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\*.*&quot; &quot;$(TargetDir)&quot;" />
   </Target>

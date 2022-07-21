@@ -17,7 +17,7 @@ trigger: none
 
 variables:
   TeamName: VSSetup
-  signType: Real
+  signType: Test
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
@@ -89,7 +89,7 @@ steps:
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
       /p:Version=$(Version)
-      /p:FilesToSign=$(Build.StagingDirectory)\$(projectName)\ADMXExtractor.exe
+      /p:TargetFileToSign=$(Build.StagingDirectory)\$(projectName)\ADMXExtractor.exe
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
