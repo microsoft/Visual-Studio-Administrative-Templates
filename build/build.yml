@@ -15,9 +15,13 @@ pool:
 
 trigger: none
 
+parameters:
+- name: signType
+  type: string
+  default: test
+
 variables:
   TeamName: VSSetup
-  signType: Real
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
@@ -75,11 +79,13 @@ steps:
       Write-Host "Setting Version to $version"
       Write-Host "##vso[task.setvariable variable=Version;]$version"
 
-- task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
+- task: MicroBuildSigningPlugin@2
   displayName: Install Signing Plugin
   inputs:
-    signType: $(signType)
-    zipSources: false
+    signType: '${{ parameters.signType }}'
+    feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+  env:
+    TeamName: '$(TeamName)'
 
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
@@ -89,7 +95,6 @@ steps:
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
       /p:Version=$(Version)
-      /p:FilesToSign=$(Build.StagingDirectory)\$(projectName)\ADMXExtractor.exe
 
 - task: PowerShell@2
   name: GenerateSelfExtractor

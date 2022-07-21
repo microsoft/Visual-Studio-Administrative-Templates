@@ -25,6 +25,20 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <FilesToSign Include="$(OutDir)\ADMXExtractor.exe">
+      <Authenticode>Microsoft400</Authenticode> 
+      <StrongName>StrongName</StrongName> 
+    </FilesToSign> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudioEng.MicroBuild.Core" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\*.*&quot; &quot;$(TargetDir)&quot;" />
   </Target>
