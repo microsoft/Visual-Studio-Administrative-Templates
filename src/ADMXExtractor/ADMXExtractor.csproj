@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <FilesToSign Include="$(TargetFileToSign)">
+    <FilesToSign Include="$(OutDir)\ADMXExtractor.exe">
         <Authenticode>Microsoft400</Authenticode>
     </FilesToSign>
   </ItemGroup>

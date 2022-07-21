@@ -15,9 +15,13 @@ pool:
 
 trigger: none
 
+parameters:
+- name: signType
+  type: string
+  default: Test
+
 variables:
   TeamName: VSSetup
-  signType: Test
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   projectName: ADMXExtractor
@@ -78,7 +82,7 @@ steps:
 - task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
   displayName: Install Signing Plugin
   inputs:
-    signType: $(signType)
+    signType: ${{ parameters.signType }}
     zipSources: false
 
 - task: MSBuild@1
@@ -89,7 +93,6 @@ steps:
       /v:diag
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
       /p:Version=$(Version)
-      /p:TargetFileToSign=$(Build.StagingDirectory)\$(projectName)\ADMXExtractor.exe
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
