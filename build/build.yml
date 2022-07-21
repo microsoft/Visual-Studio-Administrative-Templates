@@ -18,7 +18,7 @@ trigger: none
 parameters:
 - name: signType
   type: string
-  default: Test
+  default: test
 
 variables:
   TeamName: VSSetup
@@ -79,11 +79,13 @@ steps:
       Write-Host "Setting Version to $version"
       Write-Host "##vso[task.setvariable variable=Version;]$version"
 
-- task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@3
+- task: MicroBuildSigningPlugin@2
   displayName: Install Signing Plugin
   inputs:
-    signType: ${{ parameters.signType }}
-    zipSources: false
+    signType: '${{ parameters.signType }}'
+    feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+  env:
+    TeamName: '$(TeamName)'
 
 - task: MSBuild@1
   displayName: Build ADMXExtractor.csproj
