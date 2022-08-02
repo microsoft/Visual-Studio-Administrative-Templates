@@ -230,11 +230,12 @@
             displayName="$(string.LiveShare_DomainName_DisplayName)" 
             explainText="$(string.LiveShare_DomainName_Explain)" 
             presentation="$(presentation.LiveShare_DomainName_PresentationId)"
-            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"> 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
+            valueName="DomainJoined"> 
             <parentCategory ref="LiveShareSettings" />
             <supportedOn ref="VisualStudio2019AndHigher" />
             <elements>
-                <text id="LiveShare_DomainName_TextBox" valueName="LiveShareDomainName" />   
+                <text id="LiveShare_DomainName_TextBox" valueName="DomainName" />   
             </elements>
         </policy>
         <policy 
@@ -269,7 +270,54 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        
+        <policy 
+            name="GuestApprovalRequired" 
+            class="Machine" 
+            displayName="$(string.LiveShare_GuestApprovalRequired_DisplayName)"
+            explainText="$(string.LiveShare_GuestApprovalRequired_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
+            valueName="GuestApprovalRequired">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy 
+            name="DisableSharedServer" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DisableSharedServer_DisplayName)"
+            explainText="$(string.LiveShare_DisableSharedServer_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
+            valueName="DisableSharedServer">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy 
+            name="DisableReadWriteTerminal" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DisableReadWriteTerminal_DisplayName)"
+            explainText="$(string.LiveShare_DisableReadWriteTerminal_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
+            valueName="DisableReadWriteTerminal">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
         <!-- Privacy Settings -->
         <policy 
             name="TelemetryOptIn" 

@@ -80,11 +80,23 @@ If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not
 
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
-      <string id="LiveShare_DomainName_Explain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access.Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains.</string>
+      <string id="LiveShare_DomainName_Explain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access.Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. For example, set the domain name as "microsoft.com". Use ; to separate out multiple domains. 
+For more information, see: https://aka.ms/vsls-policies </string>
       <string id="LiveShare_DirectConnectionMode_DisplayName">Require direct connection</string>
-      <string id="LiveShare_DirectConnectionMode_Explain">Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.</string>
+      <string id="LiveShare_DirectConnectionMode_Explain">Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.
+For more information, see: https://aka.ms/vsls-policies</string>
       <string id="LiveShare_DisableAnonymousGuests_DisplayName">Disable anonymous guests</string>
-      <string id="LiveShare_DisableAnonymousGuests_Explain">Disallow anonymous guests from joining a session. We already have the “Live Share: Anonymous Guest Approval” setting, and so this policy is effectively just enforcing that to “reject”. </string>
+      <string id="LiveShare_DisableAnonymousGuests_Explain">Disallow anonymous guests from joining a session. We already have the “Live Share: Anonymous Guest Approval” setting, and so this policy is effectively just enforcing that to “reject”.
+For more information, see: https://aka.ms/vsls-policies </string>
+      <string id="LiveShare_GuestApprovalRequired_DisplayName">Require guest approval</string>
+      <string id="LiveShare_GuestApprovalRequired_Explain">Guest can join the session only after host approves. We already have the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.
+For more information, see: https://aka.ms/vsls-policies</string>
+      <string id="LiveShare_DisableSharedServer_DisplayName">Disable shared server</string>
+      <string id="LiveShare_DisableSharedServer_Explain">Prevent the host from being able to explicitly share a new server. The policy also enforces “Live Share: Auto Share Servers” setting to false.
+For more information, see: https://aka.ms/vsls-policies</string>
+      <string id="LiveShare_DisableReadWriteTerminal_DisplayName">Disable shared read write terminal</string>
+      <string id="LiveShare_DisableReadWriteTerminal_Explain">Prevent the host from being able to explicitly share a new writeable terminal.
+For more information, see: https://aka.ms/vsls-policies</string>
 
        <!-- Privacy -->
       <string id="TelemetryOptIn_DisplayName">Enable the Visual Studio Customer Experience Improvement Program</string>
