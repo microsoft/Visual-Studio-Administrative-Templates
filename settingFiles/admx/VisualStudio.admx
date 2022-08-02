@@ -126,7 +126,7 @@
         </policy>
         <policy 
             name="BackgroundDownloadDisabled" 
-            class="Both"
+            class="Machine"
             displayName="$(string.BackgroundDownloadDisabled_DisplayName)"
             explainText="$(string.BackgroundDownloadDisabled_Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
@@ -142,7 +142,7 @@
         </policy>
         <policy 
             name="SharedInstallationPath"
-            class="Both"
+            class="Machine"
             displayName="$(string.SharedInstallationPath_DisplayName)"
             explainText="$(string.SharedInstallationPath_Explain)"
             presentation="$(presentation.SharedInstallationPath_PresenationId)"
@@ -159,7 +159,7 @@
         </policy>
         <policy 
             name="KeepDownloadedPayloads" 
-            class="Both" 
+            class="Machine" 
             displayName="$(string.KeepDownloadedPayloads_DisplayName)" 
             explainText="$(string.KeepDownloadedPayloads_Explain)" 
             key="Software\Policies\Microsoft\VisualStudio\Setup" 
@@ -175,7 +175,7 @@
         </policy>
         <policy 
             name="AdministratorUpdatesEnabled" 
-            class="Both" 
+            class="Machine" 
             displayName="$(string.AdministratorUpdatesEnabled_DisplayName)" 
             explainText="$(string.AdministratorUpdatesEnabled_Explain)" 
             key="Software\Policies\Microsoft\VisualStudio\Setup" 
@@ -191,7 +191,7 @@
         </policy>
         <policy 
             name="AdministratorUpdatesOptOut" 
-            class="Both" 
+            class="Machine" 
             displayName="$(string.AdministratorUpdatesOptOut_DisplayName)" 
             explainText="$(string.AdministratorUpdatesOptOut_Explain)" 
             key="Software\Policies\Microsoft\VisualStudio\Setup" 
@@ -207,7 +207,7 @@
         </policy>
         <policy 
             name="UpdateConfigurationFile"
-            class="Both"
+            class="Machine"
             displayName="$(string.UpdateConfigurationFile_DisplayName)"
             explainText="$(string.UpdateConfigurationFile_Explain)"
             presentation="$(presentation.UpdateConfigurationFile_PresentationId)"
