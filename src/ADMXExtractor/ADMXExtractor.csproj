@@ -29,7 +29,10 @@
     <FilesToSign Include="$(OutDir)\ADMXExtractor.exe">
       <Authenticode>Microsoft400</Authenticode> 
       <StrongName>StrongName</StrongName> 
-    </FilesToSign> 
+    </FilesToSign>
+    <SignFilesDependsOn Include="GatherLocalizedOutputsForSigning">
+        <InProject>false</InProject>
+    </SignFilesDependsOn>
   </ItemGroup>
 
   <ItemGroup>
@@ -43,12 +46,21 @@
     <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\*.*&quot; &quot;$(TargetDir)&quot;" />
   </Target>
 
-    <ItemDefinitionGroup>
-        <FilesToLocalize Include="$(OutDir)\ADMXExtractor.exe">
-            <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\ADMXExtractor.lcl</TranslationFile>
-            <Languages>$(VS)</Languages>
-            <ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
-        </FilesToLocalize>
-    </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <FilesToLocalize Include="$(OutDir)\ADMXExtractor.exe">
+    <TranslationFile>$(ProjectDir)..\..\loc\lcl\{Lang}\ADMXExtractor.lcl</TranslationFile>
+    <Languages>$(VS)</Languages>
+    <ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
+    </FilesToLocalize>
+  </ItemDefinitionGroup>
+
+  <Target Name="GatherLocalizedOutputsForSigning" Condition="'$(LocalizationEnabled)' == 'true'">
+    <ItemGroup>
+      <FilesToSign Include="$(OutDir)\localize\**\$(AssemblyName).resources.dll">
+        <Authenticode>Microsoft400</Authenticode>
+        <StrongName>StrongName</StrongName>
+      </FilesToSign>
+    </ItemGroup>
+  </Target>
 
 </Project>
