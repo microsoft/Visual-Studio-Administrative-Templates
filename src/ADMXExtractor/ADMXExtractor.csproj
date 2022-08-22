@@ -43,4 +43,12 @@
     <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\*.*&quot; &quot;$(TargetDir)&quot;" />
   </Target>
 
+    <ItemDefinitionGroup>
+        <FilesToLocalize Include="$(OutDir)\ADMXExtractor.exe">
+            <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\ADMXExtractor.lcl</TranslationFile>
+            <Languages>$(VS)</Languages>
+            <ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
+        </FilesToLocalize>
+    </ItemDefinitionGroup>
+
 </Project>
