@@ -17,6 +17,9 @@
 mono_crash.*
 
 # Build results
+[Bb]in/
+[Oo]bj/
+!**/LocProjects/[Bb]in/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -26,8 +29,6 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
-[Oo]bj/
 [Ll]og/
 [Ll]ogs/
 
