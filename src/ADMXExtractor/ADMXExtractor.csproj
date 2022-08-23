@@ -47,7 +47,7 @@
   </Target>
 
   <ItemDefinitionGroup>
-    <FilesToLocalize Include="$(OutDir)\ADMXExtractor.exe">
+    <FilesToLocalize>
     <TranslationFile>$(ProjectDir)..\..\loc\lcl\{Lang}\ADMXExtractor.lcl</TranslationFile>
     <Languages>$(VS)</Languages>
     <ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
