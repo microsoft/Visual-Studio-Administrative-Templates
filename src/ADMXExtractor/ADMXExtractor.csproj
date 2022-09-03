@@ -51,6 +51,10 @@
         <Languages>$(VS)</Languages>
 		<ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
 	</FilesToLocalize>
+	<FilesToLocalize Include="$(OutDir)\admx\{Lang}\VisualStudio.adml">
+        <Languages>$(VS)</Languages>
+		<ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
+	</FilesToLocalize>
   </ItemDefinitionGroup>
 
   <Target Name="GatherLocalizedOutputsForSigning" Condition="'$(LocalizationEnabled)' == 'true'">
