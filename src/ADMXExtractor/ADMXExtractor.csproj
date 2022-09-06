@@ -43,7 +43,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\*.*&quot; &quot;$(TargetDir)&quot;" />
+    <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\admx\*.*&quot; &quot;$(TargetDir)&quot;" />
   </Target>
 
   <ItemDefinitionGroup>
