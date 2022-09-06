@@ -120,7 +120,7 @@ namespace ADMXExtractor
             foreach (FileInfo file in dir.GetFiles())
             {
                 string targetFilePath = Path.Combine(destinationDir, file.Name);
-                file.CopyTo(targetFilePath, overwrite: true);
+                file.CopyTo(targetFilePath);
             }
 
             // If recursive and copying subdirectories, recursively call this method
