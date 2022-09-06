@@ -43,6 +43,7 @@
 	<FilesToLocalize Include="$(OutDir)\ADMXExtractor.exe">
 	  <Languages>$(VS)</Languages>
 	  <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\ADMXExtractor.exe.lcl</TranslationFile>
+     <SettingsFile>$(LSBuildRoot)\MCP_excludeBaml.lss</SettingsFile>
 	</FilesToLocalize>
   </ItemGroup>
 
