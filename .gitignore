@@ -19,7 +19,6 @@ mono_crash.*
 # Build results
 [Bb]in/
 [Oo]bj/
-!**/LocProjects/[Bb]in/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
