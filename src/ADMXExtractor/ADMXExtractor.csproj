@@ -47,11 +47,7 @@
   </Target>
 
   <ItemDefinitionGroup>
-    <FilesToLocalize Include="$(OutDir)\ADMXExtractor.exe">
-        <Languages>$(VS)</Languages>
-		<ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
-	</FilesToLocalize>
-	<FilesToLocalize Include="$(OutDir)\admx\{Lang}\VisualStudio.adml">
+    <FilesToLocalize>
         <Languages>$(VS)</Languages>
 		<ProjectFile>$(MSBuildProjectFullPath)</ProjectFile>
 	</FilesToLocalize>
@@ -59,7 +55,7 @@
 
   <Target Name="GatherLocalizedOutputsForSigning" Condition="'$(LocalizationEnabled)' == 'true'">
     <ItemGroup>
-      <FilesToSign Include="$(OutDir)\localize\**\ADMXExtractor.exe">
+      <FilesToSign Include="$(OutDir)\Localize\**\ADMXExtractor.exe">
         <Authenticode>Microsoft400</Authenticode>
         <StrongName>StrongName</StrongName>
       </FilesToSign>
