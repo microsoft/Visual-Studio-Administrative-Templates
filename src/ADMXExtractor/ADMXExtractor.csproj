@@ -45,7 +45,7 @@
 	  <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\ADMXExtractor.exe.lcl</TranslationFile>
      <SettingsFile>$(LSBuildRoot)\MCP_excludeBaml.lss</SettingsFile>
 	</FilesToLocalize>
-	<FilesToLocalize Include="$(OutDir)\en-US\VisualStudio.adml">
+	<FilesToLocalize Include="$(OutDir)\admx\en-US\VisualStudio.adml">
 	  <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\VisualStudio.adml.lcl</TranslationFile>
 	  <SettingsFile>..\..\P210IncTermNoResId.lss</SettingsFile>
 	</FilesToLocalize>
