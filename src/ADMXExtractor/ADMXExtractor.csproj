@@ -47,7 +47,7 @@
 	</FilesToLocalize>
 	<FilesToLocalize Include="$(OutDir)\admx\en-US\VisualStudio.adml">
 	  <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\VisualStudio.adml.lcl</TranslationFile>
-	  <SettingsFile>$(LSBuildRoot)\P210IncTermNoResId.lss</SettingsFile>
+	  <SettingsFile>..\..\P210IncTermNoResId.lss</SettingsFile>
 	</FilesToLocalize>
   </ItemGroup>
 
