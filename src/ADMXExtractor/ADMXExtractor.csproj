@@ -51,7 +51,7 @@
 	</FilesToLocalize>
   </ItemGroup>
 
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\admx\*.*&quot; &quot;$(TargetDir)&quot;" />
   </Target>
 
