@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LCX SchemaVersion="6.0" Name="D:\a\_work\1\a\ADMXExtractor\ADMXExtractor.exe" PsrId="211" SrcCul="en-US" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx" TgtCul="zh-CN">
+<LCX SchemaVersion="6.0" Name="D:\a\_work\1\a\ADMXExtractor\ADMXExtractor.exe" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="zh-CN" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
   <OwnedComments>
     <Cmt Name="Dev" />
     <Cmt Name="LcxAdmin" />
@@ -12,45 +12,63 @@
       <Item ItemId=";BrowseForFolderDescriptionText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Select a folder to store the extracted files]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[选择一个文件夹以存储提取的文件]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";FileExtractionFailure" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to extract files. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[无法提取文件。{0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="RCCX"><![CDATA[{0} The exception message]]></Cmt>
-        </Cmts>
       </Item>
       <Item ItemId=";FileExtractionSuccess" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Files extracted successfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[已成功提取文件。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsCheckBoxText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[By checking here you accept the Microsoft Software License Terms.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在此处打勾即表示你接受 Microsoft 软件许可条款。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsContinueButtonText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Continue]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[继续]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[MIT License]D;]A;]D;]A;Copyright (c) Microsoft Corporation.]D;]A;]D;]A;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:]D;]A;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.]D;]A;]D;]A;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[MIT 许可]D;]A;]D;]A;版权所有(C) Microsoft Corporation。]D;]A;]D;]A;特此免费授予获得此软件副本和相关文档文件(“软件”)的任何人员无限制处理软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、分许可和/或销售软件副本，以及允许其他配备该软件的人员如此操作，需符合以下条件:]D;]A;软件的所有副本或绝大部分都必须包含以上版权声明和本许可声明。]D;]A;]D;]A;此软件按“原样”提供，无任何明示或暗示的保证，包括但不限于有关适销性、针对特定目的的适用性和不侵权的保证。任何情况下，作者或版权所有者都不应承担任何索赔、损害赔偿或其他责任，无论是因软件或使用或其他软件处理引起的或与其相关的合同行为、侵权行为或其他行为。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsTitle" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Please accept the Microsoft Software License Terms in order to continue the installation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[请接受 Microsoft 软件许可条款以继续安装。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -79,12 +97,18 @@
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[ADMXExtractor]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ADMXExtractor]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[Visual Studio Admin Templates]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 管理模板]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -97,6 +121,9 @@
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[ ]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ ]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -109,6 +136,9 @@
     <Item ItemId=";ProductName" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[ADMXExtractor]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ADMXExtractor]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
