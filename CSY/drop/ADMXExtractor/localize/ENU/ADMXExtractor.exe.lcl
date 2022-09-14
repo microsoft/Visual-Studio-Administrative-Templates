@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LCX SchemaVersion="6.0" Name="D:\a\_work\1\a\ADMXExtractor\ADMXExtractor.exe" PsrId="211" SrcCul="en-US" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx" TgtCul="cs-CZ">
+<LCX SchemaVersion="6.0" Name="D:\a\_work\1\a\ADMXExtractor\ADMXExtractor.exe" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="cs-CZ" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
   <OwnedComments>
     <Cmt Name="Dev" />
     <Cmt Name="LcxAdmin" />
@@ -12,45 +12,63 @@
       <Item ItemId=";BrowseForFolderDescriptionText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Select a folder to store the extracted files]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Vyberte složku pro uložení extrahovaných souborů.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";FileExtractionFailure" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to extract files. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Extrahování souborů se nezdařilo. {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="RCCX"><![CDATA[{0} The exception message]]></Cmt>
-        </Cmts>
       </Item>
       <Item ItemId=";FileExtractionSuccess" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Files extracted successfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Soubory byly úspěšně extrahovány.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsCheckBoxText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[By checking here you accept the Microsoft Software License Terms.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zaškrtnutím tohoto políčka přijmete Licenční podmínky pro software společnosti Microsoft.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsContinueButtonText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Continue]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pokračovat]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsText" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[MIT License]D;]A;]D;]A;Copyright (c) Microsoft Corporation.]D;]A;]D;]A;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:]D;]A;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.]D;]A;]D;]A;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Licence MIT]D;]A;]D;]A;autorská práva (c) Microsoft Corporation.]D;]A;]D;]A;Svolení je tímto bezplatně uděleno každé osobě, která získá kopii tohoto softwaru a přidružených souborů dokumentace (dále jen „software“), k obchodu se softwarem bez omezení, včetně neomezených práv k používání, kopírování, úpravám, slučování, publikování, distribuci, sublicencování a/nebo prodeji kopií softwaru, a umožnit osobám, kterým je software dodán, aby tak učinily za následujících podmínek:]D;]A;Výše uvedené oznámení o autorských právech a toto oznámení o oprávnění budou zahrnuty ve všech kopiích nebo podstatných částech softwaru.]D;]A;]D;]A;SOFTWARE JE POSKYTOVÁN „JAK STOJÍ A LEŽÍ“, BEZ ZÁRUKY JAKÉHOKOLI DRUHU, VÝSLOVNÉ NEBO PŘEDPOKLÁDANÉ, MIMO JINÉ VČETNĚ ZÁRUK PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL A NEPORUŠENÍ. AUTOŘI ANI DRŽITELÉ AUTORSKÝCH PRÁV NEBUDOU V ŽÁDNÉM PŘÍPADĚ ODPOVĚDNÍ ZA ŽÁDNÉ NÁROKY, ŠKODY NEBO JINOU ODPOVĚDNOST, AŤ UŽ V RÁMCI SMLUVNÍHO JEDNÁNÍ, OBČANSKOPRÁVNÍHO PRÁVA NEBO JINÉHO, VYPLÝVAJÍCÍHO ZE SOFTWARU NEBO V SOUVISLOSTI SE SOFTWAREM, POUŽITÍM NEBO JINÝM JEDNÁNÍM V SOFTWARU.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LicenseTermsTitle" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Please accept the Microsoft Software License Terms in order to continue the installation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pokud chcete pokračovat v instalaci, přijměte prosím Licenční podmínky pro software společnosti Microsoft.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -79,12 +97,18 @@
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[ADMXExtractor]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ADMXExtractor]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[Visual Studio Admin Templates]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Šablony pro správu Visual Studio]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -97,6 +121,9 @@
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[ ]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ ]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -109,6 +136,9 @@
     <Item ItemId=";ProductName" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[ADMXExtractor]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ADMXExtractor]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
