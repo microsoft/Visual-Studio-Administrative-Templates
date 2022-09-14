@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LCX SchemaVersion="6.0" Name="D:\a\_work\1\a\ADMXExtractor\admx\en-US\VisualStudio.adml" PsrId="210" SrcCul="en-US" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx" TgtCul="fr-FR">
+<LCX SchemaVersion="6.0" Name="D:\a\_work\1\a\ADMXExtractor\admx\en-US\VisualStudio.adml" PsrId="210" FileType="1" SrcCul="en-US" TgtCul="fr-FR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
   <OwnedComments>
     <Cmt Name="Dev" />
     <Cmt Name="LcxAdmin" />
@@ -10,8 +10,11 @@
     <Item ItemId="0;db1d179972e53013aae42d633d1187e2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Manage features for Visual Studio.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Gérez les fonctionnalités pour Visual Studio.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="3" />
+      <Disp Icon="Str" />
     </Item>
   </Item>
   <Item ItemId=";&lt;displayName&gt;" ItemType="0" PsrId="210" Leaf="false">
@@ -19,8 +22,11 @@
     <Item ItemId="0;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="1" />
+      <Disp Icon="Str" />
     </Item>
   </Item>
   <Item ItemId=";&lt;label&gt;" ItemType="0" PsrId="210" Leaf="false">
@@ -28,26 +34,38 @@
     <Item ItemId="0;2280369bd6832143d1f6ead2bdcd82f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Shared Installation Path]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Chemin d’installation partagé]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="113" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;57ff1046d6cc906f2e64f61ec5d3178f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Package Manifest and Payload Cache Path]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Chemin du manifeste du package et du cache de charge utile]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="111" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;9719e6c57435c01cd14df874b0c5cff2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enter Domain Name:]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Entrez un nom de domaine :]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="117" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;a2b8da9a3a6ca25fc99db68f2153dbb0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Custom Path to the Update Config]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Chemin personnalisé de la configuration de mise à jour]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="115" />
+      <Disp Icon="Str" />
     </Item>
   </Item>
   <Item ItemId=";&lt;string&gt;" ItemType="0" PsrId="210" Leaf="false">
@@ -55,320 +73,479 @@
     <Item ItemId="0;000878d8f1c78b3da50de0399e9192d6" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Feedback Settings]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Paramètres de commentaires]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="9" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="23" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;11e476b46162b25fc34ad038749a5874" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/DisableOrMovePackageCache]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Conserver les charges utiles de package même après leur installation. Vous pouvez modifier la valeur à tout moment. La désactivation de la stratégie supprime toutes les charges utiles de package mises en cache pour l’instance que vous réparez ou modifiez.]D;]A;]D;]A;Activé par défaut.]D;]A;]D;]A;Pour plus d’informations, consultez : https://aka.ms/DisableOrMovePackageCache]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="65" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;14604687108de1699b4b718cfece0fc0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable IntelliCode custom model training]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver l’entraînement du modèle personnalisé IntelliCode]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="107" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;1d4ef9e2c93d10044b07965157003bfd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Apply administrator updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Appliquer les mises à jour de l’administrateur]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="67" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;39f574e169f0b463191ba87c81554eb1" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. For example, set the domain name as "microsoft.com". Use ; to separate out multiple domains. ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Empêche les utilisateurs de partager leur session avec des invités qui ne font pas partie de leur entreprise ou d’une autre entreprise à laquelle l’accès a été accordé. Les utilisateurs doivent être connectés à l’aide de leur adresse e-mail d’entreprise pour accéder à Live Share. Si cette stratégie est désactivée, tous les utilisateurs de n’importe quelle organisation peuvent accéder à une session de Live Share partagée. Par exemple, définissez le nom de domaine comme « microsoft.com ». Utiliser ; pour séparer plusieurs domaines. ]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies ]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="81" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;3b60c88dda132252ba13d5b5c78d3859" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the send-a-smile feature]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver la fonctionnalité Envoyer un sourire]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="39" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;3e666a1507d3cb66740884345fef3fc9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[At least Visual Studio 2022, Enterprise and Professional only]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Au moins Visual Studio 2022, Entreprise et Professionnel uniquement]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="37" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;40013f00ef65edfcc1923d68f9024c06" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Allow only company domain accounts]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Autoriser uniquement les comptes de domaine d’entreprise]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="79" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;4687c56b16e89941944bcb1a360db3b0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Package manifest and payload cache path]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Chemin du manifeste du package et du cache de charge utile]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="51" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;4701a44e7e21ab9d21f4fc2881fe098a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2017 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2017 et versions ultérieures.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="27" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;4c1073eed371baffaef1c064a8a32384" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable downloading updates automatically]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver le téléchargement automatique des mises à jour]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="55" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;4dd62e46e6949588d3cf6c32986a855b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting will automatically remove all components from the Visual Studio installation that have transitioned out of support.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Ce paramètre supprime automatiquement tous les composants de l’installation de Visual Studio qui n’ont plus été pris en charge.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="49" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;4e19a8faddd9972bf914aa1d707daed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.1 et versions ultérieures.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="33" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;56771d386132b34eaf3cf7f1bf816e6e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The custom file path to the update configuration file used for configuring Administrative Updates. For more information, see https://aka.ms/MethodsForConfiguringAdminUpdates.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Chemin d’accès au fichier de configuration de mise à jour utilisé pour la configuration des Mises à jour d’administration. Pour plus d’informations, consultez https://aka.ms/MethodsForConfiguringAdminUpdates.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="77" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;59df68ac84fb4973f911f878bb936f8f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disables send-a-smile's screenshot capability]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactive la fonctionnalité d’envoi de capture d’écran d’un sourire]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="43" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;658b057c70d78afbfebb2685ffbd4433" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[L’invité ne peut rejoindre la session qu’après l’approbation de l’hôte. Live Share a déjà le paramètre « Live Share : Approbation de l’invité requise ». Cette stratégie applique donc simplement la valeur « true ».]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="93" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;6b6d10ad14cdd6eee27c4b5e77925d28" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable shared server]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver le serveur partagé]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="95" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;71657810a546b506f825af026994aad1" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable shared read write terminal]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver le terminal d’écriture en lecture partagée]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="99" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;758aafc2e14f4bdf2e51dc3d0fd2f913" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Empêche les hôtes d’autoriser les invités basés sur un relais à rejoindre leur session. Live Share prend déjà en charge le paramètre « Live Share : Mode de connexion ». Cette stratégie l’applique donc simplement à « direct ». Si cette stratégie est désactivée, l’hôte peut autoriser les invités basés sur un relais à rejoindre leur session si l’hôte n’a pas configuré le paramètre « Live Share : Mode de connexion ».]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="85" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;7f58436e85e71c282ed642e6f071e5c4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Opt out of administrator updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Refuser les mises à jour de l’administrateur]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="71" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;80851ea2a80fda7e6a84360bd4cbafcc" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disallow anonymous guests from joining a session. Live Share already has the “Live Share: Anonymous Guest Approval” setting, and so this policy is effectively just enforcing that to “reject”.]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Ne pas autoriser les invités anonymes à rejoindre une session. Live Share a déjà le paramètre « Live Share : Approbation d’invité anonyme ». Cette stratégie ne fait donc que l’appliquer à « rejeter ».]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies ]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="89" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;80d8375cf087aa8da1c90feb35d4782b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the ability to train custom IntelliCode models for IntelliSense completions.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Cette stratégie désactive la possibilité d’entraîner des modèles IntelliCode personnalisés pour les complétions IntelliSense.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="109" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;88c210e95643d7701f385fa012f7d13c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Custom path to the update config]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Chemin personnalisé de la configuration de mise à jour]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="75" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;8af96efe6ca965830d6947b210101648" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Shared installation path]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Chemin d’installation partagé]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="59" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;8e42c1be143c4a1008899491a6cc9b16" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Cette stratégie permet d’envoyer le télémétrie Visual Studio à Microsoft dans le cadre du Programme d’amélioration des services Visual Studio. Pour plus d’informations, consultez : aka.ms/vs/admx/telemetry]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="105" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;960a1f72d579625804a381fc2993670e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. ]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Indique que l’utilisateur ne souhaite pas recevoir les mises à jour de l’administrateur pour Visual Studio. L’absence de la valeur de Registre, ou la valeur définie 0, signifie que l’utilisateur Visual Studio souhaite recevoir les mises à jour de l’administrateur pour Visual Studio. Ceci est destiné à l’utilisateur développeur (s’il dispose d’autorisations d’administrateur sur l’ordinateur client). Pour plus d’informations, voir  Application des mises à jour de l’administrateur. Si AdministratorUpdatesOptOut a la valeur 1 mais que la valeur de Registre AdministratorUpdatesEnabled de l’utilisateur est activée, AdministratorUpdatesOptOut est respecté. ]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="73" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;98049d7c4a63b19eaf25a64a734dd3c6" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new writeable terminal.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Empêche l’hôte de partager explicitement un nouveau terminal inscriptible.]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="101" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;983fe158a314d776c09d8685e00c6000" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Require guest approval]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Imposer l'approbation des invités]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="91" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;98e4c734144aca150bda5acb1220c97f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable anonymous guests]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver les invités anonymes]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="87" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;a19858482b4d221ba2c3116958070240" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Remove out-of-support components]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Supprimer les composants non pris en charge]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="47" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Paramètres de confidentialité]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="15" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;a9f2b276f0b02ac8122d7caf104bc8c5" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Keep package payloads after installation]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Conserver les charges utiles de package après l’installation]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="63" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;af5b35d723010e0820497ba7b1d3b400" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see https://aka.ms/DisableOrMovePackageCache]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Répertoire dans lequel sont stockés les manifestes de package et, éventuellement, les charges utiles .]D;]A;]D;]A;le Visual Studio Installer applique une limite de 50 caractères pour le chemin d’accès.]D;]A;]D;]A;Pour plus d’informations, consultez https://aka.ms/DisableOrMovePackageCache]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="53" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;b47c6abc3cdf031a964ff7bf238e39d3" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Install and Update Settings]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Installer et mettre à jour les paramètres]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="11" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;b518c79d44886d450fe1212e4fbfb933" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The directory where some packages shared across versions of instances of Visual Studio are installed. You can change the value anytime, but it will only affect future installs. Any products already installed to the old location must not be moved or they might not function correctly.]D;]A;]D;]A;The Visual Studio Installer enforces a 150 character limit for the path.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Répertoire dans lequel certains packages partagés entre les versions des instances de Visual Studio sont installés. Vous pouvez modifier la valeur à tout moment, mais elle n’affectera que les prochaines installations. Les produits déjà installés à l’ancien emplacement ne doivent pas être déplacés ou ils risquent de ne pas fonctionner correctement.]D;]A;]D;]A;Le Visual Studio Installer applique une limite de 150 caractères pour le chemin d’accès.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="61" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;b8a926ce02df10019139489f5b25391a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the Visual Studio send-a-smile feature.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Cette stratégie désactive la fonctionnalité Visual Studio envoyer un sourire.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="41" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;c29fd413fba24acdfd8d512348effc18" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new server. The policy also enforces “Live Share: Auto Share Servers” setting to false.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Empêche l’hôte de partager explicitement un nouveau serveur. La stratégie applique également le paramètre « Live Share : Serveurs de partage automatique » sur false.]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="97" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;c999dfa0952915b1029c2977f33a0ebb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Empêcher le programme d’installation de télécharger automatiquement les mises à jour pour tous les produits Visual Studio installés. Vous pouvez modifier la valeur à tout moment.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="57" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;d26a830f46bf69deb5c6f37803e33370" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Require direct connection]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Exiger une connexion directe]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="83" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;d3cacc3fdaa4f137b064ac5f504fc132" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2017]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2017]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="17" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;e5ff5d3af4098733450b4e3802f5d68b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Live Share Settings]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Paramètres de Live Share]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="13" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;e7390d38d5b93bc9f31da8a2720d68f9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Allows administrator updates to be applied to the client computer. If this value is missing or is set to 0, administrator updates will be blocked. This value is for administrative use.]D;]A;]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]D;]A;]D;]A;If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not, AdministratorUpdatesEnabled is respected.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Autorise l’application des mises à jour de l’administrateur à l’ordinateur client. Si cette valeur est manquante ou définie sur 0, les mises à jour de l’administrateur sont bloquées. Cette valeur est destinée à une utilisation administrative.]D;]A;]D;]A;Pour plus d’informations, consultez https://aka.ms/EnableAdminUpdates.]D;]A;]D;]A;Si AdministratorUpdatesEnabled est désactivé, contrairement à AdministratorUpdatesOptOut, AdministratorUpdatesEnabled est respecté.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="69" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Cette stratégie désactive la fonctionnalité de capture d’écran dans la fonctionnalité Envoyer un sourire.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="45" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="0;fb72c001a97c5fb056b627687284b1db" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enable the Visual Studio Customer Experience Improvement Program]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Activer le Programme d’amélioration des services Visual Studio]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="103" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="1;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="25" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="1;4701a44e7e21ab9d21f4fc2881fe098a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2019 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2019 et versions ultérieures.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="29" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="1;4e19a8faddd9972bf914aa1d707daed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.4 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.4 et versions ultérieures.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="35" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="1;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="5" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="1;d3cacc3fdaa4f137b064ac5f504fc132" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2019]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2019]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="19" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="2;4701a44e7e21ab9d21f4fc2881fe098a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022 et versions ultérieures.]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="31" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="2;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="7" />
+      <Disp Icon="Str" />
     </Item>
     <Item ItemId="2;d3cacc3fdaa4f137b064ac5f504fc132" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022]]></Val>
+        </Tgt>
       </Str>
-      <Disp Icon="Str" Order="21" />
+      <Disp Icon="Str" />
     </Item>
   </Item>
 </LCX>
