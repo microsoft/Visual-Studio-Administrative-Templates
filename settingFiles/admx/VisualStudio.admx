@@ -221,7 +221,23 @@
                 <!--Text is limited to 1023 chars by admx -->
                 <text id="UpdateConfigurationFile_TextBox" valueName="UpdateConfigurationFile" expandable="true"/>
             </elements>
-        </policy>   
+        </policy>
+        <policy 
+            name="DisableRollback" 
+            class="Machine" 
+            displayName="$(string.DisableRollback_DisplayName)" 
+            explainText="$(string.DisableRollback_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="DisableRollback">
+            <parentCategory ref="InstallandUpdateSettings"/>
+            <supportedOn ref="VisualStudio2022AndHigher"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
 
         <!-- LiveShare Settings -->
         <policy 
