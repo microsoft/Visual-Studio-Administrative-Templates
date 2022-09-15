@@ -81,7 +81,7 @@ If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not
       <string id="DisableRollback_DisplayName">Disable the ability to rollback or undo a Visual Studio update</string>
       <string id="DisableRollback_Explain">This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.
 
-If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recently applied security patch.
+If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.
 
 If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.
 
