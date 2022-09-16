@@ -85,7 +85,7 @@ If you enable this policy setting, users will be prevented from accessing the ro
 
 If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.
 
-This policy applies to all instances of Visual Studio 2022 or higher that is installed on the machine.
+This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.
 For more information, see: https://aka.ms/vs/rollback</string>
       
       <!-- LiveShare -->
