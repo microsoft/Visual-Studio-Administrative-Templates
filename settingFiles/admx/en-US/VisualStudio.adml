@@ -78,6 +78,16 @@ If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not
       <string id="UpdateConfigurationFile_DisplayName">Custom path to the update config</string>
       <string id="UpdateConfigurationFile_Explain">The custom file path to the update configuration file used for configuring Administrative Updates. For more information, see https://aka.ms/MethodsForConfiguringAdminUpdates.</string>
 
+      <string id="DisableRollback_DisplayName">Disable the ability to rollback or undo a Visual Studio update</string>
+      <string id="DisableRollback_Explain">This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.
+
+If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.
+
+If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.
+
+This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.
+For more information, see: https://aka.ms/vs/rollback</string>
+      
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
       <string id="LiveShare_DomainName_Explain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. For example, set the domain name as "microsoft.com". Use ; to separate out multiple domains. 
