@@ -13,12 +13,15 @@ pool:
   - msbuild
   - visualstudio
 
-trigger: none
+trigger:
+  branches:
+    include:
+    - main
 
 parameters:
 - name: signType
   type: string
-  default: test
+  default: real
 
 variables:
   TeamName: VSSetup
