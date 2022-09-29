@@ -349,6 +349,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Toto nastavení zásad určuje, jestli uživatel může vrátit aktualizaci a vrátit zpět sadu Visual Studio na dříve nainstalovanou verzi.]D;]A;]D;]A;Pokud toto nastavení zásad povolíte, uživatelé nebudou mít přístup k funkci vrácení zpět, což zabrání vrácení poslední aktualizace sady Visual Studio, která může obsahovat opravu zabezpečení.]D;]A;]D;]A;Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, uživatelé budou mít v sadě Visual Studio přístup k funkci vrácení zpět a budou moct vrátit aktualizaci a vrátit zpět instance sady Visual Studio na dříve nainstalovanou verzi. Poznámka: Výchozí nenakonfigurované nastavení umožňuje vrátit zpět aktualizaci sady Visual Studio.]D;]A;]D;]A;Tato zásada platí pro instance verzí Visual Studio 2022 a novější verze nainstalované v počítači.]D;]A;Další informace viz: https://aka.ms/vs/rollback]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -417,6 +426,15 @@
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Zabrání instalačnímu programu automaticky stahovat aktualizace pro všechny nainstalované Visual Studio produkty. Hodnotu můžete kdykoli změnit.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;cfc56b648258ac8e924b0830185dfa81" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable the ability to rollback or undo a Visual Studio update]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Zakázat možnost vrácení zpět nebo vrácení aktualizace sady Visual Studio]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

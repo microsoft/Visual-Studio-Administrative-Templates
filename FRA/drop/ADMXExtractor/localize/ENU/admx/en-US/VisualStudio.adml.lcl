@@ -349,6 +349,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Ce paramètre de stratégie détermine si l’utilisateur peut annuler une mise à jour et restaurer Visual Studio à la version précédemment installée.]D;]A;]D;]A;Si vous activez ce paramètre de stratégie, les utilisateurs ne peuvent pas accéder à la fonctionnalité de restauration, ce qui empêche Visual Studio de rétablir la dernière mise à jour qui peut contenir un correctif de sécurité.]D;]A;]D;]A;Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent accéder à la fonctionnalité de restauration dans Visual Studio et peuvent annuler une mise à jour et restaurer leurs instances de Visual Studio à la version précédemment installée. Remarque : le paramètre non configuré par défaut permet de restaurer une mise à jour Visual Studio.]D;]A;]D;]A;Cette stratégie s’applique aux instances de mise en production de Visual Studio 2022 ou version ultérieure installées sur l’ordinateur.]D;]A;Pour plus d’informations, consultez : https://aka.ms/vs/rollback]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -417,6 +426,15 @@
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Empêcher le programme d’installation de télécharger automatiquement les mises à jour pour tous les produits Visual Studio installés. Vous pouvez modifier la valeur à tout moment.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;cfc56b648258ac8e924b0830185dfa81" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable the ability to rollback or undo a Visual Studio update]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver la possibilité de restaurer ou d’annuler une mise à jour Visual Studio]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
