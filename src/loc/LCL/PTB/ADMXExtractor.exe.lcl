@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="D:\a\_work\1\a\ADMXExtractor\ADMXExtractor.exe" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="pt-BR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="RCCX" />
+  </OwnedComments>
+  <Item ItemId=";ADMXExtractor.Strings.resources" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";BrowseForFolderDescriptionText" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select a folder to store the extracted files]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Selecione uma pasta para armazenar os arquivos extraídos]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";FileExtractionFailure" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Failed to extract files. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Falha ao extrair arquivos. {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";FileExtractionSuccess" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Files extracted successfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Arquivos extraídos com êxito.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";LicenseTermsCheckBoxText" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[By checking here you accept the Microsoft Software License Terms.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ao marcar, você aceita os Termos de Licença para Software Microsoft.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";LicenseTermsContinueButtonText" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Continue]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Continuar]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";LicenseTermsText" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[MIT License]D;]A;]D;]A;Copyright (c) Microsoft Corporation.]D;]A;]D;]A;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:]D;]A;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.]D;]A;]D;]A;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Licença MIT]D;]A;]D;]A;Copyright (c) Microsoft Corporation.]D;]A;]D;]A;A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (o "Software"), para lidar com o Software sem restrições, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software e permitir que as pessoas a quem o Software é fornecido o façam, sujeito às seguintes condições:]D;]A;O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do Software.]D;]A;]D;]A;O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO MAS NÃO LIMITADO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. EM NENHUMA CIRCUNSTÂNCIA OS AUTORES OU DETENTORES DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, ATO ILÍCITO OU DE OUTRA FORMA, DECORRENTE, DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";LicenseTermsTitle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Please accept the Microsoft Software License Terms in order to continue the installation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Aceite os Termos de Licença para Software Microsoft para continuar a instalação.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+  </Item>
+  <Item ItemId=";ADMXExtractor.g.resources" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
+    <Item ItemId=";view/mainwindow.baml" ItemType="0" PsrId="211" Leaf="true">
+      <Bin BinId="3">
+        <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAABR2aWV3L21haW53aW5kb3cuYmFtbAsAAQAAAP////8BAAAAAAAAAAQBAAAAH1N5c3RlbS5Vbml0eVNlcmlhbGl6YXRpb25Ib2xkZXIDAAAABERhdGEJVW5pdHlUeXBlDEFzc2VtYmx5TmFtZQEAAQgGAgAAAB9TeXN0ZW0uSU8uVW5tYW5hZ2VkTWVtb3J5U3RyZWFtBAAAAAYDAAAAS21zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQsAAQAAAP////8BAAAAAAAAAA8BAAAAcwgAAAIMAAAATQBTAEIAQQBNAEwAAABgAAAAYAAAAGAAAQD/////ARwRAAANQURNWEV4dHJhY3Rvch0eAAAAABhBRE1YRXh0cmFjdG9yLk1haW5XaW5kb3cDAAAANQEAAAAJAAAAHFcBAFNQcmVzZW50YXRpb25Db3JlLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MzFiZjM4NTZhZDM2NGUzNRxcAgBYUHJlc2VudGF0aW9uRnJhbWV3b3JrLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MzFiZjM4NTZhZDM2NGUzNRxlAwBhU3lzdGVtLldpbmRvd3MuQ29udHJvbHMuUmliYm9uLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4ORxSBABOV2luZG93c0Jhc2UsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0zMWJmMzg1NmFkMzY0ZTM1FEYAOWh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd2luZngvMjAwNi94YW1sL3ByZXNlbnRhdGlvbgQAAQACAAMABAA1AgAAAAkAAAAcUgUATlN5c3RlbS5YYW1sLCBW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]]></Val>
+      </Bin>
+      <Disp Edtr="External" LocTbl="false" />
+    </Item>
+    <Item ItemId=";view/styles/buttonstyles.baml" ItemType="0" PsrId="211" Leaf="true">
+      <Bin BinId="3">
+        <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAAB12aWV3L3N0eWxlcy9idXR0b25zdHlsZXMuYmFtbAsAAQAAAP////8BAAAAAAAAAAQBAAAAH1N5c3RlbS5Vbml0eVNlcmlhbGl6YXRpb25Ib2xkZXIDAAAABERhdGEJVW5pdHlUeXBlDEFzc2VtYmx5TmFtZQEAAQgGAgAAAB9TeXN0ZW0uSU8uVW5tYW5hZ2VkTWVtb3J5U3RyZWFtBAAAAAYDAAAAS21zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQsAAQAAAP////8BAAAAAAAAAA8BAAAA9wwAAAIMAAAATQBTAEIAQQBNAEwAAABgAAAAYAAAAGAAAQD/////ARweAAAaUHJlc2VudGF0aW9uRnJhbWV3b3JrLkFlcm8bZ0pjbHItbmFtZXNwYWNlOk1pY3Jvc29mdC5XaW5kb3dzLlRoZW1lczthc3NlbWJseT1QcmVzZW50YXRpb25GcmFtZXdvcmsuQWVybxhNaWNyb3NvZnQuV2luZG93cy5UaGVtZXMAADUDAAAAFQAAABxXAQBTUHJlc2VudGF0aW9uQ29yZSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTMxYmYzODU2YWQzNjRlMzUcXAIAWFByZXNlbnRhdGlvbkZyYW1ld29yaywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTMxYmYzODU2YWQzNjRlMzUcZQMAYVN5c3RlbS5XaW5kb3dzLkNvbnRyb2xzLlJpYmJvbiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkcUgQATldpbmRvd3NCYXNlLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MzFiZjM4NTZhZDM2NGUzNRxSBQBOU3lzdGVtLlhhbWwsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5IBIAAA5CdXR0b25UZW1wbGF0ZR8RAACU/wAKVGFyZ2V0VHlwZR8aAQBK/QATU25hcHNUb0RldmljZVBpeGVscyAhAQAdQnV0dG9uRGlzYWJsZWRCYWNrZ3JvdW5kQnJ1c2gfDAIAvv0ABUNvbG9yIB0CABlCdXR0b25EaXNhYmxlZEJvcmRlckJydXNoICEDAB1CdXR0b25EaXNhYmxlZEZvcmVncm91bmRCcnVzaCAfBAAbQnV0dG9uTm9ybWFsQmFja2dyb3VuZEJydXNoIBsFABdCdXR0b25Ob3JtYWxCb3JkZXJCcnVzaCAfBgAbQnV0dG9uTm9ybWFsRm9yZWdyb3VuZEJydXNoICAHABxCdXR0b25Gb2N1c2VkQmFja2dyb3VuZEJydXNoIBwIABhCdXR0b25Gb2N1c2VkQm9yZGVyQnJ1c2ggIAkAHEJ1dHRvbkZvY3VzZWRGb3JlZ3JvdW5kQnJ1c2ggHgoAGkJ1dHRvbkhvdmVyQmFja2dyb3VuZEJydXNoIBoLABZCdXR0b25Ib3ZlckJvcmRlckJydXNoIB4MABpCdXR0b25Ib3ZlckZvcmVncm91bmRCcnVzaCAgDQAcQnV0dG9uUHJlc3NlZEJhY2tncm91bmRCcnVzaCAcDgAYQnV0dG9uUHJlc3NlZEJvcmRlckJydXNoICAPABxCdXR0b25QcmVzc2VkRm9yZWdyb3VuZEJydXNoIBoQABZSZWd1bGFyQnV0dG9uQmFzZVN0eWxlHxEDAJT9AApUYXJnZXRUeXBlHw8EANT9AAhQcm9wZXJ0eR8MBQDU/QAFVmFsdWUfDwYAlP0ACFRyaWdnZXJzHw8HAFD9AAhQcm9wZXJ0eR8MCABQ/QAFVmFsdWUgFhEAElJlZ3VsYXJCdXR0b25TdHlsZR8OCQCU/QAHQmFzZWRPbgP0/QA1AQAAABUAAAAURgA5aHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93aW5meC8yMDA2L3hhbWwvcHJlc2VudGF0aW9uBAABAAIAAwAEABQ6AXgsaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93aW5m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]]></Val>
+      </Bin>
+      <Disp Edtr="External" LocTbl="false" />
+    </Item>
+  </Item>
+  <Item ItemId=";Managed Resources" ItemType="0" PsrId="211" Leaf="true">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+  </Item>
+  <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
+    <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
+      <Str Cat="Text">
+        <Val><![CDATA[ADMXExtractor]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ADMXExtractor]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
+      <Str Cat="Text">
+        <Val><![CDATA[Visual Studio Admin Templates]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Modelos de Administração do Visual Studio]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
+      <Str Cat="Text" DevLk="true">
+        <Val><![CDATA[ADMXExtractor.exe]]></Val>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
+      <Str Cat="Text">
+        <Val><![CDATA[ ]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ ]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
+      <Str Cat="Text" DevLk="true">
+        <Val><![CDATA[ADMXExtractor.exe]]></Val>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId=";ProductName" ItemType="0" PsrId="211" Leaf="true">
+      <Str Cat="Text">
+        <Val><![CDATA[ADMXExtractor]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[ADMXExtractor]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+  </Item>
+  <Item ItemId=";Version" ItemType="8" PsrId="211" Leaf="true">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+  </Item>
+</LCX>
