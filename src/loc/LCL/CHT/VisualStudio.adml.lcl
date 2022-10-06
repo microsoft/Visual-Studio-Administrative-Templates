@@ -349,6 +349,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此原則設定會決定使用者是否可以恢復更新，並將 Visual Studio 復原至先前安裝的版本。]D;]A;]D;]A;如果啟用此原則設定，將防止使用者存取復原功能，這會防止 Visual Studio 復原可能包含安全性修補程式的最後一個更新。]D;]A;]D;]A;如果停用或不設定此原則設定，使用者將能夠在 Visual Studio 中存取復原功能，並能夠恢復更新，並將其 Visual Studio 執行個體復原至先前安裝的版本。注意: 預設未設定的設定可讓您擁有復原 Visual Studio 更新的能力。]D;]A;]D;]A;此原則適用於電腦上安裝的 Visual Studio 2022 或更新版本執行個體。]D;]A;如需詳細資訊，請參閱: https://aka.ms/vs/rollback]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -417,6 +426,15 @@
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[防止安裝程式為所有已安裝的 Visual Studio 產品自動下載更新。您隨時可以變更該值。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;cfc56b648258ac8e924b0830185dfa81" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable the ability to rollback or undo a Visual Studio update]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[停用復原或恢復 Visual Studio 更新的功能]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

@@ -349,6 +349,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책 설정은 사용자가 이전에 설치한 버전으로 Visual Studio를 업데이트하고 롤백을 실행 취소할 수 있는지를 결정합니다.]D;]A;]D;]A;이 정책 설정을 사용하면 사용자가 롤백 기능에 액세스할 수 없으므로 Visual Studio 보안 패치를 포함할 수 있는 마지막 업데이트를 되돌릴 수 없습니다.]D;]A;]D;]A;이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자는 Visual Studio 롤백 기능에 액세스할 수 있으며 업데이트를 실행 취소하고 Visual Studio 인스턴스를 이전에 설치한 버전으로 롤백할 수 있습니다. 참고: 구성되지 않은 기본 설정을 사용하면 Visual Studio 업데이트를 롤백할 수 있습니다.]D;]A;]D;]A;이 정책은 컴퓨터에 설치된 Visual Studio 2022 이상의 릴리스 인스턴스에 적용됩니다.]D;]A;자세한 내용은 다음을 참조하세요. https://aka.ms/vs/rollback]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -417,6 +426,15 @@
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[설치된 모든 Visual Studio 제품에 대한 업데이트를 자동으로 다운로드하지 못하도록 합니다. 언제든지 값을 변경할 수 있습니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;cfc56b648258ac8e924b0830185dfa81" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable the ability to rollback or undo a Visual Studio update]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 업데이트 롤백 또는 실행 취소 기능 사용 안 함]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
