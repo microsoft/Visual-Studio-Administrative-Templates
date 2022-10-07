@@ -45,14 +45,16 @@
 	  <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\ADMXExtractor.exe.lcl</TranslationFile>
 	  <SettingsFile>$(LSBuildRoot)\MCP_excludeBaml.lss</SettingsFile>
 	</FilesToLocalize>
-	<FilesToLocalize Include="$(OutDir)\admx\en-US\VisualStudio.adml">
+	<FilesToLocalize Include="$(OutDir)\admx\VisualStudio.adml">
 	  <TranslationFile>$(MSBuildThisFileDirectory)..\loc\lcl\{Lang}\VisualStudio.adml.lcl</TranslationFile>
 	  <SettingsFile>..\..\P210IncTermNoResId.lss</SettingsFile>
 	</FilesToLocalize>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-	<Exec Command="xcopy /d /s /i /y &quot;$(ProjectDir)..\..\settingFiles\*.*&quot; &quot;$(TargetDir)&quot;" />
-  </Target>
 
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy /d /i /y &quot;$(ProjectDir)..\..\settingFiles\admx\VisualStudio.admx&quot; &quot;$(TargetDir)\admx\&quot;" />
+		<Exec Command="xcopy /d /i /y &quot;$(ProjectDir)..\..\settingFiles\admx\en-US\VisualStudio.adml&quot; &quot;$(TargetDir)\admx\&quot;" />
+	</Target>
+	
 </Project>
