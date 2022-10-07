@@ -51,4 +51,10 @@
 	</FilesToLocalize>
   </ItemGroup>
 
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy /d /i /y &quot;$(ProjectDir)..\..\settingFiles\admx\VisualStudio.admx&quot; &quot;$(TargetDir)\admx\&quot;" />
+		<Exec Command="xcopy /d /i /y &quot;$(ProjectDir)..\..\settingFiles\admx\en-US\VisualStudio.adml&quot; &quot;$(TargetDir)\admx\&quot;" />
+	</Target>
+	
 </Project>
