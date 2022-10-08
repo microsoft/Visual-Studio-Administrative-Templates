@@ -37,7 +37,6 @@ $languageTable = [ordered]@{
     TRK="tr-tr";
 }
 
-$ArtifactsDir = "C:\Users\edskrod\OneDrive - Microsoft\Desktop\ADMXExtractor" 
 $exeFilesToCopy = @( "ADMXExtractor.exe", "ADMXExtractor.exe.config" )
 $visualStudioAdmx = "VisualStudio.admx"
 $visualStudioAdml = "VisualStudio.adml"

@@ -114,7 +114,6 @@ steps:
     filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
     arguments:  -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -Verbose
 
-
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)' 
