@@ -73,13 +73,16 @@ foreach ($key in $languageTable.Keys)
     New-Item -Path $path -ItemType Directory -Force
     Write-Verbose "Created path: $path"
 
-    # Copy the .adml files
+    # Copy the .adml files for all languages except ENU which is handled separately below.
     # $(Build.StagingDirectory)\AdmxExtractor\localize\{LanguageTable.Key}\admx\VisualStudio.adml
     # To$(IntermediateDrop)\admx\{LanguageTable.Value}\VisualSTudio.adml
-    $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, "admx", $visualStudioAdml)
-    $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $value, $visualStudioAdml)
-    Write-Verbose "Copying $visualStudioAdml from $source to $destination."
-    Copy-Item -Path $source -Destination $destination
+    if ($key -ne "ENU") 
+    {
+        $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, "admx", $visualStudioAdml)
+        $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $value, $visualStudioAdml)
+        Write-Verbose "Copying $visualStudioAdml from $source to $destination."
+        Copy-Item -Path $source -Destination $destination
+    }
 }
 
 # Copy the exe and config file to the intermediate drop to be staged for consumption by the boxtool.
