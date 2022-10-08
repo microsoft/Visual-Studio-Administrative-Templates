@@ -7,16 +7,22 @@
 
 .PARAMETER $ArtifactsDir
     The root artifact directory where the ADMXExtractor build was generated.
-    e.g. $ArtifactsDir = $(Build.StagingDirectory)\$(projectName)\ 
+    e.g. $ArtifactsDir = $(Build.StagingDirectory)\$(projectName)\
 
-
+.PARAMETER $IntermediateDropPath
+    The artifact directory where the ADMXExtractor build with localized files should be generated.
+    e.g. $ArtifactsDir = $(Build.StagingDirectory)\$(projectName)\intermediate
 #>
 
 [CmdletBinding()]
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$ArtifactsDir
+    [string]$ArtifactsDir,
+
+    [Parameter()]
+    [ValidateNotNullOrEmpty()]
+    [string]$IntermediateDropPath
 )
 
 # Map the Microbuild Language outputs to the OS CultureInfo codes.
@@ -25,7 +31,7 @@ $languageTable = [ordered]@{
     CHT="zh-hant";
     CSY="cs-cz";
     DEU="de-de";
-    ENU="en-us";
+    ENU="en-US";
     ESN="es-es";
     FRA="fr-fr";
     ITA="it-it";
@@ -41,7 +47,6 @@ $exeFilesToCopy = @( "ADMXExtractor.exe", "ADMXExtractor.exe.config" )
 $visualStudioAdmx = "VisualStudio.admx"
 $visualStudioAdml = "VisualStudio.adml"
 $ADMXExtractorResourcesFile = "ADMXExtractor.resources.dll"
-$intermediateDropPath = Join-Path -Path $ArtifactsDir -ChildPath "Intermediate"
 
 foreach ($key in $languageTable.Keys)
 {
@@ -49,7 +54,7 @@ foreach ($key in $languageTable.Keys)
     
     # Create each of the language folders in the IntermediateDrop folder.
     # $(IntermediateDrop)\{LanguageTable.Value}
-    $path = [System.IO.Path]::Combine($intermediateDropPath, $value)
+    $path = [System.IO.Path]::Combine($IntermediateDropPath, $value)
     New-Item -Path $path -ItemType Directory -Force
     Write-Output "Created path: $path"
 
@@ -64,7 +69,7 @@ foreach ($key in $languageTable.Keys)
 
     # Create each of the ADMX template language folders in Intermediate\admx to copy the .adml files.
     # $(IntermediateDrop)\admx\{LanguageTable.Value}
-    $path = [System.IO.Path]::Combine($intermediateDropPath, "admx", $value)
+    $path = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $value)
     New-Item -Path $path -ItemType Directory -Force
     Write-Output "Created path: $path"
 
@@ -72,7 +77,7 @@ foreach ($key in $languageTable.Keys)
     # $(Build.StagingDirectory)\AdmxExtractor\localize\{LanguageTable.Key}\admx\en-US\VisualStudio.adml
     # To$(IntermediateDrop)\admx\{LanguageTable.Value}\VisualSTudio.adml
     $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, "admx", "en-us", $visualStudioAdml)
-    $destination = [System.IO.Path]::Combine($intermediateDropPath, "admx", $value, $visualStudioAdml)
+    $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $value, $visualStudioAdml)
     Write-Output "Copying $visualStudioAdml from $source to $destination."
     Copy-Item -Path $source -Destination $destination
 
@@ -82,18 +87,18 @@ foreach ($key in $languageTable.Keys)
 foreach ($file in $exeFilesToCopy)
 {
     $source = [System.IO.Path]::Combine($ArtifactsDir, $file)
-    $destination = [System.IO.Path]::Combine($intermediateDropPath, $file)
+    $destination = [System.IO.Path]::Combine($IntermediateDropPath, $file)
     Write-Output "Copying $file from $source to $destination."
     Copy-Item -Path $source -Destination $destination
 }
 
 # Special handling to copy the en-us admx and adml files because they are not localized.
 $source = [System.IO.Path]::Combine($ArtifactsDir, "admx", $visualStudioAdmx)
-$destination = [System.IO.Path]::Combine($intermediateDropPath, "admx", $visualStudioAdmx)
+$destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $visualStudioAdmx)
 Write-Output "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination
 
 $source = [System.IO.Path]::Combine($ArtifactsDir, "admx", "en-us", $visualStudioAdml)
-$destination = [System.IO.Path]::Combine($intermediateDropPath, "admx", "en-us", $visualStudioAdml)
+$destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", "en-us", $visualStudioAdml)
 Write-Output "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination
