@@ -30,8 +30,8 @@ param(
 # the folder names used by the Group Policy editor in c:\Windows\GroupPolicy
 # Map the Microbuild Language outputs to the OS codes to store the resource files.
 $admxExtractorlanguageTable = [ordered]@{
-    CHS="cn";
-    CHT="zh";
+    CHS="zh-cn";
+    CHT="zh-tw";
     CSY="cs";
     DEU="de";
     ENU="en";
