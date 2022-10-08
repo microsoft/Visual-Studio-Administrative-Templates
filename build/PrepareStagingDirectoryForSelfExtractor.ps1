@@ -56,14 +56,14 @@ foreach ($key in $languageTable.Keys)
     # $(IntermediateDrop)\{LanguageTable.Value}
     $path = [System.IO.Path]::Combine($IntermediateDropPath, $value)
     New-Item -Path $path -ItemType Directory -Force
-    Write-Output "Created path: $path"
+    Write-Verbose "Created path: $path"
 
     # Copy the resource files from each of the build language folders to the intermediate drop
     # $source: $(Build.StagingDirectory)\AdmxExtractor\localize\{LanguageTable.Key}\ADMXExtractor.resources.dll
     # $destination: $(IntermediateDrop)\{LanguageTable.Value}\ADMXExtractor.resources.dll
     $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, $ADMXExtractorResourcesFile)
     $destination = [System.IO.Path]::Combine($path, $ADMXExtractorResourcesFile)
-    Write-Output "Copying $ADMXExtractorResourcesFile from $source to $destination."
+    Write-Verbose "Copying $ADMXExtractorResourcesFile from $source to $destination."
     Copy-Item -Path $source -Destination $destination
 
 
@@ -71,14 +71,14 @@ foreach ($key in $languageTable.Keys)
     # $(IntermediateDrop)\admx\{LanguageTable.Value}
     $path = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $value)
     New-Item -Path $path -ItemType Directory -Force
-    Write-Output "Created path: $path"
+    Write-Verbose "Created path: $path"
 
     # Copy the .adml files
     # $(Build.StagingDirectory)\AdmxExtractor\localize\{LanguageTable.Key}\admx\en-US\VisualStudio.adml
     # To$(IntermediateDrop)\admx\{LanguageTable.Value}\VisualSTudio.adml
-    $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, "admx", "en-us", $visualStudioAdml)
+    $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, "admx", "en-US", $visualStudioAdml)
     $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $value, $visualStudioAdml)
-    Write-Output "Copying $visualStudioAdml from $source to $destination."
+    Write-Verbose "Copying $visualStudioAdml from $source to $destination."
     Copy-Item -Path $source -Destination $destination
 
 }
@@ -88,17 +88,17 @@ foreach ($file in $exeFilesToCopy)
 {
     $source = [System.IO.Path]::Combine($ArtifactsDir, $file)
     $destination = [System.IO.Path]::Combine($IntermediateDropPath, $file)
-    Write-Output "Copying $file from $source to $destination."
+    Write-Verbose "Copying $file from $source to $destination."
     Copy-Item -Path $source -Destination $destination
 }
 
 # Special handling to copy the en-us admx and adml files because they are not localized.
 $source = [System.IO.Path]::Combine($ArtifactsDir, "admx", $visualStudioAdmx)
 $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $visualStudioAdmx)
-Write-Output "Copying $file from $source to $destination."
+Write-Verbose "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination
 
-$source = [System.IO.Path]::Combine($ArtifactsDir, "admx", "en-us", $visualStudioAdml)
-$destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", "en-us", $visualStudioAdml)
-Write-Output "Copying $file from $source to $destination."
+$source = [System.IO.Path]::Combine($ArtifactsDir, "admx", "en-US", $visualStudioAdml)
+$destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", "en-US", $visualStudioAdml)
+Write-Verbose "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination
