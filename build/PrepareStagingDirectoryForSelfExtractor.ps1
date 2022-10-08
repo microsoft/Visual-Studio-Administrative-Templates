@@ -103,6 +103,6 @@ Write-Verbose "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination
 
 $source = [System.IO.Path]::Combine($ArtifactsDir, "admx", $visualStudioAdml)
-$destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", "en-US", $visualStudioAdml)
+$destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", "en", $visualStudioAdml)
 Write-Verbose "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination
