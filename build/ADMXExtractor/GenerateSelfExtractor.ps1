@@ -6,8 +6,8 @@
     Zips up the admx and adml files, ADMXExtractor.exe using the box tool to create the self-extracting admin update exe.
 
 .PARAMETER $ArtifactsDir
-    The root artifact directory where the ADMXExtractor build is located.
-    e.g. $ArtifactsDir = D:\Visual-Studio-Administrative-Templates\artifacts\ADMXExtractor
+    The root artifact directory where the ADMXExtractor build was generated.
+    e.g. $ArtifactsDir = $(Build.StagingDirectory)\$(projectName)\ 
 
 .PARAMETER $RootDir
     The repo root directory.

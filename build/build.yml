@@ -106,6 +106,15 @@ steps:
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
       /p:Version=$(Version)
 
+- task: PowerShell@2
+  name: PrepareStagingDirectoryForSelfExtractor
+  displayName: Prepare the intermediate staging directory for the SelfExtractor.
+  inputs:
+    workingDirectory: $(Build.SourcesDirectory)
+    filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\PrepareStagingDirectoryForSelfExtractor.ps1
+    arguments:  -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -Verbose
+
+
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)' 
@@ -117,7 +126,7 @@ steps:
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
+    arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\Intermediate\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
 
 - task: MSBuild@1
   displayName: Sign packages
