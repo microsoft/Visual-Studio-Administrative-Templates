@@ -74,13 +74,12 @@ foreach ($key in $languageTable.Keys)
     Write-Verbose "Created path: $path"
 
     # Copy the .adml files
-    # $(Build.StagingDirectory)\AdmxExtractor\localize\{LanguageTable.Key}\admx\en-US\VisualStudio.adml
+    # $(Build.StagingDirectory)\AdmxExtractor\localize\{LanguageTable.Key}\admx\VisualStudio.adml
     # To$(IntermediateDrop)\admx\{LanguageTable.Value}\VisualSTudio.adml
-    $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, "admx", "en-US", $visualStudioAdml)
+    $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, "admx", $visualStudioAdml)
     $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $value, $visualStudioAdml)
     Write-Verbose "Copying $visualStudioAdml from $source to $destination."
     Copy-Item -Path $source -Destination $destination
-
 }
 
 # Copy the exe and config file to the intermediate drop to be staged for consumption by the boxtool.
@@ -98,7 +97,7 @@ $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", $visualS
 Write-Verbose "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination
 
-$source = [System.IO.Path]::Combine($ArtifactsDir, "admx", "en-US", $visualStudioAdml)
+$source = [System.IO.Path]::Combine($ArtifactsDir, "admx", $visualStudioAdml)
 $destination = [System.IO.Path]::Combine($IntermediateDropPath, "admx", "en-US", $visualStudioAdml)
 Write-Verbose "Copying $file from $source to $destination."
 Copy-Item -Path $source -Destination $destination

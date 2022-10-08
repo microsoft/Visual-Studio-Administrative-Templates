@@ -106,11 +106,6 @@ steps:
       /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
       /p:Version=$(Version)
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'drop'
-
 - task: PowerShell@2
   name: PrepareStagingDirectoryForSelfExtractor
   displayName: Prepare the intermediate staging directory for the SelfExtractor.
@@ -119,11 +114,10 @@ steps:
     filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
     arguments:  -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -IntermediateDropPath $(Build.StagingDirectory)\$(projectName)\Intermediate\  -Verbose
 
-
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'drop2'
+    pathToPublish: '$(Build.ArtifactStagingDirectory)\ADMXExtractor' 
+    artifactName: 'drop'
 
 - task: PowerShell@2
   name: GenerateSelfExtractor
