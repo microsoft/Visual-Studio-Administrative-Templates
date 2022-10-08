@@ -27,20 +27,20 @@ param(
 
 # Map the Microbuild Language outputs to the OS CultureInfo codes.
 $languageTable = [ordered]@{
-    CHS="zh-hans";
-    CHT="zh-hant";
-    CSY="cs-cz";
-    DEU="de-de";
-    ENU="en-US";
-    ESN="es-es";
-    FRA="fr-fr";
-    ITA="it-it";
-    JPN="ja-jp";
-    KOR="ko-kr";
-    PLK="pl-pl";
-    PTB="pt-pt";
-    RUS="ru-ru";
-    TRK="tr-tr";
+    CHS="cn";
+    CHT="zh";
+    CSY="cs";
+    DEU="de";
+    ENU="en";
+    ESN="es";
+    FRA="fr";
+    ITA="it";
+    JPN="ja";
+    KOR="ko";
+    PLK="pl";
+    PTB="pt";
+    RUS="ru";
+    TRK="tr";
 }
 
 $exeFilesToCopy = @( "ADMXExtractor.exe", "ADMXExtractor.exe.config" )
