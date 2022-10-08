@@ -111,7 +111,7 @@ steps:
   displayName: Prepare the intermediate staging directory for the SelfExtractor.
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
-    filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\PrepareStagingDirectoryForSelfExtractor.ps1
+    filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
     arguments:  -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -Verbose
 
 
