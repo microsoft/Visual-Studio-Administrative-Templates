@@ -58,14 +58,16 @@ foreach ($key in $languageTable.Keys)
     New-Item -Path $path -ItemType Directory -Force
     Write-Verbose "Created path: $path"
 
-    # Copy the resource files from each of the build language folders to the intermediate drop
+    # Copy the resource files from each of the build language folders to the intermediate drop except ENU which is handled below.
     # $source: $(Build.StagingDirectory)\AdmxExtractor\localize\{LanguageTable.Key}\ADMXExtractor.resources.dll
     # $destination: $(IntermediateDrop)\{LanguageTable.Value}\ADMXExtractor.resources.dll
-    $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, $ADMXExtractorResourcesFile)
-    $destination = [System.IO.Path]::Combine($path, $ADMXExtractorResourcesFile)
-    Write-Verbose "Copying $ADMXExtractorResourcesFile from $source to $destination."
-    Copy-Item -Path $source -Destination $destination
-
+    if ($key -ne "ENU") 
+    {    
+        $source = [System.IO.Path]::Combine($ArtifactsDir, "localize", $key, $ADMXExtractorResourcesFile)
+        $destination = [System.IO.Path]::Combine($path, $ADMXExtractorResourcesFile)
+        Write-Verbose "Copying $ADMXExtractorResourcesFile from $source to $destination."
+        Copy-Item -Path $source -Destination $destination
+    }
 
     # Create each of the ADMX template language folders in Intermediate\admx to copy the .adml files.
     # $(IntermediateDrop)\admx\{LanguageTable.Value}
