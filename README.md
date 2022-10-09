@@ -2,7 +2,7 @@
 
 This repository contains the administrative templates for the Visual Studio family of products.
 
-These templates define what what Visual Studio functionality can be centrally managed by group policy.
+These templates define what Visual Studio functionality can be centrally managed by group policy.
 
 ## Testing locally
 
@@ -10,20 +10,21 @@ On Windows, you can test locally by leveraging the Windows Local Group Policy Ed
 
 ![Local Group Policy Editor](images/gpeditor.png)
 
-### Step 1: Download the templates
+### Step 1: Download the templates or download the latest release
 
-- Clone the repository or download the latest release
-- Browse the files till you find the applicable .admx file
+- Clone or fork the repository 
+- Browse the files until you find the applicable .admx file
+- Download the latest release
+  - [https://www.microsoft.com/en-us/download/104405](https://www.microsoft.com/en-us/download/104405)
+- Install the application to insert the templates directly into the Windows policy definitions folder
 
-### Step 2: Insert templates into the Windows policy definitions folder
+### Step 2: Insert downloaded templates into the Windows policy definitions folder
 
 - Open File Explorer and navigate to the **Policydefinitions** folder:
    > C:\Windows\PolicyDefinitions
 - Copy the desired .admx file into this location
-- Navigate to the **en-US** (or the applicable langue) folder
-   
    > C:\Windows\PolicyDefinitions\en-US
-- Navigate into the applicable language folder next to .admx file selected in Step 1
+- Navigate into the applicable language folder next to the .admx file selected in Step 1
 - Copy the .adml file into the respective **Policydefinitions** folder
 
 ### Step 3: Test using the Local Group Policy Editor
