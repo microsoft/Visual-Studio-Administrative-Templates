@@ -24,7 +24,7 @@ namespace ADMXExtractor
             Title = NonLocalizableWindowTitle;
             LicenseTermsTitle.Text = Strings.LicenseTermsTitle;
             LicenseTerms.Text = Strings.LicenseTermsText;
-            LicenseTermsCheckBox.Content = Strings.LicenseTermsCheckBoxText;
+            LicenseTermsCheckBoxTextBlock.Text = Strings.LicenseTermsCheckBoxText;
             LicenseTermsContinueButton.Content = Strings.LicenseTermsContinueButtonText;
             LicenseTermsContinueButton.IsEnabled = false;
 
