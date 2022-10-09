@@ -41,7 +41,7 @@ $admxExtractorlanguageTable = [ordered]@{
     JPN="ja";
     KOR="ko";
     PLK="pl";
-    PTB="pt";
+    PTB="pt-BR";
     RUS="ru";
     TRK="tr";
 }
