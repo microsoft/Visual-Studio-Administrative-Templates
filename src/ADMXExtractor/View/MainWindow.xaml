@@ -25,7 +25,8 @@
         <TextBlock x:Name="LicenseTermsTitle" 
                    Grid.Row="0" 
                    Padding="20,20,20,0"
-                   VerticalAlignment="Center" />
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap" />
         <ScrollViewer Grid.Row="1" 
                       Padding="0, 20, 0, 0"
                       BorderBrush="White"
