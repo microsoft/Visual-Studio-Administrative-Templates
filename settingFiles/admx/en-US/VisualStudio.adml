@@ -73,6 +73,10 @@ For more information, see https://aka.ms/EnableAdminUpdates.
 
 If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not, AdministratorUpdatesEnabled is respected.</string>
 
+      <string id="AdministratorUpdatesEnabled_Disabled">Administrator Updates Disabled</string>
+      <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">Administrator Updates Enabled for Catalog and WSUS</string>
+      <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndAU">Administrator Updates Enabled for Catalog, WSUS and Automatic Updates</string>
+
       <string id="AdministratorUpdatesOptOut_DisplayName">Opt out of administrator updates</string>
       <string id="AdministratorUpdatesOptOut_Explain">Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. </string>
       <string id="UpdateConfigurationFile_DisplayName">Custom path to the update config</string>
@@ -116,6 +120,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
 
     </stringTable>
     <presentationTable>
+      <presentation id="AdministratorUpdatesEnabled_PresentationId">
+         <dropdownList refId="AdministratorUpdatesEnabledDropID" noSort="true" defaultItem="0" />
+      </presentation>
       <presentation id="CachePath_PresentationId">
         <textBox refId="CachePath_TextBox">
           <label>Package Manifest and Payload Cache Path</label>
