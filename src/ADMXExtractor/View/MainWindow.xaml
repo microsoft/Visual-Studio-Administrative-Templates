@@ -42,14 +42,13 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
-            <CheckBox x:Name="LicenseTermsCheckBox" 
-                      Grid.Column="0" 
+            <CheckBox Grid.Column="0" 
                       Checked="LicenseTermsCheckBox_Checked"
                       Unchecked="LicenseTermsCheckBox_Unchecked"
-                      VerticalAlignment="Center">
-                <Border 
-                    CornerRadius="0"
-                    BorderThickness="1" />
+                      VerticalAlignment="Center"
+                      BorderThickness="1">
+                <TextBlock x:Name="LicenseTermsCheckBoxTextBlock"
+                           TextWrapping="Wrap" />
             </CheckBox>
             <Button x:Name="LicenseTermsContinueButton"
                     Grid.Column="1"
