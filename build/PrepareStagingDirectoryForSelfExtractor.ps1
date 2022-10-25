@@ -1,10 +1,9 @@
 ﻿    <#
 .SYNOPSIS
-    Prepares a staging directory for consumption by the BoxStub tool.
+    Generates the self-extracting ADMXExtractor exe
 
 .DESCRIPTION
-    Prepares a staging directory with the appropriate language directories, ADMX and ADML files 
-    for consumption by the BoxStub tool that creates the self-extracting VisualStudioAdminTemplates.exe.
+    Zips up the admx and adml files, ADMXExtractor.exe using the box tool to create the self-extracting admin update exe.
 
 .PARAMETER $ArtifactsDir
     The root artifact directory where the ADMXExtractor build was generated.
