@@ -209,7 +209,7 @@
                             <decimal value="1" />
                         </value>
                     </item>
-                    <item displayName="$(string.AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndAU)">
+                    <item displayName="$(string.AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU)">
                         <value>
                             <decimal value="2" />
                         </value>
