@@ -279,7 +279,7 @@
             <parentCategory ref="LiveShareSettings" />
             <supportedOn ref="VisualStudio2019AndHigher" />
             <elements>
-                <text id="LiveShare_DomainName_TextBox" valueName="DomainName" />   
+                <text id="LiveShare_DomainName_TextBox" valueName="DomainName" expandable="true" required="true"/>   
             </elements>
         </policy>
         <policy 
