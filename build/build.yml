@@ -13,6 +13,13 @@ pool:
   - msbuild
   - visualstudio
 
+schedules:
+- cron: "0 12 * * *"
+  displayName: Daily build at 12pm UTC (5am Redmond)
+  branches:
+    include:
+    - main
+
 trigger:
   branches:
     include:
