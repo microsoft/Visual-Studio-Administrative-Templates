@@ -115,15 +115,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;39f574e169f0b463191ba87c81554eb1" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. For example, set the domain name as "microsoft.com". Use ; to separate out multiple domains. ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[사용자가 자신의 회사 또는 액세스 권한이 부여된 다른 회사에 속하지 않은 게스트와 세션을 공유할 수 없도록 합니다. Live Share에 액세스하려면 사용자가 회사 이메일로 로그인해야 합니다. 이 정책을 사용하지 않으면 조직의 모든 사용자가 공유 Live Share 세션에 액세스할 수 있습니다. 예를 들어 도메인 이름을 "microsoft.com"으로 설정합니다. ;를 사용하여 여러 도메인을 분리합니다. ]D;]A;자세한 정보는 https://aka.ms/vsls-policies를 참조하세요. ]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;3b60c88dda132252ba13d5b5c78d3859" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the send-a-smile feature]]></Val>
@@ -219,6 +210,15 @@
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[게스트는 호스트가 승인한 후에만 세션에 참여할 수 있습니다. Live Share에는 이미 "Live Share: Guest Approval required" 설정이 있으므로 이 정책은 사실상 "true"로 적용합니다.]D;]A;자세한 내용은 https://aka.ms/vsls-policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;691949fd3afe690b42e5ddf466493d9b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[카탈로그, WSUS 및 Microsoft 업데이트에 대해 관리자 업데이트 사용]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -349,6 +349,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a24427abeadf9e1708020a435d8b5531" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Administrator Updates Enabled for Catalog and WSUS]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[카탈로그 및 WSUS에 대해 관리자 업데이트 사용]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
@@ -408,6 +417,15 @@
         <Val><![CDATA[This policy disables the Visual Studio send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[이 정책은 Visual Studio 웃는 얼굴 보내기 기능을 사용하지 않도록 설정합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;bbe02c9b477e81256b19f24a8373b423" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[사용자가 자신의 회사 또는 액세스 권한이 부여된 다른 회사에 속하지 않는 게스트와 세션을 공유할 수 없도록 합니다. Live Share에 액세스하려면 사용자가 회사 이메일로 로그인해야 합니다. 이 정책을 사용하지 않으면 모든 조직의 모든 사용자가 공유 Live Share 세션에 액세스할 수 있습니다. ;를 사용하여 여러 도메인을 분리하세요(예: 도메인 이름을 contoso.com 또는 contoso.com;foo.com으로 설정). ]D;]A;자세한 정보는 https://aka.ms/vsls-policies를 참조하세요. ]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
