@@ -115,15 +115,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;39f574e169f0b463191ba87c81554eb1" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. For example, set the domain name as "microsoft.com". Use ; to separate out multiple domains. ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Impide que los usuarios puedan compartir su sesión con cualquier invitado que no forme parte de su empresa o de cualquier otra empresa a la que se haya concedido acceso. Los usuarios deben iniciar sesión con el correo electrónico de su empresa para acceder a Live Share. Si se deshabilita esta directiva, cualquier usuario de cualquier organización podrá acceder a una sesión de Live Share compartida. Por ejemplo, establezca el nombre de dominio como "microsoft.com". Use ; para separar varios dominios. ]D;]A;Para obtener más información, consulte: https://aka.ms/vsls-policies ]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;3b60c88dda132252ba13d5b5c78d3859" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the send-a-smile feature]]></Val>
@@ -219,6 +210,15 @@
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[El invitado solo puede unirse a la sesión después de aprobar el host. Live Share ya tiene la configuración "Live Share: Aprobación de invitado necesaria", por lo que esta directiva solo exige que sea "true".]D;]A;Para obtener más información, consulte: https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;691949fd3afe690b42e5ddf466493d9b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Actualizaciones de administrador habilitadas para actualizaciones de Microsoft, catálogo y WSUS]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -349,6 +349,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a24427abeadf9e1708020a435d8b5531" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Administrator Updates Enabled for Catalog and WSUS]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Actualizaciones de administrador habilitadas para el catálogo y WSUS]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
@@ -408,6 +417,15 @@
         <Val><![CDATA[This policy disables the Visual Studio send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Esta directiva deshabilita la característica "enviar una sonrisa" de Visual Studio.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;bbe02c9b477e81256b19f24a8373b423" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Impide que los usuarios puedan compartir su sesión con cualquier invitado que no forme parte de su empresa o de cualquier otra empresa a la que se haya concedido acceso. Los usuarios deben iniciar sesión con el correo electrónico de su empresa para acceder a Live Share. Si esta directiva está deshabilitada, cualquier usuario de cualquier organización puede acceder a una sesión compartida de Live Share. Uso; para separar varios dominios. Por ejemplo, establezca el nombre de dominio como contoso.com o contoso.com;foo.com ]D;]A;Para obtener más información, consulte: https://aka.ms/vsls-policies ]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
