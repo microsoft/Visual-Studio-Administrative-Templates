@@ -115,15 +115,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;39f574e169f0b463191ba87c81554eb1" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. For example, set the domain name as "microsoft.com". Use ; to separate out multiple domains. ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Impede que os usuários possam compartilhar sua sessão com participantes que não fazem parte de sua empresa ou de qualquer outra empresa que tenha recebido acesso. Os usuários devem estar conectados com o email da empresa para acessar o Live Share. Se essa política estiver desabilitada, qualquer usuário de qualquer organização poderá acessar uma sessão compartilhada do Live Share. Por exemplo, defina o nome de domínio como "microsoft.com". Use ; para separar vários domínios. ]D;]A;Para obter mais informações, confira: https://aka.ms/vsls-policies ]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;3b60c88dda132252ba13d5b5c78d3859" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the send-a-smile feature]]></Val>
@@ -219,6 +210,15 @@
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[O participante pode ingressar na sessão somente após a aprovação do anfitrião. O Live Share já tem a configuração "Live Share: necessária aprovação do participante" e, portanto, essa política está efetivamente apenas impondo isso como "verdadeiro".]D;]A;Para obter mais informações, confira: https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;691949fd3afe690b42e5ddf466493d9b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Atualizações do Administrador Habilitadas para Catálogo, WSUS e Atualizações da Microsoft]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -349,6 +349,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a24427abeadf9e1708020a435d8b5531" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Administrator Updates Enabled for Catalog and WSUS]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Atualizações do Administrador Habilitadas para Catálogo e WSUS]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
@@ -408,6 +417,15 @@
         <Val><![CDATA[This policy disables the Visual Studio send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Essa política desabilita o recurso Enviar um sorriso do Visual Studio.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;bbe02c9b477e81256b19f24a8373b423" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Impede que os usuários compartilhem sua sessão com convidados que não façam parte da empresa ou de qualquer outra empresa à qual tenha sido concedido acesso. Os usuários devem estar conectados com o email da empresa para acessar o Live Share. Se essa política for desabilitada, qualquer usuário de qualquer organização poderá acessar uma sessão compartilhada de Live Share. Use ; para separar vários domínios. Por exemplo, defina o nome do domínio como contoso.com ou contoso.com;foo.com ]D;]A;Para saber mais, confira: https://aka.ms/vsls-policies ]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
