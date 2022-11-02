@@ -45,6 +45,10 @@
       <!-- Install and Update -->
       <string id="RemoveOutOfSupport_DisplayName">Remove out-of-support components</string>
       <string id="RemoveOutOfSupport_Explain">This setting will automatically remove all components from the Visual Studio installation that have transitioned to an out-of-support state.
+        
+If set to 1, then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  If set to 0 or missing entirely, then the removeOos behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.
+        
+This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        
 
 For more information, see https://aka.ms/vs/removeoos/blog</string>
     
@@ -72,11 +76,11 @@ For more information, see: https://aka.ms/DisableOrMovePackageCache</string>
       <string id="AdministratorUpdatesEnabled_DisplayName">Enable administrator updates</string>
       <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be visible to and applied to the client computer. This value is for administrative use.
         
-If this value is a 1, then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  
+If set to 1, then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  
         
-If this value is a 2, then administrator updates delivered through either WSUS/SCCM or Intune/Microsoft Endpoint Manager will be available to either Active Directory (AD) or Azure Active Directory (AAD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.
+If set to 2, then administrator updates delivered through either WSUS/SCCM or Intune/Microsoft Endpoint Manager will be available to either Active Directory (AD) or Azure Active Directory (AAD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.
 
-If this value is missing or is set to 0, then administrator updates will not be available to the machine.        
+If set to 0 or missing entirely, then administrator updates will not be available to the machine.        
         
 For more information, see https://aka.ms/EnableAdminUpdates.
 
@@ -91,12 +95,12 @@ For more information, see https://aka.ms/EnableAdminUpdates.
       <string id="DisableRollback_DisplayName">Disable the ability to rollback or undo a Visual Studio update</string>
       <string id="DisableRollback_Explain">This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.
 
-If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.
+If set to 1, then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.
 
-If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.
+If set to 0 or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.
 
 This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.
-For more information, see: https://aka.ms/vs/rollback</string>
+For more information, see https://aka.ms/vs/rollback</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
