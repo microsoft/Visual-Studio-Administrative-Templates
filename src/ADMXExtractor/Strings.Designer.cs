@@ -70,6 +70,15 @@ namespace ADMXExtractor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File extraction was cancelled..
+        /// </summary>
+        internal static string FileExtractionCancel {
+            get {
+                return ResourceManager.GetString("FileExtractionCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to extract files. {0}.
         /// </summary>
         internal static string FileExtractionFailure {

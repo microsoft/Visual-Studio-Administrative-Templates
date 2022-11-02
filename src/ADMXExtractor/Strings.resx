@@ -120,6 +120,9 @@
   <data name="BrowseForFolderDescriptionText" xml:space="preserve">
     <value>Select a folder to store the extracted files</value>
   </data>
+  <data name="FileExtractionCancel" xml:space="preserve">
+    <value>File extraction was cancelled.</value>
+  </data>
   <data name="FileExtractionFailure" xml:space="preserve">
     <value>Failed to extract files. {0}</value>
     <comment>{0} The exception message</comment>

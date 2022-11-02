@@ -64,35 +64,38 @@ namespace ADMXExtractor
             browseForFolder.SelectedPath = Directory.Exists(policyDefinitionPath) ? policyDefinitionPath : winDirPath;
 
             browseForFolder.Description = Strings.BrowseForFolderDescriptionText;
-
-            var dialogResult = browseForFolder.ShowDialog();
-            if (!dialogResult.Equals(System.Windows.Forms.DialogResult.OK))
-            {
-                // If the user closes the FolderBrowserDialog by clicking "Cancel" or by clicking the "X" in the upper right corner,
-                // exit the application.
-                Close();
-            }
-
-            // Extract the ADMX and ADSM files to the selected directory.
-            var source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AdmxDirectoryName);
-            var selected = browseForFolder.SelectedPath;
-
+            
             string messageBoxText;
             MessageBoxImage messageBoxImage;
-            try
+            
+            var dialogResult = browseForFolder.ShowDialog();
+            if (dialogResult.Equals(System.Windows.Forms.DialogResult.Cancel) || dialogResult.Equals(System.Windows.Forms.DialogResult.Abort))
             {
-                CopyFiles(source, selected);
-                messageBoxText = Strings.FileExtractionSuccess;
+                // If the user closes or aborts the FolderBrowserDialog by clicking "Cancel" or by clicking the "X" in the upper right corner,
+                // exit the application.
+                messageBoxText = string.Format(Strings.FileExtractionCancel);
                 messageBoxImage = (MessageBoxImage)MessageBoxIcon.Information;
             }
-            catch (Exception ex)
+            else
             {
-                messageBoxText = string.Format(Strings.FileExtractionFailure, ex.Message);
-                messageBoxImage = (MessageBoxImage)MessageBoxIcon.Warning;
-            }
-            
-            System.Windows.MessageBox.Show(messageBoxText, NonLocalizableWindowTitle, MessageBoxButton.OK, messageBoxImage, MessageBoxResult.OK);
+                // Extract the ADMX and ADSM files to the selected directory.
+                var source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AdmxDirectoryName);
+                var selected = browseForFolder.SelectedPath;
 
+                try
+                {
+                    CopyFiles(source, selected);
+                    messageBoxText = Strings.FileExtractionSuccess;
+                    messageBoxImage = (MessageBoxImage)MessageBoxIcon.Information;
+                }
+                catch (Exception ex)
+                {
+                    messageBoxText = string.Format(Strings.FileExtractionFailure, ex.Message);
+                    messageBoxImage = (MessageBoxImage)MessageBoxIcon.Warning;
+                }
+            }
+
+            System.Windows.MessageBox.Show(messageBoxText, NonLocalizableWindowTitle, MessageBoxButton.OK, messageBoxImage, MessageBoxResult.OK);
             Close();
         }
 
