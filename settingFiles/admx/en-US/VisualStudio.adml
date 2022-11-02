@@ -44,10 +44,7 @@
       
       <!-- Install and Update -->
       <string id="RemoveOutOfSupport_DisplayName">Remove out-of-support components</string>
-      <string id="RemoveOutOfSupport_Explain">This setting will automatically remove all components from the Visual Studio installation that have transitioned to an out-of-support state.
-
-For more information, see https://aka.ms/vs/removeoos/blog</string>
-    
+      <string id="RemoveOutOfSupport_Explain">This setting will automatically remove all components from the Visual Studio installation that have transitioned out of support.</string>
       <string id="CachePath_DisplayName">Package manifest and payload cache path</string>
       <string id="CachePath_Explain">The directory where package manifests and, optionally, payloads are stored.
 
@@ -69,16 +66,12 @@ Enabled by default.
 
 For more information, see: https://aka.ms/DisableOrMovePackageCache</string>
 
-      <string id="AdministratorUpdatesEnabled_DisplayName">Enable administrator updates</string>
-      <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be visible to and applied to the client computer. This value is for administrative use.
-        
-If this value is a 1, then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  
-        
-If this value is a 2, then administrator updates delivered through either WSUS/SCCM or Intune/Microsoft Endpoint Manager will be available to either Active Directory (AD) or Azure Active Directory (AAD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.
+      <string id="AdministratorUpdatesEnabled_DisplayName">Apply administrator updates</string>
+      <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be applied to the client computer. If this value is missing or is set to 0, administrator updates will be blocked. This value is for administrative use.
 
-If this value is missing or is set to 0, then administrator updates will not be available to the machine.        
-        
 For more information, see https://aka.ms/EnableAdminUpdates.
+
+If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not, AdministratorUpdatesEnabled is respected.</string>
 
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">Administrator Updates Enabled for Catalog and WSUS</string>
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU">Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates</string>
