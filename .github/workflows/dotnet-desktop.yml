@@ -1,0 +1,85 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT license.
+
+# Build
+# Create Self-Extracting Exe
+
+# This continuous integration pipeline is triggered anytime a user creates a PR in the repo.
+# This pipeline builds the Wpf project, then creates the non-localized self-extracting exe for testing.
+name: VisualStudioAdminTemplates PR Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [ Release ]
+
+    runs-on: windows-latest
+
+    env:
+      SOLUTION_NAME: src/ADMXExtractor/ADMXExtractor.sln
+      AZURE_ARTIFACTS_FEED_URL: https://devdiv.pkgs.visualstudio.com/_packaging/Setup-Dependencies/nuget/v3/index.json
+      OUTPUT_NAME_WITH_EXTENSION: VisualStudioAdminTemplates.exe
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.301
+        source-url: ${{ env.AZURE_ARTIFACTS_FEED_URL }}
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.AZURE_DEVOPS_TOKEN }} 
+    
+    # Restore the application and ensure that the NuGet packages are added to the appropriate directory.
+    - name: Restore the application
+      run: dotnet restore ${{ env.SOLUTION_NAME }} --packages ${{ github.workspace }}\packages
+
+    # Build the application
+    - name: Build the application
+      run: dotnet build ${{ env.SOLUTION_NAME }} --configuration '${{ matrix.configuration }}' --output 'OutDir\Staging\ADMXExtractor'
+
+    # Prepare the staging directory
+    - name: Prepare staging directory for self extractor  
+      run: |
+        .\build\PrepareStagingDirectoryForSelfExtractorPR.ps1 -ArtifactsDir 'OutDir\Staging\ADMXExtractor\' -IntermediateDropPath 'OutDir\Staging\ADMXExtractor\Intermediate\'  -Verbose
+
+    # Upload the build artifacts
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: ADMXExtractor
+        path: ${{ github.workspace }} 
+
+    # Generate the self extracting exe
+    - name: Generate the self extracting exe for ADMXExtractor and all admx files.
+      run: |
+        .\build\ADMXExtractor\GenerateSelfExtractorPR.ps1 -RootDir ${{ github.workspace }}  -ArtifactsDir 'OutDir\Staging\ADMXExtractor\Intermediate\' -ArtifactsDropTarget 'OutDir\Staging\ADMXExtractor\finalDrop' -OutputNameWithExtension ${{ env.OUTPUT_NAME_WITH_EXTENSION }} -Verbose
+
+    # Upload the build artifacts
+    - name: Upload build artifacts on failure
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: FailureLogs
+        path: ${{ github.workspace }} 
+
+    # Upload the final artifact
+    - name: Upload the final artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: Exe
+        path: 'OutDir\Staging\ADMXExtractor\finalDrop'
