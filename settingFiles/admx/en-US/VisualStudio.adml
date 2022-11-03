@@ -82,7 +82,7 @@ If set to 2, then administrator updates delivered through either WSUS/SCCM or In
 
 If set to 0 or missing entirely, then administrator updates will not be available to the machine.        
         
-For more information, see https://aka.ms/EnableAdminUpdates.
+For more information, see https://aka.ms/EnableAdminUpdates.</string>
 
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">Administrator Updates Enabled for Catalog and WSUS</string>
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU">Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates</string>
