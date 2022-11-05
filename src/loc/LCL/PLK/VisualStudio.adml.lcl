@@ -106,15 +106,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;1d4ef9e2c93d10044b07965157003bfd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Apply administrator updates]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Zastosuj aktualizacje administratora]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;3b60c88dda132252ba13d5b5c78d3859" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the send-a-smile feature]]></Val>
@@ -160,20 +151,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;47b4de804f44a13317076354c238b3d5" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enable administrator updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Włącz aktualizacje administratora]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4c1073eed371baffaef1c064a8a32384" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable downloading updates automatically]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Wyłącz automatyczne pobieranie aktualizacji]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;4dd62e46e6949588d3cf6c32986a855b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This setting will automatically remove all components from the Visual Studio installation that have transitioned out of support.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[To ustawienie spowoduje automatyczne usunięcie wszystkich składników z instalacji programu Visual Studio, których obsługa została zakończona.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -304,6 +295,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;92579914b8b1ad987293e94a38bb9b55" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. This value is for administrative use.]D;]A;        ]D;]A;If set to 1, then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2, then administrator updates delivered through either WSUS/SCCM or Intune/Microsoft Endpoint Manager will be available to either Active Directory (AD) or Azure Active Directory (AAD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Umożliwia zobaczenie aktualizacji administratora i zastosowanie ich do klienta. Ta wartość jest do użytku administratora.]D;]A;        ]D;]A;Jeśli ustawienia ma wartość 1, aktualizacje administratora dostarczane przez usługi WSUS i program SCCM będą dostępne dla maszyn klienckich przyłączonych do usługi Active Directory (AD).  ]D;]A;        ]D;]A;Jeśli ustawienie ma wartość 2, aktualizacje administratora dostarczane przez usługi WSUS/SCCM lub Intune/Microsoft Endpoint Manager będą dostępne dla maszyn przyłączonych do usługi Active Directory (AD) lub Azure Active Directory (AAD) zarejestrowanych w usłudze Windows Update dla Firm. Pamiętaj, że muszą być również włączone zasady AllowMUUpdateServicePolicy usługi Windows Update dla Firm.]D;]A;]D;]A;Jeśli ustawienie ma wartość 0 lub wartość w ogóle nie jest określona, aktualizacje administratora nie będą dostępne dla maszyny.        ]D;]A;        ]D;]A;Aby uzyskać więcej informacji, zobacz: https://aka.ms/EnableAdminUpdates.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;960a1f72d579625804a381fc2993670e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. ]]></Val>
@@ -354,15 +354,6 @@
         <Val><![CDATA[Administrator Updates Enabled for Catalog and WSUS]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Aktualizacje administratora włączone dla wykazu i programu WSUS]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[To ustawienie zasad określa, czy użytkownik może cofnąć aktualizację i przywrócić program Visual Studio do poprzednio zainstalowanej wersji.]D;]A;]D;]A;Jeśli to ustawienie zasad zostanie włączone, użytkownicy nie będą mogli uzyskiwać dostępu do możliwości wycofywania, co uniemożliwi przywrócenie programu Visual Studio do ostatniej aktualizacji, która może zawierać poprawkę zabezpieczeń.]D;]A;]D;]A;Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą mogli uzyskać dostęp do funkcji wycofywania w programie Visual Studio i będą mogli cofnąć aktualizację i wycofać swoje wystąpienia programu Visual Studio do poprzednio zainstalowanej wersji. Uwaga: domyślne ustawienie nieskonfigurowane umożliwia wycofanie aktualizacji programu Visual Studio.]D;]A;]D;]A;Te zasady mają zastosowanie do wystąpień wersji programu Visual Studio 2022 lub nowszej zainstalowanej na maszynie.]D;]A;Aby uzyskać więcej informacji, zobacz: https://aka.ms/vs/rollback]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -475,6 +466,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;e0b8fd92fb5de487efc6632225c36027" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1, then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see https://aka.ms/vs/rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[To ustawienie zasad określa, czy użytkownik może cofnąć aktualizację i przywrócić program Visual Studio do poprzednio zainstalowanej wersji.]D;]A;]D;]A;Jeśli ustawienie ma wartość 1, użytkownicy nie będą mieli dostępu do funkcji wycofywania, co uniemożliwi cofnięcie najnowszej aktualizacji programu Visual Studio, która może zawierać poprawki zabezpieczeń.]D;]A;]D;]A;Jeśli to ustawienie ma wartość 0 lub wartość w ogóle nie jest określona, użytkownicy uzyskają dostęp do funkcji wycofywania w programie Visual Studio — mogą cofnąć aktualizację i wycofać swoje wystąpienia programu Visual Studio do poprzednio zainstalowanej wersji. Uwaga: domyślne nieskonfigurowane ustawienie umożliwia wycofanie aktualizacji programu Visual Studio.]D;]A;]D;]A;Te zasady mają zastosowanie do zainstalowanych na maszynie wystąpień programu w wersji Visual Studio 2022 lub nowszej.]D;]A;Aby uzyskać więcej informacji, zobacz: https://aka.ms/vs/rollback]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;e5ff5d3af4098733450b4e3802f5d68b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Live Share Settings]]></Val>
@@ -484,11 +484,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;e7390d38d5b93bc9f31da8a2720d68f9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;ecb4fe72c2bcaf4950c1c050fc22d14d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be applied to the client computer. If this value is missing or is set to 0, administrator updates will be blocked. This value is for administrative use.]D;]A;]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]D;]A;]D;]A;If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not, AdministratorUpdatesEnabled is respected.]]></Val>
+        <Val><![CDATA[This setting will automatically remove all components from the Visual Studio installation that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1, then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  If set to 0 or missing entirely, then the removeOos behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Umożliwia stosowanie aktualizacji administratora na komputerze klienckim. Jeśli brakuje tej wartości lub ustawiono jej wartość na 0, aktualizacje administratora zostaną zablokowane. Ta wartość jest do użytku administracyjnego.]D;]A;]D;]A;A uzyskaj więcej informacji, zobacz https://aka.ms/EnableAdminUpdates.]D;]A;]D;]A;Jeśli opcja AdministratorUpdatesEnabled jest wyłączona, ale element AdministratorUpdatesOptOut nie jest, uwzględniana jest wartość AdministratorUpdatesEnabled.]]></Val>
+          <Val><![CDATA[To ustawienie powoduje automatyczne usunięcie z instalacji programu Visual Studio wszystkich składników, które przeszły do stanu braku wsparcia technicznego.]D;]A;        ]D;]A;Jeśli ustawienie ma wartość 1, instalator programu Visual Studio usunie wszystkie składniki bez wsparcia technicznego podczas wszystkich kolejnych aktualizacji.  Jeśli ustawienie ma wartość 0 lub wartość w ogóle nie jest określona, zachowanie funkcji removeOos będzie uwzględniać inne lokalizacje, w których można to skonfigurować, takie jak parametr wiersza polecenia lub okno dialogowe Aktualizowanie ustawień.]D;]A;        ]D;]A;Ta funkcja wymaga zainstalowania na maszynie klienta instalatora programu Visual Studio 2022 w wersji 17.4.        ]D;]A;]D;]A;Aby uzyskać więcej informacji, zobacz: https://aka.ms/vs/removeoos/blog]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
