@@ -43,10 +43,12 @@
       <string id="DisableScreenshotCapture_Explain">This policy disables the screenshot capability in the send-a-smile feature.</string>
       
       <!-- Install and Update -->
-      <string id="RemoveOutOfSupport_DisplayName">Remove out-of-support components</string>
-      <string id="RemoveOutOfSupport_Explain">This setting will automatically remove all components from the Visual Studio installation that have transitioned to an out-of-support state.
+      <string id="RemoveOutOfSupport_DisplayName">Remove out-of-support components during updates</string>
+      <string id="RemoveOutOfSupport_Explain">This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.
         
-If set to 1, then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  If set to 0 or missing entirely, then the removeOos behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.
+If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  
+        
+If set to 0 (disabled) or missing entirely, then the remove out-of-support compontnets behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.
         
 This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        
 
@@ -74,33 +76,38 @@ Enabled by default.
 For more information, see: https://aka.ms/DisableOrMovePackageCache</string>
 
       <string id="AdministratorUpdatesEnabled_DisplayName">Enable administrator updates</string>
-      <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be visible to and applied to the client computer. This value is for administrative use.
+      <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be visible to and applied to the client computer. 
         
-If set to 1, then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  
+If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  
         
-If set to 2, then administrator updates delivered through either WSUS/SCCM or Intune/Microsoft Endpoint Manager will be available to either Active Directory (AD) or Azure Active Directory (AAD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.
+If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.
 
-If set to 0 or missing entirely, then administrator updates will not be available to the machine.        
+If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        
         
 For more information, see https://aka.ms/EnableAdminUpdates.</string>
 
-      <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">Administrator Updates Enabled for Catalog and WSUS</string>
-      <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU">Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates</string>
+      <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">WSUS/SCCM</string>
+      <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU">WSUS/SCCM and Microsoft Updates/Intune</string>
 
       <string id="AdministratorUpdatesOptOut_DisplayName">Opt out of administrator updates</string>
-      <string id="AdministratorUpdatesOptOut_Explain">Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. </string>
-      <string id="UpdateConfigurationFile_DisplayName">Custom path to the update config</string>
-      <string id="UpdateConfigurationFile_Explain">The custom file path to the update configuration file used for configuring Administrative Updates. For more information, see https://aka.ms/MethodsForConfiguringAdminUpdates.</string>
+      <string id="AdministratorUpdatesOptOut_Explain">Indicates that the user does not want to receive administrator updates to Visual Studio. 
+        
+If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. 
+        
+For more information, see https://aka.ms/vs/admin/updates/control.</string>
+      <string id="UpdateConfigurationFile_DisplayName">Custom path to the update configuration file</string>
+      <string id="UpdateConfigurationFile_Explain">The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.</string>
 
       <string id="DisableRollback_DisplayName">Disable the ability to rollback or undo a Visual Studio update</string>
-      <string id="DisableRollback_Explain">This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.
+      <string id="DisableRollback_Explain">This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.
 
-If set to 1, then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.
+If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.
 
-If set to 0 or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.
+If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.
 
-This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.
-For more information, see https://aka.ms/vs/rollback</string>
+This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.
+
+For more information, see https://aka.ms/vs/rollback.</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
