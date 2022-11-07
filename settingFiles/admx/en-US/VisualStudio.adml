@@ -48,7 +48,7 @@
         
 If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  
         
-If set to 0 (disabled) or missing entirely, then the remove out-of-support compontnets behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.
+If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.
         
 This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        
 
