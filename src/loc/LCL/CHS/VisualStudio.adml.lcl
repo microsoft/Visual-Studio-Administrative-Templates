@@ -106,6 +106,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;1eba2355fc158588b609771aad3407bd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Custom path to the update configuration file]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[更新配置文件的自定义路径]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;2c28491f8b0dcdb4b16c91172b435a7d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Remove out-of-support components during updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[在更新期间移除不再支持的组件]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;3b60c88dda132252ba13d5b5c78d3859" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the send-a-smile feature]]></Val>
@@ -178,15 +196,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;56771d386132b34eaf3cf7f1bf816e6e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The custom file path to the update configuration file used for configuring Administrative Updates. For more information, see https://aka.ms/MethodsForConfiguringAdminUpdates.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[用于配置管理更新的更新配置文件的自定义文件路径。有关详细信息，请参阅 https://aka.ms/MethodsForConfiguringAdminUpdates。]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;59df68ac84fb4973f911f878bb936f8f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disables send-a-smile's screenshot capability]]></Val>
@@ -205,15 +214,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;691949fd3afe690b42e5ddf466493d9b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[为目录、WSUS、Microsoft 更新启用了管理员更新]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;6b6d10ad14cdd6eee27c4b5e77925d28" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable shared server]]></Val>
@@ -228,6 +228,15 @@
         <Val><![CDATA[Disable shared read write terminal]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[禁用共享读写终端]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此设置将导致更新自动从已转换为失去支持状态的所有 Visual Studio 安装中移除所有组件。]D;]A;        ]D;]A;如果设置为 1 (已启用)，则 Visual Studio 安装程序将在所有后续更新期间移除所有不再支持的组件。]D;]A;        ]D;]A;如果设置为 0 (已禁用)或完全缺失，则移除不再支持的组件行为将遵从可配置此设置的其他位置，例如命令行参数或“更新设置”对话框。]D;]A;        ]D;]A;此功能要求在客户端计算机上安装 Visual Studio 2022 版本 17.4 安装程序。        ]D;]A;]D;]A;有关详细信息，请参阅 https://aka.ms/vs/removeoos/blog]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -268,11 +277,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;88c210e95643d7701f385fa012f7d13c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Custom path to the update config]]></Val>
+        <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[更新配置的自定义路径]]></Val>
+          <Val><![CDATA[WSUS/SCCM 和 Microsoft 更新/Intune]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -291,24 +300,6 @@
         <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[此策略允许将 Visual Studio 遥测数据发送到 Microsoft，作为 Visual Studio 客户体验改善计划的一部分。有关详细信息，请参阅: aka.ms/vs/admx/telemetry]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;92579914b8b1ad987293e94a38bb9b55" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. This value is for administrative use.]D;]A;        ]D;]A;If set to 1, then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2, then administrator updates delivered through either WSUS/SCCM or Intune/Microsoft Endpoint Manager will be available to either Active Directory (AD) or Azure Active Directory (AAD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[允许管理员更新对客户端计算机可见并应用到客户端计算机。此值用于管理用途。]D;]A;        ]D;]A;如果设置为 1，则通过 WSUS 和 SCCM 传递的管理员更新将可用于已建立 Active Directory (AD)联接的客户端计算机。 ]D;]A;        ]D;]A;如果设置为 2，则通过 WSUS/SCCM 或 Intune/Microsoft Endpoint Manager 传递的管理员更新将可用于 Active Directory (AD)或注册了适用于企业的 Windows 更新(WUfB) 的已建立 Azure Active Directory (AAD)联接的计算机。请注意，还必须启用 WUfB AllowMUUpdateServicePolicy。]D;]A;]D;]A;如果设置为 0 或完全缺失，则计算机将无法使用管理员更新。       ]D;]A;        ]D;]A;有关详细信息，请参阅 https://aka.ms/EnableAdminUpdates.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;960a1f72d579625804a381fc2993670e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. ]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[表示用户不希望接收 Visual Studio 的管理员更新。缺少注册表值或设置值为 0 意味着 Visual Studio 用户想要接收 Visual Studio 管理员更新。这适用于开发人员用户(如果他们在客户端计算机上具有管理员权限)。有关详细信息，请参阅 应用管理员更新。如果 AdministratorUpdatesOptOut 设置为 1，但用户的 AdministratorUpdatesEnabled 注册表值已启用，则会遵守 AdministratorUpdatesOptOut。 ]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -340,24 +331,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;a19858482b4d221ba2c3116958070240" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Remove out-of-support components]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[删除不受支持的组件]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a24427abeadf9e1708020a435d8b5531" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Administrator Updates Enabled for Catalog and WSUS]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[为目录和 WSUS 启用了管理员更新]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -372,6 +345,24 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[安装后保留程序包有效负载]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[指示用户不希望接收 Visual Studio 的管理员更新。]D;]A;        ]D;]A;如果设置为 1 (已启用)，则 Visual Studio 用户不希望接收 Visual Studio 的管理员更新。如果开发人员用户在客户端计算机上具有管理员权限，则可以设置此策略。]D;]A;        ]D;]A;有关详细信息，请参阅 https://aka.ms/vs/admin/updates/control。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ab7205b61d4a56ba4ed4e941576e4afc" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[允许管理员更新对客户端计算机可见并应用到客户端计算机。]D;]A;        ]D;]A;如果设置为 1 (为 WSUS/SCCM 启用)，则通过 WSUS 和 SCCM 传递的管理员更新将可用于已联接 Active Directory (AD)的客户端计算机。]D;]A;        ]D;]A;如果设置为 2 (为 WSUS/SCCM 和 Microsoft 更新/Intune 启用)，则通过 WSUS/SCCM 或 Microsoft 更新/Intune 传递的管理员更新将可用于 Active Directory (AD)，或注册了适用于企业的 Windows 更新(WUfB)的已联接 Azure Active Directory (Azure AD)的计算机。请注意，还必须启用 WUfB AllowMUUpdateServicePolicy。]D;]A;]D;]A;如果设置为 0 (已禁用)或完全缺失，则计算机将无法使用管理员更新。        ]D;]A;        ]D;]A;有关详细信息，请参阅 https://aka.ms/EnableAdminUpdates.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -430,6 +421,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;c92b134ee6dabec50bec54abafef79b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[WSUS/SCCM]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[WSUS/SCCM]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;c999dfa0952915b1029c2977f33a0ebb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
@@ -466,11 +466,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;e0b8fd92fb5de487efc6632225c36027" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1, then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see https://aka.ms/vs/rollback]]></Val>
+        <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[此策略设置确定用户是否可以撤消更新并将 Visual Studio 回滚到以前安装的版本。]D;]A;]D;]A;如果设置为 1，则将阻止用户访问回滚功能，这将阻止 Visual Studio 还原可能包含安全修复的最新一次更新。]D;]A;]D;]A;如果设置为 0 或完全缺失，则用户将能够访问 Visual Studio 中的回滚功能，并且能够撤消更新并将其 Visual Studio 实例回滚到以前安装的版本。注意: 默认的未配置设置允许回滚 Visual Studio 更新。]D;]A;]D;]A;此策略适用于计算机上安装的 Visual Studio 2022 或更高版本的发布实例。]D;]A;有关详细信息，请参阅 https://aka.ms/vs/rollback]]></Val>
+          <Val><![CDATA[用于配置管理员更新的更新配置文件的自定义文件路径。有关详细信息，请参阅 https://aka.ms/vs/admin/updates/configurationfile。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -484,20 +484,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;ecb4fe72c2bcaf4950c1c050fc22d14d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This setting will automatically remove all components from the Visual Studio installation that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1, then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  If set to 0 or missing entirely, then the removeOos behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[此设置将自动从Visual Studio 安装中删除转换为不受支持状态的所有组件。]D;]A;        ]D;]A;如果设置为 1，则 Visual Studio 安装程序将在所有后续更新期间删除所有不支持的组件。如果设置为 0 或完全缺失，则 removeOos 行为将遵从可配置此设置的其他位置，例如命令行参数或“更新设置”对话框。]D;]A;        ]D;]A;此功能要求在客户端计算机上安装 Visual Studio 2022 版本 17.4 安装程序。       ]D;]A;]D;]A;有关详细信息，请参阅 https://aka.ms/vs/removeoos/blog]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[此策略禁用“发送微笑”功能中的屏幕截图功能。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;f9ae13cf82e3690aa0bd76ca3f17c434" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/rollback.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此策略确定用户是否可以撤消更新并将 Visual Studio 回滚到以前安装的版本。]D;]A;]D;]A;如果设置为 1 (已启用)，则将阻止用户访问回滚功能，这将阻止 Visual Studio 还原可能包含安全修复的最近一次更新。]D;]A;]D;]A;如果设置为 0 (已禁用)或完全缺失，则用户将能够访问 Visual Studio 中的回滚功能，并且能够撤消更新并将其 Visual Studio 实例回滚到以前安装的版本。注意: 默认的未配置设置允许回滚 Visual Studio 更新。]D;]A;]D;]A;此策略适用于可以在计算机上安装的 Visual Studio 2022 或更高版本的发布实例。]D;]A;]D;]A;有关详细信息，请参阅 https://aka.ms/vs/rollback。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
