@@ -57,7 +57,9 @@ jobs:
     env:
       SOLUTION_NAME: src/ADMXExtractor/ADMXExtractor.sln
       VSS_NUGET_EXTERNAL_FEED_ENDPOINTS: '{"endpointCredentials": [{"endpoint":"https://devdiv.pkgs.visualstudio.com/_packaging/Setup-Dependencies/nuget/v3/index.json", "password":"${{ secrets.AZURE_DEVOPS_TOKEN }}"}]'
-    
+      NuGet_ForceEnableCredentialProviderV2: true
+      NuGet_ForceEnableCredentialProvider: false
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
