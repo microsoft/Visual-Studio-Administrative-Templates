@@ -99,6 +99,14 @@ jobs:
       run: |
         .\build\ADMXExtractor\GenerateSelfExtractorPR.ps1 -RootDir ${{ github.workspace }}  -ArtifactsDir 'OutDir\Staging\ADMXExtractor\Intermediate\' -ArtifactsDropTarget 'OutDir\Staging\ADMXExtractor\finalDrop' -OutputNameWithExtension ${{ env.OUTPUT_NAME_WITH_EXTENSION }} -Verbose
 
+    # Upload the build artifacts
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: Failure
+        path: ${{ github.workspace }} 
+        
     # Upload the final artifact
     - name: Upload the final artifact
       uses: actions/upload-artifact@v1
