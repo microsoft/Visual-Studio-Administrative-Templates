@@ -57,7 +57,7 @@ jobs:
     env:
       SOLUTION_NAME: src/ADMXExtractor/ADMXExtractor.sln
       AZURE_ARTIFACTS_FEED_URL: https://devdiv.pkgs.visualstudio.com/_packaging/Setup-Dependencies/nuget/v3/index.json
-      PROJECT_NAME: ADMXExtractor
+      OUTPUT_NAME_WITH_EXTENSION: VisualStudioAdminTemplates.exe
 
     steps:
     - name: Checkout
@@ -80,10 +80,21 @@ jobs:
 
     # Build the application
     - name: Build the application
-      run: dotnet build ${{ env.SOLUTION_NAME }} --configuration '${{ matrix.configuration }}' --output 'OutDir\Staging\${{ env.PROJECT_NAME }}'
+      run: dotnet build ${{ env.SOLUTION_NAME }} --configuration '${{ matrix.configuration }}' --output 'OutDir\Staging\ADMXExtractor'
 
+    # Prepare the staging directory
+    - name: Prepare staging directory for self extractor  
+      run: |
+        .\build\PrepareStagingDirectoryForSelfExtractor.ps1 -ArtifactsDir 'OutDir\Staging\ADMXExtractor\' -IntermediateDropPath 'OutDir\Staging\ADMXExtractor\Intermediate\'  -Verbose
+
+    # Upload the build artifacts
     - name: Upload build artifacts
       uses: actions/upload-artifact@v1
       with:
         name: ADMXExtractor
-        path: 'OutDir\Staging\${{ env.PROJECT_NAME }}'
+        path: 'OutDir\Staging\ADMXExtractor'
+
+    # Generate the self extracting exe
+    - name: Generate the self extracting exe for ADMXExtractor and all admx files.
+      run: |
+        .\build\ADMXExtractor\GenerateSelfExtractor.ps1 -RootDir . -ArtifactsDir 'OutDir\Staging\ADMXExtractor\Intermediate\' -ArtifactsDropTarget 'OutDir\Staging\ADMXExtractor\finalDrop' -OutputNameWithExtension ${{ env.OUTPUT_NAME_WITH_EXTENSION }} -Verbose
