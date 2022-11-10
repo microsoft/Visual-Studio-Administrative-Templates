@@ -60,12 +60,12 @@ Function Set-RootForExecuteFile ($xml, $outputName)
     $executeFile.InnerText = $executeFile.InnerText.Replace("%root%", "$outputName")
 }
 
-Function Get-ZipArgs ($zipTarget) {
+Function Get-ZipArgs ($directoryOfFilesToZip, $zipTarget) {
     $zipArgs = @()
     $zipArgs += "a"
     $zipArgs += "$zipTarget"
     # recursivly search the target folder
-    $zipArgs += "-r"
+    $zipArgs += "-r $directoryOfFilesToZip"
 
     # no compression, extremely fast extract speed.
     $zipArgs += "-mx=0 -mmt=4"
@@ -121,31 +121,22 @@ Write-Verbose "7z tool root: $zipToolRoot"
 
 $zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
 $zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
-$ArtifactsDirFullPath = [System.IO.Path]::Combine($RootDir, $ArtifactsDir)
-$zipArgs = Get-ZipArgs $zipFileToDropInArtifactsDirectory
+$everythingInArtifactsDir = [System.IO.Path]::Combine($ArtifactsDir, "*.*")
+$zipArgs = Get-ZipArgs $everythingInArtifactsDir $zipFileToDropInArtifactsDirectory
 
 Write-Verbose "Calling Zip tool: $zipTool"
 Write-Verbose "Argument List: $zipArgs"
 
-Write-Verbose "Directory of files to zip:  $ArtifactsDirFullPath"
+Write-Verbose "Directory of files to zip:  $directoryOfFilesToZip"
 Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifactsDirectory"
 
-# To prevent 7-Zip from adding the directory structure $ArtifactsDirFullPath, cd to the location
-
-$currentDirectory = Get-Location
-Write-Verbose "cd to $ArtifactsDirFullPath"
-Set-Location -Path $ArtifactsDirFullPath
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
-    Write-Verbose "Failed to zip the directory of admx files: $ArtifactsDirFullPath."
+    Write-Verbose "Failed to zip the directory of admx files: $directoryOfFilesToZip."
     Remove-Item -Recurse -Force $ArtifactsDir
     exit 1
 }
-
-# cd back to root dir
-Write-Verbose "cd to $currentDirectory"
-Set-Location -Path $currentDirectory
 
 # At this point in the script, ArtifactsDir has:
 # admx\
