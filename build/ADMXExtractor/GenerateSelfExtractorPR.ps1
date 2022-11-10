@@ -65,7 +65,7 @@ Function Get-ZipArgs ($zipTarget) {
     $zipArgs += "a"
     $zipArgs += "$zipTarget"
     # recursivly search the target folder
-    $zipArgs += "-r ./*"
+    $zipArgs += "-r"
 
     # no compression, extremely fast extract speed.
     $zipArgs += "-mx=0 -mmt=4"
