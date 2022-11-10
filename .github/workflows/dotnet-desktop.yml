@@ -92,7 +92,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: ADMXExtractor
-        path: 'OutDir\Staging\ADMXExtractor'
+        path: ${{ github.workspace }} 
 
     # Generate the self extracting exe
     - name: Generate the self extracting exe for ADMXExtractor and all admx files.
