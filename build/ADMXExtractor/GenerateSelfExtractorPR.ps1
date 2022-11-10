@@ -136,12 +136,13 @@ Set-Location -Path $ArtifactsDirFullPath -PassThru
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
-    Write-Verbose "Failed to zip the directory of admx files: $directoryOfFilesToZip."
+    Write-Verbose "Failed to zip the directory of admx files: $ArtifactsDirFullPath."
     Remove-Item -Recurse -Force $ArtifactsDir
     exit 1
 }
 
 # cd back to root dir
+Write-Verbose "cd to $RootDir"
 Set-Location -Path $RootDir -PassThru
 
 # At this point in the script, ArtifactsDir has:
