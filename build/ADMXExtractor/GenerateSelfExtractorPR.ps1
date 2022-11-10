@@ -87,7 +87,7 @@ Function Get-BoxToolArgs ($boxManifestFilePath, $outputExeTarget, $boxstubTarget
 
 Function Get-Id ($packageId, $xml) {
     $p = $xml.SelectNodes("/packages/package") | Where-Object { $_.id -eq "$packageId"} | Select-Object -Index 0
-    return "$packageId" + "/" + $p.version.ToString()
+    return "$packageId" + "\" + $p.version.ToString()
 }
 # end helper functions
 
