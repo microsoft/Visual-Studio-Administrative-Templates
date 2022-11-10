@@ -60,12 +60,12 @@ Function Set-RootForExecuteFile ($xml, $outputName)
     $executeFile.InnerText = $executeFile.InnerText.Replace("%root%", "$outputName")
 }
 
-Function Get-ZipArgs ($directoryOfFilesToZip, $zipTarget) {
+Function Get-ZipArgs ($zipTarget) {
     $zipArgs = @()
     $zipArgs += "a"
     $zipArgs += "$zipTarget"
     # recursivly search the target folder
-    $zipArgs += "-r $directoryOfFilesToZip"
+    $zipArgs += "-r ./*"
 
     # no compression, extremely fast extract speed.
     $zipArgs += "-mx=0 -mmt=4"
@@ -121,15 +121,18 @@ Write-Verbose "7z tool root: $zipToolRoot"
 
 $zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
 $zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
-$everythingInArtifactsDir = [System.IO.Path]::Combine($ArtifactsDir, "*.*")
-$zipArgs = Get-ZipArgs $everythingInArtifactsDir $zipFileToDropInArtifactsDirectory
+$ArtifactsDirFullPath = [System.IO.Path]::Combine($RootDir, $ArtifactsDir)
+$zipArgs = Get-ZipArgs $zipFileToDropInArtifactsDirectory
 
 Write-Verbose "Calling Zip tool: $zipTool"
 Write-Verbose "Argument List: $zipArgs"
 
-Write-Verbose "Directory of files to zip:  $directoryOfFilesToZip"
+Write-Verbose "Directory of files to zip:  $ArtifactsDirFullPath"
 Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifactsDirectory"
 
+# To prevent 7-Zip from adding the directory structure $ArtifactsDirFullPath, cd to the location
+Write-Verbose "cd to $ArtifactsDirFullPath"
+Set-Location -Path $ArtifactsDirFullPath -PassThru
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
@@ -137,6 +140,9 @@ if ($zipRun.ExitCode -ne 0)
     Remove-Item -Recurse -Force $ArtifactsDir
     exit 1
 }
+
+# cd back to root dir
+Set-Location -Path $RootDir -PassThru
 
 # At this point in the script, ArtifactsDir has:
 # admx\
