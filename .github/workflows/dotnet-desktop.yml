@@ -97,7 +97,7 @@ jobs:
     # Generate the self extracting exe
     - name: Generate the self extracting exe for ADMXExtractor and all admx files.
       run: |
-        .\build\ADMXExtractor\GenerateSelfExtractor.ps1 -RootDir ${{ github.workspace }}  -ArtifactsDir 'OutDir\Staging\ADMXExtractor\Intermediate\' -ArtifactsDropTarget 'OutDir\Staging\ADMXExtractor\finalDrop' -OutputNameWithExtension ${{ env.OUTPUT_NAME_WITH_EXTENSION }} -Verbose
+        .\build\ADMXExtractor\GenerateSelfExtractorPR.ps1 -RootDir ${{ github.workspace }}  -ArtifactsDir 'OutDir\Staging\ADMXExtractor\Intermediate\' -ArtifactsDropTarget 'OutDir\Staging\ADMXExtractor\finalDrop' -OutputNameWithExtension ${{ env.OUTPUT_NAME_WITH_EXTENSION }} -Verbose
 
     # Upload the final artifact
     - name: Upload the final artifact
