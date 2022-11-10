@@ -144,8 +144,8 @@ if ($zipRun.ExitCode -ne 0)
 }
 
 # cd back to root dir
-Write-Verbose "cd to $currentDirectory.Path"
-Set-Location -Path $currentDirectory.Path
+Write-Verbose "cd to $currentDirectory"
+Set-Location -Path $currentDirectory
 
 # At this point in the script, ArtifactsDir has:
 # admx\
