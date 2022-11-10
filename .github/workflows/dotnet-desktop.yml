@@ -57,6 +57,7 @@ jobs:
     env:
       SOLUTION_NAME: src/ADMXExtractor/ADMXExtractor.sln
       AZURE_ARTIFACTS_FEED_URL: https://devdiv.pkgs.visualstudio.com/_packaging/Setup-Dependencies/nuget/v3/index.json
+      PROJECT_NAME: ADMXExtractor
 
     steps:
     - name: Checkout
@@ -76,3 +77,13 @@ jobs:
     # Restore the application
     - name: Restore the application
       run: dotnet restore ${{ env.SOLUTION_NAME }}
+
+    # Build the application
+    - name: Build the application
+      run: dotnet build ${{ env.SOLUTION_NAME }} --configuration '${{ matrix.configuration }}' --output 'OutDir\Staging\${{ env.PROJECT_NAME }}'
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: ADMXExtractor
+        path: 'OutDir\Staging\${{ env.PROJECT_NAME }}'
