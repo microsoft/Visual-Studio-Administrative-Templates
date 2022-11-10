@@ -131,8 +131,10 @@ Write-Verbose "Directory of files to zip:  $ArtifactsDirFullPath"
 Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifactsDirectory"
 
 # To prevent 7-Zip from adding the directory structure $ArtifactsDirFullPath, cd to the location
+
+$currentDirectory = Get-Location
 Write-Verbose "cd to $ArtifactsDirFullPath"
-Set-Location -Path $ArtifactsDirFullPath -PassThru
+Set-Location -Path $ArtifactsDirFullPath
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
@@ -142,8 +144,8 @@ if ($zipRun.ExitCode -ne 0)
 }
 
 # cd back to root dir
-Write-Verbose "cd to $RootDir"
-Set-Location -Path $RootDir -PassThru
+Write-Verbose "cd to $currentDirectory.Path"
+Set-Location -Path $currentDirectory.Path
 
 # At this point in the script, ArtifactsDir has:
 # admx\
