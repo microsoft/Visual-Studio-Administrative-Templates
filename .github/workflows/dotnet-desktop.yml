@@ -56,10 +56,7 @@ jobs:
 
     env:
       SOLUTION_NAME: src/ADMXExtractor/ADMXExtractor.sln
-      #VSS_NUGET_EXTERNAL_FEED_ENDPOINTS: '{"endpointCredentials": [{"endpoint":"https://devdiv.pkgs.visualstudio.com/_packaging/Setup-Dependencies/nuget/v3/index.json", "username":"", "password":"${{ secrets.AZURE_DEVOPS_TOKEN }}"}]'
-      nuget_feed_source: "https://devdiv.pkgs.visualstudio.com/_packaging/Setup-Dependencies/nuget/v3/index.json"
-      nuget_feed_name: "Setup-Dependencies"
-      nuget_config: "nuget.config"
+      AZURE_ARTIFACTS_FEED_URL: https://devdiv.pkgs.visualstudio.com/_packaging/Setup-Dependencies/nuget/v3/index.json
 
     steps:
     - name: Checkout
@@ -69,13 +66,13 @@ jobs:
 
     # Install the .NET Core workload
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 7.x
-
-    - name: Authenticate NuGet
-      run: dotnet nuget add source ${{ env.nuget_feed_source }} --username az --password ${{ secrets.AZURE_DEVOPS_TOKEN }}
-  
+        source-url: ${{ env.AZURE_ARTIFACTS_FEED_URL }}
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.AZURE_DEVOPS_TOKEN }} 
+    
     # Restore the application
     - name: Restore the application
       run: dotnet restore ${{ env.SOLUTION_NAME }}
