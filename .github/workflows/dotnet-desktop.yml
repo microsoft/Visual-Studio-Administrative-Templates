@@ -76,7 +76,7 @@ jobs:
     
     # Restore the application
     - name: Restore the application
-      run: dotnet restore ${{ env.SOLUTION_NAME }}
+      run: dotnet restore ${{ env.SOLUTION_NAME }} --packages ${{ github.workspace }}\packages
 
     # Build the application
     - name: Build the application
