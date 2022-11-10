@@ -85,7 +85,7 @@ jobs:
     # Prepare the staging directory
     - name: Prepare staging directory for self extractor  
       run: |
-        .\build\PrepareStagingDirectoryForSelfExtractor.ps1 -ArtifactsDir 'OutDir\Staging\ADMXExtractor\' -IntermediateDropPath 'OutDir\Staging\ADMXExtractor\Intermediate\'  -Verbose
+        .\build\PrepareStagingDirectoryForSelfExtractorPR.ps1 -ArtifactsDir 'OutDir\Staging\ADMXExtractor\' -IntermediateDropPath 'OutDir\Staging\ADMXExtractor\Intermediate\'  -Verbose
 
     # Upload the build artifacts
     - name: Upload build artifacts
@@ -98,3 +98,10 @@ jobs:
     - name: Generate the self extracting exe for ADMXExtractor and all admx files.
       run: |
         .\build\ADMXExtractor\GenerateSelfExtractor.ps1 -RootDir . -ArtifactsDir 'OutDir\Staging\ADMXExtractor\Intermediate\' -ArtifactsDropTarget 'OutDir\Staging\ADMXExtractor\finalDrop' -OutputNameWithExtension ${{ env.OUTPUT_NAME_WITH_EXTENSION }} -Verbose
+
+    # Upload the final artifact
+    - name: Upload the final artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: ADMXExtractor
+        path: 'OutDir\Staging\ADMXExtractor\finalDrop'
