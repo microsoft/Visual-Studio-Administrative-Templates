@@ -74,7 +74,7 @@ jobs:
       env:
         NUGET_AUTH_TOKEN: ${{ secrets.AZURE_DEVOPS_TOKEN }} 
     
-    # Restore the application
+    # Restore the application and ensure that the NuGet packages are added to the appropriate directory.
     - name: Restore the application
       run: dotnet restore ${{ env.SOLUTION_NAME }} --packages ${{ github.workspace }}\packages
 
@@ -103,5 +103,5 @@ jobs:
     - name: Upload the final artifact
       uses: actions/upload-artifact@v1
       with:
-        name: ADMXExtractor
+        name: Exe
         path: 'OutDir\Staging\ADMXExtractor\finalDrop'
