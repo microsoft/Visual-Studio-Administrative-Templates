@@ -55,7 +55,7 @@ jobs:
     # Prepare the staging directory
     - name: Prepare staging directory for self extractor  
       run: |
-        .\build\PrepareStagingDirectoryForSelfExtractorPR.ps1 -ArtifactsDir 'OutDir\Staging\ADMXExtractor\' -IntermediateDropPath 'OutDir\Staging\ADMXExtractor\Intermediate\'  -Verbose
+        .\build\PrepareStagingDirectoryForSelfExtractor.ps1 -ArtifactsDir 'OutDir\Staging\ADMXExtractor\' -IntermediateDropPath 'OutDir\Staging\ADMXExtractor\Intermediate\' -IsLocalized false -Verbose
 
     # Upload the build artifacts
     - name: Upload build artifacts
