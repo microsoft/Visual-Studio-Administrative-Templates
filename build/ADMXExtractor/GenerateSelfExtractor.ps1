@@ -127,13 +127,13 @@ $zipArgs = Get-ZipArgs $everythingInArtifactsDir $zipFileToDropInArtifactsDirect
 Write-Verbose "Calling Zip tool: $zipTool"
 Write-Verbose "Argument List: $zipArgs"
 
-Write-Verbose "Directory of files to zip:  $directoryOfFilesToZip"
+Write-Verbose "Directory of files to zip:  $everythingInArtifactsDir"
 Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifactsDirectory"
 
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
-    Write-Verbose "Failed to zip the directory of admx files: $directoryOfFilesToZip."
+    Write-Verbose "Failed to zip the directory of admx files: $everythingInArtifactsDir."
     Remove-Item -Recurse -Force $ArtifactsDir
     exit 1
 }
