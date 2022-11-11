@@ -106,11 +106,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;1d4ef9e2c93d10044b07965157003bfd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;1eba2355fc158588b609771aad3407bd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Apply administrator updates]]></Val>
+        <Val><![CDATA[Custom path to the update configuration file]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[관리자 업데이트 적용]]></Val>
+          <Val><![CDATA[업데이트 구성 파일의 사용자 지정 경로]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;2c28491f8b0dcdb4b16c91172b435a7d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Remove out-of-support components during updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[업데이트하는 동안 지원되지 않는 구성 요소 제거]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -160,6 +169,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;47b4de804f44a13317076354c238b3d5" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enable administrator updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[관리자 업데이트 사용]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4c1073eed371baffaef1c064a8a32384" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable downloading updates automatically]]></Val>
@@ -169,29 +187,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;4dd62e46e6949588d3cf6c32986a855b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This setting will automatically remove all components from the Visual Studio installation that have transitioned out of support.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 설정은 지원에서 전환된 Visual Studio 설치에서 모든 구성 요소를 자동으로 제거합니다.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;4e19a8faddd9972bf914aa1d707daed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.1 이상.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;56771d386132b34eaf3cf7f1bf816e6e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The custom file path to the update configuration file used for configuring Administrative Updates. For more information, see https://aka.ms/MethodsForConfiguringAdminUpdates.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[관리 업데이트를 구성하는 데 사용되는 업데이트 구성 파일의 사용자 지정 파일 경로입니다. 자세한 내용은  https://aka.ms/MethodsForConfiguringAdminUpdates를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -214,15 +214,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;691949fd3afe690b42e5ddf466493d9b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[카탈로그, WSUS 및 Microsoft 업데이트에 대해 관리자 업데이트 사용]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;6b6d10ad14cdd6eee27c4b5e77925d28" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable shared server]]></Val>
@@ -237,6 +228,15 @@
         <Val><![CDATA[Disable shared read write terminal]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[공유 읽기 쓰기 터미널 사용 안 함]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 설정은 지원 중단 상태로 전환된 Visual Studio 설치에서 모든 구성 요소를 자동으로 제거하는 업데이트를 일으킵니다다.]D;]A;        ]D;]A;1(사용함)로 설정하면 Visual Studio 설치 프로그램은 모든 후속 업데이트 중에 지원되지 않는 모든 구성 요소를 제거합니다. ]D;]A;        ]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락된 경우 지원하지 않는 구성 요소 삭제제 동작은 명령줄 매개변수 또는 업데이트 설정 대화 상자와 같이 구성할 수 있는 다른 위치를 따릅니다.]D;]A;        ]D;]A;이 기능을 사용하려면 클라이언트 컴퓨터에 Visual Studio 2022 버전 17.4 설치 프로그램을 설치해야 합니다.        ]D;]A;]D;]A;자세한 정보는 https://aka.ms/vs/removeoos/blog를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -277,11 +277,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;88c210e95643d7701f385fa012f7d13c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Custom path to the update config]]></Val>
+        <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[업데이트 구성에 대한 사용자 지정 경로]]></Val>
+          <Val><![CDATA[WSUS/SCCM 및 Microsoft 업데이트/Intune]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -300,15 +300,6 @@
         <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[이 정책을 사용하면 Visual Studio 원격 분석을 Visual Studio 사용자 환경 개선 프로그램 일부로 Microsoft로 보낼 수 있습니다. 자세한 내용은 aka.ms/vs/admx/telemetry를 참조하세요.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;960a1f72d579625804a381fc2993670e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. ]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[사용자가 Visual Studio에 대한 관리자 업데이트를 수신하지 않으려는 것을 나타냅니다. 레지스트리 값이 없거나 0으로 설정된 값은 Visual Studio 사용자가 Visual Studio에 대한 관리자 업데이트를 받기를 원한다는 것을 의미합니다. 개발자 사용자를 위한 것입니다(클라이언트 컴퓨터에 대한 관리자 권한이 있는 경우). 자세한 내용은 관리자 업데이트 적용을 참조하세요. AdministratorUpdatesOptOut이 1로 설정되어 있지만 사용자의 AdministratorUpdatesEnabled 레지스트리 값이 활성화되어 있으면 AdministratorUpdatesOptOut이 적용됩니다. ]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -340,33 +331,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;a19858482b4d221ba2c3116958070240" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Remove out-of-support components]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[지원되지 않는 구성 요소 제거]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a24427abeadf9e1708020a435d8b5531" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Administrator Updates Enabled for Catalog and WSUS]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[카탈로그 및 WSUS에 대해 관리자 업데이트 사용]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 정책 설정은 사용자가 이전에 설치한 버전으로 Visual Studio를 업데이트하고 롤백을 실행 취소할 수 있는지를 결정합니다.]D;]A;]D;]A;이 정책 설정을 사용하면 사용자가 롤백 기능에 액세스할 수 없으므로 Visual Studio 보안 패치를 포함할 수 있는 마지막 업데이트를 되돌릴 수 없습니다.]D;]A;]D;]A;이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자는 Visual Studio 롤백 기능에 액세스할 수 있으며 업데이트를 실행 취소하고 Visual Studio 인스턴스를 이전에 설치한 버전으로 롤백할 수 있습니다. 참고: 구성되지 않은 기본 설정을 사용하면 Visual Studio 업데이트를 롤백할 수 있습니다.]D;]A;]D;]A;이 정책은 컴퓨터에 설치된 Visual Studio 2022 이상의 릴리스 인스턴스에 적용됩니다.]D;]A;자세한 내용은 다음을 참조하세요. https://aka.ms/vs/rollback]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -381,6 +345,24 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[설치 후 패키지 페이로드 유지]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[사용자가 Visual Studio 관리자 업데이트를 받지 않음을 나타냅니다. ]D;]A;        ]D;]A;1(사용)로 설정하면 Visual Studio 사용자가 Visual Studio 관리자 업데이트를 받지 않습니다. 이 정책은 개발자인 사용자가 클라이언트 컴퓨터에 대한 관리자 권한이 있는지를 설정하기 위한 것입니다. ]D;]A;        ]D;]A;자세한 내용은 https://aka.ms/vs/admin/updates/control을 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ab7205b61d4a56ba4ed4e941576e4afc" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[관리자 업데이트를 클라이언트 컴퓨터에 표시하고 적용할 수 있습니다. ]D;]A;        ]D;]A;1(WSUS/SCCM을 사용)로 설정하면 WSUS 및 SCCM을 통해 전달된 관리자 업데이트를 AD(Active Direcotry) 조인 클라이언트 컴퓨터에서 사용할 수 있습니다.  ]D;]A;        ]D;]A;2(WSUS/SCCM 및 Microsoft Updates/Intune을 사용)로 설정하면 WSUS/SCCM 또는 Microsoft 업데이트/Intune을 통해 제공되는 관리자 업데이트는 비즈니스용 Windows 업데이트(WUfB)에 등록된 AD(Active Directory) 또는 Azure AD(Azure Active Directory) 조인 컴퓨터에서 사용할 수 있습니다. WUfB AllowMUUpdateServicePolicy도 켜져 있어야 합니다.]D;]A;]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락된 경우 컴퓨터에서 관리자 업데이트를 사용할 수 없습니다.       ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -439,6 +421,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;c92b134ee6dabec50bec54abafef79b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[WSUS/SCCM]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[WSUS/SCCM]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;c999dfa0952915b1029c2977f33a0ebb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
@@ -475,6 +466,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[관리자 업데이트를 구성하는 데 사용되는 업데이트 구성 파일의 사용자 지정 파일 경로입니다. 자세한 내용은  https://aka.ms/vs/admin/updates/configurationfile을 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;e5ff5d3af4098733450b4e3802f5d68b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Live Share Settings]]></Val>
@@ -484,20 +484,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;e7390d38d5b93bc9f31da8a2720d68f9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be applied to the client computer. If this value is missing or is set to 0, administrator updates will be blocked. This value is for administrative use.]D;]A;]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]D;]A;]D;]A;If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not, AdministratorUpdatesEnabled is respected.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[관리자 업데이트를 클라이언트 컴퓨터에 적용할 수 있습니다. 이 값이 없거나 0으로 설정되면 관리자 업데이트가 차단됩니다. 이 값은 관리용입니다.]D;]A;]D;]A;자세한 내용을 확인하려면 https://aka.ms/EnableAdminUpdates를 참조하세요.]D;]A;]D;]A;AdministratorUpdatesEnabled가 비활성화되어 있지만 AdministratorUpdatesOptOut이 비활성화되어 있지 않으면 AdministratorUpdatesEnabled가 적용됩니다.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[이 정책은 웃는 얼굴 보내기 기능에서 스크린샷 기능을 사용하지 않도록 설정합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;f9ae13cf82e3690aa0bd76ca3f17c434" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/rollback.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책은 사용자가 업데이트를 실행 취소하고 Visual Studio를 이전에 설치된 버전으로 롤백할 수 있는지 여부를 결정합니다.]D;]A;]D;]A;1(사용함)로 설정하면 사용자가 롤백 기능에 액세스할 수 없으므로 Visual Studio에서 보안 수정 사항이 포함될 수 있는 최신 업데이트를 되돌릴 수 없습니다.]D;]A;]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락되면 사용자는 Visual Studio 롤백 기능에 액세스할 수 있으며 업데이트를 실행 취소하고 Visual Studio 인스턴스를 이전에 설치한 버전으로 롤백할 수 있습니다. 참고: 구성되지 않은 기본 설정을 사용하면 Visual Studio 업데이트를 롤백할 수 있습니다.]D;]A;]D;]A;이 정책은 컴퓨터에 설치된 Visual Studio 2022 이상의 릴리스 인스턴스에 적용됩니다.]D;]A;]D;]A;자세한 정보는 https://aka.ms/vs/rollback을 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

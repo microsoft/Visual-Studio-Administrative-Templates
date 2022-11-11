@@ -106,11 +106,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;1d4ef9e2c93d10044b07965157003bfd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;1eba2355fc158588b609771aad3407bd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Apply administrator updates]]></Val>
+        <Val><![CDATA[Custom path to the update configuration file]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Použít aktualizace správce]]></Val>
+          <Val><![CDATA[Vlastní cesta ke konfiguračnímu souboru aktualizace]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;2c28491f8b0dcdb4b16c91172b435a7d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Remove out-of-support components during updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Odebrání nepodporovaných součásti v průběhu aktualizací]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -160,6 +169,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;47b4de804f44a13317076354c238b3d5" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enable administrator updates]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Povolit aktualizace správce]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4c1073eed371baffaef1c064a8a32384" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable downloading updates automatically]]></Val>
@@ -169,29 +187,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;4dd62e46e6949588d3cf6c32986a855b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This setting will automatically remove all components from the Visual Studio installation that have transitioned out of support.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Toto nastavení automaticky odebere všechny součásti z instalace Visual Studio, u kterých došlo k ukončení podpory.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;4e19a8faddd9972bf914aa1d707daed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.1 a vyšší.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;56771d386132b34eaf3cf7f1bf816e6e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The custom file path to the update configuration file used for configuring Administrative Updates. For more information, see https://aka.ms/MethodsForConfiguringAdminUpdates.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Vlastní cesta k souboru konfigurace aktualizace, který se používá ke konfiguraci aktualizací pro správu Další informace najdete v tématu https://aka.ms/MethodsForConfiguringAdminUpdates.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -214,15 +214,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;691949fd3afe690b42e5ddf466493d9b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Administrator Updates Enabled for Catalog, WSUS and Microsoft Updates]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Aktualizace správců povolené pro katalog, WSUS a aktualizace Microsoftu]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;6b6d10ad14cdd6eee27c4b5e77925d28" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable shared server]]></Val>
@@ -237,6 +228,15 @@
         <Val><![CDATA[Disable shared read write terminal]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Zakázat sdílený terminál pro zápis pro čtení]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Toto nastavení způsobí, že aktualizace automaticky odeberou všechny součásti ze všech instalací Visual Studio, které přešly do stavu mimo podporu.]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povoleno), odebere instalační program Visual Studio v průběhu všech následných aktualizací všechny nepodporované součásti.  ]D;]A;        ]D;]A;Pokud je nastaveno na hodnotu 0 (zakázáno) nebo zcela chybí, bude chování odebrání nepodporovaných součástí respektovat jiná umístění, ve kterých lze tuto možnost nakonfigurovat. Jde například o parametr příkazového řádku nebo dialogové okno Aktualizovat nastavení.]D;]A;        ]D;]A;Tato funkce vyžaduje instalaci instalačního programu Visual Studio 2022 verze 17.4 na klientský počítač.        ]D;]A;]D;]A;Další informace najdete v tématu https://aka.ms/vs/removeoos/blog]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -277,11 +277,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;88c210e95643d7701f385fa012f7d13c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Custom path to the update config]]></Val>
+        <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Vlastní cesta ke konfiguraci aktualizace]]></Val>
+          <Val><![CDATA[WSUS/SCCM a Microsoft Updates/Intune]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -300,15 +300,6 @@
         <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Tyto zásady umožňují odesílat Visual Studio telemetrii do Microsoftu jako součást Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů. Další informace najdete v tématu: aka.ms/vs/admx/telemetry]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;960a1f72d579625804a381fc2993670e" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. The absence of the registry value, or a set value of 0, means that the Visual Studio user wants to receive administrator updates to Visual Studio. This is for developer user (if they have admin permissions on the client machine). For more information, see Applying administrator updates. If AdministratorUpdatesOptOut is set to 1 but the user’s AdministratorUpdatesEnabled registry value is enabled, the AdministratorUpdatesOptOut is respected. ]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Označuje, že uživatel nechce dostávat aktualizace správce pro Visual Studio. Absence hodnoty registru nebo nastavená hodnota 0 znamená, že uživatel Visual Studio chce dostávat aktualizace správce pro Visual Studio. Je to pro uživatele vývojáře (pokud má na klientském počítači oprávnění správce). Další informace najdete v tématu Použití aktualizací správce. Pokud je vlastnost AdministratorUpdatesOptOut nastavena na hodnotu 1, ale je povolena hodnota registru AdministratorUpdatesEnabled uživatele, bude respektována hodnota AdministratorUpdatesOptOut. ]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -340,33 +331,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;a19858482b4d221ba2c3116958070240" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Remove out-of-support components]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Odebrat nepodporované komponenty]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a24427abeadf9e1708020a435d8b5531" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Administrator Updates Enabled for Catalog and WSUS]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Aktualizace správce povoleny pro katalog a službu WSUS]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a54fe2652af46aeb90c68ba992c2f721" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy setting determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If you enable this policy setting, users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the last update which may contain a security patch.]D;]A;]D;]A;If you disable or do not configure this policy setting, users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that is installed on the machine.]D;]A;For more information, see: https://aka.ms/vs/rollback]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Toto nastavení zásad určuje, jestli uživatel může vrátit aktualizaci a vrátit zpět sadu Visual Studio na dříve nainstalovanou verzi.]D;]A;]D;]A;Pokud toto nastavení zásad povolíte, uživatelé nebudou mít přístup k funkci vrácení zpět, což zabrání vrácení poslední aktualizace sady Visual Studio, která může obsahovat opravu zabezpečení.]D;]A;]D;]A;Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, uživatelé budou mít v sadě Visual Studio přístup k funkci vrácení zpět a budou moct vrátit aktualizaci a vrátit zpět instance sady Visual Studio na dříve nainstalovanou verzi. Poznámka: Výchozí nenakonfigurované nastavení umožňuje vrátit zpět aktualizaci sady Visual Studio.]D;]A;]D;]A;Tato zásada platí pro instance verzí Visual Studio 2022 a novější verze nainstalované v počítači.]D;]A;Další informace viz: https://aka.ms/vs/rollback]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -381,6 +345,24 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Zachovat datové části balíčku po instalaci]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Označuje, že uživatel nechce dostávat aktualizace správce pro Visual Studio. ]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povoleno), uživatel Visual Studio nebude chtít dostávat aktualizace správce pro Visual Studio. Tuto zásadu může vývojářský uživatel nastavit, pokud má na klientském počítači oprávnění správce. ]D;]A;        ]D;]A;Další informace najdete v tématu https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ab7205b61d4a56ba4ed4e941576e4afc" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Umožňuje zobrazit aktualizace správce a použít je v klientském počítači. ]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povolená pro WSUS/SCCM), budou aktualizace správců doručované přes WSUS a SCCM dostupné klientským počítačům připojeným ke službě Active Direcotry (AD).  ]D;]A;        ]D;]A;Pokud je nastavená hodnota 2 (povolená pro WSUS/SCCM a Microsoft Updates/Intune), budou se aktualizace správců doručované prostřednictvím WSUS/SCCM nebo Microsoft Updates/Intune dostupné buď pro počítače připojené ke službě Active Directory (AD), nebo Azure Active Directory (Azure AD), které jsou zaregistrované v Windows Update pro firmy (WUfB). Všimněte si, že zásada WUfB AllowMUUpdateServicePolicy musí být také zapnutá.]D;]A;]D;]A;Pokud je nastavená hodnota 0 (zakázáno) nebo zcela chybí, aktualizace správce nebudou pro počítač k dispozici.        ]D;]A;        ]D;]A;Další informace najdete v tématu https://aka.ms/EnableAdminUpdates.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -439,6 +421,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;c92b134ee6dabec50bec54abafef79b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[WSUS/SCCM]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[WSUS/SCCM]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;c999dfa0952915b1029c2977f33a0ebb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
@@ -475,6 +466,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Vlastní cesta ke konfiguračnímu souboru aktualizace, který se používá ke konfiguraci aktualizací správce. Další informace najdete v tématu https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;e5ff5d3af4098733450b4e3802f5d68b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Live Share Settings]]></Val>
@@ -484,20 +484,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;e7390d38d5b93bc9f31da8a2720d68f9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be applied to the client computer. If this value is missing or is set to 0, administrator updates will be blocked. This value is for administrative use.]D;]A;]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]D;]A;]D;]A;If AdministratorUpdatesEnabled is disabled but AdministratorUpdatesOptOut is not, AdministratorUpdatesEnabled is respected.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Umožňuje použití aktualizací správce na klientský počítač. Pokud tato hodnota chybí nebo je nastavená na 0, aktualizace správce se zablokují. Tato hodnota je pro administrativní účely.]D;]A;]D;]A;Další informace najdete v tématu https://aka.ms/EnableAdminUpdates.]D;]A;]D;]A;Pokud je vlastnost AdministratorUpdatesEnabled zakázána, ale není nastavena možnost AdministratorUpdatesOptOut, je respektována vlastnost AdministratorUpdatesEnabled.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Tato zásada zakáže funkci poslat smajlíka schopnost udělat snímek obrazovky.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;f9ae13cf82e3690aa0bd76ca3f17c434" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/rollback.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Tato zásada určuje, jestli uživatel může vrátit aktualizaci zpět a vrátit zpět Visual Studio na dříve nainstalovanou verzi.]D;]A;]D;]A;Pokud je nastavená hodnota 1 (povoleno), uživatelé nebudou mít přístup k funkci vrácení zpět, což zabrání Visual Studio v vrácení nejnovější aktualizace, která může obsahovat opravu zabezpečení.]D;]A;]D;]A;Pokud je nastavená hodnota 0 (zakázáno) nebo chybí úplně, budou mít uživatelé v aplikaci Visual Studio přístup k funkci vrácení zpět, budou moct vrátit zpět aktualizaci a vrátit své instance Visual Studio na dříve nainstalovanou verzi. Poznámka: Výchozí nenakonfigurované nastavení umožňuje vrátit zpět aktualizaci Visual Studio.]D;]A;]D;]A;Tyto zásady platí pro instance verzí Visual Studio 2022 nebo vyšší, které mohou být na počítači nainstalovány.]D;]A;]D;]A;Další informace najdete v tématu https://aka.ms/vs/rollback.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
