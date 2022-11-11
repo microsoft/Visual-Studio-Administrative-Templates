@@ -113,7 +113,7 @@ steps:
   inputs:
     workingDirectory: $(Build.SourcesDirectory)
     filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
-    arguments:  -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -IntermediateDropPath $(Build.StagingDirectory)\$(projectName)\Intermediate\ -IsLocalized true -Verbose
+    arguments:  -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -IntermediateDropPath $(Build.StagingDirectory)\$(projectName)\Intermediate\ -IsLocalized $True -Verbose
 
 - task: PublishBuildArtifacts@1
   inputs:
