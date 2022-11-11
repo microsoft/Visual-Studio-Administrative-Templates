@@ -34,6 +34,7 @@ variables:
   logFileName: MyWpfAppSigningLog.txt
   finalDrop: $(Build.StagingDirectory)\finalDrop
   outputNameWithExtension: VisualStudioAdminTemplates.exe
+  CodeQL.Enabled: true
 
 steps:
 - checkout: self
