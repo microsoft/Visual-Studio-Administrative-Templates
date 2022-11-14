@@ -1,26 +1,20 @@
 <#
 .SYNOPSIS
     Generates the self-extracting ADMXExtractor exe
-
 .DESCRIPTION
     Zips up the admx and adml files, ADMXExtractor.exe using the box tool to create the self-extracting admin update exe.
-
 .PARAMETER $ArtifactsDir
     The root artifact directory where the ADMXExtractor build was generated.
     e.g. $ArtifactsDir = $(Build.StagingDirectory)\$(projectName)\ 
-
 .PARAMETER $RootDir
     The repo root directory.
     e.g. $RootDir = D:\Visual-Studio-Administrative-Templates
-
 .PARAMETER $ArtifactFinalDropTarget
     The target path for where to output the finished ADMX Self-extracting exe.
     e.g. $ArtifactFinalDropTarget = D:\Visual-Studio-Administrative-Templates\artifacts\finaldrop
-
 .PARAMETER $OutputNameWithExtension
     The final ADMX Self-extracting exe.
     e.g. $OutputNameWithExtension = VisualStudioAdministrativeTemplates.exe
-
 
 Start-Process -FilePath "C:\Program Files\7-Zip\7z.exe" -ArgumentList "a", "D:\Visual-Studio-Administrative-Templates\artifacts\admx.7z", "-r", "D:\Visual-Studio-Administrative-Templates\artifacts\ADMXExtractor", "-mx=0 -mmt=4" 
 
@@ -31,7 +25,6 @@ if ($boxtoolRun.ExitCode -ne 0)
     Write-Verbose 'BoxTool failed with exit code $boxtoolRun.ExitCode.'
     exit 1
 }
-
 #>
 
 [CmdletBinding()]
@@ -87,7 +80,7 @@ Function Get-BoxToolArgs ($boxManifestFilePath, $outputExeTarget, $boxstubTarget
 
 Function Get-Id ($packageId, $xml) {
     $p = $xml.SelectNodes("/packages/package") | Where-Object { $_.id -eq "$packageId"} | Select-Object -Index 0
-    return "$packageId" + "." + $p.version.ToString()
+    return "$packageId" + "\" + $p.version.ToString()
 }
 # end helper functions
 
@@ -120,23 +113,41 @@ $zipToolRoot = [System.IO.Path]::Combine($bootstrapperToolRoot, "7z")
 Write-Verbose "7z tool root: $zipToolRoot"
 
 $zipTool = [System.IO.Path]::Combine($zipToolRoot, "7z.exe")
-$zipFileToDropInArtifactsDirectory = [System.IO.Path]::Combine($ArtifactsDir, "admx.7z")
+$zipFileToDropInArtifactsDirectory = "admx.7z"
 $everythingInArtifactsDir = [System.IO.Path]::Combine($ArtifactsDir, "*.*")
-$zipArgs = Get-ZipArgs $everythingInArtifactsDir $zipFileToDropInArtifactsDirectory
+$starDotStar = "*.*"
+$pathToArtifactsDir = [System.IO.Path]::Combine($RootDir, $ArtifactsDir)
+$zipArgs = Get-ZipArgs $starDotStar $zipFileToDropInArtifactsDirectory
+
+Write-Verbose "Directory of files to zip:  $everythingInArtifactsDir"
+Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifactsDirectory"
+
+Write-Verbose "Get and save current location"
+$currentLocation = Get-Location
+Write-Verbose "CurrentLocation $currentLocation"
+
+# Switch location to the artifacts directory in order to prevent 7-zip from bundling the directories
+Write-Verbose "Set-Location -LiteralPath $pathToArtifactsDir"
+Set-Location -LiteralPath $pathToArtifactsDir
 
 Write-Verbose "Calling Zip tool: $zipTool"
 Write-Verbose "Argument List: $zipArgs"
 
-Write-Verbose "Directory of files to zip:  $directoryOfFilesToZip"
-Write-Verbose "Zip file to drop in artifact directory: $zipFileToDropInArtifactsDirectory"
-
 $zipRun = Start-Process -FilePath $zipTool -ArgumentList $zipArgs -PassThru -Wait
 if ($zipRun.ExitCode -ne 0)
 {
-    Write-Verbose "Failed to zip the directory of admx files: $directoryOfFilesToZip."
+    Write-Verbose "Failed to zip the directory of admx files: $everythingInArtifactsDir."
     Remove-Item -Recurse -Force $ArtifactsDir
     exit 1
 }
+else
+{
+    Write-Verbose "Successfully zipped the directory of admx files: $everythingInArtifactsDir."
+}
+
+# Switch location back to the working directory
+Write-Verbose "Set-Location -LiteralPath $currentLocation"
+Set-Location -LiteralPath $currentLocation
 
 # At this point in the script, ArtifactsDir has:
 # admx\
