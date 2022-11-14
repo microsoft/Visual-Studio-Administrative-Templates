@@ -13,6 +13,7 @@ jobs:
     build:
         name: Call Azure Pipeline
         runs-on: windows-latest
+        environment: development
         steps:
         - name: Azure Pipelines Action
           uses: Azure/pipelines@v1
