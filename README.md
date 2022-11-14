@@ -4,6 +4,8 @@ This repository contains the administrative templates for the Visual Studio fami
 
 These templates define what Visual Studio functionality can be centrally managed by group policy.
 
+[![Build Status](https://devdiv.visualstudio.com/DevDiv/_apis/build/status/microsoft.Visual-Studio-Administrative-Templates?branchName=main)](https://devdiv.visualstudio.com/DevDiv/_build/latest?definitionId=16847&branchName=main)
+
 ## Testing locally
 
 On Windows, you can test locally by leveraging the Windows Local Group Policy Editor:
