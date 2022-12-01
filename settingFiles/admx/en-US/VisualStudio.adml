@@ -109,14 +109,16 @@ This policy applies to release instances of Visual Studio 2022 or higher that ma
 
 For more information, see https://aka.ms/vs/rollback.</string>
 
-      <string id="HideAvailableTab_DisplayName">Hide Available Tab shown in Visual Studio Installer</string>
-      <string id="HideAvailableTab_Explain">This policy determines whether the user can see the Available Tab which contains the available products that can be installed by the Visual Studio Installer.
+      <string id="HideAvailableTab_DisplayName">Hide Available tab shown in Visual Studio Installer</string>
+      <string id="HideAvailableTab_Explain">This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.
 
 If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.
 
 If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.
 
-This policy applies to release instances of Visual Studio 2017 or higher that may be installed on the machine.</string>
+This policy applies to the Visual Studio Installer version 3.6.0 or higher.
+
+For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
