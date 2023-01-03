@@ -266,6 +266,22 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
+        <policy 
+            name="HideAvailableTab" 
+            class="Machine" 
+            displayName="$(string.HideAvailableTab_DisplayName)" 
+            explainText="$(string.HideAvailableTab_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="HideAvailableTab">
+            <parentCategory ref="InstallandUpdateSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
 
         <!-- LiveShare Settings -->
         <policy 
