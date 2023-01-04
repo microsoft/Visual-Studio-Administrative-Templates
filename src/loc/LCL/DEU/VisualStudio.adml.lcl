@@ -88,6 +88,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;0787119262bdcd3c6d4f53811fffe56f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Hide Available tab shown in Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Registerkarte „Verfügbar“ ausblenden, die in Visual Studio-Installer angezeigt wird]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;11e476b46162b25fc34ad038749a5874" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/DisableOrMovePackageCache]]></Val>
@@ -300,6 +309,15 @@
         <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Mit dieser Richtlinie können Visual Studio-Telemetriedaten im Rahmen des Visual Studio-Programms zur Verbesserung der Benutzerfreundlichkeit an Microsoft gesendet werden. Weitere Informationen finden Sie unter: aka.ms/vs/admx/telemetry]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;975a236e30fedda9ba2634f1d21a689d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This policy applies to the Visual Studio Installer version 3.6.0 or higher.]D;]A;]D;]A;For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Diese Richtlinie bestimmt, ob die Registerkarte „Verfügbar“ im Installer sichtbar ist oder nicht. Die Registerkarte „Verfügbar“ enthält vorgeschlagene Produkte, die vom Visual Studio-Installer installiert werden können.]D;]A;]D;]A;Wenn dies auf 1 (aktiviert) festgelegt sind, wird verhindert, dass Benutzern die Registerkarte „Verfügbar“ sehen können, und somit werden sie keine Möglichkeit haben, neue Produkte über die Registerkarte „Verfügbar“ über die Benutzeroberfläche des Installers zu installieren. Benutzer können weiterhin Produkte über die Befehlszeile oder über den Bootstrapper installieren.]D;]A;]D;]A;Wenn dies auf 0 (deaktiviert) festgelegt ist oder vollständig fehlt, werden Benutze die Registerkarte „Verfügbar“ sehen können, und sie können neue Produkte frei installieren, die auf der Benutzeroberfläche des Installers angekündigt werden. Hinweis: Dies ist das Standardverhalten.]D;]A;]D;]A;Diese Richtlinie gilt für die Visual Studio-Installer Version 3.6.0 oder höher.]D;]A;]D;]A;Weitere Informationen finden Sie unter https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

@@ -88,6 +88,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;0787119262bdcd3c6d4f53811fffe56f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Hide Available tab shown in Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[隐藏 Visual Studio 安装程序中显示的“可用”选项卡]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;11e476b46162b25fc34ad038749a5874" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/DisableOrMovePackageCache]]></Val>
@@ -300,6 +309,15 @@
         <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[此策略允许将 Visual Studio 遥测数据发送到 Microsoft，作为 Visual Studio 客户体验改善计划的一部分。有关详细信息，请参阅: aka.ms/vs/admx/telemetry]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;975a236e30fedda9ba2634f1d21a689d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This policy applies to the Visual Studio Installer version 3.6.0 or higher.]D;]A;]D;]A;For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此策略确定安装程序中的“可用”选项卡是否可见。“可用”选项卡包含可由 Visual Studio 安装程序安装的建议产品。]D;]A;]D;]A;如果设置为 1 (已启用)，则将阻止用户看到“可用”选项卡， 因此，将无法使用安装程序 UI 从“可用”选项卡安装新产品。用户仍然可以从命令行或通过 bootstrapper 安装产品。]D;]A;]D;]A;如果设置为 0 (已禁用)或完全缺失，则用户仍然可以安装产品。 用户将能够看到“可用”选项卡并自由安装在安装程序 UI 上播发的新产品。注意: 此为默认行为。]D;]A;]D;]A;此策略适用于 Visual Studio 安装程序版本 3.6.0 或更高版本。]D;]A;]D;]A;有关详细信息， 请参阅 https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
