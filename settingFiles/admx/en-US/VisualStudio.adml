@@ -95,6 +95,8 @@ For more information, see https://aka.ms/EnableAdminUpdates.</string>
 If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. 
         
 For more information, see https://aka.ms/vs/admin/updates/control.</string>
+      <string id="AdministratorPromptToClose_DisplayName"></string>
+      <string id="AdministratorPromptToClose_Explain"></string>
       <string id="UpdateConfigurationFile_DisplayName">Custom path to the update configuration file</string>
       <string id="UpdateConfigurationFile_Explain">The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.</string>
 
