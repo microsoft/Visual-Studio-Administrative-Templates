@@ -52,14 +52,14 @@ If set to 0 (disabled) or missing entirely, then the remove out-of-support compo
         
 This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        
 
-For more information, see https://aka.ms/vs/removeoos/blog</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
     
       <string id="CachePath_DisplayName">Package manifest and payload cache path</string>
       <string id="CachePath_Explain">The directory where package manifests and, optionally, payloads are stored.
 
 The Visual Studio Installer enforces a 50 character limit for the path.
 
-For more information, see https://aka.ms/DisableOrMovePackageCache</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
   
       <string id="BackgroundDownloadDisabled_DisplayName">Disable downloading updates automatically</string>
       <string id="BackgroundDownloadDisabled_Explain">Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.</string>
@@ -73,7 +73,7 @@ The Visual Studio Installer enforces a 150 character limit for the path.</string
 
 Enabled by default.
 
-For more information, see: https://aka.ms/DisableOrMovePackageCache</string>
+For more information, see: http://aka.ms/vs/setup/policies.</string>
 
       <string id="AdministratorUpdatesEnabled_DisplayName">Enable administrator updates</string>
       <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be visible to and applied to the client computer. 
@@ -84,7 +84,7 @@ If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administr
 
 If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        
         
-For more information, see https://aka.ms/EnableAdminUpdates.</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
 
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">WSUS/SCCM</string>
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU">WSUS/SCCM and Microsoft Updates/Intune</string>
@@ -94,7 +94,7 @@ For more information, see https://aka.ms/EnableAdminUpdates.</string>
         
 If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. 
         
-For more information, see https://aka.ms/vs/admin/updates/control.</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
       <string id="UpdateConfigurationFile_DisplayName">Custom path to the update configuration file</string>
       <string id="UpdateConfigurationFile_Explain">The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.</string>
 
@@ -107,18 +107,18 @@ If set to 0 (disabled) or missing entirely, then users will be able to access th
 
 This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.
 
-For more information, see https://aka.ms/vs/rollback.</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
 
-      <string id="HideAvailableTab_DisplayName">Hide Available tab shown in Visual Studio Installer</string>
+      <string id="HideAvailableTab_DisplayName">Hide the Available tab shown in the Visual Studio Installer</string>
       <string id="HideAvailableTab_Explain">This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.
 
-If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.
+If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.
 
 If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.
 
-This policy applies to the Visual Studio Installer version 3.6.0 or higher.
+This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.
 
-For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
