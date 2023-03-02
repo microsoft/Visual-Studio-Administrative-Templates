@@ -88,20 +88,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;0787119262bdcd3c6d4f53811fffe56f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;0e3b58934d3872d0439d81b70ea36d2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Hide Available tab shown in Visual Studio Installer]]></Val>
+        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: http://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio Yükleyicisinde gösterilen Kullanılabilir sekmesini gizleyin]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;11e476b46162b25fc34ad038749a5874" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/DisableOrMovePackageCache]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Paket yüklerini yüklendikten sonra da saklayın. Değeri istediğiniz zaman değiştirebilirsiniz. İlkenin devre dışı bırakılması, onarmış veya değiştirmiş olduğunuz örnek için önbelleğe alınmış paket yüklerini kaldırır.]D;]A;]D;]A;Varsayılan olarak etkin.]D;]A;]D;]A;Daha fazla bilgi için bkz. https://aka.ms/DisableOrMovePackageCache]]></Val>
+          <Val><![CDATA[Paket yüklerini yüklendikten sonra da saklayın. Değeri istediğiniz zaman değiştirebilirsiniz. İlkenin devre dışı bırakılması, onarmış veya değiştirmiş olduğunuz örnek için önbelleğe alınmış paket yüklerini kaldırır.]D;]A;]D;]A;Varsayılan olarak etkin.]D;]A;]D;]A;Daha fazla bilgi için bkz. http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -129,6 +120,15 @@
         <Val><![CDATA[Remove out-of-support components during updates]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Güncelleştirmeler sırasında destek kapsamı dışındaki bileşenleri kaldır]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;32abb6e39cd62f63c9be7113c44bd81d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Kullanıcının Visual Studio için yönetici güncelleştirmeleri almak istemediğini belirtir. ]D;]A;        ]D;]A;1 (etkin) olarak ayarlanırsa, Visual Studio kullanıcısı Visual Studio için yönetici güncelleştirmeleri almak istemiyor demektir. Bu ilke, geliştirici kullanıcının istemci makinede yönetici izinlerine sahip olup olmayacağını belirlemeye yarar. ]D;]A;        ]D;]A;Daha fazla bilgi için http://aka.ms/vs/setup/policies sayfasına bakın.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -243,10 +243,13 @@
     </Item>
     <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Bu ayar, güncelleştirmelerin destek kapsamı dışındaki bir duruma geçmiş olan tüm Visual Studio yüklemelerindeki tüm bileşenleri otomatik olarak kaldırmasını sağlar.]D;]A;        ]D;]A;1 (etkin) olarak ayarlandığında, Visual Studio yükleyicisi sonraki tüm güncelleştirmeler sırasında destek kapsamı dışındaki tüm bileşenleri kaldırır.  ]D;]A;        ]D;]A;0 (devre dışı) olarak ayarlandığında veya hiç ayarlanmadığında, destek kapsamı dışındaki bileşenleri kaldırma davranışı, bu ayarın yapılandırılabileceği komut satırı parametresi veya Güncelleştirme Ayarları iletişim kutusu gibi diğer konumlara uyum sağlar.]D;]A;        ]D;]A;Bu işlev, Visual Studio 2022 sürüm 17.4 yükleyicisinin istemci makinede yüklü olmasını gerektirir.        ]D;]A;]D;]A;Daha fazla bilgi için https://aka.ms/vs/removeoos/blog sayfasına bakın]]></Val>
+          <Val><![CDATA[Bu ayar, güncelleştirmelerin destek kapsamı dışındaki bir duruma geçmiş olan tüm Visual Studio yüklemelerindeki tüm bileşenleri otomatik olarak kaldırmasını sağlar.]D;]A;        ]D;]A;1 (etkin) olarak ayarlanırsa, Visual Studio yükleyicisi sonraki tüm güncelleştirmeler sırasında destek kapsamı dışındaki tüm bileşenleri kaldırır.  ]D;]A;        ]D;]A;0 (devre dışı) olarak ayarlanırsa veya hiç ayarlanmazsa, destek kapsamı dışındaki bileşenleri kaldırma davranışı, bu ayarın yapılandırılabileceği komut satırı parametresi veya Güncelleştirme Ayarları iletişim kutusu gibi diğer konumlara uyum sağlar.]D;]A;        ]D;]A;Bu işlev, Visual Studio 2022 sürüm 17.4 yükleyicisinin istemci makinede yüklü olmasını gerektirir.        ]D;]A;]D;]A;Daha fazla bilgi için http://aka.ms/vs/setup/policies sayfasına bakın.]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -286,6 +289,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;81c22d15a93486175e34cde04ef8f882" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Hide the Available tab shown in the Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio yükleyicisinde gösterilen Kullanılabilir sekmesini gizleyin]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
@@ -304,20 +316,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;8e0b839a06e9b81f15c89edd84f318a3" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Bu ilke, kullanıcının bir güncelleştirmeyi kaldırıp Visual Studio’yu önceki yüklü sürüme geri alıp alamayacağını belirler.]D;]A;]D;]A;Bu ilke 1 (etkin) olarak ayarlanırsa kullanıcıların geri alma özelliğine erişimi engellenir ve böylece Visual Studio’nun güvenlik düzeltmesi içerebilecek en son güncelleştirmeye geri dönmesi önlenir.]D;]A;]D;]A;Bu ilke 0 (devre dışı) olarak ayarlanırsa veya hiç ayarlanmazsa, kullanıcılar Visual Studio’daki geri alma özelliğine erişebilir ve bir güncelleştirmeyi kaldırabilir ve Visual Studio örneklerini önceden yüklenmiş sürüme geri alabilir. Not: Varsayılan yapılandırılmamış ayar, Visual Studio güncelleştirmesinin geri alınabilmesini sağlar.]D;]A;]D;]A;Bu ilke, makinede yüklü olabilecek Visual Studio 2022 veya üzeri sürüm örnekleri için geçerlidir.]D;]A;]D;]A;Daha fazla bilgi için http://aka.ms/vs/setup/policies sayfasına bakın.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;8e42c1be143c4a1008899491a6cc9b16" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Bu ilke, Visual Studio telemetrisinin Visual Studio Müşteri Deneyimini Geliştirme Programı’nın bir parçası olarak Microsoft’a gönderilmesini sağlar. Daha fazla bilgi için bkz. aka.ms/vs/admx/telemetry]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;975a236e30fedda9ba2634f1d21a689d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This policy applies to the Visual Studio Installer version 3.6.0 or higher.]D;]A;]D;]A;For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Bu ilke, yükleyicideki Kullanılabilir sekmesinin görünür olup olmayacağını belirler. Kullanılabilir sekmesi Visual Studio Yükleyicisi tarafından yüklenebilecek önerilen ürünleri içerir.]D;]A;]D;]A;1 (etkin) olarak ayarlanırsa, kullanıcıların Kullanılabilir Sekmesini görmesi engellenir ve bu nedenle kullanıcılar yükleyici UI’sini kullanarak Kullanılabilir Sekmesindeki ürünleri yükleyemez. Yine de kullanıcılar komut satırından veya önyükleyici aracılığıyla ürünleri yükleyebilir.]D;]A;]D;]A;0 (devre dışı) olarak ayarlanırsa veya hiç mevcut değilse, kullanıcılar Kullanılabilir Sekmesini görebilir ve yükleyici UI’sinde tanıtılan yeni ürünleri serbestçe yükleyebilir. Not: Bu, varsayılan davranıştır.]D;]A;]D;]A;Bu ilke Visual Studio Yükleyicisi sürüm 3.6.0 veya üstü için geçerlidir.]D;]A;]D;]A;Daha fazla bilgi için https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022 sayfasına bakın.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -349,6 +361,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a2f4deadda9f669e455c85c9b53ba30b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Yönetici güncelleştirmelerinin istemci bilgisayarda görünür olmasını ve uygulanmasını sağlar.]D;]A;        ]D;]A;1 (WSUS/SCCM için etkin) olarak ayarlanırsa, WSUS ve SCCM aracılığıyla sunulan yönetici güncelleştirmeleri, Active Directory (AD) ile katılan istemci makineleri tarafından kullanılabilir.  ]D;]A;        ]D;]A;2 (WSUS/SCCM ve Microsoft Update/Intune için etkin) olarak ayarlanırsa, WSUS/SCCM veya Microsoft Update/Intune aracılığıyla sunulan yönetici güncelleştirmeleri, İş İçin Windows Update’e (WUfB) kayıtlı Active Directory (AD) veya Azure Active Directory (Azure AD) ile katılan makineler tarafından kullanılabilir. WUfB AllowMUUpdateServicePolicy ilkesinin de etkinleştirilmesi gerektiğini unutmayın.]D;]A;]D;]A;0 (devre dışı) olarak ayarlanırsa veya hiç ayarlanmazsa, yönetici güncelleştirmeleri makine tarafından kullanılamaz.        ]D;]A;        ]D;]A;Daha fazla bilgi için http://aka.ms/vs/setup/policies sayfasına bakın.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -363,33 +384,6 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Yüklemeden sonra paket yüklerini tut]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Kullanıcının Visual Studio için yönetici güncelleştirmeleri almak istemediğini belirtir. ]D;]A;        ]D;]A;1 (etkin) olarak ayarlandığında, Visual Studio kullanıcısı Visual Studio için yönetici güncelleştirmeleri almak istemiyor demektir. Bu ilke, geliştirici kullanıcının istemci makinede yönetici izinlerine sahip olup olmayacağını belirlemeye yarar. ]D;]A;        ]D;]A;Daha fazla bilgi için https://aka.ms/vs/admin/updates/control sayfasına bakın.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;ab7205b61d4a56ba4ed4e941576e4afc" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Yönetici güncelleştirmelerinin istemci bilgisayarda görünür olmasını ve uygulanmasını sağlar.]D;]A;        ]D;]A;1 (WSUS/SCCM için etkin) olarak ayarlandığında, WSUS ve SCCM aracılığıyla sunulan yönetici güncelleştirmeleri, Active Directory (AD) ile katılan istemci makineleri tarafından kullanılabilir.  ]D;]A;        ]D;]A;2 (WSUS/SCCM ve Microsoft Update/Intune için etkin) olarak ayarlandığında, WSUS/SCCM veya Microsoft Update/Intune aracılığıyla sunulan yönetici güncelleştirmeleri, İş İçin Windows Update’e (WUfB) kayıtlı Active Directory (AD) veya Azure Active Directory (Azure AD) ile katılan makineler tarafından kullanılabilir. WUfB AllowMUUpdateServicePolicy ilkesinin de etkinleştirilmesi gerektiğini unutmayın.]D;]A;]D;]A;0 (devre dışı) olarak ayarlandığında veya hiç ayarlanmadığında, yönetici güncelleştirmeleri makine tarafından kullanılamaz.        ]D;]A;        ]D;]A;Daha fazla bilgi için https://aka.ms/EnableAdminUpdates sayfasına bakın.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;af5b35d723010e0820497ba7b1d3b400" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see https://aka.ms/DisableOrMovePackageCache]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Paket bildirimlerinin ve isteğe bağlı olarak yüklerin depolandığı dizin.]D;]A;]D;]A;Visual Studio Yükleyicisi’nin 50 karakter yol sınırı vardır.]D;]A;]D;]A;Daha fazla bilgi için bkz. https://aka.ms/DisableOrMovePackageCache]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -426,6 +420,15 @@
         <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Kullanıcıların kendi şirketlerinin veya erişim verilen başka bir şirketin parçası olmayan konuklar ile oturum paylaşmalarını engeller. Kullanıcıların Live Share’e erişmek için şirket e-postalarıyla oturum açması gerekir. Bu ilke devre dışı bırakılırsa herhangi bir kuruluştan herhangi bir kullanıcı, paylaşılan bir Live Share oturumuna erişebilir. Birden çok etki alanını noktalı virgül (;) ile ayırabilirsiniz. Örneğin; etki alanı adını contoso.com veya contoso.com;foo.com olarak ayarlayın.]D;]A;Daha fazla bilgi için bkz. https://aka.ms/vsls-policies ]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;bcb7f28b7becee5d8f6d930beab61cdf" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Bu ilke, yükleyicideki Kullanılabilir sekmesinin görünür olup olmayacağını belirler. Kullanılabilir sekmesi Visual Studio Yükleyicisi tarafından yüklenebilecek önerilen ürünleri içerir.]D;]A;]D;]A;1 (etkin) olarak ayarlanırsa, kullanıcıların Kullanılabilir Sekmesini görmesi engellenir ve bu nedenle kullanıcılar yükleyici UI’sini kullanarak Kullanılabilir Sekmesindeki yeni ürünleri yükleyemez. Yine de kullanıcılar komut satırından veya doğrudan önyükleyici aracılığıyla ürünleri yükleyebilir.]D;]A;]D;]A;0 (devre dışı) olarak ayarlanırsa veya hiç mevcut değilse, kullanıcılar Kullanılabilir Sekmesini görebilir ve yükleyici UI’sinde tanıtılan yeni ürünleri serbestçe yükleyebilir. Not: Bu, varsayılan davranıştır.]D;]A;]D;]A;Bu işlev, Visual Studio 2022 sürüm 17.6 yükleyicisinin istemci makinede yüklü olmasını gerektirir.]D;]A;]D;]A;Daha fazla bilgi için http://aka.ms/vs/setup/policies sayfasına bakın.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -484,6 +487,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;da1049cb0266609781e09a7fa023d4eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Paket bildirimlerinin ve isteğe bağlı olarak yüklerin depolandığı dizin.]D;]A;]D;]A;Visual Studio Yükleyicisi’nin 50 karakter yol sınırı vardır.]D;]A;]D;]A;Daha fazla bilgi için bkz. http://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
@@ -507,15 +519,6 @@
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Bu ilke, gülümseme gönder özelliğindeki ekran görüntüsü özelliğini devre dışı bırakır.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;f9ae13cf82e3690aa0bd76ca3f17c434" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/rollback.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Bu ilke, kullanıcının bir güncelleştirmeyi kaldırıp Visual Studio’yu önceki yüklü sürüme geri alıp alamayacağını belirler.]D;]A;]D;]A;Bu ilke 1 (etkin) olarak ayarlandığında, kullanıcıların geri alma özelliğine erişimini engellenir ve böylece Visual Studio’nun güvenlik düzeltmesi içerebilecek en son güncelleştirmeye geri dönmesi önlenir.]D;]A;]D;]A;Bu ilke 0 (devre dışı) olarak ayarlandığında veya hiç ayarlanmadığında, kullanıcılar Visual Studio’daki geri alma özelliğine erişebilir ve bir güncelleştirmeyi kaldırabilir ve Visual Studio örneklerini önceden yüklenmiş sürüme geri alabilir. Not: Varsayılan yapılandırılmamış ayar, Visual Studio güncelleştirmesinin geri alınabilmesini sağlar.]D;]A;]D;]A;Bu ilke, makinede yüklü olabilecek Visual Studio 2022 veya üstü sürüm örnekleri için geçerlidir.]D;]A;]D;]A;Daha fazla bilgi için https://aka.ms/vs/rollback sayfasına bakın.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
