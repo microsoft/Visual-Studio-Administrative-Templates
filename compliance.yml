@@ -1,6 +1,3 @@
-trigger:
-- 'main'
-
 pool: VSEngSS-MicroBuild2022-1ES
 
 parameters:
@@ -18,18 +15,40 @@ parameters:
   default: Release
   values:
   - Release
+- name: BinSkimSeverity
+  displayName: BinSkim severity
+  type: string
+  default: Error
+  values:
+  - Error
+  - Note
+  - Warning
 
 variables:
   CodeQL.Enabled: true
 
 schedules:
-- cron: '0 0 */28 * *'
-  displayName: 'Run every 28 days at 12:00 a.m.'
+- cron: '0 0 */21 * *'
+  displayName: 'Run every 21 days at 12:00 a.m.'
   branches:
-    include: main
+    include: 
+    - main
 
 steps:
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk matching global.json'
+  inputs:
+    packageType: sdk
+    useGlobalJson: true
+    workingDirectory: $(Build.SourcesDirectory)
+    performMultiLevelLookup: true
+
 - task: CodeQL3000Init@0
+
+- task: NuGetToolInstaller@1
+  displayName: Install NuGet
+  inputs:
+    versionSpec: '6.x'
 
 - task: NuGetCommand@2
   inputs:
@@ -37,9 +56,47 @@ steps:
 
 - task: VSBuild@1
   inputs:
-    solution: '*.sln'
+    solution: '**/*.sln'
     maximumCpuCount: true
     platform: '${{ parameters.BuildPlatform }}'
     configuration: '${{ parameters.BuildConfiguration }}'
 
 - task: CodeQL3000Finalize@0
+
+- task: PoliCheck@2
+  displayName: 'Run PoliCheck'
+  inputs:
+    targetType: F
+    targetArgument: '$(Build.SourcesDirectory)'
+    optionsFC: 0
+    optionsXS: 1
+    optionsHMENABLE: 0
+  continueOnError: true
+
+- task: CredScan@3
+  displayName: 'Run CredScan'
+  inputs:
+    debugMode: false
+    toolMajorVersion: V2
+
+- task: BinSkim@4
+  displayName: 'Run BinSkim'
+  inputs:
+    InputType: Basic
+    Function: analyze
+    TargetPattern: guardianGlob
+    AnalyzeTargetGlob: $(Build.SourcesDirectory)/**.dll;$(Build.SourcesDirectory)/**.exe;
+    AnalyzeSymPath: 'Srv*http://msdl.microsoft.com/download/symbols'
+    AnalyzeLocalSymbolDirectories: $(Build.SourcesDirectory)
+    AnalyzeVerbose: true
+    AnalyzeHashes: true
+  continueOnError: true
+
+- task: PublishSecurityAnalysisLogs@3
+  displayName: 'Publish Security Analysis Logs'
+
+- task: PostAnalysis@2
+  displayName: 'Check SDL results'
+  inputs:
+    AllTools: true
+    GdnBreakGdnToolBinSkimSeverity: '${{ parameters.BinSkimSeverity }}'
