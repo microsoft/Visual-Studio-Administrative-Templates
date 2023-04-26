@@ -378,6 +378,22 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
+        <policy 
+            name="DisableChat" 
+            class="Machine" 
+            displayName="$(string.LiveShare_DisableChat_DisplayName)"
+            explainText="$(string.LiveShare_DisableChat_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
+            valueName="DisableChat">
+            <parentCategory ref="LiveShareSettings" />
+            <supportedOn ref="VisualStudio2019AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
         <!-- Privacy Settings -->
         <policy 
             name="TelemetryOptIn" 
