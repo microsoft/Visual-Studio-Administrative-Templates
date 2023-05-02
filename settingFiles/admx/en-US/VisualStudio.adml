@@ -15,7 +15,7 @@
       <string id="InstallandUpdateSettingsCategoryName">Install and Update Settings</string>
       <string id="LiveShareSettingsCategoryName">Live Share Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
-      <string id="VisualStudioDevTunnels">Dev Tunnels Settings</string>
+      <string id="VisualStudioDevTunnels">Dev Tunnel Settings</string>
 
       <!-- The VS catalog Product Names. -->
       <string id="VisualStudioProductName2017">Visual Studio 2017</string>
