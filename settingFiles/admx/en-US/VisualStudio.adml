@@ -15,7 +15,8 @@
       <string id="InstallandUpdateSettingsCategoryName">Install and Update Settings</string>
       <string id="LiveShareSettingsCategoryName">Live Share Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
-      
+      <string id="VisualStudioDevTunnels">Dev Tunnel Settings</string>
+
       <!-- The VS catalog Product Names. -->
       <string id="VisualStudioProductName2017">Visual Studio 2017</string>
       <string id="VisualStudioProductName2019">Visual Studio 2019</string>
@@ -107,7 +108,7 @@ If set to 0 (disabled) or missing entirely, then users will be able to access th
 
 This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.
 
-For more information, see http://aka.ms/vs/setup/policies.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
 
       <string id="HideAvailableTab_DisplayName">Hide the Available tab shown in the Visual Studio Installer</string>
       <string id="HideAvailableTab_Explain">This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.
@@ -118,7 +119,7 @@ If set to 0 (disabled) or missing entirely, users will be able to see the Availa
 
 This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.
 
-For more information, see http://aka.ms/vs/setup/policies.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
@@ -142,10 +143,13 @@ For more information, see: https://aka.ms/vsls-policies</string>
 
        <!-- Privacy -->
       <string id="TelemetryOptIn_DisplayName">Enable the Visual Studio Customer Experience Improvement Program</string>
-      <string id="TelemetryOptIn_Explain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry</string>
+      <string id="TelemetryOptIn_Explain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: https://aka.ms/vs/admx/telemetry</string>
       <string id="IntelliCodeRemoteAnalysisDisabled_DisplayName">Disable IntelliCode custom model training</string>
       <string id="IntelliCodeRemoteAnalysisDisabled_Explain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
 
+      <!-- Visual Studio dev tunnels -->
+      <string id="VSDevTunnelsDisable_DisplayName">Disable dev tunnels in Visual Studio</string>
+      <string id="VSDevTunnelsDisable__Explain">This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx</string>
     </stringTable>
     <presentationTable>
       <presentation id="AdministratorUpdatesEnabled_PresentationId">

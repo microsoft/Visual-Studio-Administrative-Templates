@@ -54,6 +54,9 @@
         <category name="LiveShareSettings" displayName="$(string.LiveShareSettingsCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
+        <category name="VisualStudioDevTunnelsSettings" displayName="$(string.VisualStudioDevTunnels)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
     </categories>
     <policies>
         
@@ -405,11 +408,22 @@
             <parentCategory ref="PrivacySettings" />
             <supportedOn ref="VisualStudio2019AndHigher" />
             <enabledValue>
-                <decimal value="1" />
+                <decimal value="0" />
             </enabledValue>
             <disabledValue>
-                <decimal value="0" />
+                <decimal value="1" />
             </disabledValue>
+        </policy>
+        <!-- Visual Studio dev tunnels Settings -->
+        <policy 
+            name="DisableVisualStudioDevTunnels" 
+            class="Machine" 
+            displayName="$(string.VSDevTunnelsDisable_DisplayName)" 
+            explainText="$(string.VSDevTunnelsDisable__Explain)" 
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Devtunnels"
+            valueName="DisableDevTunnelsInVisualStudio"> 
+            <parentCategory ref="VisualStudioDevTunnelsSettings" />
+            <supportedOn ref="VisualStudio2022AndHigher" />
         </policy>
     </policies>
 </policyDefinitions>
