@@ -15,7 +15,8 @@
       <string id="InstallandUpdateSettingsCategoryName">Install and Update Settings</string>
       <string id="LiveShareSettingsCategoryName">Live Share Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
-      
+      <string id="VisualStudioDevTunnels">Visual Studio dev tunnels Settings</string>
+
       <!-- The VS catalog Product Names. -->
       <string id="VisualStudioProductName2017">Visual Studio 2017</string>
       <string id="VisualStudioProductName2019">Visual Studio 2019</string>
@@ -146,6 +147,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <string id="IntelliCodeRemoteAnalysisDisabled_DisplayName">Disable IntelliCode custom model training</string>
       <string id="IntelliCodeRemoteAnalysisDisabled_Explain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
 
+      <!-- Visual Studio dev tunnels -->
+      <string id="VSDevTunnelsDisable_DisplayName">Disable dev tunnels in Visual Studio</string>
+      <string id="VSDevTunnelsDisable__Explain">This policy disables dev tunnels in Visual Studio. For more information, see: aka.ms/devtunnels/vs/admx</string>
     </stringTable>
     <presentationTable>
       <presentation id="AdministratorUpdatesEnabled_PresentationId">
