@@ -106,6 +106,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;18e106751d8c3be68a5c1b2476f319b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta directiva deshabilita los túneles de desarrollo en Visual Studio. Para obtener más información, consulta: https://aka.ms/devtunnels/vs/admx]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;1eba2355fc158588b609771aad3407bd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Custom path to the update configuration file]]></Val>
@@ -187,6 +196,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;484ad4a51183e1c5eaaabb1cee03fc2c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Dev Tunnel Settings]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Configuración de túnel de desarrollo]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4c1073eed371baffaef1c064a8a32384" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable downloading updates automatically]]></Val>
@@ -219,6 +237,15 @@
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[El invitado solo puede unirse a la sesión después de aprobar el host. Live Share ya tiene la configuración "Live Share: Aprobación de invitado necesaria", por lo que esta directiva solo exige que sea "true".]D;]A;Para obtener más información, consulte: https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;6654660eeb644fa2c2bbad38729b1df0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta directiva determina si el usuario puede deshacer una actualización y revertir Visual Studio a la versión instalada anteriormente.]D;]A;]D;]A;Si se establece en 1 (habilitada), se impedirá que los usuarios accedan a la funcionalidad de reversión, lo que impedirá que Visual Studio revierta la actualización más reciente que podría contener una corrección de seguridad.]D;]A;]D;]A;Si se establece en 0 (deshabilitada) o no está establecida, los usuarios podrán acceder a la característica de reversión de Visual Studio y podrán deshacer una actualización y revertir sus instancias de Visual Studio a la versión instalada anteriormente. Nota: la opción predeterminada no configurada permite revertir una actualización de Visual Studio.]D;]A;]D;]A;Esta directiva se aplica a las instancias de versión de Visual Studio 2022 o posterior que estén instaladas en el equipo.]D;]A;]D;]A;Para obtener más información, consulta https://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -316,24 +343,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;8e0b839a06e9b81f15c89edd84f318a3" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Esta directiva determina si el usuario puede deshacer una actualización y revertir Visual Studio a la versión instalada anteriormente.]D;]A;]D;]A;Si se establece en 1 (habilitada), se impedirá que los usuarios accedan a la funcionalidad de reversión, lo que impedirá que Visual Studio revierta la actualización más reciente que podría contener una corrección de seguridad.]D;]A;]D;]A;Si se establece en 0 (deshabilitada) o no está establecida, los usuarios podrán acceder a la característica de reversión de Visual Studio y podrán deshacer una actualización y revertir sus instancias de Visual Studio a la versión instalada anteriormente. Nota: La opción predeterminada no configurada permite revertir una actualización de Visual Studio.]D;]A;]D;]A;Esta directiva se aplica a las instancias de versión de Visual Studio 2022 o posterior que estén instaladas en el equipo.]D;]A;]D;]A;Para obtener más información, consulte http://aka.ms/vs/setup/policies.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;8e42c1be143c4a1008899491a6cc9b16" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Esta directiva permite enviar la telemetría de Visual Studio a Microsoft como parte del Programa para la mejora de la experiencia del usuario de Visual Studio. Para obtener más información, consulte: aka.ms/vs/admx/telemetry]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;98049d7c4a63b19eaf25a64a734dd3c6" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new writeable terminal.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -424,15 +433,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;bcb7f28b7becee5d8f6d930beab61cdf" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Esta directiva determina si la pestaña Disponible del instalador es visible o no. La pestaña Disponible contiene productos sugeridos que el Instalador de Visual Studio puede instalar.]D;]A;]D;]A;Si se establece en 1 (habilitada), se impedirá que los usuarios vean la pestaña Disponible y, por lo tanto, no podrán instalar nuevos productos desde ella mediante la UI del instalador. Los usuarios podrán instalar productos desde la línea de comandos o mediante el programa de arranque.]D;]A;]D;]A;Si se establece en 0 (deshabilitada) o no está establecida, los usuarios podrán ver la pestaña Disponible e instalar libremente los nuevos productos anunciados en la UI del instalador. Nota: este es el comportamiento predeterminado.]D;]A;]D;]A;Esta funcionalidad requiere que la versión 17.6 del instalador de Visual Studio 2022 esté instalada en el equipo cliente.]D;]A;]D;]A;Para obtener más información, consulte http://aka.ms/vs/setup/policies.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;c29fd413fba24acdfd8d512348effc18" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new server. The policy also enforces “Live Share: Auto Share Servers” setting to false.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -456,6 +456,15 @@
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Impida que el programa de instalación descargue actualizaciones de forma automática para todos los productos de Visual Studio instalados. Puede cambiar el valor en cualquier momento.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;cf50146d8e4821effbaacd73b4278f0b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta directiva determina si la pestaña Disponible del instalador es visible o no. La pestaña Disponible contiene productos sugeridos que el Instalador de Visual Studio puede instalar.]D;]A;]D;]A;Si se establece en 1 (habilitada), se impedirá que los usuarios vean la pestaña Disponible y, por lo tanto, no podrán instalar nuevos productos desde ella mediante la UI del instalador. Los usuarios podrán instalar productos desde la línea de comandos o mediante el programa de arranque.]D;]A;]D;]A;Si se establece en 0 (deshabilitada) o no está establecida, los usuarios podrán ver la pestaña Disponible e instalar libremente los nuevos productos anunciados en la UI del instalador. Nota: este es el comportamiento predeterminado.]D;]A;]D;]A;Esta funcionalidad requiere que la versión 17.6 del instalador de Visual Studio 2022 esté instalada en el equipo cliente.]D;]A;]D;]A;Para obtener más información, consulta https://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -505,6 +514,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;e21c7039426fb89789b505dac72e287c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: https://aka.ms/vs/admx/telemetry]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta directiva permite enviar la telemetría de Visual Studio a Microsoft como parte del Programa para la mejora de la experiencia del usuario de Visual Studio. Para obtener más información, consulte: https://aka.ms/vs/admx/telemetry]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;e5ff5d3af4098733450b4e3802f5d68b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Live Share Settings]]></Val>
@@ -519,6 +537,15 @@
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Esta directiva deshabilita la funcionalidad de captura de pantalla en la característica "enviar una sonrisa".]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;f86881402780b1326b1f45afc0124632" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable dev tunnels in Visual Studio]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Deshabilitar túneles de desarrollo en Visual Studio]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
