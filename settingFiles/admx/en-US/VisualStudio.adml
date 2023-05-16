@@ -140,6 +140,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <string id="LiveShare_DisableReadWriteTerminal_DisplayName">Disable shared read write terminal</string>
       <string id="LiveShare_DisableReadWriteTerminal_Explain">Prevent the host from being able to explicitly share a new writeable terminal.
 For more information, see: https://aka.ms/vsls-policies</string>
+      <string id="LiveShare_DisableChat_DisplayName">Disable Chat</string>
+      <string id="LiveShare_DisableChat_Explain">Prevent the host and guest from using chat within the session.
+For more information, see: https://aka.ms/vsls-policies</string>
 
        <!-- Privacy -->
       <string id="TelemetryOptIn_DisplayName">Enable the Visual Studio Customer Experience Improvement Program</string>
