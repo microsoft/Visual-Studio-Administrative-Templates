@@ -285,6 +285,36 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
+        <policy 
+            name="AllowStandardUserControl" 
+            class="Machine" 
+            displayName="$(string.AllowStandardUserControl_DisplayName)" 
+            explainText="$(string.AllowStandardUserControl_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+            presentation="$(presentation.AllowStandardUserControl_PresentationId)"
+            valueName="AllowStandardUserControl">
+            <parentCategory ref="InstallandUpdateSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
+            <elements>
+                <enum id="AllowStandardUserControlDropID" valueName="AllowStandardUserControl">
+                    <item displayName="$(string.AllowStandardUserControl_Blocked)">
+                        <value>
+                            <decimal value="0" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.AllowStandardUserControl_EnabledForUpdateAndRollback)">
+                        <value>
+                            <decimal value="1" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.AllowStandardUserControl_EnabledForAll)">
+                        <value>
+                            <decimal value="2" />
+                        </value>
+                    </item>
+                </enum>
+            </elements>
+        </policy>
 
         <!-- LiveShare Settings -->
         <policy 

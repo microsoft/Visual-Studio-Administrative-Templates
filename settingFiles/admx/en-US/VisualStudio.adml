@@ -120,6 +120,21 @@ If set to 0 (disabled) or missing entirely, users will be able to see the Availa
 This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.
 
 For more information, see https://aka.ms/vs/setup/policies.</string>
+
+      <string id="AllowStandardUserControl_DisplayName">Allow standard users to execute installer operations</string>
+      <string id="AllowStandardUserControl_Explain">Allows users without administrator permissions to manage their Visual Studio installations. 
+        
+If set to 0 (blocked) or missing entirely, the installer will prompt for administrator permissions using UAC.        
+
+If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  
+        
+If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.
+        
+For more information, see http://aka.ms/vs/setup/policies.</string>
+
+      <string id="AllowStandardUserControl_Blocked">Blocked</string>
+      <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Enabled for Update and Rollback</string>
+      <string id="AllowStandardUserControl_EnabledForAll">Enabled for all installer operations</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
@@ -172,6 +187,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
         <textBox refId="UpdateConfigurationFile_TextBox">
           <label>Custom Path to the Update Config</label>
         </textBox>
+      </presentation>
+      <presentation id="AllowStandardUserControl_PresentationId">
+         <dropdownList refId="AllowStandardUserControlDropID" noSort="true" defaultItem="0" />
       </presentation>
 
       <!-- LiveShare Presentations -->
