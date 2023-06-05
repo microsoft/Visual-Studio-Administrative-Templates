@@ -15,6 +15,14 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk matching global.json'
+  inputs:
+    packageType: sdk
+    useGlobalJson: true
+    workingDirectory: $(Build.SourcesDirectory)
+    performMultiLevelLookup: true
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
