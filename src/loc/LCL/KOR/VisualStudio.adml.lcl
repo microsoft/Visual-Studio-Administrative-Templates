@@ -97,6 +97,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;095b9f65f33e0d5d5b6c6fd14f973e16" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (blocked) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[관리자 권한이 없는 사용자가 Visual Studio 설치를 관리할 수 있도록 허용합니다. ]D;]A;        ]D;]A;0(차단됨)으로 설정하거나 완전히 누락된 경우 설치 관리자가 UAC를 사용하여 관리자 권한을 묻는 메시지를 표시합니다.        ]D;]A;]D;]A;1(업데이트 및 롤백에 사용하도록 설정)으로 설정하면 관리자 권한이 없는 사용자는 UAC 없이 업데이트하거나 롤백할 수 있습니다. 다른 모든 작업에서 UAC를 통해 관리자 권한을 요청합니다.  ]D;]A;        ]D;]A;2(모든 설치 관리자 작업에 대해 사용)로 설정하면 관리자 권한이 없는 사용자가 UAC 없이 Visual Studio 설치 관리자를 통해 Visual Studio를 완전히 관리할 수 있습니다.]D;]A;        ]D;]A;자세한 내용은 http://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;0e3b58934d3872d0439d81b70ea36d2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: http://aka.ms/vs/setup/policies.]]></Val>
@@ -237,6 +246,15 @@
         <Val><![CDATA[Disable Chat]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[채팅 사용 안 함]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;5891da6762ce86611d2a3fcb9b679701" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allow standard users to execute installer operations]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[표준 사용자가 설치 관리자 작업을 실행하도록 허용]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -388,6 +406,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enabled for all installer operations]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[모든 설치 관리자 작업에 대해 사용]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a2f4deadda9f669e455c85c9b53ba30b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
@@ -411,6 +438,15 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[설치 후 패키지 페이로드 유지]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ac23ce9ec7d41d37dafb6093e26e6894" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Blocked]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[차단됨]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -456,6 +492,15 @@
         <Val><![CDATA[Prevent the host from being able to explicitly share a new server. The policy also enforces “Live Share: Auto Share Servers” setting to false.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[호스트가 새 서버를 명시적으로 공유할 수 없도록 합니다. 이 정책은 또한 "Live Share: Auto Share Servers" 설정을 false로 적용합니다.]D;]A;자세한 내용은 https://aka.ms/vsls-policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;c596f1a80baecec295e9d2d8e24fea55" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enabled for Update and Rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[업데이트 및 롤백 사용]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
