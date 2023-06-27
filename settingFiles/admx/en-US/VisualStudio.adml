@@ -27,9 +27,9 @@
       <string id="VisualStudioProductName2022_4">Visual Studio 2022, 17.4</string>
 
       <!-- Convey a particular version and higher. -->
-      <string id="VisualStudio2017">Visual Studio 2017 and higher.</string>
-      <string id="VisualStudio2019">Visual Studio 2019 and higher.</string>
-      <string id="VisualStudio2022">Visual Studio 2022 and higher.</string>
+      <string id="VisualStudio2017AndHigher">Visual Studio 2017 and higher.</string>
+      <string id="VisualStudio2019AndHigher">Visual Studio 2019 and higher.</string>
+      <string id="VisualStudio2022AndHigher">Visual Studio 2022 and higher.</string>
       <string id="VisualStudio2022_1">Visual Studio 2022, 17.1 and higher.</string>
       <string id="VisualStudio2022_4">Visual Studio 2022, 17.4 and higher.</string>
 
