@@ -59,14 +59,14 @@
         </category>
     </categories>
     <policies>
-        
+
         <!-- Feedback Settings -->
-        <policy 
-            name="DisableFeedbackDialog" 
-            class="Both" 
-            displayName="$(string.DisableFeedbackDialog_DisplayName)" 
-            explainText="$(string.DisableFeedbackDialog_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Feedback" 
+        <policy
+            name="DisableFeedbackDialog"
+            class="Both"
+            displayName="$(string.DisableFeedbackDialog_DisplayName)"
+            explainText="$(string.DisableFeedbackDialog_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Feedback"
             valueName="DisableFeedbackDialog">
             <parentCategory ref="FeedbackSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
@@ -77,11 +77,11 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy 
-            name="DisableScreenshotCapture" 
-            class="Both" displayName="$(string.DisableScreenshotCapture_DisplayName)" 
-            explainText="$(string.DisableScreenshotCapture_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Feedback" 
+        <policy
+            name="DisableScreenshotCapture"
+            class="Both" displayName="$(string.DisableScreenshotCapture_DisplayName)"
+            explainText="$(string.DisableScreenshotCapture_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Feedback"
             valueName="DisableScreenshotCapture">
             <parentCategory ref="FeedbackSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
@@ -92,14 +92,14 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        
+
         <!-- Install and Update Settings -->
-        <policy 
-            name="RemoveOutOfSupport" 
-            class="Machine" 
-            displayName="$(string.RemoveOutOfSupport_DisplayName)" 
-            explainText="$(string.RemoveOutOfSupport_Explain)" 
-            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup" 
+        <policy
+            name="RemoveOutOfSupport"
+            class="Machine"
+            displayName="$(string.RemoveOutOfSupport_DisplayName)"
+            explainText="$(string.RemoveOutOfSupport_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
             valueName="RemoveOos">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2022AndHigher" />
@@ -110,7 +110,7 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy 
+        <policy
             name="CachePath"
             class="Machine"
             displayName="$(string.CachePath_DisplayName)"
@@ -119,7 +119,7 @@
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017AndHigher" />
-            
+
             <elements>
                 <!--This value will be stored as a REG_EXPAND_SZ, a null-terminated string that can contain unexpanded
                     references to environment variables (for example, "%PATH%") -->
@@ -127,8 +127,8 @@
                 <text id="CachePath_TextBox" valueName="CachePath" expandable="true"/>
             </elements>
         </policy>
-        <policy 
-            name="BackgroundDownloadDisabled" 
+        <policy
+            name="BackgroundDownloadDisabled"
             class="Machine"
             displayName="$(string.BackgroundDownloadDisabled_DisplayName)"
             explainText="$(string.BackgroundDownloadDisabled_Explain)"
@@ -143,7 +143,7 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy 
+        <policy
             name="SharedInstallationPath"
             class="Machine"
             displayName="$(string.SharedInstallationPath_DisplayName)"
@@ -152,7 +152,7 @@
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017AndHigher" />
-            
+
             <elements>
                 <!--This value will be stored as a REG_EXPAND_SZ, a null-terminated string that can contain unexpanded
                     references to environment variables (for example, "%PATH%") -->
@@ -160,12 +160,12 @@
                 <text id="SharedInstallationPath_TextBox" valueName="SharedInstallationPath" expandable="true"/>
             </elements>
         </policy>
-        <policy 
-            name="KeepDownloadedPayloads" 
-            class="Machine" 
-            displayName="$(string.KeepDownloadedPayloads_DisplayName)" 
-            explainText="$(string.KeepDownloadedPayloads_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+        <policy
+            name="KeepDownloadedPayloads"
+            class="Machine"
+            displayName="$(string.KeepDownloadedPayloads_DisplayName)"
+            explainText="$(string.KeepDownloadedPayloads_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Setup"
             valueName="KeepDownloadedPayloads">
             <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
@@ -176,13 +176,13 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy 
-            name="AdministratorUpdatesEnabled" 
-            class="Machine" 
-            displayName="$(string.AdministratorUpdatesEnabled_DisplayName)" 
-            explainText="$(string.AdministratorUpdatesEnabled_Explain)" 
+        <policy
+            name="AdministratorUpdatesEnabled"
+            class="Machine"
+            displayName="$(string.AdministratorUpdatesEnabled_DisplayName)"
+            explainText="$(string.AdministratorUpdatesEnabled_Explain)"
             key="Software\Policies\Microsoft\VisualStudio\Setup"
-            presentation="$(presentation.AdministratorUpdatesEnabled_PresentationId)" 
+            presentation="$(presentation.AdministratorUpdatesEnabled_PresentationId)"
             valueName="AdministratorUpdatesEnabled">
             <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
@@ -220,12 +220,12 @@
                 </enum>
             </elements>
         </policy>
-        <policy 
-            name="AdministratorUpdatesOptOut" 
-            class="Machine" 
-            displayName="$(string.AdministratorUpdatesOptOut_DisplayName)" 
-            explainText="$(string.AdministratorUpdatesOptOut_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+        <policy
+            name="AdministratorUpdatesOptOut"
+            class="Machine"
+            displayName="$(string.AdministratorUpdatesOptOut_DisplayName)"
+            explainText="$(string.AdministratorUpdatesOptOut_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Setup"
             valueName="AdministratorUpdatesOptOut">
             <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
@@ -236,7 +236,7 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy 
+        <policy
             name="UpdateConfigurationFile"
             class="Machine"
             displayName="$(string.UpdateConfigurationFile_DisplayName)"
@@ -245,7 +245,7 @@
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup">
             <parentCategory ref="InstallandUpdateSettings" />
             <supportedOn ref="VisualStudio2017AndHigher" />
-            
+
             <elements>
                 <!--This value will be stored as a REG_EXPAND_SZ, a null-terminated string that can contain unexpanded
                     references to environment variables (for example, "%PATH%") -->
@@ -253,12 +253,12 @@
                 <text id="UpdateConfigurationFile_TextBox" valueName="UpdateConfigurationFile" expandable="true"/>
             </elements>
         </policy>
-        <policy 
-            name="DisableRollback" 
-            class="Machine" 
-            displayName="$(string.DisableRollback_DisplayName)" 
-            explainText="$(string.DisableRollback_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+        <policy
+            name="DisableRollback"
+            class="Machine"
+            displayName="$(string.DisableRollback_DisplayName)"
+            explainText="$(string.DisableRollback_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Setup"
             valueName="DisableRollback">
             <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2022AndHigher"/>
@@ -269,12 +269,12 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy 
-            name="HideAvailableTab" 
-            class="Machine" 
-            displayName="$(string.HideAvailableTab_DisplayName)" 
-            explainText="$(string.HideAvailableTab_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+        <policy
+            name="HideAvailableTab"
+            class="Machine"
+            displayName="$(string.HideAvailableTab_DisplayName)"
+            explainText="$(string.HideAvailableTab_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Setup"
             valueName="HideAvailableTab">
             <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
@@ -285,12 +285,12 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        <policy 
-            name="AllowStandardUserControl" 
-            class="Machine" 
-            displayName="$(string.AllowStandardUserControl_DisplayName)" 
-            explainText="$(string.AllowStandardUserControl_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+        <policy
+            name="AllowStandardUserControl"
+            class="Machine"
+            displayName="$(string.AllowStandardUserControl_DisplayName)"
+            explainText="$(string.AllowStandardUserControl_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Setup"
             presentation="$(presentation.AllowStandardUserControl_PresentationId)"
             valueName="AllowStandardUserControl">
             <parentCategory ref="InstallandUpdateSettings"/>
@@ -317,26 +317,26 @@
         </policy>
 
         <!-- LiveShare Settings -->
-        <policy 
-            name="LiveShareDomainName" 
-            class="Machine" 
-            displayName="$(string.LiveShare_DomainName_DisplayName)" 
-            explainText="$(string.LiveShare_DomainName_Explain)" 
+        <policy
+            name="LiveShareDomainName"
+            class="Machine"
+            displayName="$(string.LiveShare_DomainName_DisplayName)"
+            explainText="$(string.LiveShare_DomainName_Explain)"
             presentation="$(presentation.LiveShare_DomainName_PresentationId)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
-            valueName="DomainJoined"> 
+            valueName="DomainJoined">
             <parentCategory ref="LiveShareSettings" />
             <supportedOn ref="VisualStudio2019AndHigher" />
             <elements>
-                <text id="LiveShare_DomainName_TextBox" valueName="DomainName" expandable="true" required="true"/>   
+                <text id="LiveShare_DomainName_TextBox" valueName="DomainName" expandable="true" required="true"/>
             </elements>
         </policy>
-        <policy 
-            name="DirectConnectionMode" 
-            class="Machine" 
-            displayName="$(string.LiveShare_DirectConnectionMode_DisplayName)" 
-            explainText="$(string.LiveShare_DirectConnectionMode_Explain)" 
-            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare" 
+        <policy
+            name="DirectConnectionMode"
+            class="Machine"
+            displayName="$(string.LiveShare_DirectConnectionMode_DisplayName)"
+            explainText="$(string.LiveShare_DirectConnectionMode_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
             valueName="DirectConnectionMode">
             <parentCategory ref="LiveShareSettings" />
             <supportedOn ref="VisualStudio2019AndHigher" />
@@ -347,9 +347,9 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy 
-            name="DisableAnonymousGuests" 
-            class="Machine" 
+        <policy
+            name="DisableAnonymousGuests"
+            class="Machine"
             displayName="$(string.LiveShare_DisableAnonymousGuests_DisplayName)"
             explainText="$(string.LiveShare_DisableAnonymousGuests_Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
@@ -363,9 +363,9 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy 
-            name="GuestApprovalRequired" 
-            class="Machine" 
+        <policy
+            name="GuestApprovalRequired"
+            class="Machine"
             displayName="$(string.LiveShare_GuestApprovalRequired_DisplayName)"
             explainText="$(string.LiveShare_GuestApprovalRequired_Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
@@ -379,9 +379,9 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy 
-            name="DisableSharedServer" 
-            class="Machine" 
+        <policy
+            name="DisableSharedServer"
+            class="Machine"
             displayName="$(string.LiveShare_DisableSharedServer_DisplayName)"
             explainText="$(string.LiveShare_DisableSharedServer_Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
@@ -395,9 +395,9 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy 
-            name="DisableReadWriteTerminal" 
-            class="Machine" 
+        <policy
+            name="DisableReadWriteTerminal"
+            class="Machine"
             displayName="$(string.LiveShare_DisableReadWriteTerminal_DisplayName)"
             explainText="$(string.LiveShare_DisableReadWriteTerminal_Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
@@ -411,9 +411,9 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy 
-            name="DisableChat" 
-            class="Machine" 
+        <policy
+            name="DisableChat"
+            class="Machine"
             displayName="$(string.LiveShare_DisableChat_DisplayName)"
             explainText="$(string.LiveShare_DisableChat_Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\LiveShare"
@@ -428,12 +428,12 @@
             </disabledValue>
         </policy>
         <!-- Privacy Settings -->
-        <policy 
-            name="TelemetryOptIn" 
-            class="Machine" 
-            displayName="$(string.TelemetryOptIn_DisplayName)" 
-            explainText="$(string.TelemetryOptIn_Explain)" 
-            key="Software\Policies\Microsoft\VisualStudio\SQM" 
+        <policy
+            name="TelemetryOptIn"
+            class="Machine"
+            displayName="$(string.TelemetryOptIn_DisplayName)"
+            explainText="$(string.TelemetryOptIn_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\SQM"
             valueName="OptIn">
             <parentCategory ref="PrivacySettings"/>
             <supportedOn ref="VisualStudio2022"/>
@@ -443,13 +443,13 @@
             <disabledValue>
                 <decimal value="0"/>
             </disabledValue>
-        </policy>        
-        <policy 
-            name="IntelliCodeRemoteAnalysisDisabled" 
-            class="Machine" 
-            displayName="$(string.IntelliCodeRemoteAnalysisDisabled_DisplayName)" 
-            explainText="$(string.IntelliCodeRemoteAnalysisDisabled_Explain)" 
-            key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode" 
+        </policy>
+        <policy
+            name="IntelliCodeRemoteAnalysisDisabled"
+            class="Machine"
+            displayName="$(string.IntelliCodeRemoteAnalysisDisabled_DisplayName)"
+            explainText="$(string.IntelliCodeRemoteAnalysisDisabled_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\IntelliCode"
             valueName="DisableRemoteAnalysis">
             <parentCategory ref="PrivacySettings" />
             <supportedOn ref="VisualStudio2019AndHigher" />
@@ -461,15 +461,21 @@
             </disabledValue>
         </policy>
         <!-- Visual Studio dev tunnels Settings -->
-        <policy 
-            name="DisableVisualStudioDevTunnels" 
-            class="Machine" 
-            displayName="$(string.VSDevTunnelsDisable_DisplayName)" 
-            explainText="$(string.VSDevTunnelsDisable__Explain)" 
+        <policy
+            name="DisableVisualStudioDevTunnels"
+            class="Machine"
+            displayName="$(string.VSDevTunnelsDisable_DisplayName)"
+            explainText="$(string.VSDevTunnelsDisable__Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Devtunnels"
-            valueName="DisableDevTunnelsInVisualStudio"> 
+            valueName="DisableDevTunnelsInVisualStudio">
             <parentCategory ref="VisualStudioDevTunnelsSettings" />
             <supportedOn ref="VisualStudio2022AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
         </policy>
     </policies>
 </policyDefinitions>
