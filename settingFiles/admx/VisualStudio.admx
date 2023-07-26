@@ -470,6 +470,12 @@
             valueName="DisableDevTunnelsInVisualStudio"> 
             <parentCategory ref="VisualStudioDevTunnelsSettings" />
             <supportedOn ref="VisualStudio2022AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
         </policy>
     </policies>
 </policyDefinitions>
