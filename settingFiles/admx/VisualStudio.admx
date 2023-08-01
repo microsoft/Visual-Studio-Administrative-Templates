@@ -295,13 +295,27 @@
             valueName="AllowStandardUserControl">
             <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
+            <enabledList>
+                <item key="Software\Policies\Microsoft\VisualStudio\Setup" valueName="AllowStandardUserControl">
+                  <value>
+                    <decimal value="1" />
+                  </value>
+                </item>
+                <item key="Software\Policies\Microsoft\VisualStudio\Setup" valueName="AllowStandardUserControl">
+                    <value>
+                      <decimal value="2" />
+                    </value>
+                  </item>
+              </enabledList>
+            <disabledList>
+                <item key="Software\Policies\Microsoft\VisualStudio\Setup" valueName="AllowStandardUserControl">
+                    <value>
+                      <decimal value="0" />
+                    </value>
+                  </item>
+            </disabledList>
             <elements>
                 <enum id="AllowStandardUserControlDropID" valueName="AllowStandardUserControl">
-                    <item displayName="$(string.AllowStandardUserControl_Blocked)">
-                        <value>
-                            <decimal value="0" />
-                        </value>
-                    </item>
                     <item displayName="$(string.AllowStandardUserControl_EnabledForUpdateAndRollback)">
                         <value>
                             <decimal value="1" />
