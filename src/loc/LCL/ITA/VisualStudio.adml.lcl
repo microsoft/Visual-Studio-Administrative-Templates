@@ -97,15 +97,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;095b9f65f33e0d5d5b6c6fd14f973e16" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (blocked) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Consente agli utenti senza autorizzazioni di amministratore di gestire le installazioni di Visual Studio. ]D;]A;        ]D;]A;Se impostato su 0 (bloccato) o completamente mancante, il programma di installazione richiederà le autorizzazioni di amministratore tramite Controllo dell'account utente.        ]D;]A;]D;]A;Se impostato su 1 (abilitato per aggiornamento e rollback), gli utenti senza autorizzazioni di amministratore possono eseguire l'aggiornamento o il rollback senza Controllo dell'account utente. Tutte le altre operazioni richiederanno autorizzazioni di amministratore tramite Controllo dell'account utente.  ]D;]A;        ]D;]A;Se impostato su 2 (abilitato per tutte le operazioni di installazione), gli utenti senza autorizzazioni di amministratore possono gestire completamente Visual Studio tramite il Programma di installazione di Visual Studio senza Controllo dell'account utente.]D;]A;        ]D;]A;Per altre informazioni, vedere http://aka.ms/vs/setup/policies.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;0e3b58934d3872d0439d81b70ea36d2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: http://aka.ms/vs/setup/policies.]]></Val>
@@ -442,15 +433,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;ac23ce9ec7d41d37dafb6093e26e6894" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Blocked]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Bloccato]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;b47c6abc3cdf031a964ff7bf238e39d3" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Install and Update Settings]]></Val>
@@ -618,6 +600,15 @@
         <Val><![CDATA[Enable the Visual Studio Customer Experience Improvement Program]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Abilitare il Analisi utilizzo software di Visual Studio]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;fc32cd1e200ec38d22a40a822dafcccf" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Consente agli utenti senza autorizzazioni di amministratore di gestire le installazioni di Visual Studio. ]D;]A;        ]D;]A;Se impostato su 0 (disabilitato) o completamente mancante, il programma di installazione richiederà le autorizzazioni di amministratore tramite Controllo dell'account utente.        ]D;]A;]D;]A;Se impostato su 1 (abilitato per aggiornamento e rollback), gli utenti senza autorizzazioni di amministratore possono eseguire l'aggiornamento o il rollback senza Controllo dell'account utente. Tutte le altre operazioni richiederanno autorizzazioni di amministratore tramite Controllo dell'account utente.  ]D;]A;        ]D;]A;Se impostato su 2 (abilitato per tutte le operazioni di installazione), gli utenti senza autorizzazioni di amministratore possono gestire completamente Visual Studio tramite il Programma di installazione di Visual Studio senza Controllo dell'account utente.]D;]A;        ]D;]A;Per altre informazioni, vedere http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
