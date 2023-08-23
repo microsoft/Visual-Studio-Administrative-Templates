@@ -43,6 +43,8 @@ variables:
   finalDrop: $(Build.StagingDirectory)\finalDrop
   outputNameWithExtension: VisualStudioAdminTemplates.exe
   CodeQL.Enabled: true
+  CodeQL.TSAEnabled: true
+  CodeQL.TSAOptionsPath: $(Build.SourcesDirectory)\.config\CodeQL\tsaoptions.json
 
 steps:
 - checkout: self
