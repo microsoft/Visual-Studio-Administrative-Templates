@@ -88,20 +88,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;0787119262bdcd3c6d4f53811fffe56f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;077245c46cf2f4eae1124116f0809cb9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Hide Available tab shown in Visual Studio Installer]]></Val>
+        <Val><![CDATA[Prevent the host and guest from using chat within the session.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 설치 관리자에 표시된 사용 가능한 탭 숨기기]]></Val>
+          <Val><![CDATA[호스트와 게스트가 세션 내에서 채팅을 사용하지 못하도록 합니다.]D;]A;자세한 내용은 다음을 참고하세요. https://aka.ms/vsls-policies]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;11e476b46162b25fc34ad038749a5874" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;0e3b58934d3872d0439d81b70ea36d2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/DisableOrMovePackageCache]]></Val>
+        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: http://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[패키지 페이로드는 설치된 후에도 유지하세요. 값은 언제든지 변경할 수 있습니다. 정책을 비활성화하면 복구하거나 수정하는 인스턴스에 대해 캐시된 패키지 페이로드가 제거됩니다.]D;]A;]D;]A;기본적으로 사용하도록 설정됩니다.]D;]A;]D;]A;자세한 내용은 https://aka.ms/DisableOrMovePackageCache를 참조하세요.]]></Val>
+          <Val><![CDATA[패키지 페이로드는 설치된 후에도 유지하세요. 값은 언제든지 변경할 수 있습니다. 정책을 비활성화하면 복구하거나 수정하는 인스턴스에 대해 캐시된 패키지 페이로드가 제거됩니다.]D;]A;]D;]A;기본적으로 사용하도록 설정됩니다.]D;]A;]D;]A;자세한 내용은 http://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -111,6 +111,15 @@
         <Val><![CDATA[Disable IntelliCode custom model training]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[IntelliCode 사용자 지정 모델 학습 사용 안 함]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;18e106751d8c3be68a5c1b2476f319b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책은 Visual Studio 개발 터널을 사용하지 않도록 설정합니다. 자세한 내용은 https://aka.ms/devtunnels/vs/admx를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -129,6 +138,15 @@
         <Val><![CDATA[Remove out-of-support components during updates]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[업데이트하는 동안 지원되지 않는 구성 요소 제거]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;32abb6e39cd62f63c9be7113c44bd81d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[사용자가 Visual Studio 관리자 업데이트를 받지 않음을 나타냅니다. ]D;]A;        ]D;]A;1(사용)로 설정하면 Visual Studio 사용자가 Visual Studio 관리자 업데이트를 받지 않습니다. 이 정책은 개발자인 사용자가 클라이언트 컴퓨터에 대한 관리자 권한이 있는지를 설정하기 위한 것입니다. ]D;]A;        ]D;]A;자세한 내용은 http://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -187,6 +205,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;484ad4a51183e1c5eaaabb1cee03fc2c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Dev Tunnel Settings]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[개발 터널 설정]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4c1073eed371baffaef1c064a8a32384" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable downloading updates automatically]]></Val>
@@ -205,6 +232,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;55828bd0a3887edbc4d9b33027d18d1f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Chat]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[채팅 사용 안 함]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;5891da6762ce86611d2a3fcb9b679701" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allow standard users to execute installer operations]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[표준 사용자가 설치 관리자 작업을 실행하도록 허용]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;59df68ac84fb4973f911f878bb936f8f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disables send-a-smile's screenshot capability]]></Val>
@@ -219,6 +264,15 @@
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[게스트는 호스트가 승인한 후에만 세션에 참여할 수 있습니다. Live Share에는 이미 "Live Share: Guest Approval required" 설정이 있으므로 이 정책은 사실상 "true"로 적용합니다.]D;]A;자세한 내용은 https://aka.ms/vsls-policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;6654660eeb644fa2c2bbad38729b1df0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책은 사용자가 업데이트를 실행 취소하고 Visual Studio를 이전에 설치된 버전으로 롤백할 수 있는지 여부를 결정합니다.]D;]A;]D;]A;1(사용)로 설정하면 사용자가 롤백 기능에 액세스할 수 없으므로 Visual Studio에서 보안 수정 사항을 포함할 수 있는 최신 업데이트를 되돌릴 수 없습니다.]D;]A;]D;]A;0(사용 안 함)으로 설정하거나 완전히 누락된 경우 사용자는 Visual Studio 롤백 기능에 액세스할 수 있으며 업데이트를 실행 취소하고 Visual Studio 인스턴스를 이전에 설치한 버전으로 롤백할 수 있습니다. 참고: 구성되지 않은 기본 설정을 사용하면 Visual Studio 업데이트를 롤백할 수 있습니다.]D;]A;]D;]A;이 정책은 컴퓨터에 설치된 Visual Studio 2022 이상의 릴리스 인스턴스에 적용됩니다.]D;]A;]D;]A;자세한 정보는 https://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -243,10 +297,13 @@
     </Item>
     <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 설정은 지원 중단 상태로 전환된 Visual Studio 설치에서 모든 구성 요소를 자동으로 제거하는 업데이트를 일으킵니다다.]D;]A;        ]D;]A;1(사용함)로 설정하면 Visual Studio 설치 프로그램은 모든 후속 업데이트 중에 지원되지 않는 모든 구성 요소를 제거합니다. ]D;]A;        ]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락된 경우 지원하지 않는 구성 요소 삭제제 동작은 명령줄 매개변수 또는 업데이트 설정 대화 상자와 같이 구성할 수 있는 다른 위치를 따릅니다.]D;]A;        ]D;]A;이 기능을 사용하려면 클라이언트 컴퓨터에 Visual Studio 2022 버전 17.4 설치 프로그램을 설치해야 합니다.        ]D;]A;]D;]A;자세한 정보는 https://aka.ms/vs/removeoos/blog를 참조하세요.]]></Val>
+          <Val><![CDATA[이 설정은 모든 Visual Studio 설치에서 업데이트 시 지원 중단 상태로 전환된 모든 구성 요소를 자동으로 제거합니다.]D;]A;        ]D;]A;1(사용함)로 설정하면 Visual Studio 설치 관리자가 모든 후속 업데이트 동안 지원이 중단된 모든 구성 요소를 제거합니다.  ]D;]A;        ]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락된 경우 지원이 중단된 구성 요소 삭제 동작은 명령줄 매개변수 또는 업데이트 설정 대화 상자와 같이 이를 구성할 수 있는 다른 위치를 고려합니다.]D;]A;        ]D;]A;이 기능을 사용하려면 클라이언트 컴퓨터에 Visual Studio 2022 버전 17.4 설치 관리자가 설치되어 있어야 합니다.        ]D;]A;]D;]A;자세한 정보는 http://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -286,6 +343,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;81c22d15a93486175e34cde04ef8f882" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Hide the Available tab shown in the Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 설치 관리자에 표시되는 사용 가능한 탭 숨기기]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
@@ -300,24 +366,6 @@
         <Val><![CDATA[Shared installation path]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[공유 설치 경로]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;8e42c1be143c4a1008899491a6cc9b16" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 정책을 사용하면 Visual Studio 원격 분석을 Visual Studio 사용자 환경 개선 프로그램 일부로 Microsoft로 보낼 수 있습니다. 자세한 내용은 aka.ms/vs/admx/telemetry를 참조하세요.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;975a236e30fedda9ba2634f1d21a689d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This policy applies to the Visual Studio Installer version 3.6.0 or higher.]D;]A;]D;]A;For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 정책은 사용 가능한 탭을 설치 관리자에 표시할지 여부를 결정합니다. 사용 가능한 탭에는 Visual Studio 설치 관리자를 통해 설치할 수 있는 추천 제품이 들어 있습니다.]D;]A;]D;]A;1(사용)로 설정하면 사용 가능한 탭이 사용자에게 표시되지 않으며 설치 관리자 UI를 통해 사용 가능한 탭에서 새 제품을 설치할 수 없게 됩니다. 하지만 명령줄이나 부트스트래퍼를 통해서는 여전히 사용자가 제품을 설치할 수 있습니다.]D;]A;]D;]A;0(사용하지 않음)으로 설정하거나 무시할 경우 사용자에게 사용 가능한 탭이 표시되며 설치 관리자 UI에서 광고하는 새 제품을 마음대로 설치할 수 있게 됩니다. 참고: 기본으로 설정된 동작입니다.]D;]A;]D;]A;이 정책은 Visual Studio 설치 관리자 버전 3.6.0 이상에 적용됩니다.]D;]A;]D;]A;자세한 내용은 https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -349,6 +397,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enabled for all installer operations]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[모든 설치 관리자 작업에 대해 사용]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;a2f4deadda9f669e455c85c9b53ba30b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[관리자 업데이트를 클라이언트 컴퓨터에 표시하고 적용할 수 있습니다. ]D;]A;        ]D;]A;1(WSUS/SCCM을 사용)로 설정하면 WSUS 및 SCCM을 통해 전달된 관리자 업데이트를 AD(Active Direcotry) 조인 클라이언트 컴퓨터에서 사용할 수 있습니다.  ]D;]A;        ]D;]A;2(WSUS/SCCM 및 Microsoft Updates/Intune을 사용)로 설정하면 WSUS/SCCM 또는 Microsoft 업데이트/Intune을 통해 제공되는 관리자 업데이트를 비즈니스용 Windows 업데이트(WUfB)에 등록된 AD(Active Directory) 또는 Azure AD(Azure Active Directory) 조인 컴퓨터에서 사용할 수 있습니다. WUfB AllowMUUpdateServicePolicy도 켜져 있어야 합니다.]D;]A;]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락된 경우 컴퓨터에서 관리자 업데이트를 사용할 수 없습니다.        ]D;]A;        ]D;]A;자세한 정보는 http://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -363,33 +429,6 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[설치 후 패키지 페이로드 유지]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[사용자가 Visual Studio 관리자 업데이트를 받지 않음을 나타냅니다. ]D;]A;        ]D;]A;1(사용)로 설정하면 Visual Studio 사용자가 Visual Studio 관리자 업데이트를 받지 않습니다. 이 정책은 개발자인 사용자가 클라이언트 컴퓨터에 대한 관리자 권한이 있는지를 설정하기 위한 것입니다. ]D;]A;        ]D;]A;자세한 내용은 https://aka.ms/vs/admin/updates/control을 참조하세요.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;ab7205b61d4a56ba4ed4e941576e4afc" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[관리자 업데이트를 클라이언트 컴퓨터에 표시하고 적용할 수 있습니다. ]D;]A;        ]D;]A;1(WSUS/SCCM을 사용)로 설정하면 WSUS 및 SCCM을 통해 전달된 관리자 업데이트를 AD(Active Direcotry) 조인 클라이언트 컴퓨터에서 사용할 수 있습니다.  ]D;]A;        ]D;]A;2(WSUS/SCCM 및 Microsoft Updates/Intune을 사용)로 설정하면 WSUS/SCCM 또는 Microsoft 업데이트/Intune을 통해 제공되는 관리자 업데이트는 비즈니스용 Windows 업데이트(WUfB)에 등록된 AD(Active Directory) 또는 Azure AD(Azure Active Directory) 조인 컴퓨터에서 사용할 수 있습니다. WUfB AllowMUUpdateServicePolicy도 켜져 있어야 합니다.]D;]A;]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락된 경우 컴퓨터에서 관리자 업데이트를 사용할 수 없습니다.       ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;af5b35d723010e0820497ba7b1d3b400" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see https://aka.ms/DisableOrMovePackageCache]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[패키지 매니페스트 및 선택적으로 페이로드가 저장되는 디렉터리입니다.]D;]A;]D;]A;Visual Studio 설치 관리자는 경로에 대해 50자 제한을 적용합니다.]D;]A;]D;]A;자세한 내용은 https://aka.ms/DisableOrMovePackageCache를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -439,6 +478,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;c596f1a80baecec295e9d2d8e24fea55" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enabled for Update and Rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[업데이트 및 롤백 사용]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;c92b134ee6dabec50bec54abafef79b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[WSUS/SCCM]]></Val>
@@ -453,6 +501,15 @@
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[설치된 모든 Visual Studio 제품에 대한 업데이트를 자동으로 다운로드하지 못하도록 합니다. 언제든지 값을 변경할 수 있습니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;cf50146d8e4821effbaacd73b4278f0b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책은 사용 가능한 탭을 설치 관리자에 표시할지 여부를 결정합니다. 사용 가능한 탭에는 Visual Studio 설치 관리자를 통해 설치할 수 있는 추천 제품이 포함되어 있습니다.]D;]A;]D;]A;1(사용)로 설정하면 사용 가능한 탭이 사용자에게 표시되지 않으며 설치 관리자 UI를 통해 사용 가능한 탭에서 새 제품을 설치할 수 없게 됩니다. 하지만 명령줄이나 부트스트래퍼를 통해서는 여전히 사용자가 제품을 설치할 수 있습니다.]D;]A;]D;]A;0(사용 안 함)으로 설정하거나 완전히 누락된 경우 사용자에게 사용 가능한 탭이 표시되며 설치 관리자 UI에서 광고하는 새 제품을 마음대로 설치할 수 있게 됩니다. 참고: 기본으로 설정된 동작입니다.]D;]A;]D;]A;이 기능을 사용하려면 클라이언트 컴퓨터에 Visual Studio 2022 버전 17.6 설치 관리자가 설치되어 있어야 합니다.]D;]A;]D;]A;자세한 내용은 https://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -484,11 +541,29 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;da1049cb0266609781e09a7fa023d4eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[패키지 매니페스트 및 선택적으로 페이로드가 저장되는 디렉터리입니다.]D;]A;]D;]A;Visual Studio 설치 관리자는 경로에 50자 제한을 적용합니다.]D;]A;]D;]A;자세한 내용은 http://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[관리자 업데이트를 구성하는 데 사용되는 업데이트 구성 파일의 사용자 지정 파일 경로입니다. 자세한 내용은  https://aka.ms/vs/admin/updates/configurationfile을 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;e21c7039426fb89789b505dac72e287c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: https://aka.ms/vs/admx/telemetry]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책을 사용하면 Visual Studio 원격 분석을 Visual Studio 사용자 환경 개선 프로그램 일부로 Microsoft에 보낼 수 있습니다. 자세한 내용은 https://aka.ms/vs/admx/telemetry를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -511,11 +586,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;f9ae13cf82e3690aa0bd76ca3f17c434" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;f86881402780b1326b1f45afc0124632" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/rollback.]]></Val>
+        <Val><![CDATA[Disable dev tunnels in Visual Studio]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 정책은 사용자가 업데이트를 실행 취소하고 Visual Studio를 이전에 설치된 버전으로 롤백할 수 있는지 여부를 결정합니다.]D;]A;]D;]A;1(사용함)로 설정하면 사용자가 롤백 기능에 액세스할 수 없으므로 Visual Studio에서 보안 수정 사항이 포함될 수 있는 최신 업데이트를 되돌릴 수 없습니다.]D;]A;]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락되면 사용자는 Visual Studio 롤백 기능에 액세스할 수 있으며 업데이트를 실행 취소하고 Visual Studio 인스턴스를 이전에 설치한 버전으로 롤백할 수 있습니다. 참고: 구성되지 않은 기본 설정을 사용하면 Visual Studio 업데이트를 롤백할 수 있습니다.]D;]A;]D;]A;이 정책은 컴퓨터에 설치된 Visual Studio 2022 이상의 릴리스 인스턴스에 적용됩니다.]D;]A;]D;]A;자세한 정보는 https://aka.ms/vs/rollback을 참조하세요.]]></Val>
+          <Val><![CDATA[Visual Studio 개발 터널 사용 안 함]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -525,6 +600,15 @@
         <Val><![CDATA[Enable the Visual Studio Customer Experience Improvement Program]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 사용자 환경 개선 프로그램 사용]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;fc32cd1e200ec38d22a40a822dafcccf" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[관리자 권한이 없는 사용자가 Visual Studio 설치를 관리할 수 있도록 허용합니다. ]D;]A;        ]D;]A;0(사용하지 않음)으로 설정하거나 완전히 누락된 경우 설치 관리자가 UAC를 사용하여 관리자 권한을 묻는 메시지를 표시합니다.        ]D;]A;]D;]A;1(업데이트 및 롤백에 사용하도록 설정)으로 설정하면 관리자 권한이 없는 사용자는 UAC 없이 업데이트하거나 롤백할 수 있습니다. 다른 모든 작업에서 UAC를 통해 관리자 권한을 요청합니다.  ]D;]A;        ]D;]A;2(모든 설치 관리자 작업에 대해 사용)로 설정하면 관리자 권한이 없는 사용자가 UAC 없이 Visual Studio 설치 관리자를 통해 Visual Studio를 완전히 관리할 수 있습니다.]D;]A;        ]D;]A;자세한 내용은 http://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

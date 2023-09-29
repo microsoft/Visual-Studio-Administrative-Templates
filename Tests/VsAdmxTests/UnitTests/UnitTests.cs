@@ -16,21 +16,21 @@ namespace UnitTests
         [TestMethod]
         public void CheckAdmxFileExists()
         {
-            string admxFullFilePath = Path.Join(ADMX_FILE_PATH, ADMX_FILE_NAME);
+            string admxFullFilePath = Path.Combine(ADMX_FILE_PATH, ADMX_FILE_NAME);
             Assert.IsTrue(File.Exists(admxFullFilePath));
         }
 
         [TestMethod]
         public void CheckAdmlFileExists()
         {
-            string admlFullFilePath = Path.Join(ADML_FILE_PATH, ADML_FILE_NAME);
+            string admlFullFilePath = Path.Combine(ADML_FILE_PATH, ADML_FILE_NAME);
             Assert.IsTrue(File.Exists(admlFullFilePath));
         }
 
         [TestMethod]
         public void CheckAdmxXml()
         {
-            string admxFullFilePath = Path.Join(ADMX_FILE_PATH, ADMX_FILE_NAME);
+            string admxFullFilePath = Path.Combine(ADMX_FILE_PATH, ADMX_FILE_NAME);
 
             try
             {
@@ -49,7 +49,7 @@ namespace UnitTests
         [TestMethod]
         public void CheckAdmlXml()
         {
-            string admlFullFilePath = Path.Join(ADML_FILE_PATH, ADML_FILE_NAME);
+            string admlFullFilePath = Path.Combine(ADML_FILE_PATH, ADML_FILE_NAME);
 
             try
             {

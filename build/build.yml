@@ -17,6 +17,14 @@ trigger:
   branches:
     include:
     - main
+    - release
+
+schedules:
+- cron: "0 2 * * Mon"
+  displayName: Weekly Monday build
+  branches:
+    include:
+    - main
 
 parameters:
 - name: signType
@@ -35,6 +43,8 @@ variables:
   finalDrop: $(Build.StagingDirectory)\finalDrop
   outputNameWithExtension: VisualStudioAdminTemplates.exe
   CodeQL.Enabled: true
+  CodeQL.TSAEnabled: true
+  CodeQL.TSAOptionsPath: $(Build.SourcesDirectory)\.config\CodeQL\tsaoptions.json
 
 steps:
 - checkout: self

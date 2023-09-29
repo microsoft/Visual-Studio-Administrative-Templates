@@ -88,20 +88,20 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;0787119262bdcd3c6d4f53811fffe56f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;077245c46cf2f4eae1124116f0809cb9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Hide Available tab shown in Visual Studio Installer]]></Val>
+        <Val><![CDATA[Prevent the host and guest from using chat within the session.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Skrýt kartu K dispozici, která se zobrazuje v Instalačním programu pro Visual Studio.]]></Val>
+          <Val><![CDATA[Zabrání hostiteli a hostovi používat chat v rámci relace.]D;]A;Další informace najdete na https://aka.ms/vsls-policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;11e476b46162b25fc34ad038749a5874" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;0e3b58934d3872d0439d81b70ea36d2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/DisableOrMovePackageCache]]></Val>
+        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: http://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Uchovávejte datové části balíčku i po jejich instalaci. Hodnotu můžete kdykoli změnit. Když se zásada zakáže, odeberou se všechny datové části balíčku uložené v mezipaměti pro instanci, kterou opravíte nebo upravíte.]D;]A;]D;]A;Povoleno ve výchozím nastavení.]D;]A;]D;]A;Další informace najdete tady: https://aka.ms/DisableOrMovePackageCache]]></Val>
+          <Val><![CDATA[Uchovávejte datové části balíčku i po jejich instalaci. Hodnotu můžete kdykoli změnit. Když se zásada zakáže, odeberou se všechny datové části balíčku uložené v mezipaměti pro instanci, kterou opravíte nebo upravíte.]D;]A;]D;]A;Povoleno ve výchozím nastavení.]D;]A;]D;]A;Další informace najdete tady: http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -111,6 +111,15 @@
         <Val><![CDATA[Disable IntelliCode custom model training]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Zakázat cvičení vlastního modelu IntelliCode]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;18e106751d8c3be68a5c1b2476f319b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Tato zásada zakáže tunely pro vývoj v programu Visual Studio. Další informace najdete tady: https://aka.ms/devtunnels/vs/admx]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -129,6 +138,15 @@
         <Val><![CDATA[Remove out-of-support components during updates]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Odebrání nepodporovaných součásti v průběhu aktualizací]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;32abb6e39cd62f63c9be7113c44bd81d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Označuje, že uživatel nechce dostávat aktualizace správce pro Visual Studio. ]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povoleno), uživatel Visual Studio nebude chtít dostávat aktualizace správce pro Visual Studio. Tuto zásadu může vývojářský uživatel nastavit, pokud má na klientském počítači oprávnění správce. ]D;]A;        ]D;]A;Další informace najdete v tématu http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -187,6 +205,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;484ad4a51183e1c5eaaabb1cee03fc2c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Dev Tunnel Settings]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Nastavení Vývojových tunelů]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4c1073eed371baffaef1c064a8a32384" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable downloading updates automatically]]></Val>
@@ -205,6 +232,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;55828bd0a3887edbc4d9b33027d18d1f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Chat]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Zakázat chat]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;5891da6762ce86611d2a3fcb9b679701" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allow standard users to execute installer operations]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Povolit standardním uživatelům spouštět operace instalačního programu]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;59df68ac84fb4973f911f878bb936f8f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disables send-a-smile's screenshot capability]]></Val>
@@ -219,6 +264,15 @@
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Host se může k relaci připojit až po schválení hostitelem. Live Share už má požadované nastavení „Live Share: Schválení hosta“, a proto ho tato zásada v podstatě vynucuje jako „pravdivé“.]D;]A;Další informace najdete tady: https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;6654660eeb644fa2c2bbad38729b1df0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Tato zásada určuje, jestli uživatel může vrátit aktualizaci zpět a vrátit zpět Visual Studio na dříve nainstalovanou verzi.]D;]A;]D;]A;Pokud je nastavená hodnota 1 (povoleno), uživatelé nebudou mít přístup k funkci vrácení zpět, což zabrání Visual Studiu ve vrácení nejnovější aktualizace, která může obsahovat opravu zabezpečení.]D;]A;]D;]A;Pokud je nastavená hodnota 0 (zakázáno) nebo chybí úplně, budou mít uživatelé v aplikaci Visual Studio přístup k funkci vrácení zpět, budou moct vrátit zpět aktualizaci a vrátit své instance Visual Studio na dříve nainstalovanou verzi. Poznámka: Výchozí nenakonfigurované nastavení umožňuje vrátit zpět aktualizaci Visual Studio.]D;]A;]D;]A;Tyto zásady platí pro instance verzí Visual Studio 2022 nebo vyšší, které mohou být na počítači nainstalovány.]D;]A;]D;]A;Další informace najdete v tématu http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -243,10 +297,13 @@
     </Item>
     <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Toto nastavení způsobí, že aktualizace automaticky odeberou všechny součásti ze všech instalací Visual Studio, které přešly do stavu mimo podporu.]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povoleno), odebere instalační program Visual Studio v průběhu všech následných aktualizací všechny nepodporované součásti.  ]D;]A;        ]D;]A;Pokud je nastaveno na hodnotu 0 (zakázáno) nebo zcela chybí, bude chování odebrání nepodporovaných součástí respektovat jiná umístění, ve kterých lze tuto možnost nakonfigurovat. Jde například o parametr příkazového řádku nebo dialogové okno Aktualizovat nastavení.]D;]A;        ]D;]A;Tato funkce vyžaduje instalaci instalačního programu Visual Studio 2022 verze 17.4 na klientský počítač.        ]D;]A;]D;]A;Další informace najdete v tématu https://aka.ms/vs/removeoos/blog]]></Val>
+          <Val><![CDATA[Toto nastavení způsobí, že aktualizace automaticky odeberou všechny součásti ze všech instalací Visual Studio, které přešly do stavu mimo podporu.]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povoleno), odebere instalační program Visual Studio v průběhu všech následných aktualizací všechny nepodporované součásti.  ]D;]A;        ]D;]A;Pokud je nastaveno na hodnotu 0 (zakázáno) nebo zcela chybí, bude chování odebrání nepodporovaných součástí respektovat jiná umístění, ve kterých lze tuto možnost nakonfigurovat. Jde například o parametr příkazového řádku nebo dialogové okno Aktualizovat nastavení.]D;]A;        ]D;]A;Tato funkce vyžaduje instalaci instalačního programu Visual Studio 2022 verze 17.4 na klientský počítač.        ]D;]A;]D;]A;Další informace najdete v tématu http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -286,6 +343,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;81c22d15a93486175e34cde04ef8f882" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Hide the Available tab shown in the Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Skrýt kartu K dispozici zobrazenou v Instalačním programu pro Visual Studio]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
@@ -300,24 +366,6 @@
         <Val><![CDATA[Shared installation path]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Sdílená instalační cesta]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;8e42c1be143c4a1008899491a6cc9b16" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Tyto zásady umožňují odesílat Visual Studio telemetrii do Microsoftu jako součást Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů. Další informace najdete v tématu: aka.ms/vs/admx/telemetry]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;975a236e30fedda9ba2634f1d21a689d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This policy applies to the Visual Studio Installer version 3.6.0 or higher.]D;]A;]D;]A;For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Zásada určuje, jestli je karta K dispozici v instalačním programu viditelná, nebo ne. Tato karta obsahuje navrhované produkty, které může nainstalovat Instalační program pro Visual Studio.]D;]A;]D;]A;Pokud je zásada nastavená na hodnotu 1 (povoleno), uživatelé kartu K dispozici neuvidí, takže z ní nebudou moct instalovat nové produkty pomocí uživatelského rozhraní instalačního programu. Uživatelé budou moct dál instalovat produkty z příkazového řádku nebo přes bootstrapper.]D;]A;]D;]A;Pokud je zásada nastavená na hodnotu 0 (zakázáno) nebo chybí, uživatelé kartu K dispozici uvidí a můžou libovolně instalovat nové produkty inzerované v uživatelském rozhraní instalačního programu. Poznámka: Toto je výchozí chování.]D;]A;]D;]A;Tyto zásady platí pro Instalační program pro Visual Studio verze 3.6.0 nebo vyšší.]D;]A;]D;]A;Další informace najdete na https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -349,6 +397,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enabled for all installer operations]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Povoleno pro všechny operace instalačního programu]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;a2f4deadda9f669e455c85c9b53ba30b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Umožňuje zobrazit aktualizace správce a použít je v klientském počítači. ]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povolená pro WSUS/SCCM), budou aktualizace správců doručované přes WSUS a SCCM dostupné klientským počítačům připojeným ke službě Active Direcotry (AD).  ]D;]A;        ]D;]A;Pokud je nastavená hodnota 2 (povolená pro WSUS/SCCM a Microsoft Updates/Intune), budou se aktualizace správců doručované prostřednictvím WSUS/SCCM nebo Microsoft Updates/Intune dostupné buď pro počítače připojené ke službě Active Directory (AD), nebo Azure Active Directory (Azure AD), které jsou zaregistrované v Windows Update pro firmy (WUfB). Všimněte si, že zásada WUfB AllowMUUpdateServicePolicy musí být také zapnutá.]D;]A;]D;]A;Pokud je nastavená hodnota 0 (zakázáno) nebo zcela chybí, aktualizace správce nebudou pro počítač k dispozici.        ]D;]A;        ]D;]A;Další informace najdete v tématu http://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a8a606d0c3589d690af84e53d98fea5b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Privacy Settings]]></Val>
@@ -363,33 +429,6 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Zachovat datové části balíčku po instalaci]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Označuje, že uživatel nechce dostávat aktualizace správce pro Visual Studio. ]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povoleno), uživatel Visual Studio nebude chtít dostávat aktualizace správce pro Visual Studio. Tuto zásadu může vývojářský uživatel nastavit, pokud má na klientském počítači oprávnění správce. ]D;]A;        ]D;]A;Další informace najdete v tématu https://aka.ms/vs/admin/updates/control.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;ab7205b61d4a56ba4ed4e941576e4afc" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/EnableAdminUpdates.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Umožňuje zobrazit aktualizace správce a použít je v klientském počítači. ]D;]A;        ]D;]A;Pokud je nastavená hodnota 1 (povolená pro WSUS/SCCM), budou aktualizace správců doručované přes WSUS a SCCM dostupné klientským počítačům připojeným ke službě Active Direcotry (AD).  ]D;]A;        ]D;]A;Pokud je nastavená hodnota 2 (povolená pro WSUS/SCCM a Microsoft Updates/Intune), budou se aktualizace správců doručované prostřednictvím WSUS/SCCM nebo Microsoft Updates/Intune dostupné buď pro počítače připojené ke službě Active Directory (AD), nebo Azure Active Directory (Azure AD), které jsou zaregistrované v Windows Update pro firmy (WUfB). Všimněte si, že zásada WUfB AllowMUUpdateServicePolicy musí být také zapnutá.]D;]A;]D;]A;Pokud je nastavená hodnota 0 (zakázáno) nebo zcela chybí, aktualizace správce nebudou pro počítač k dispozici.        ]D;]A;        ]D;]A;Další informace najdete v tématu https://aka.ms/EnableAdminUpdates.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;af5b35d723010e0820497ba7b1d3b400" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see https://aka.ms/DisableOrMovePackageCache]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Adresář, do kterého se ukládají manifesty balíčků a volitelně také datové části.]D;]A;]D;]A;Instalační program pro Visual Studio vynucuje pro cestu limit 50 znaků.]D;]A;]D;]A;Další informace najdete v tématu https://aka.ms/DisableOrMovePackageCache]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -439,6 +478,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;c596f1a80baecec295e9d2d8e24fea55" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Enabled for Update and Rollback]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Povoleno pro Aktualizaci a Vrácení zpět]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;c92b134ee6dabec50bec54abafef79b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[WSUS/SCCM]]></Val>
@@ -453,6 +501,15 @@
         <Val><![CDATA[Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Zabrání instalačnímu programu automaticky stahovat aktualizace pro všechny nainstalované Visual Studio produkty. Hodnotu můžete kdykoli změnit.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;cf50146d8e4821effbaacd73b4278f0b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Zásada určuje, jestli je karta ‚K dispozici‘ v instalačním programu viditelná, nebo ne. Tato karta obsahuje navrhované produkty, které může nainstalovat Instalační program pro Visual Studio.]D;]A;]D;]A;Pokud je zásada nastavená na hodnotu 1 (povoleno), uživatelé kartu K dispozici neuvidí, takže z ní nebudou moct instalovat nové produkty pomocí uživatelského rozhraní instalačního programu. Uživatelé budou moct dál instalovat produkty z příkazového řádku nebo přes bootstrapper.]D;]A;]D;]A;Pokud je zásada nastavená na hodnotu 0 (zakázáno) nebo chybí, uživatelé kartu K dispozici uvidí a můžou libovolně instalovat nové produkty inzerované v uživatelském rozhraní instalačního programu. Poznámka: Toto je výchozí chování.]D;]A;]D;]A;Tato funkce vyžaduje instalaci instalačního programu Visual Studio 2022 verze 17.6 na klientský počítač.]D;]A;]D;]A;Další informace najdete na http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -484,11 +541,29 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;da1049cb0266609781e09a7fa023d4eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Adresář, do kterého se ukládají manifesty balíčků a volitelně také datové části.]D;]A;]D;]A;Instalační program pro Visual Studio vynucuje pro cestu limit 50 znaků.]D;]A;]D;]A;Další informace najdete v tématu http://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Vlastní cesta ke konfiguračnímu souboru aktualizace, který se používá ke konfiguraci aktualizací správce. Další informace najdete v tématu https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;e21c7039426fb89789b505dac72e287c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: https://aka.ms/vs/admx/telemetry]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Tyto zásady umožňují odesílat Visual Studio telemetrii do Microsoftu jako součást programu Visual Studio Zlepšování softwaru a služeb na základě zkušeností uživatelů. Další informace najdete v tématu: aka.ms/vs/admx/telemetry]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -511,11 +586,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;f9ae13cf82e3690aa0bd76ca3f17c434" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;f86881402780b1326b1f45afc0124632" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This policy determines whether the user can undo an update and rollback Visual Studio to the previously installed version.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from accessing the rollback capability, which will prevent Visual Studio from reverting the most recent update which may contain a security fix.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then users will be able to access the rollback feature in Visual Studio, and will be able to undo an update and rollback their Visual Studio instances to the previously installed version. Note: The default unconfigured setting enables the ability to rollback a Visual Studio update.]D;]A;]D;]A;This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/rollback.]]></Val>
+        <Val><![CDATA[Disable dev tunnels in Visual Studio]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Tato zásada určuje, jestli uživatel může vrátit aktualizaci zpět a vrátit zpět Visual Studio na dříve nainstalovanou verzi.]D;]A;]D;]A;Pokud je nastavená hodnota 1 (povoleno), uživatelé nebudou mít přístup k funkci vrácení zpět, což zabrání Visual Studio v vrácení nejnovější aktualizace, která může obsahovat opravu zabezpečení.]D;]A;]D;]A;Pokud je nastavená hodnota 0 (zakázáno) nebo chybí úplně, budou mít uživatelé v aplikaci Visual Studio přístup k funkci vrácení zpět, budou moct vrátit zpět aktualizaci a vrátit své instance Visual Studio na dříve nainstalovanou verzi. Poznámka: Výchozí nenakonfigurované nastavení umožňuje vrátit zpět aktualizaci Visual Studio.]D;]A;]D;]A;Tyto zásady platí pro instance verzí Visual Studio 2022 nebo vyšší, které mohou být na počítači nainstalovány.]D;]A;]D;]A;Další informace najdete v tématu https://aka.ms/vs/rollback.]]></Val>
+          <Val><![CDATA[Zakázat tunely pro vývoj v Visual Studio]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -525,6 +600,15 @@
         <Val><![CDATA[Enable the Visual Studio Customer Experience Improvement Program]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Povolení Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;fc32cd1e200ec38d22a40a822dafcccf" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Umožňuje uživatelům bez oprávnění správce spravovat instalace Visual Studia. ]D;]A;]D;]A; Pokud je nastavená hodnota 0 (zakázáno) nebo chybí úplně, instalační program zobrazí výzvu k zadání oprávnění správce pomocí Řízení uživatelských účtů.        ]D;]A;]D;]A; Pokud je tato možnost nastavená na 1 (povoleno pro aktualizace a vrácení zpět), můžou uživatelé bez oprávnění správce provádět aktualizaci nebo vrácení zpět bez nástroje Řízení uživatelských účtů. Všechny ostatní operace budou požadovat oprávnění správce prostřednictvím Řízení uživatelských účtů.  ]D;]A;]D;]A; Pokud je nastavená hodnota 2 (povolená pro všechny operace instalačního programu), můžou uživatelé bez oprávnění správce plně spravovat Visual Studio prostřednictvím Instalační program pro Visual Studio bez Řízení uživatelských účtů.]D;]A;]D;]A; Další informace najdete na http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

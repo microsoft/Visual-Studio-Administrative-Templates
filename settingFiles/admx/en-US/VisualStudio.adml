@@ -15,7 +15,8 @@
       <string id="InstallandUpdateSettingsCategoryName">Install and Update Settings</string>
       <string id="LiveShareSettingsCategoryName">Live Share Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
-      
+      <string id="VisualStudioDevTunnels">Dev Tunnel Settings</string>
+
       <!-- The VS catalog Product Names. -->
       <string id="VisualStudioProductName2017">Visual Studio 2017</string>
       <string id="VisualStudioProductName2019">Visual Studio 2019</string>
@@ -26,9 +27,9 @@
       <string id="VisualStudioProductName2022_4">Visual Studio 2022, 17.4</string>
 
       <!-- Convey a particular version and higher. -->
-      <string id="VisualStudio2017">Visual Studio 2017 and higher.</string>
-      <string id="VisualStudio2019">Visual Studio 2019 and higher.</string>
-      <string id="VisualStudio2022">Visual Studio 2022 and higher.</string>
+      <string id="VisualStudio2017AndHigher">Visual Studio 2017 and higher.</string>
+      <string id="VisualStudio2019AndHigher">Visual Studio 2019 and higher.</string>
+      <string id="VisualStudio2022AndHigher">Visual Studio 2022 and higher.</string>
       <string id="VisualStudio2022_1">Visual Studio 2022, 17.1 and higher.</string>
       <string id="VisualStudio2022_4">Visual Studio 2022, 17.4 and higher.</string>
 
@@ -52,14 +53,14 @@ If set to 0 (disabled) or missing entirely, then the remove out-of-support compo
         
 This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        
 
-For more information, see https://aka.ms/vs/removeoos/blog</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
     
       <string id="CachePath_DisplayName">Package manifest and payload cache path</string>
       <string id="CachePath_Explain">The directory where package manifests and, optionally, payloads are stored.
 
 The Visual Studio Installer enforces a 50 character limit for the path.
 
-For more information, see https://aka.ms/DisableOrMovePackageCache</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
   
       <string id="BackgroundDownloadDisabled_DisplayName">Disable downloading updates automatically</string>
       <string id="BackgroundDownloadDisabled_Explain">Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.</string>
@@ -73,7 +74,7 @@ The Visual Studio Installer enforces a 150 character limit for the path.</string
 
 Enabled by default.
 
-For more information, see: https://aka.ms/DisableOrMovePackageCache</string>
+For more information, see: http://aka.ms/vs/setup/policies.</string>
 
       <string id="AdministratorUpdatesEnabled_DisplayName">Enable administrator updates</string>
       <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be visible to and applied to the client computer. 
@@ -84,7 +85,7 @@ If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administr
 
 If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        
         
-For more information, see https://aka.ms/EnableAdminUpdates.</string>
+For more information, see http://aka.ms/vs/setup/policies.</string>
 
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">WSUS/SCCM</string>
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU">WSUS/SCCM and Microsoft Updates/Intune</string>
@@ -117,18 +118,32 @@ If set to 0 (disabled) or missing entirely, then users will be able to access th
 
 This policy applies to release instances of Visual Studio 2022 or higher that may be installed on the machine.
 
-For more information, see https://aka.ms/vs/rollback.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
 
-      <string id="HideAvailableTab_DisplayName">Hide Available tab shown in Visual Studio Installer</string>
+      <string id="HideAvailableTab_DisplayName">Hide the Available tab shown in the Visual Studio Installer</string>
       <string id="HideAvailableTab_Explain">This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.
 
-If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or through the bootstrapper.
+If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.
 
 If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.
 
-This policy applies to the Visual Studio Installer version 3.6.0 or higher.
+This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.
 
-For more information, see https://learn.microsoft.com/en-us/visualstudio/install/set-defaults-for-enterprise-deployments?view=vs-2022.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
+
+      <string id="AllowStandardUserControl_DisplayName">Allow standard users to execute installer operations</string>
+      <string id="AllowStandardUserControl_Explain">Allows users without administrator permissions to manage their Visual Studio installations. 
+        
+If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        
+
+If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  
+        
+If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.
+        
+For more information, see http://aka.ms/vs/setup/policies.</string>
+
+      <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Enabled for Update and Rollback</string>
+      <string id="AllowStandardUserControl_EnabledForAll">Enabled for all installer operations</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
@@ -149,13 +164,19 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <string id="LiveShare_DisableReadWriteTerminal_DisplayName">Disable shared read write terminal</string>
       <string id="LiveShare_DisableReadWriteTerminal_Explain">Prevent the host from being able to explicitly share a new writeable terminal.
 For more information, see: https://aka.ms/vsls-policies</string>
+      <string id="LiveShare_DisableChat_DisplayName">Disable Chat</string>
+      <string id="LiveShare_DisableChat_Explain">Prevent the host and guest from using chat within the session.
+For more information, see: https://aka.ms/vsls-policies</string>
 
        <!-- Privacy -->
       <string id="TelemetryOptIn_DisplayName">Enable the Visual Studio Customer Experience Improvement Program</string>
-      <string id="TelemetryOptIn_Explain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: aka.ms/vs/admx/telemetry</string>
+      <string id="TelemetryOptIn_Explain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: https://aka.ms/vs/admx/telemetry</string>
       <string id="IntelliCodeRemoteAnalysisDisabled_DisplayName">Disable IntelliCode custom model training</string>
       <string id="IntelliCodeRemoteAnalysisDisabled_Explain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
 
+      <!-- Visual Studio dev tunnels -->
+      <string id="VSDevTunnelsDisable_DisplayName">Disable dev tunnels in Visual Studio</string>
+      <string id="VSDevTunnelsDisable__Explain">This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx</string>
     </stringTable>
     <presentationTable>
       <presentation id="AdministratorUpdatesEnabled_PresentationId">
@@ -175,6 +196,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
         <textBox refId="UpdateConfigurationFile_TextBox">
           <label>Custom Path to the Update Config</label>
         </textBox>
+      </presentation>
+      <presentation id="AllowStandardUserControl_PresentationId">
+         <dropdownList refId="AllowStandardUserControlDropID" noSort="true" defaultItem="0" />
       </presentation>
 
       <!-- LiveShare Presentations -->
