@@ -234,12 +234,12 @@
             </disabledValue>
         </policy>
         <policy 
-            name="AdministratorPromptToClose" 
+            name="AdministratorUpdatesNotifications" 
             class="Machine" 
-            displayName="$(string.AdministratorPromptToClose_DisplayName)" 
-            explainText="$(string.AdministratorPromptToClose_Explain)" 
+            displayName="$(string.AdministratorUpdatesNotifications_DisplayName)" 
+            explainText="$(string.AdministratorUpdatesNotifications_Explain)" 
             key="Software\Policies\Microsoft\VisualStudio\Setup" 
-            valueName="AdministratorPromptToClose">
+            valueName="AdministratorUpdatesNotifications">
             <parentCategory ref="InstallandUpdateSettings"/>
             <supportedOn ref="VisualStudio2017AndHigher"/>
             <enabledValue>

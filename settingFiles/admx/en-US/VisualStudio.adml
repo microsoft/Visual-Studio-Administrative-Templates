@@ -95,8 +95,16 @@ For more information, see https://aka.ms/EnableAdminUpdates.</string>
 If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. 
         
 For more information, see https://aka.ms/vs/admin/updates/control.</string>
-      <string id="AdministratorPromptToClose_DisplayName"></string>
-      <string id="AdministratorPromptToClose_Explain"></string>
+      <string id="AdministratorUpdatesNotifications_DisplayName">Display administrator update notifications</string>
+      <string id="AdministratorUpdatesNotifications_Explain">This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  
+ 
+If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  
+
+The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  
+
+The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. 
+
+For more information, see https://aka.ms/vs/admin/updates/control.</string>
       <string id="UpdateConfigurationFile_DisplayName">Custom path to the update configuration file</string>
       <string id="UpdateConfigurationFile_Explain">The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.</string>
 
