@@ -237,6 +237,22 @@
             </disabledValue>
         </policy>
         <policy 
+            name="AdministratorUpdatesNotifications" 
+            class="Machine" 
+            displayName="$(string.AdministratorUpdatesNotifications_DisplayName)" 
+            explainText="$(string.AdministratorUpdatesNotifications_Explain)" 
+            key="Software\Policies\Microsoft\VisualStudio\Setup" 
+            valueName="AdministratorUpdatesNotifications">
+            <parentCategory ref="InstallandUpdateSettings"/>
+            <supportedOn ref="VisualStudio2017AndHigher"/>
+            <enabledValue>
+                <decimal value="1"/>
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0"/>
+            </disabledValue>
+        </policy>
+        <policy 
             name="UpdateConfigurationFile"
             class="Machine"
             displayName="$(string.UpdateConfigurationFile_DisplayName)"
