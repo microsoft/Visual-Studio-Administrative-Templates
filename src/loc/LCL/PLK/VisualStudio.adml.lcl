@@ -118,6 +118,9 @@
     <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[To ustawienie umożliwia programowi Visual Studio dostarczanie użytkownikom końcowym monitów o aktualizację i informacji o stanie za pośrednictwem funkcji wyskakujących powiadomień systemu Windows.  ]D;]A; ]D;]A;Jeśli zostanie ustawiona wartość 1 (włączona), w programie Visual Studio będą wyświetlane powiadomienia administratora o aktualizacjach.  ]D;]A;]D;]A;Powiadomienia administratora programu Visual Studio o aktualizacjach będą zgłaszać powodzenie lub niepowodzenie aktualizacji przez administratora. W przypadku niepowodzenia aktualizacji przez administratora te powiadomienia będą zawierać informacje o problemie, co powinno ułatwić diagnozowanie i rozwiązywanie problemów. Jedną z typowych przyczyn niepowodzenia stosowania aktualizacji administratora programu Visual Studio jest to, że program Visual Studio jest otwarty i używany. W takiej sytuacji powiadomienia administratora o aktualizacjach będą również monitować użytkownika o zamknięcie programu Visual Studio, aby można było następnie zastosować aktualizację administratora.  ]D;]A;]D;]A;Powiadomienia o aktualizacjach administratora podlegają ustawieniom, które sterują wyskakującymi powiadomieniami systemu Windows na komputerze klienckim. ]D;]A;]D;]A;Aby uzyskać więcej informacji, zobacz https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -352,6 +355,9 @@
     <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Wyświetl powiadomienia o aktualizacjach administratora]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
