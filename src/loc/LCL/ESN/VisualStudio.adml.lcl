@@ -115,6 +115,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta configuración permite a Visual Studio proporcionar mensajes de actualización del administrador e información de estado a los usuarios finales mediante la característica de notificación del sistema de Windows.  ]D;]A; ]D;]A;Si se establece en 1 (habilitado), Visual Studio mostrará las notificaciones de actualización del administrador.  ]D;]A;]D;]A;Las notificaciones de actualización del administrador de Visual Studio notificarán que la actualización del administrador se realizó correctamente o no. En caso de error de actualización del administrador, estas notificaciones proporcionarán información sobre cuál es el problema, lo que debería ayudar a facilitar el diagnóstico y la resolución. Una razón común por la que no se pueden aplicar las actualizaciones del administrador de Visual Studio es que Visual Studio está abierto y en uso. En esta situación, las notificaciones de actualización del administrador también pedirán al usuario que cierre Visual Studio para que se pueda aplicar la actualización del administrador.  ]D;]A;]D;]A;Las notificaciones de actualización del administrador se rigen por la configuración que controla las notificaciones del sistema de Windows en el equipo cliente. ]D;]A;]D;]A;Para obtener más información, consulte https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;18e106751d8c3be68a5c1b2476f319b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx]]></Val>
@@ -138,15 +147,6 @@
         <Val><![CDATA[Remove out-of-support components during updates]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Quitar los componentes que no son compatibles durante las actualizaciones]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;32abb6e39cd62f63c9be7113c44bd81d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Indica que el usuario no desea recibir actualizaciones de administrador para Visual Studio. ]D;]A;        ]D;]A;Si se establece en 1 (habilitada), el usuario de Visual Studio no desea recibir actualizaciones de administrador para Visual Studio. El usuario desarrollador puede establecer esta directiva si tiene permisos de administrador en el equipo cliente. ]D;]A;        ]D;]A;Para obtener más información, consulte http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -352,6 +352,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Mostrar notificaciones de actualización del administrador]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
@@ -429,6 +438,15 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Mantener las cargas del paquete después de la instalación]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Indica que el usuario no desea recibir actualizaciones de administrador para Visual Studio. ]D;]A; ]D;]A;Si se establece en 1 (habilitado), el usuario Visual Studio no desea recibir actualizaciones de administrador para Visual Studio. Esta directiva es para que el usuario desarrollador establezca si tiene permisos de administrador en el equipo cliente. ]D;]A; ]D;]A;Para obtener más información, consulte https://aka.ms/vs/admin/updates/control.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

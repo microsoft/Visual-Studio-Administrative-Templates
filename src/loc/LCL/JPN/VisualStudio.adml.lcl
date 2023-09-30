@@ -115,6 +115,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[この設定により、Visual Studio は Windows のトースト通知機能を介して、管理者の更新プロンプトと状態情報をエンド ユーザーに提供できます。 ]D;]A; ]D;]A;1 (有効) に設定すると、Visual Studio は管理者の更新通知を表示します。  ]D;]A;]D;]A;Visual Studio の管理者の更新通知では、管理者の更新の成功または失敗が報されます。管理者の更新が失敗した発生した場合、これらの通知によって何が問題であるかの情報が提供されるため、診断と解決が容易になります。Visual Studio の管理者の更新が失敗する一般的な理由の 1 つは、Visual Studio が開いて使用中であることです。この場合、管理者の更新通知により、管理者の更新が適用できるように、Visual Studioを閉じるようにユーザーに求めます。 ]D;]A;]D;]A;管理者の更新通知は、クライアント コンピューターで Windows のトースト通知を制御する設定によって管理されます。 ]D;]A;]D;]A;詳細については、「https://aka.ms/vs/admin/updates/control」を参照してください。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;18e106751d8c3be68a5c1b2476f319b7" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx]]></Val>
@@ -138,15 +147,6 @@
         <Val><![CDATA[Remove out-of-support components during updates]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[更新中にサポート対象外のコンポーネントを削除する]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;32abb6e39cd62f63c9be7113c44bd81d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[ユーザーがVisual Studioに対する管理者の更新プログラムを受信しないことを示します。]D;]A;        ]D;]A;1 (有効) に設定した場合、Visual Studio ユーザーはVisual Studioに対する管理者の更新プログラムを受信しません。このポリシーは、開発者ユーザーがクライアント コンピューターに対する管理者権限を持っている場合に設定します。 ]D;]A;        ]D;]A;詳細については、「http://aka.ms/vs/setup/policies」を参照してください。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -352,6 +352,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[管理者の更新通知を表示する]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;8a60642368effaf56957c1cfb90295f4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[WSUS/SCCM and Microsoft Updates/Intune]]></Val>
@@ -429,6 +438,15 @@
         <Val><![CDATA[Keep package payloads after installation]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[インストール後にパッケージ ペイロードを保持する]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;aad0b5abc5ac66dc7e6b235c8c9399c0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[ユーザーがVisual Studioに対する管理者の更新プログラムを受信しないことを示します。]D;]A; ]D; ]A;1 (有効) に設定した場合、Visual Studio ユーザーはVisual Studioの管理者アップデートを受信しません。このポリシーは、開発者ユーザーがクライアント コンピューターに対する管理者権限を持っている場合に設定します。]D;]A; ]D;]A;詳細については、「https://aka.ms/vs/admin/updates/control」を参照してください。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
