@@ -118,6 +118,9 @@
     <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Bu ayar, Visual Studio bildirim özelliği aracılığıyla son kullanıcılara yönetici güncelleştirme istemleri ve durum bilgileri sağlamasını sağlar.  ]D;]A; ]D;]A;1 (etkin) olarak ayarlanırsa Visual Studio, yönetici güncelleştirme bildirimlerini görüntüler.  ]D;]A;]D;]A;Visual Studio yönetici güncelleme bildirimleri, yönetici güncelleme başarısını veya başarısızlığını bildirecektir. Yönetici güncellemesinin başarısız olması durumunda, bu bildirimler sorunun ne olduğuna ilişkin bilgi sağlayacak ve tanı ve çözümü kolaylaştırmaya yardımcı olacaktır. Visual Studio yönetici güncelleştirmelerinin uygulanamamasının yaygın bir nedeni, Visual Studio'nun açık ve kullanımda olmasıdır. Bu durumda yönetici güncelleme bildirimleri, yönetici güncelleştirmesinin uygulanabilmesi için kullanıcıdan Visual Studio'yu kapatmasını da isteyecektir.  ]D;]A;]D;]A;Yönetici güncelleştirme bildirimleri, istemci makinedeki Windows tost bildirimlerini kontrol eden ayarlar tarafından yönetilir. ]D;]A;]D;]A;Daha fazla bilgi için bkz. https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -352,6 +355,9 @@
     <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Yönetici güncelleştirme bildirimlerini görüntüle]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>

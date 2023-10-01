@@ -118,6 +118,9 @@
     <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Toto nastavení umožňuje Visual Studio poskytovat koncovým uživatelům výzvy k aktualizaci a informace o stavu správce prostřednictvím funkce informačních zpráv systému Windows.  ]D;]A; ]D;]A;Pokud je nastavená hodnota 1 (povoleno), Visual Studio zobrazí oznámení o aktualizacích správce.  ]D;]A;]D;]A;Oznámení o aktualizaci správce Visual Studio oznámí, že aktualizace správce proběhla úspěšně nebo se nezdařila. V případě selhání aktualizace správce budou tato oznámení poskytovat informace o problému, což by mělo usnadnit diagnostiku a řešení. Jedním z běžných důvodů, proč se aktualizace správce Visual Studio nedaří použít, je to, že Visual Studio je otevřený a používán. V takovém případě budou oznámení o aktualizacích správce také vyzvat uživatele, aby zavřel Visual Studio, aby bylo možné následně použít aktualizaci správce.  ]D;]A;]D;]A;Oznámení o aktualizacích správce se řídí nastavením, které řídí informační zprávy Windows na klientském počítači. ]D;]A;]D;]A;Další informace najdete v tématu https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -352,6 +355,9 @@
     <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Zobrazit oznámení o aktualizacích správce]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>

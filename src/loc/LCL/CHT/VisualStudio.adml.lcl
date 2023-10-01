@@ -118,6 +118,9 @@
     <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此設定可讓 Visual Studio 透過 Windows 快顯通知功能，提供系統管理員更新提示和狀態資訊給使用者。]D;]A;]D;]A;如果設為 1 (已啟用)，則 Visual Studio 會顯示系統管理員更新通知。]D;]A;]D;]A;Visual Studio 系統管理員更新通知會報告系統管理員更新成功或失敗。在系統管理員更新失敗的情況下，這些通知會提供問題為何的相關資訊，其應該有助於診斷和解決。Visual Studio 系統管理員更新無法套用的一個常見原因是 因為 Visual Studio 已開啟且使用中。在此情況下，系統管理員更新通知也會提示使用者關閉 Visual Studio，以便可以接著套用系統管理員更新。]D;]A;]D;]A;系統管理員更新通知受用戶端電腦上控制 Windows 快顯通知的設定所控管。]D;]A;]D;]A;如需詳細資訊，請參閱 https://aka.ms/vs/admin/updates/control。]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -352,6 +355,9 @@
     <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[顯示系統管理員更新通知]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
