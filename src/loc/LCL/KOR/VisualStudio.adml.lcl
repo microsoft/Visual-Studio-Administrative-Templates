@@ -118,6 +118,9 @@
     <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 설정을 사용하면 Visual Studio Windows 알림 메시지를 통해 관리자 업데이트 프롬프트 및 상태 정보를 최종 사용자에게 제공할 수 있습니다.  ]D;]A; ]D;]A;1(사용)로 설정하면 Visual Studio에서 관리자 업데이트 알림을 표시합니다.  ]D;]A;]D;]A;Visual Studio 관리자 업데이트 알림은 관리자 업데이트 성공 또는 실패를 보고합니다. 관리자 업데이트 실패의 경우 이러한 알림은 문제에 대한 정보를 제공하며 진단 및 해결에 도움이 됩니다. Visual Studio 관리자 업데이트를 적용하지 못하는 일반적인 이유 중 하나는 Visual Studio가 열려 있고 사용 중이기 때문입니다. 이 경우 관리자 업데이트 알림은 사용자에게 Visual Studio를 닫아 관리자 업데이트를 적용하라는 메시지도 표시합니다.  ]D;]A;]D;]A;관리자 업데이트 알림에는 클라이언트 컴퓨터에서 Windows 알림 메시지를 제어하는 설정이 적용됩니다. ]D;]A;]D;]A;자세한 내용은 https://aka.ms/vs/admin/updates/control을 참조하세요.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -352,6 +355,9 @@
     <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[관리자 업데이트 알림 표시]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>

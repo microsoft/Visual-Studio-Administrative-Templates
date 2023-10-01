@@ -118,6 +118,9 @@
     <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Ce paramètre permet à Visual Studio de fournir des invites de mise à jour de l'administrateur et des informations d'état aux utilisateurs finaux via la fonctionnalité de notification Windows Toast.  ]D;]A; ]D;]A;S'il est défini sur 1 (activé), Visual Studio affichera les notifications de mise à jour de l'administrateur.  ]D;]A;]D;]A;Les notifications de mise à jour de l'administrateur Visual Studio signaleront le succès ou l'échec de la mise à jour de l'administrateur. En cas d'échec de la mise à jour de l'administrateur, ces notifications fourniront des informations sur la nature du problème, ce qui devrait faciliter le diagnostic et la résolution. L’une des raisons courantes pour lesquelles les mises à jour de l’administrateur de Visual Studio ne s’appliquent pas est que Visual Studio est ouvert et en cours d’utilisation. Dans cette situation, les notifications de mise à jour de l'administrateur inviteront également l'utilisateur à fermer Visual Studio afin que la mise à jour de l'administrateur puisse ensuite être appliquée.  ]D;]A;]D;]A;Les notifications de mise à jour de l'administrateur sont régies par les paramètres qui contrôlent les notifications Windows Toast sur l'ordinateur client. ]D;]A;]D;]A;Pour plus d'informations, consultez https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -352,6 +355,9 @@
     <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Afficher les notifications de mise à jour de l'administrateur]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
