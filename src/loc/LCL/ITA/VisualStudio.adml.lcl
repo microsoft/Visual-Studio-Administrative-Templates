@@ -118,6 +118,9 @@
     <Item ItemId="0;148831ff1edf7c12285b468a5de34978" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting enables Visual Studio to provide administrator update prompts and status information to end users via the Windows toast notification feature.  ]D;]A; ]D;]A;If set to a 1 (enabled), then Visual Studio will display administrator update notifications.  ]D;]A;]D;]A;The Visual Studio administrator update notifications will report administrator update success or failure. In the case of administrator update failure, these notifications will provide information as to what the problem is, which should help facilitate diagnosis and resolution. One common reason that Visual Studio administrator updates fail to apply is because Visual Studio is open and in use. In this situation, the administrator update notifications will also prompt the user to close Visual Studio so that the administrator update can then be applied.  ]D;]A;]D;]A;The administrator update notifications are governed by the settings that control Windows toast notifications on the client machine. ]D;]A;]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Questa impostazione consente a Visual Studio di fornire agli utenti finali richieste di aggiornamento e informazioni sullo stato tramite la funzionalità di notifica di tipo avviso popup di Windows.  ]D;]A; ]D;]A;Se questa opzione è impostata su 1 (abilitata), Visual Studio visualizzerà le notifiche di aggiornamento dell'amministratore.  ]D;]A;]D;]A;Le notifiche di aggiornamento dell'amministratore di Visual Studio segnaleranno l'esito positivo o negativo degli aggiornamenti dell'amministratore. In caso di errore di aggiornamento dell'amministratore, queste notifiche forniranno informazioni sul problema, che dovrebbe facilitare la diagnosi e la risoluzione. Un motivo comune per cui Visual Studio gli aggiornamenti dell'amministratore non vengono applicati consiste nel fatto che Visual Studio è aperto e in uso. In questo caso, le notifiche di aggiornamento dell'amministratore richiederanno anche all'utente di chiudere Visual Studio in modo che l'aggiornamento dell'amministratore possa essere applicato.  ]D;]A;]D;]A;Le notifiche di aggiornamento dell'amministratore sono regolate dalle impostazioni che controllano le notifiche di tipo avviso popup di Windows nel computer client. ]D;]A;]D;]A;Per altre informazioni, vedere https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -352,6 +355,9 @@
     <Item ItemId="0;8a1d9916ef329af32c4c4d6d47dfe271" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Display administrator update notifications]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visualizza le notifiche di aggiornamento dell'amministratore]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
