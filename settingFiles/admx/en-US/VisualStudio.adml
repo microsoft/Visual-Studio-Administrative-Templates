@@ -142,8 +142,8 @@ If set to 2 (enabled for all installer operations), users without administrator 
         
 For more information, see http://aka.ms/vs/setup/policies.</string>
 
-      <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Enabled for Update and Rollback</string>
-      <string id="AllowStandardUserControl_EnabledForAll">Enabled for all installer operations</string>
+      <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Update and Rollback</string>
+      <string id="AllowStandardUserControl_EnabledForAll">All installer operations</string>
       
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
@@ -180,7 +180,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
     </stringTable>
     <presentationTable>
       <presentation id="AdministratorUpdatesEnabled_PresentationId">
-         <dropdownList refId="AdministratorUpdatesEnabledDropID" noSort="true" defaultItem="0" />
+         <dropdownList refId="AdministratorUpdatesEnabledDropID" noSort="true" defaultItem="0">
+            <label>Microsoft Update Channel</label>
+         </dropdownList>
       </presentation>
       <presentation id="CachePath_PresentationId">
         <textBox refId="CachePath_TextBox">
@@ -198,7 +200,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
         </textBox>
       </presentation>
       <presentation id="AllowStandardUserControl_PresentationId">
-         <dropdownList refId="AllowStandardUserControlDropID" noSort="true" defaultItem="0" />
+         <dropdownList refId="AllowStandardUserControlDropID" noSort="true" defaultItem="0">
+            <label>Define Which Installer Commands Standard Users Can Execute</label>
+         </dropdownList>
       </presentation>
 
       <!-- LiveShare Presentations -->
