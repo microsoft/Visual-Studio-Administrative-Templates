@@ -142,7 +142,7 @@ If set to 2 (enabled for all installer operations), users without administrator 
         
 For more information, see http://aka.ms/vs/setup/policies.</string>
 
-      <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Update and Rollback</string>
+      <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Update and Rollback only</string>
       <string id="AllowStandardUserControl_EnabledForAll">All installer operations</string>
       
       <!-- LiveShare -->
