@@ -181,7 +181,7 @@ For more information, see: https://aka.ms/vsls-policies</string>
     <presentationTable>
       <presentation id="AdministratorUpdatesEnabled_PresentationId">
          <dropdownList refId="AdministratorUpdatesEnabledDropID" noSort="true" defaultItem="0">
-            <label>Microsoft Update Channel</label>
+            <label>Microsoft Update channel</label>
          </dropdownList>
       </presentation>
       <presentation id="CachePath_PresentationId">
