@@ -201,7 +201,7 @@ For more information, see: https://aka.ms/vsls-policies</string>
       </presentation>
       <presentation id="AllowStandardUserControl_PresentationId">
          <dropdownList refId="AllowStandardUserControlDropID" noSort="true" defaultItem="0">
-            <label>Define Which Installer Commands Standard Users Can Execute</label>
+            <label>Define which installer commands Standard Users can execute</label>
          </dropdownList>
       </presentation>
 
