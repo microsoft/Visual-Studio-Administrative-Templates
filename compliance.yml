@@ -86,6 +86,15 @@ extends:
       - stage: Build
         jobs:
           - job: Build
+            templateContext:
+              mb:
+                localization:
+                  enabled: true
+                  type: 'full'
+                  languages: 'VS'
+                  lsbuildVersion: 'V7'
+                  feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+
             steps:
               - template: /build/templates/build-steps-template.yml@self
                 parameters:
@@ -98,7 +107,6 @@ extends:
                 inputs:
                   SourceFolder: $(Build.ArtifactStagingDirectory)
                   Contents: |
-                    **\$(OutputName).?(exe|pdb|dll|xml)
                     **\$(ProjectName)\*.?(exe|pdb|dll|xml)
                     !**\*.Test.*
                   TargetFolder: $(Build.StagingDirectory)\apiscan-inputs
