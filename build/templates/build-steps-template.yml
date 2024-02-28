@@ -59,7 +59,7 @@ steps:
       solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
       msbuildArguments: >
         /v:diag
-        /p:OutDir=$(Build.StagingDirectory)\${{ projectName }}\
+        /p:OutDir=$(Build.StagingDirectory)\${{ parameters.projectName }}\
         /p:Version=$(Version)
 
   - task: PowerShell@2
@@ -68,7 +68,7 @@ steps:
     inputs:
       workingDirectory: $(Build.SourcesDirectory)
       filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
-      arguments:  -ArtifactsDir $(Build.StagingDirectory)\${{ projectName }}\ -IntermediateDropPath $(Build.StagingDirectory)\${{ projectName }}\Intermediate\  -Verbose
+      arguments:  -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\ -IntermediateDropPath $(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate\  -Verbose
 
   - task: PowerShell@2
     name: GenerateSelfExtractor
@@ -76,13 +76,13 @@ steps:
     inputs:
       workingDirectory: $(Build.SourcesDirectory)
       filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-      arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\${{ projectName }}\Intermediate\ -ArtifactsDropTarget ${{ finalDrop }} -OutputNameWithExtension ${{ outputNameWithExtension }} -Verbose
+      arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate\ -ArtifactsDropTarget ${{ parameters.finalDrop }} -OutputNameWithExtension ${{ parameters.outputNameWithExtension }} -Verbose
 
   - task: MSBuild@1
     displayName: Sign packages
     inputs:
       solution: build\ADMXExtractor\ADMXExtractor.signproj
-      msbuildArguments: '/v:diag /t:Build /p:OutDir=${{ finalDrop }} /p:TargetFileToSign=${{ finalDrop }}\${{ outputNameWithExtension }}' 
+      msbuildArguments: '/v:diag /t:Build /p:OutDir=${{ parameters.finalDrop }} /p:TargetFileToSign=${{ parameters.finalDrop }}\${{ parameters.outputNameWithExtension }}' 
 
   - task: 1ES.PublishPipelineArtifact@1
     displayName: Publish ADMExtractor
@@ -93,5 +93,5 @@ steps:
   - task: 1ES.PublishPipelineArtifact@1
     displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
     inputs:
-      targetPath: ${{ finalDrop }}
+      targetPath: ${{ parameters.finalDrop }}
       artifactName: exe   
