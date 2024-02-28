@@ -1,0 +1,97 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT license.
+
+parameters:
+  projectName: ADMXExtractor
+  finalDrop: $(Build.StagingDirectory)\finalDrop
+  outputNameWithExtension: VisualStudioAdminTemplates.exe
+          
+steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+
+  - task: NuGetToolInstaller@0
+    displayName: Install NuGet
+    inputs:
+      versionSpec: '5.8.1'
+
+  - task: NuGetAuthenticate@1
+    displayName: "NuGet Authenticate"
+    inputs:
+      nuGetServiceConnections: VSSetup-PubSuiteConnection
+
+  - task: UseDotNet@2
+    displayName: Install .NET Core SDK
+    inputs:
+      packageType: sdk
+      useGlobalJson: true
+      workingDirectory: $(Build.SourcesDirectory)
+
+  - task: NuGetCommand@2
+    displayName: NuGet restore packages.config
+    inputs:
+      restoreSolution: $(Build.SourcesDirectory)\packages.config
+      restoreDirectory: $(Build.SourcesDirectory)\packages
+      feedsToUse: config
+      nugetConfigPath: $(Build.SourcesDirectory)\nuget.config    
+
+  - task: NuGetCommand@2
+    displayName: NuGet restore ADMXExtractor.sln
+    inputs:
+      restoreSolution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
+      restoreDirectory: $(Build.SourcesDirectory)\packages
+      feedsToUse: config
+
+  - task: PowerShell@1  
+    displayName: Install the Nerdbank Versioning tool and set the Version
+    inputs:
+      scriptType: 'inlineScript'
+      inlineScript: |
+        dotnet tool install --tool-path . nbgv
+        $version = .\nbgv get-version -v Version
+        Write-Host "Setting Version to $version"
+        Write-Host "##vso[task.setvariable variable=Version;]$version"
+
+  - task: MSBuild@1
+    displayName: Build ADMXExtractor.csproj
+    inputs:
+      solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
+      msbuildArguments: >
+        /v:diag
+        /p:OutDir=$(Build.StagingDirectory)\${{ projectName }}\
+        /p:Version=$(Version)
+
+  - task: PowerShell@2
+    name: PrepareStagingDirectoryForSelfExtractor
+    displayName: Prepare the intermediate staging directory for the SelfExtractor.
+    inputs:
+      workingDirectory: $(Build.SourcesDirectory)
+      filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
+      arguments:  -ArtifactsDir $(Build.StagingDirectory)\${{ projectName }}\ -IntermediateDropPath $(Build.StagingDirectory)\${{ projectName }}\Intermediate\  -Verbose
+
+  - task: PowerShell@2
+    name: GenerateSelfExtractor
+    displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.
+    inputs:
+      workingDirectory: $(Build.SourcesDirectory)
+      filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
+      arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\${{ projectName }}\Intermediate\ -ArtifactsDropTarget ${{ finalDrop }} -OutputNameWithExtension ${{ outputNameWithExtension }} -Verbose
+
+  - task: MSBuild@1
+    displayName: Sign packages
+    inputs:
+      solution: build\ADMXExtractor\ADMXExtractor.signproj
+      msbuildArguments: '/v:diag /t:Build /p:OutDir=${{ finalDrop }} /p:TargetFileToSign=${{ finalDrop }}\${{ outputNameWithExtension }}' 
+
+  - task: 1ES.PublishPipelineArtifact@1
+    displayName: Publish ADMExtractor
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)\ADMXExtractor' 
+      artifactName: 'drop'
+
+  - task: 1ES.PublishPipelineArtifact@1
+    displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
+    inputs:
+      targetPath: ${{ finalDrop }}
+      artifactName: exe   
