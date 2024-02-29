@@ -1,29 +1,3 @@
-parameters:
-  - name: BuildPlatform
-    displayName: Build platform
-    type: string
-    default: 'Any CPU'
-    values:
-      - 'Any CPU'
-      - 'x86'
-      - 'x64'
-
-  - name: BuildConfiguration
-    displayName: Build configuration
-    type: string
-    default: Release
-    values:
-      - Release
-    
-  - name: BinSkimSeverity
-    displayName: BinSkim severity
-    type: string
-    default: Error
-    values:
-      - Error
-      - Note
-      - Warning
-
 schedules:
 - cron: '0 0 */21 * *'
   displayName: 'Run every 21 days at 12:00 a.m.'
@@ -107,6 +81,7 @@ extends:
                 inputs:
                   SourceFolder: $(Build.ArtifactStagingDirectory)
                   Contents: |
+                    **\$(OutputName).?(exe|pdb|dll|xml)
                     **\$(ProjectName)\*.?(exe|pdb|dll|xml)
                     !**\*.Test.*
                   TargetFolder: $(Build.StagingDirectory)\apiscan-inputs
