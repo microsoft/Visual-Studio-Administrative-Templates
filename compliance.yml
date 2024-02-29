@@ -85,6 +85,22 @@ extends:
                     **\$(ProjectName)\*.?(exe|pdb|dll|xml)
                     !**\*.Test.*
                   TargetFolder: $(Build.StagingDirectory)\apiscan-inputs
+                  flattenFolders: true
+
+              - task: CopyFiles@2
+                displayName: Copy BoxStub PDB for API scan
+                inputs:
+                  SourceFolder: $(Build.SourcesDirectory)
+                  Contents: |
+                    packages\VS.Setup.BootstrapperExternals*\**\boxstub.pdb
+                  TargetFolder: $(Build.StagingDirectory)\apiscan-inputs
+                  flattenFolders: true
+
+              # - task: PowerShell@2
+              #   displayName: Rename BoxStub PDB for API scan
+              #   inputs:
+              #     targetType: inline
+              #     script: Rename-Item -Path "$(Build.StagingDirectory)\apiscan-inputs\boxstub.pdb" -NewName "$(OutputName).pdb"
 
               - task: APIScan@2
                 displayName: Run APIScan
