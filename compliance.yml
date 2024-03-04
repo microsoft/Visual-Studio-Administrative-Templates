@@ -47,6 +47,8 @@ extends:
           enabled: true
       prefast:
         enabled: true
+      roslyn:
+        break: false
       tsa:
         enabled: ${{ parameters.LogBugs }}
         configFile: $(Build.SourcesDirectory)\.config\tsaoptions.json
