@@ -5,6 +5,12 @@ schedules:
     include: 
     - main
 
+parameters:
+  - name: LogBugs
+    displayName: Log bugs?
+    type: boolean
+    default: true
+
 variables:
   - group: vssetup-apiscan
   - group: vssetup-apiscan-secrets
@@ -42,7 +48,7 @@ extends:
       prefast:
         enabled: true
       tsa:
-        enabled: true
+        enabled: ${{ parameters.LogBugs }}
         configFile: $(Build.SourcesDirectory)\.config\tsaoptions.json
         onboard: false # We already onboarded
 
@@ -126,5 +132,5 @@ extends:
                   GdnPublishTsaConfigFile: '$(Build.SourcesDirectory)\.config\tsaoptions.json'
                   GdnPublishTsaExportedResultsPublishable: true
                 continueOnError: true
-                condition: succeededOrFailed()
+                condition: and(succeededOrFailed(), eq(${{ parameters.LogBugs }}, 'true'))
                 enabled: true
