@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<APIScanSurrogates>
+  <Mappings>
+    <!-- Map boxstub and updatedriver as surrogates for the packaged admin update. -->
+    <!-- This is necessary since we package updatedriver inside boxstub which breaks API scan tooling. -->
+    <!-- The owning team directed us to use a surrogate as well for the two packaged executables. -->
+    <Mapping>
+      <SurrogateSet>
+        <BinarySet>
+          <SymbolLocations>
+            <SymbolLocation>SRV*https://symweb</SymbolLocation>
+          </SymbolLocations>
+          <Binary path="boxstub.exe" />
+          <Binary path="ADMXExtractor.exe" />
+        </BinarySet>
+      </SurrogateSet>
+      <Targets>
+        <Binary path="VisualStudioAdminTemplates\.exe" pathType="Regex" />
+      </Targets>
+    </Mapping>
+  </Mappings>
+</APIScanSurrogates>

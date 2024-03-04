@@ -30,25 +30,15 @@ extends:
     pool:
       name: VSEngSS-MicroBuild2022-1ES
     sdl:
+      enableAllTools: true
       sourceAnalysisPool:
         name: AzurePipelines-EO
         image: 1ESPT-Windows2022
-      antimalwareScan:
-        enabled: true
-      armory:
-        enabled: true
       binskim:
-        enabled: true
         scanOutputDirectoryOnly: true
       codeql:
         compiled:
           enabled: true
-      credscan:
-        enabled: true
-      policheck:
-        enabled: true
-      psscriptanalyzer:
-        enabled: true
       prefast:
         enabled: true
       tsa:
@@ -88,19 +78,21 @@ extends:
                   flattenFolders: true
 
               - task: CopyFiles@2
-                displayName: Copy BoxStub PDB for API scan
+                displayName: Copy BoxStub for API scan
                 inputs:
                   SourceFolder: $(Build.SourcesDirectory)
                   Contents: |
-                    packages\VS.Setup.BootstrapperExternals*\**\boxstub.pdb
+                    packages\VS.Setup.BootstrapperExternals*\**\boxstub.?(exe|pdb)
                   TargetFolder: $(Build.StagingDirectory)\apiscan-inputs
                   flattenFolders: true
 
-              # - task: PowerShell@2
-              #   displayName: Rename BoxStub PDB for API scan
-              #   inputs:
-              #     targetType: inline
-              #     script: Rename-Item -Path "$(Build.StagingDirectory)\apiscan-inputs\boxstub.pdb" -NewName "$(OutputName).pdb"
+              - task: CopyFiles@2
+                displayName: Copy surrogate file for API scan
+                inputs:
+                  SourceFolder: $(Build.SourcesDirectory)\.config\apiscan\surrogates
+                  Contents: |
+                    apiscan-surrogate.xml
+                  TargetFolder: $(System.ArtifactsDirectory)\apiscan-inputs
 
               - task: APIScan@2
                 displayName: Run APIScan
@@ -109,6 +101,7 @@ extends:
                   softwareName: 'Microsoft.VisualStudioAdministrativeTemplates'
                   softwareVersionNum: '1'
                   toolVersion: Latest
+                  surrogateConfigurationFolder: $(System.ArtifactsDirectory)\apiscan-inputs
                 env:
                   AzureServicesAuthConnectionString: runAs=App;AppId=$(ApiScanClientId);TenantId=$(ApiScanTenant);AppKey=$(SetupAppApiScanSecret)
 
