@@ -5,6 +5,8 @@ schedules:
     include: 
     - main
 
+trigger: none
+
 parameters:
   - name: LogBugs
     displayName: Log bugs?
