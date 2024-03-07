@@ -24,22 +24,13 @@ schedules:
 parameters:
 - name: signType
   type: string
+  values:
+    - real
+    - test
   default: real
 
 variables:
   TeamName: VSSetup
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-  projectName: ADMXExtractor
-  projectDirectory: $(Build.SourcesDirectory)\src\ADMXExtractor
-  projectFullPath: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
-  publishDir: Release\net472\x86\publish\
-  logFileName: MyWpfAppSigningLog.txt
-  finalDrop: $(Build.StagingDirectory)\finalDrop
-  outputNameWithExtension: VisualStudioAdminTemplates.exe
-  CodeQL.Enabled: true
-  CodeQL.TSAEnabled: true
-  CodeQL.TSAOptionsPath: $(Build.SourcesDirectory)\.config\CodeQL\tsaoptions.json
 
 resources:
   repositories:
@@ -56,115 +47,35 @@ extends:
     sdl:
       sourceAnalysisPool:
         name: AzurePipelines-EO
-        image: AzurePipelinesWindows2022compliantGPT
+        image: 1ESPT-Windows2022
       policheck:
         enabled: true
       binskim:
         enabled: true
         scanOutputDirectoryOnly: true # BinSkim scans whole source tree but we only need to scan the output dir.
+      tsa:
+        enabled: true
+        configFile: $(Build.SourcesDirectory)\.config\tsaoptions.json
+        onboard: false # We already onboarded
 
     stages:
       - stage: Build
+        templateContext:
+          mb:
+            signing:
+              enabled: true
+              signType: ${{ parameters.SignType }}
+              feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+          
+            localization:
+              enabled: true
+              type: 'full'
+              languages: 'VS'
+              lsbuildVersion: 'V7'
+              feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+
         jobs:
           - job: Build
-            templateContext:
-              mb:
-                signing:
-                  enabled: true
-                  signType: ${{ parameters.SignType }}
-                  feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
-
-                localization:
-                  enabled: true
-                  type: 'full'
-                  languages: 'VS'
-                  lsbuildVersion: 'V7'
-                  feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
-
-              outputs:
-                - output: pipelineArtifact
-                  path: '$(Build.ArtifactStagingDirectory)\ADMXExtractor' 
-                  artifactName: 'drop'
-
-                - output: pipelineArtifact
-                  displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
-                  path: $(finalDrop)
-                  artifactName: exe   
-                    
             steps:
-            - checkout: self
-              submodules: true
-              persistCredentials: true
-
-            - task: NuGetToolInstaller@0
-              displayName: Install NuGet
-              inputs:
-                versionSpec: '5.8.1'
-
-            - task: NuGetAuthenticate@1
-              displayName: "NuGet Authenticate"
-              inputs:
-                nuGetServiceConnections: VSSetup-PubSuiteConnection
-
-            - task: UseDotNet@2
-              displayName: Install .NET Core SDK
-              inputs:
-                packageType: sdk
-                useGlobalJson: true
-                workingDirectory: $(Build.SourcesDirectory)
-
-            - task: NuGetCommand@2
-              displayName: NuGet restore packages.config
-              inputs:
-                restoreSolution: $(Build.SourcesDirectory)\packages.config
-                restoreDirectory: $(Build.SourcesDirectory)\packages
-                feedsToUse: config
-                nugetConfigPath: $(Build.SourcesDirectory)\nuget.config    
-
-            - task: NuGetCommand@2
-              displayName: NuGet restore ADMXExtractor.sln
-              inputs:
-                restoreSolution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
-                restoreDirectory: $(Build.SourcesDirectory)\packages
-                feedsToUse: config
-
-            - task: PowerShell@1  
-              displayName: Install the Nerdbank Versioning tool and set the Version
-              inputs:
-                scriptType: 'inlineScript'
-                inlineScript: |
-                  dotnet tool install --tool-path . nbgv
-                  $version = .\nbgv get-version -v Version
-                  Write-Host "Setting Version to $version"
-                  Write-Host "##vso[task.setvariable variable=Version;]$version"
-
-            - task: MSBuild@1
-              displayName: Build ADMXExtractor.csproj
-              inputs:
-                solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
-                msbuildArguments: >
-                  /v:diag
-                  /p:OutDir=$(Build.StagingDirectory)\$(projectName)\
-                  /p:Version=$(Version)
-
-            - task: PowerShell@2
-              name: PrepareStagingDirectoryForSelfExtractor
-              displayName: Prepare the intermediate staging directory for the SelfExtractor.
-              inputs:
-                workingDirectory: $(Build.SourcesDirectory)
-                filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
-                arguments:  -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\ -IntermediateDropPath $(Build.StagingDirectory)\$(projectName)\Intermediate\  -Verbose
-
-            - task: PowerShell@2
-              name: GenerateSelfExtractor
-              displayName: Generate the self extracting .exe for ADMXExtractor and all admx files.
-              inputs:
-                workingDirectory: $(Build.SourcesDirectory)
-                filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-                arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\$(projectName)\Intermediate\ -ArtifactsDropTarget $(finalDrop) -OutputNameWithExtension $(outputNameWithExtension) -Verbose
-
-            - task: MSBuild@1
-              displayName: Sign packages
-              inputs:
-                solution: build\ADMXExtractor\ADMXExtractor.signproj
-                msbuildArguments: '/v:diag /t:Build /p:OutDir=$(finalDrop) /p:TargetFileToSign=$(finalDrop)\$(outputNameWithExtension)' 
+              - template: /build/templates/build-steps-template.yml@self
+              

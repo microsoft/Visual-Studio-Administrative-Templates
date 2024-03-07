@@ -1,32 +1,3 @@
-pool: VSEngSS-MicroBuild2022-1ES
-
-parameters:
-- name: BuildPlatform
-  displayName: Build platform
-  type: string
-  default: 'Any CPU'
-  values:
-  - 'Any CPU'
-  - 'x86'
-  - 'x64'
-- name: BuildConfiguration
-  displayName: Build configuration
-  type: string
-  default: Release
-  values:
-  - Release
-- name: BinSkimSeverity
-  displayName: BinSkim severity
-  type: string
-  default: Error
-  values:
-  - Error
-  - Note
-  - Warning
-
-variables:
-  CodeQL.Enabled: true
-
 schedules:
 - cron: '0 0 */21 * *'
   displayName: 'Run every 21 days at 12:00 a.m.'
@@ -34,69 +5,136 @@ schedules:
     include: 
     - main
 
-steps:
-- task: UseDotNet@2
-  displayName: 'Use .NET Core sdk matching global.json'
-  inputs:
-    packageType: sdk
-    useGlobalJson: true
-    workingDirectory: $(Build.SourcesDirectory)
-    performMultiLevelLookup: true
+trigger: none
 
-- task: CodeQL3000Init@0
+parameters:
+  - name: LogBugs
+    displayName: Log bugs?
+    type: boolean
+    default: true
 
-- task: NuGetToolInstaller@1
-  displayName: Install NuGet
-  inputs:
-    versionSpec: '6.x'
+variables:
+  - group: vssetup-apiscan
+  - group: vssetup-apiscan-secrets
+  - name: TeamName
+    value: VSSetup
+  - name: OutputName
+    value: VisualStudioAdminTemplates
+  - name: FinalDropPath
+    value: $(Build.StagingDirectory)\finalDrop
+  - name: ProjectName
+    value: ADMXExtractor
 
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
+resources:
+  repositories:
+    - repository: MicroBuildTemplate
+      type: git
+      name: 1ESPipelineTemplates/MicroBuildTemplate
+      ref: refs/tags/release
 
-- task: VSBuild@1
-  inputs:
-    solution: '**/*.sln'
-    maximumCpuCount: true
-    platform: '${{ parameters.BuildPlatform }}'
-    configuration: '${{ parameters.BuildConfiguration }}'
+extends:
+  template: azure-pipelines/MicroBuild.1ES.Unofficial.yml@MicroBuildTemplate
+  parameters:
+    pool:
+      name: VSEngSS-MicroBuild2022-1ES
+    sdl:
+      enableAllTools: true
+      sourceAnalysisPool:
+        name: AzurePipelines-EO
+        image: 1ESPT-Windows2022
+      binskim:
+        scanOutputDirectoryOnly: true
+      codeql:
+        compiled:
+          enabled: true
+      prefast:
+        enabled: true
+      roslyn:
+        break: false
+      tsa:
+        enabled: ${{ parameters.LogBugs }}
+        configFile: $(Build.SourcesDirectory)\.config\tsaoptions.json
+        onboard: false # We already onboarded
 
-- task: CodeQL3000Finalize@0
+    stages:
+      - stage: Build
+        jobs:
+          - job: Build
+            templateContext:
+              mb:
+                localization:
+                  enabled: true
+                  type: 'full'
+                  languages: 'VS'
+                  lsbuildVersion: 'V7'
+                  feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
 
-- task: PoliCheck@2
-  displayName: 'Run PoliCheck'
-  inputs:
-    targetType: F
-    targetArgument: '$(Build.SourcesDirectory)'
-    optionsFC: 0
-    optionsXS: 1
-    optionsHMENABLE: 0
-  continueOnError: true
+            steps:
+              - template: /build/templates/build-steps-template.yml@self
+                parameters:
+                  outputNameWithExtension: $(OutputName).exe
+                  finalDrop: $(FinalDropPath)
+                  projectName: $(ProjectName)
 
-- task: CredScan@3
-  displayName: 'Run CredScan'
-  inputs:
-    debugMode: false
-    toolMajorVersion: V2
+              - task: CopyFiles@2
+                displayName: Copy files for API scan
+                inputs:
+                  SourceFolder: $(Build.ArtifactStagingDirectory)
+                  Contents: |
+                    **\$(OutputName).?(exe|pdb|dll|xml)
+                    **\$(ProjectName)\*.?(exe|pdb|dll|xml)
+                    !**\*.Test.*
+                  TargetFolder: $(Build.StagingDirectory)\apiscan-inputs
+                  flattenFolders: true
 
-- task: BinSkim@4
-  displayName: 'Run BinSkim'
-  inputs:
-    InputType: Basic
-    Function: analyze
-    TargetPattern: guardianGlob
-    AnalyzeTargetGlob: $(Build.SourcesDirectory)/**.dll;$(Build.SourcesDirectory)/**.exe;
-    AnalyzeSymPath: 'Srv*http://msdl.microsoft.com/download/symbols'
-    AnalyzeLocalSymbolDirectories: $(Build.SourcesDirectory)
-    AnalyzeVerbose: true
-    AnalyzeHashes: true
-  continueOnError: true
+              - task: CopyFiles@2
+                displayName: Copy BoxStub for API scan
+                inputs:
+                  SourceFolder: $(Build.SourcesDirectory)
+                  Contents: |
+                    packages\VS.Setup.BootstrapperExternals*\**\boxstub.?(exe|pdb)
+                  TargetFolder: $(Build.StagingDirectory)\apiscan-inputs
+                  flattenFolders: true
 
-- task: PublishSecurityAnalysisLogs@3
-  displayName: 'Publish Security Analysis Logs'
+              - task: CopyFiles@2
+                displayName: Copy surrogate file for API scan
+                inputs:
+                  SourceFolder: $(Build.SourcesDirectory)\.config\apiscan\surrogates
+                  Contents: |
+                    apiscan-surrogate.xml
+                  TargetFolder: $(System.ArtifactsDirectory)\apiscan-inputs
 
-- task: PostAnalysis@2
-  displayName: 'Check SDL results'
-  inputs:
-    AllTools: true
-    GdnBreakGdnToolBinSkimSeverity: '${{ parameters.BinSkimSeverity }}'
+              - task: APIScan@2
+                displayName: Run APIScan
+                inputs:
+                  softwareFolder: $(Build.StagingDirectory)\apiscan-inputs
+                  softwareName: 'Microsoft.VisualStudioAdministrativeTemplates'
+                  softwareVersionNum: '1'
+                  toolVersion: Latest
+                  surrogateConfigurationFolder: $(System.ArtifactsDirectory)\apiscan-inputs
+                env:
+                  AzureServicesAuthConnectionString: runAs=App;AppId=$(ApiScanClientId);TenantId=$(ApiScanTenant);AppKey=$(SetupAppApiScanSecret)
+
+              - task: PublishSecurityAnalysisLogs@3
+                displayName: Publish 'SDLAnalysis-APIScan' artifact
+                condition: succeededOrFailed()
+                inputs:
+                  ArtifactName: SDLAnalysis-APIScan
+                  AllTools: false
+                  APIScan: true
+
+              - task: PostAnalysis@2
+                displayName: Post Analysis
+                inputs:
+                  GdnBreakAllTools: false
+                  GdnBreakGdnToolApiScan: true
+                
+              - task: TSAUpload@2
+                displayName: Upload APIScan results to TSA
+                inputs:
+                  GdnPublishTsaOnboard: false
+                  GdnPublishTsaConfigFile: '$(Build.SourcesDirectory)\.config\tsaoptions.json'
+                  GdnPublishTsaExportedResultsPublishable: true
+                continueOnError: true
+                condition: and(succeededOrFailed(), eq(${{ parameters.LogBugs }}, 'true'))
+                enabled: true
