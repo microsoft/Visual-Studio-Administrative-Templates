@@ -16,6 +16,7 @@
       <string id="LiveShareSettingsCategoryName">Live Share Settings</string>
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
       <string id="VisualStudioDevTunnels">Dev Tunnel Settings</string>
+      <string id="CopilotCategoryName">Copilot Settings</string>
 
       <!-- The VS catalog Product Names. -->
       <string id="VisualStudioProductName2017">Visual Studio 2017</string>
@@ -177,6 +178,13 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <!-- Visual Studio dev tunnels -->
       <string id="VSDevTunnelsDisable_DisplayName">Disable dev tunnels in Visual Studio</string>
       <string id="VSDevTunnelsDisable__Explain">This policy disables dev tunnels in Visual Studio. For more information, see: https://aka.ms/devtunnels/vs/admx</string>
+
+      <!-- GitHub Copilot -->
+      <string id="DisableCopilot_DisplayName">Disable Copilot</string>
+      <string id="DisableCopilot_Explain">If this setting is enabled, it will prevent your users from using any GitHub Copilot license (GitHub Copilot for Business, GitHub Copilot for Enterprise, and Copilot for Individual</string>
+      <string id="DisableCopilotForIndividuals_DisplayName">Disable Copilot for Individuals</string>
+      <string id="DisableCopilotForIndividuals_Explain">If this setting is enabled, it will prevent your users from using GitHub Copilot for Individual. GitHub Copilot for Business and GitHub Copilot for Enterprise will still be enabled</string>
+
     </stringTable>
     <presentationTable>
       <presentation id="AdministratorUpdatesEnabled_PresentationId">
