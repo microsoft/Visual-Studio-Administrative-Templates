@@ -181,9 +181,9 @@ For more information, see: https://aka.ms/vsls-policies</string>
 
       <!-- GitHub Copilot -->
       <string id="DisableCopilot_DisplayName">Disable Copilot</string>
-      <string id="DisableCopilot_Explain">If this setting is enabled, it will prevent your users from using any GitHub Copilot license (GitHub Copilot for Business, GitHub Copilot for Enterprise, and Copilot for Individual</string>
+      <string id="DisableCopilot_Explain">If this setting is enabled, it will prevent your users from using any GitHub Copilot license (GitHub Copilot for Business, GitHub Copilot for Enterprise, and Copilot for Individual). For more information, see: https://aka.ms/CopilotGroupPoilcy</string>
       <string id="DisableCopilotForIndividuals_DisplayName">Disable Copilot for Individuals</string>
-      <string id="DisableCopilotForIndividuals_Explain">If this setting is enabled, it will prevent your users from using GitHub Copilot for Individual. GitHub Copilot for Business and GitHub Copilot for Enterprise will still be enabled</string>
+      <string id="DisableCopilotForIndividuals_Explain">If this setting is enabled, it will prevent your users from using GitHub Copilot for Individual. GitHub Copilot for Business and GitHub Copilot for Enterprise will still be enabled. For more information, see: https://aka.ms/CopilotGroupPoilcy</string>
 
     </stringTable>
     <presentationTable>
