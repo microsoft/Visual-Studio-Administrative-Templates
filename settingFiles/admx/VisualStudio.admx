@@ -16,6 +16,7 @@
                 <majorVersion name="VisualStudio2022" displayName="$(string.VisualStudioProductName2022)" versionIndex="17">
                     <minorVersion name="VisualStudio2022_1" displayName="$(string.VisualStudioProductName2022_1)" versionIndex="1"/>
                     <minorVersion name="VisualStudio2022_4" displayName="$(string.VisualStudioProductName2022_4)" versionIndex="4"/>
+                    <minorVersion name="VisualStudio2022_10" displayName="$(string.VisualStudioProductName2022_10)" versionIndex="10"/>
                 </majorVersion>
             </product>
         </products>
@@ -38,6 +39,8 @@
                     <reference ref="VisualStudio2022"/>
                 </and>
             </definition>
+            <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10)">
+            </definition>
         </definitions>
     </supportedOn>
     <categories>
@@ -55,6 +58,9 @@
             <parentCategory ref="VisualStudio"/>
         </category>
         <category name="VisualStudioDevTunnelsSettings" displayName="$(string.VisualStudioDevTunnels)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
+        <category name="CopilotSettings" displayName="$(string.CopilotCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
     </categories>
@@ -500,6 +506,40 @@
             valueName="DisableDevTunnelsInVisualStudio"> 
             <parentCategory ref="VisualStudioDevTunnelsSettings" />
             <supportedOn ref="VisualStudio2022AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+
+        <!-- Copilot Settings -->
+        <policy 
+            name="DisableCopilot"
+            class="Machine"
+            displayName="$(string.DisableCopilot_DisplayName)"
+            explainText="$(string.DisableCopilot_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Copilot"
+            valueName="DisableCopilot">
+            <parentCategory ref="CopilotSettings" />
+            <supportedOn ref="VisualStudio2022_10AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy
+            name="DisableCopilotForIndividuals"
+            class="Machine"
+            displayName="$(string.DisableCopilotForIndividuals_DisplayName)"
+            explainText="$(string.DisableCopilotForIndividuals_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Copilot"
+            valueName="DisableCopilotForIndividuals">
+            <parentCategory ref="CopilotSettings" />
+            <supportedOn ref="VisualStudio2022_10AndHigher" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
