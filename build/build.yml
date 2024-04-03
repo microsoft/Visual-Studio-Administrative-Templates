@@ -60,22 +60,21 @@ extends:
 
     stages:
       - stage: Build
-        templateContext:
-          mb:
-            signing:
-              enabled: true
-              signType: ${{ parameters.SignType }}
-              feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
-          
-            localization:
-              enabled: true
-              type: 'full'
-              languages: 'VS'
-              lsbuildVersion: 'V7'
-              feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
-
         jobs:
           - job: Build
+            templateContext:
+              mb:
+                signing:
+                  enabled: true
+                  signType: ${{ parameters.SignType }}
+                  feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+              
+                localization:
+                  enabled: true
+                  type: 'full'
+                  languages: 'VS'
+                  lsbuildVersion: 'V7'
+                  feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
             steps:
               - template: /build/templates/build-steps-template.yml@self
               
