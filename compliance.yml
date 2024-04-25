@@ -51,6 +51,8 @@ extends:
         enabled: true
       roslyn:
         break: false
+      codeSignValidation:
+        enabled: false # We don't sign our compliance builds
       tsa:
         enabled: ${{ parameters.LogBugs }}
         configFile: $(Build.SourcesDirectory)\.config\tsaoptions.json
