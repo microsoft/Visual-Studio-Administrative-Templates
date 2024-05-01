@@ -15,7 +15,6 @@ parameters:
 
 variables:
   - group: vssetup-apiscan
-  - group: vssetup-apiscan-secrets
   - name: TeamName
     value: VSSetup
   - name: OutputName
