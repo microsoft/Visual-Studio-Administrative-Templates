@@ -56,7 +56,7 @@ namespace ADMXExtractor
         {
             Hide();
 
-            var browseForFolder = new FolderBrowserDialog();
+            using var browseForFolder = new FolderBrowserDialog();
             browseForFolder.RootFolder = Environment.SpecialFolder.MyComputer;
 
             var winDirPath = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
