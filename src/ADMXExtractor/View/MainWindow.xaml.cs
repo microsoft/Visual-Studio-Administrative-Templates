@@ -56,7 +56,7 @@ namespace ADMXExtractor
         {
             Hide();
 
-            var browseForFolder = new FolderBrowserDialog();
+            using var browseForFolder = new FolderBrowserDialog();
             browseForFolder.RootFolder = Environment.SpecialFolder.MyComputer;
 
             var winDirPath = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
@@ -73,7 +73,7 @@ namespace ADMXExtractor
             {
                 // If the user closes or aborts the FolderBrowserDialog by clicking "Cancel" or by clicking the "X" in the upper right corner,
                 // exit the application.
-                messageBoxText = string.Format(Strings.FileExtractionCancel);
+                messageBoxText = Strings.FileExtractionCancel;
                 messageBoxImage = (MessageBoxImage)MessageBoxIcon.Information;
             }
             else
