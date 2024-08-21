@@ -27,6 +27,7 @@
       <string id="VisualStudioProductName2022_1">Visual Studio 2022, 17.1</string>
       <string id="VisualStudioProductName2022_4">Visual Studio 2022, 17.4</string>
       <string id="VisualStudioProductName2022_10">Visual Studio 2022, 17.10</string>
+      <string id="VisualStudioProductName2022_11">Visual Studio 2022, 17.11</string>
 
       <!-- Convey a particular version and higher. -->
       <string id="VisualStudio2017AndHigher">Visual Studio 2017 and higher.</string>
@@ -35,6 +36,7 @@
       <string id="VisualStudio2022_1">Visual Studio 2022, 17.1 and higher.</string>
       <string id="VisualStudio2022_4">Visual Studio 2022, 17.4 and higher.</string>
       <string id="VisualStudio2022_10">Visual Studio 2022, 17.10 and higher.</string>
+      <string id="VisualStudio2022_11">Visual Studio 2022, 17.11 and higher.</string>
 
       <!-- Convey a particular version and distribution. -->
       <string id="VisualStudio2022_Enterprise_Professional">At least Visual Studio 2022, Enterprise and Professional only</string>
@@ -56,14 +58,14 @@ If set to 0 (disabled) or missing entirely, then the remove out-of-support compo
         
 This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        
 
-For more information, see http://aka.ms/vs/setup/policies.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
     
       <string id="CachePath_DisplayName">Package manifest and payload cache path</string>
       <string id="CachePath_Explain">The directory where package manifests and, optionally, payloads are stored.
 
 The Visual Studio Installer enforces a 50 character limit for the path.
 
-For more information, see http://aka.ms/vs/setup/policies.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
   
       <string id="BackgroundDownloadDisabled_DisplayName">Disable downloading updates automatically</string>
       <string id="BackgroundDownloadDisabled_Explain">Prevent setup from downloading updates automatically for all installed Visual Studio products. You can change the value anytime.</string>
@@ -77,7 +79,7 @@ The Visual Studio Installer enforces a 150 character limit for the path.</string
 
 Enabled by default.
 
-For more information, see: http://aka.ms/vs/setup/policies.</string>
+For more information, see: https://aka.ms/vs/setup/policies.</string>
 
       <string id="AdministratorUpdatesEnabled_DisplayName">Enable administrator updates</string>
       <string id="AdministratorUpdatesEnabled_Explain">Allows administrator updates to be visible to and applied to the client computer. 
@@ -88,7 +90,7 @@ If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administr
 
 If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        
         
-For more information, see http://aka.ms/vs/setup/policies.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
 
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogAndWSUS">WSUS/SCCM</string>
       <string id="AdministratorUpdatesEnabled_EnabledForCatalogWSUSAndMU">WSUS/SCCM and Microsoft Updates/Intune</string>
@@ -143,12 +145,20 @@ If set to 1 (enabled for Update and Rollback), users without administrator permi
         
 If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.
         
-For more information, see http://aka.ms/vs/setup/policies.</string>
+For more information, see https://aka.ms/vs/setup/policies.</string>
 
       <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Enabled for Update and Rollback</string>
       <string id="AllowStandardUserControl_EnabledForAll">Enabled for all installer operations</string>
-      
-      <!-- LiveShare -->
+
+	  <string id="UpdateNotificationsOptOut_DisplayName">Allows administrators to disable update notifications in Visual Studio</string>
+	  <string id="UpdateNotificationsOptOut_Explain">Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.
+If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.
+
+If set to a 1, then the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on release or ltsc channel, only if they are either receiving updates from a layout or if they’re enrolled to receive Visual Studio Administrator Updates. The two main use cases for this policy are if an administrator wants to tightly control the version of the product that gets installed across their organization, or if the users only have Standard User access and thus don’t have the ability to update the product anyways.
+
+For more information, see https://aka.ms/vs/setup/policies.</string>
+
+		<!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
       <string id="LiveShare_DomainName_Explain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com 
 For more information, see: https://aka.ms/vsls-policies </string>

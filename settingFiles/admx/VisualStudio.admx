@@ -17,6 +17,7 @@
                     <minorVersion name="VisualStudio2022_1" displayName="$(string.VisualStudioProductName2022_1)" versionIndex="1"/>
                     <minorVersion name="VisualStudio2022_4" displayName="$(string.VisualStudioProductName2022_4)" versionIndex="4"/>
                     <minorVersion name="VisualStudio2022_10" displayName="$(string.VisualStudioProductName2022_10)" versionIndex="10"/>
+                    <minorVersion name="VisualStudio2022_11" displayName="$(string.VisualStudioProductName2022_11)" versionIndex="11"/>
                 </majorVersion>
             </product>
         </products>
@@ -41,6 +42,8 @@
             </definition>
             <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10)">
             </definition>
+			<definition name="VisualStudio2022_11AndHigher" displayName="$(string.VisualStudio2022_11)">
+			</definition>
         </definitions>
     </supportedOn>
     <categories>
@@ -351,6 +354,22 @@
                 </enum>
             </elements>
         </policy>
+		<policy
+            name="UpdateNotificationsOptOut"
+            class="Machine"
+            displayName="$(string.UpdateNotificationsOptOut_DisplayName)"
+            explainText="$(string.UpdateNotificationsOptOut_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
+            valueName="UpdateNotificationsOptOut">
+			<parentCategory ref="InstallandUpdateSettings" />
+			<supportedOn ref="VisualStudio2022_11AndHigher" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
 
         <!-- LiveShare Settings -->
         <policy 
