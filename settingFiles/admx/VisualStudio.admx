@@ -361,14 +361,14 @@
             explainText="$(string.UpdateNotificationsOptOut_Explain)"
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
             valueName="UpdateNotificationsOptOut">
-			<parentCategory ref="InstallandUpdateSettings" />
-			<supportedOn ref="VisualStudio2022_12AndHigher" />
-			<enabledValue>
-				<decimal value="1" />
-			</enabledValue>
-			<disabledValue>
-				<decimal value="0" />
-			</disabledValue>
+     	    <parentCategory ref="InstallandUpdateSettings" />
+	    <supportedOn ref="VisualStudio2022_12AndHigher" />
+	    <enabledValue>
+	    <decimal value="1" />
+            </enabledValue>
+	    <disabledValue>
+	    <decimal value="0" />
+	    </disabledValue>
 	</policy>
 
         <!-- LiveShare Settings -->
