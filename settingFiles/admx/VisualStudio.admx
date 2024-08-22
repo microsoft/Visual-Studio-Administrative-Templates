@@ -42,8 +42,8 @@
             </definition>
             <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10)">
             </definition>
-			<definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12)">
-			</definition>
+	    <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12)">
+	    </definition>
         </definitions>
     </supportedOn>
     <categories>
@@ -354,7 +354,7 @@
                 </enum>
             </elements>
         </policy>
-		<policy
+	<policy
             name="UpdateNotificationsOptOut"
             class="Machine"
             displayName="$(string.UpdateNotificationsOptOut_DisplayName)"
@@ -369,7 +369,7 @@
 			<disabledValue>
 				<decimal value="0" />
 			</disabledValue>
-		</policy>
+	</policy>
 
         <!-- LiveShare Settings -->
         <policy 
