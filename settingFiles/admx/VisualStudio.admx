@@ -364,10 +364,10 @@
      	    <parentCategory ref="InstallandUpdateSettings" />
 	    <supportedOn ref="VisualStudio2022_12AndHigher" />
 	    <enabledValue>
-	    <decimal value="1" />
+	    	<decimal value="1" />
             </enabledValue>
 	    <disabledValue>
-	    <decimal value="0" />
+	    	<decimal value="0" />
 	    </disabledValue>
 	</policy>
 
