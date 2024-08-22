@@ -150,8 +150,8 @@ For more information, see https://aka.ms/vs/setup/policies.</string>
       <string id="AllowStandardUserControl_EnabledForUpdateAndRollback">Enabled for Update and Rollback</string>
       <string id="AllowStandardUserControl_EnabledForAll">Enabled for all installer operations</string>
 
-	  <string id="UpdateNotificationsOptOut_DisplayName">Disable update notifications in Visual Studio</string>
-	  <string id="UpdateNotificationsOptOut_Explain">Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.
+      <string id="UpdateNotificationsOptOut_DisplayName">Disable update notifications in Visual Studio</string>
+      <string id="UpdateNotificationsOptOut_Explain">Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.
 
 If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.
 
