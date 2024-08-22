@@ -155,7 +155,7 @@ For more information, see https://aka.ms/vs/setup/policies.</string>
 
 If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.
 
-If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTS channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.
+If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTSC channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.
 
 For more information, see https://aka.ms/vs/setup/policies.</string>
 
