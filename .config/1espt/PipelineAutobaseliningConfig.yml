@@ -29,3 +29,16 @@ pipelines:
           lastModifiedDate: 2024-08-21
         roslyn:
           lastModifiedDate: 2024-08-21
+  16847:
+    retail:
+      source:
+        credscan:
+          lastModifiedDate: 2024-08-23
+        policheck:
+          lastModifiedDate: 2024-08-23
+        eslint:
+          lastModifiedDate: 2024-08-23
+        psscriptanalyzer:
+          lastModifiedDate: 2024-08-23
+        armory:
+          lastModifiedDate: 2024-08-23
