@@ -97,15 +97,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;0e3b58934d3872d0439d81b70ea36d2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[在安装完程序包有效负载后，也请保留这些负载。可以随时更改值。如果禁用此策略，则会删除你修复或修改的实例的任何缓存程序包有效负载。]D;]A;]D;]A;默认情况下已启用。]D;]A;]D;]A;有关详细信息，请参阅: http://aka.ms/vs/setup/policies。]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;14604687108de1699b4b718cfece0fc0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable IntelliCode custom model training]]></Val>
@@ -178,6 +169,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;3c0326b304ca05791ee5c766cdd72056" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[允许没有管理员权限的用户管理其 Visual Studio 安装。]D;]A;        ]D;]A;如果设置为 0 (已禁用)或完全缺失，安装程序将提示使用 UAC 获取管理员权限。      ]D;]A;]D;]A;如果设置为 1 (已为更新和回滚启用)，则没有管理员权限的用户可以在不使用 UAC 的情况下更新或回滚。所有其他操作都将通过 UAC 请求管理员权限。]D;]A;        ]D;]A;如果设置为 2 (已为所有安装程序操作启用)，则没有管理员权限的用户可以在不使用 UAC 的情况下通过 Visual Studio 安装程序完全管理 Visual Studio。]D;]A;        ]D;]A;有关详细信息，请参阅 https://aka.ms/vs/setup/policies。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;3e666a1507d3cb66740884345fef3fc9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[At least Visual Studio 2022, Enterprise and Professional only]]></Val>
@@ -241,6 +241,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;4c875120c7d9cb37b4af61fd6bd7c27f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[存储包清单和(可选)有效负载的目录。]D;]A;]D;]A;Visual Studio 安装程序对路径强制执行 50 个字符的限制。]D;]A;]D;]A;有关详细信息，请参阅 https://aka.ms/vs/setup/policies。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;4ca3642cbf1ac3c90863302e250a7357" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[在安装完程序包有效负载后，也请保留这些负载。可以随时更改值。禁用策略会删除你修复或修改的实例的任何缓存包有效负载。]D;]A;]D;]A;默认情况下启用。]D;]A;]D;]A;有关详细信息，请参阅: https://aka.ms/vs/setup/policies。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4e19a8faddd9972bf914aa1d707daed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1 and higher.]]></Val>
@@ -295,6 +313,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;6b3739c133c6462f23befd87f883e184" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable update notifications in Visual Studio]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[在 Visual Studio 中禁用更新通知]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;6b6d10ad14cdd6eee27c4b5e77925d28" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable shared server]]></Val>
@@ -319,18 +346,6 @@
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[禁用共享读写终端]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[此设置将导致更新自动从已转换为失去支持状态的所有 Visual Studio 安装中移除所有组件。]D;]A;        ]D;]A;如果设置为 1 (已启用)，则 Visual Studio 安装程序将在所有后续更新期间移除所有不再支持的组件。]D;]A;        ]D;]A;如果设置为 0 (已禁用)或完全缺失，则移除不再支持的组件行为将遵从可配置此设置的其他位置，例如命令行参数或“更新设置”对话框。]D;]A;        ]D;]A;此功能要求在客户端计算机上安装 Visual Studio 2022 版本 17.4 安装程序。        ]D;]A;]D;]A;有关详细信息，请参阅 http://aka.ms/vs/setup/policies。]]></Val>
-        </Tgt>
-        <Prev Cat="AppData">
-          <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
-        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -406,6 +421,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;961d5786502b0b8670878afd3dd51a2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此设置将导致更新从所有 Visual Studio 安装中自动删除所有已转换为不受支持状态的组件。]D;]A;        ]D;]A;如果设置为 1 (已启用)，则 Visual Studio 安装程序将在所有后续更新期间删除所有不支持的组件。]D;]A;        ]D;]A;如果设置为 0 (已禁用)或完全缺失，则删除不受支持的组件行为将遵循可配置的其他位置，例如命令行参数或“更新设置”对话框。]D;]A;        ]D;]A;此功能要求在客户端计算机上安装 Visual Studio 2022 版本 17.4 安装程序。      ]D;]A;]D;]A;有关详细信息，请参阅 https://aka.ms/vs/setup/policies。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;98049d7c4a63b19eaf25a64a734dd3c6" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new writeable terminal.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -438,15 +462,6 @@
         <Val><![CDATA[Enabled for all installer operations]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[已为所有安装程序操作启用]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a2f4deadda9f669e455c85c9b53ba30b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[允许管理员更新对客户端计算机可见并应用到客户端计算机。]D;]A;        ]D;]A;如果设置为 1 (为 WSUS/SCCM 启用)，则通过 WSUS 和 SCCM 传递的管理员更新将可用于已联接 Active Directory (AD)的客户端计算机。]D;]A;        ]D;]A;如果设置为 2 (为 WSUS/SCCM 和 Microsoft 更新/Intune 启用)，则通过 WSUS/SCCM 或 Microsoft 更新/Intune 传递的管理员更新将可用于 Active Directory (AD)，或注册了适用于企业的 Windows 更新(WUfB)的已联接 Azure Active Directory (Azure AD)的计算机。请注意，还必须启用 WUfB AllowMUUpdateServicePolicy。]D;]A;]D;]A;如果设置为 0 (已禁用)或完全缺失，则计算机将无法使用管理员更新。        ]D;]A;        ]D;]A;有关详细信息，请参阅 http://aka.ms/vs/setup/policies。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -577,6 +592,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;cc48a08a943bf4bdcf9c0227302711a8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[允许管理员更新对客户端计算机可见并应用到客户端计算机。]D;]A;        ]D;]A;如果设置为 1 (已为 WSUS/SCCM 启用)，则通过 WSUS 和 SCCM 传递的管理员更新将提供给已加入 Active Directcotry (AD) 的客户端计算机。]D;]A;        ]D;]A;如果设置为 2 (已为 WSUS/SCCM 和 Microsoft 更新/Intune 启用)，则通过 WSUS/SCCM 或 Microsoft 更新/Intune 传递的管理员更新将提供给适用于企业的 Windows 更新(WUfB)中注册的已加入 Active Directory (AD) 或 Azure Active Directory (Azure AD)的计算机。请注意，WUfB AllowMUUpdateServicePolicy 也必须开启。]D;]A;]D;]A;如果设置为 0 (已禁用)或完全缺失，则计算机将无法使用管理员更新。      ]D;]A;        ]D;]A;有关详细信息，请参阅 https://aka.ms/vs/setup/policies。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ce2f4de5718d647b3f6ce8304041ca50" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.]D;]A;]D;]A;If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.]D;]A;]D;]A;If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTSC channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[允许管理员在特定情况下控制 Visual Studio IDE 中的更新通知。]D;]A;]D;]A;如果设置为 0 (已阻止)或完全缺失，每当检测到更新时，更新通知都将显示在 Visual Studio IDE 中。]D;]A;]D;]A;如果设置为 "1"，只有在企业版和专业版从布局中接收更新或注册以接收 Visual Studio 管理员更新时，才会在 Release 或 LTSC 频道上对这两个版本取消 Visual Studio IDE 中的更新通知。]D;]A;]D;]A;有关详细信息，请参阅 https://aka.ms/vs/setup/policies。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;cf50146d8e4821effbaacd73b4278f0b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -618,15 +651,6 @@
         <Val><![CDATA[Visual Studio 2022, 17.10 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022 17.10 及更高版本。]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;da1049cb0266609781e09a7fa023d4eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[存储程序包清单以及(可选)有效负载的目录。]D;]A;]D;]A;Visual Studio 安装程序对路径强制设置 50 个字符的限制。]D;]A;]D;]A;有关详细信息，请参阅 http://aka.ms/vs/setup/policies。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -685,15 +709,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;fc32cd1e200ec38d22a40a822dafcccf" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[允许没有管理员权限的用户管理其 Visual Studio 安装。]D;]A;        ]D;]A;如果设置为 0 (禁用) 或完全丢失，安装程序将使用 UAC 提示需要管理员权限。       ]D;]A;]D;]A;如果设置为 1 (为更新和回滚启用)，则没有管理员权限的用户可以在不使用 UAC 的情况下更新或回滚。所有其他操作都将通过 UAC 请求管理员权限。 ]D;]A;        ]D;]A;如果设置为 2 (为所有安装程序操作启用)，则没有管理员权限的用户可以在不使用 UAC 的情况下通过 Visual Studio 安装程序完全管理 Visual Studio。]D;]A;        ]D;]A;有关详细信息，请参阅 http://aka.ms/vs/setup/policies。]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="1;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
@@ -721,6 +736,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="1;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022，17.12]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="1;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
@@ -735,6 +759,15 @@
         <Val><![CDATA[Visual Studio 2019]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2019]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="1;d6412652c23a433796dd4b61d0f778dd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.12 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022 17.12 及更高版本。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

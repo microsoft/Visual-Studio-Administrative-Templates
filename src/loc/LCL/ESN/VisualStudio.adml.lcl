@@ -97,15 +97,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;0e3b58934d3872d0439d81b70ea36d2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Mantener las cargas de paquete incluso después de instalarlas. Puede cambiar el valor en cualquier momento. Al deshabilitar la directiva, se quitan todas las cargas de paquete almacenadas en caché de la instancia que repare o modifique.]D;]A;]D;]A;Habilitada de manera predeterminada.]D;]A;]D;]A;Para obtener más información, consulte: http://aka.ms/vs/setup/policies.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;14604687108de1699b4b718cfece0fc0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable IntelliCode custom model training]]></Val>
@@ -178,6 +169,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;3c0326b304ca05791ee5c766cdd72056" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Permite a los usuarios sin permisos de administrador administrar sus instalaciones de Visual Studio. ]D;]A;        ]D;]A;Si se establece en 0 (deshabilitado) o falta por completo, el instalador solicitará permisos de administrador mediante UAC.        ]D;]A;]D;]A;Si se establece en 1 (habilitado para actualización y reversión), los usuarios sin permisos de administrador pueden actualizar o revertir sin UAC. Todas las demás operaciones pedirán permisos de administrador a través de UAC.  ]D;]A;        ]D;]A;Si se establece en 2 (habilitado para todas las operaciones del instalador), los usuarios sin permisos de administrador pueden administrar completamente Visual Studio a través del Instalador de Visual Studio sin UAC.]D;]A;        ]D;]A;Para más información, vea https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;3e666a1507d3cb66740884345fef3fc9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[At least Visual Studio 2022, Enterprise and Professional only]]></Val>
@@ -241,6 +241,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;4c875120c7d9cb37b4af61fd6bd7c27f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Directorio donde se almacenan los manifiestos de paquete y, opcionalmente, las cargas útiles.]D;]A;]D;]A;El Instalador de Visual Studio aplica un límite de 50 caracteres para la ruta de acceso.]D;]A;]D;]A;Para más información, vea https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;4ca3642cbf1ac3c90863302e250a7357" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Keep package payloads even after they are installed. You can change the value anytime. Disabling the policy removes any cached package payloads for the instance you repair or modify.]D;]A;]D;]A;Enabled by default.]D;]A;]D;]A;For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Mantener las cargas de paquete incluso después de instalarlas. Puede cambiar el valor en cualquier momento. Al deshabilitar la directiva, se quitan todas las cargas de paquetes almacenadas en caché para la instancia que se repara o modifica.]D;]A;]D;]A;Habilitado de forma predeterminada.]D;]A;]D;]A;Para más información, vea: https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4e19a8faddd9972bf914aa1d707daed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1 and higher.]]></Val>
@@ -295,6 +313,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;6b3739c133c6462f23befd87f883e184" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable update notifications in Visual Studio]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Deshabilitar las notificaciones de actualización en Visual Studio]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;6b6d10ad14cdd6eee27c4b5e77925d28" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable shared server]]></Val>
@@ -319,18 +346,6 @@
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Deshabilitar terminal de lectura y escritura compartido]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;74a312996ee7533d6c21a3149ea4713d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Esta configuración hará que las actualizaciones quiten automáticamente todos los componentes de todas las instalaciones de Visual Studio que pasaron a un estado sin soporte técnico.]D;]A;        ]D;]A;Si se establece en 1 (habilitada), el instalador de Visual Studio quitará todos los componentes sin soporte técnico durante todas las actualizaciones posteriores.  ]D;]A;        ]D;]A;Si se establece en 0 (deshabilitada) o no está establecida, el comportamiento de quitar componentes sin soporte técnico respetará otras ubicaciones en las que se pueda configurar, como el parámetro de línea de comandos o el cuadro de diálogo Actualizar configuración.]D;]A;        ]D;]A;Esta funcionalidad requiere que la versión 17.4 del instalador de Visual Studio 2022 esté instalada en el equipo cliente.        ]D;]A;]D;]A;Para obtener más información, consulte http://aka.ms/vs/setup/policies.]]></Val>
-        </Tgt>
-        <Prev Cat="AppData">
-          <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/removeoos/blog]]></Val>
-        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -406,6 +421,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;961d5786502b0b8670878afd3dd51a2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta configuración hará que las actualizaciones eliminen automáticamente todos los componentes de todas las instalaciones de Visual Studio que hayan pasado a un estado no compatible.]D;]A;        ]D;]A;Si se establece en 1 (habilitado), el instalador de Visual Studio eliminará todos los componentes no compatibles durante todas las actualizaciones posteriores.  ]D;]A;        ]D;]A;Si se establece en 0 (deshabilitado) o falta por completo, el comportamiento de eliminar componentes no compatibles respetará otras ubicaciones en las que se pueda configurar, como el parámetro de la línea de comandos o el cuadro de diálogo Actualizar configuración.]D;]A;        ]D;]A;Esta funcionalidad requiere que el instalador de Visual Studio 2022 versión 17.4 esté instalado en el equipo cliente.        ]D;]A;]D;]A;Para más información, vea https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;98049d7c4a63b19eaf25a64a734dd3c6" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new writeable terminal.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -438,15 +462,6 @@
         <Val><![CDATA[Enabled for all installer operations]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Habilitado para todas las operaciones del instalador]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;a2f4deadda9f669e455c85c9b53ba30b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Permite que las actualizaciones del administrador sean visibles y se apliquen al equipo cliente. ]D;]A;        ]D;]A;Si se establece en 1 (habilitada para WSUS/SCCM), las actualizaciones de administrador entregadas a través de WSUS y SCCM estarán disponibles para los equipos cliente unidos a Active Directory (AD).  ]D;]A;        ]D;]A;Si se establece en 2 (habilitada para WSUS/SCCM y Microsoft Updates/Intune), las actualizaciones de administrador entregadas a través de WSUS/SCCM o Microsoft Updates/Intune estarán disponibles para los equipos unidos a Active Directory (AD) o Azure Active Directory (Azure AD) inscritos en Windows Update para empresas (WUfB). Tenga en cuenta que WUfB AllowMUUpdateServicePolicy también debe estar activado.]D;]A;]D;]A;Si se establece en 0 (deshabilitada) o no está establecida, las actualizaciones del administrador no estarán disponibles para el equipo.        ]D;]A;        ]D;]A;Para obtener más información, consulte http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -577,6 +592,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;cc48a08a943bf4bdcf9c0227302711a8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Permite que las actualizaciones del administrador sean visibles y se apliquen al equipo cliente. ]D;]A;        ]D;]A;Si se establece en 1 (habilitado para WSUS/SCCM), las actualizaciones de administrador entregadas a través de WSUS y SCCM estarán disponibles para los equipos cliente unidos a Active Direcotry (AD).  ]D;]A;        ]D;]A;Si se establece en 2 (habilitado para WSUS/SCCM y Microsoft Updates/Intune), las actualizaciones de administrador entregadas a través de WSUS/SCCM o Microsoft Updates/Intune estarán disponibles para los equipos unidos a Active Directory (AD) o Azure Active Directory (Azure AD) que están inscritos en Windows Update para empresas (WUfB). Tenga en cuenta que WUfB AllowMUUpdateServicePolicy también debe estar activado.]D;]A;]D;]A;Si se establece en 0 (deshabilitado) o falta por completo, las actualizaciones del administrador no estarán disponibles para el equipo.        ]D;]A;        ]D;]A;Para más información, vea https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ce2f4de5718d647b3f6ce8304041ca50" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.]D;]A;]D;]A;If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.]D;]A;]D;]A;If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTSC channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Permite a un administrador controlar la notificación de actualización en el IDE de Visual Studio en situaciones específicas.]D;]A;]D;]A;Si se establece en 0 (bloqueado) o falta por completo, las notificaciones de actualización aparecerán en el IDE de Visual Studio cada vez que se detecte una actualización.]D;]A;]D;]A;Si se establece en 1, la notificación de actualización en el IDE de Visual Studio se suprimirá para las ediciones Enterprise y Professional en los canales de Lanzamiento o LTSC, solo si reciben actualizaciones de un diseño o si están inscritos para recibir actualizaciones de administrador de Visual Studio.]D;]A;]D;]A;Para más información, vea https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;cf50146d8e4821effbaacd73b4278f0b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy determines whether the Available tab in the installer is visible or not. The Available tab contains suggested products that can be installed by the Visual Studio Installer.]D;]A;]D;]A;If set to 1 (enabled), then users will be prevented from seeing the Available Tab, and thus will not have an ability to install new products from the Available Tab using the installer UI. Users will still be able to install products from the command line or directly through the bootstrapper.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, users will be able to see the Available Tab and freely install new products that are advertised on the installer UI. Note: This is the default behavior.]D;]A;]D;]A;This functionality requires the Visual Studio 2022 version 17.6 installer to be installed on the client machine.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -618,15 +651,6 @@
         <Val><![CDATA[Visual Studio 2022, 17.10 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.10 y versiones posteriores.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;da1049cb0266609781e09a7fa023d4eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[The directory where package manifests and, optionally, payloads are stored.]D;]A;]D;]A;The Visual Studio Installer enforces a 50 character limit for the path.]D;]A;]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[El directorio donde se almacenan los manifiestos de paquete y, de forma opcional, las cargas.]D;]A;]D;]A;El Instalador de Visual Studio aplica un límite de 50 caracteres para la ruta de acceso.]D;]A;]D;]A;Para obtener más información, consulte http://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -685,15 +709,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;fc32cd1e200ec38d22a40a822dafcccf" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Allows users without administrator permissions to manage their Visual Studio installations. ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        ]D;]A;]D;]A;If set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  ]D;]A;        ]D;]A;If set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.]D;]A;        ]D;]A;For more information, see http://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Permite a los usuarios sin permisos de administrador administrar sus instalaciones de Visual Studio. ]D;]A;        ]D;]A;Si se establece en 0 (deshabilitado) o falta completamente, el instalador solicitará permisos de administrador mediante UAC.        ]D;]A;]D;]A;Si se establece en 1 (habilitado para Actualización y reversión), los usuarios sin permisos de administrador pueden actualizar o revertir sin UAC. Todas las demás operaciones solicitarán permisos de administrador a través de UAC.  ]D;]A;        ]D;]A;Si se establece en 2 (habilitado para todas las operaciones del instalador), los usuarios sin permisos de administrador pueden administrar completamente Visual Studio a través del Instalador de Visual Studio sin UAC.]D;]A;        ]D;]A;Para obtener más información, vea http://aka.ms/vs/setup/policies.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="1;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
@@ -721,6 +736,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="1;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="1;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
@@ -735,6 +759,15 @@
         <Val><![CDATA[Visual Studio 2019]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2019]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="1;d6412652c23a433796dd4b61d0f778dd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.12 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.12 y versiones posteriores.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
