@@ -41,9 +41,15 @@
                 </and>
             </definition>
             <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10)">
+                <and>
+                    <reference ref="VisualStudio2022_10"/>
+                </and>
             </definition>
-	    <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12)">
-	    </definition>
+	        <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12)">
+                <and>
+                    <reference ref="VisualStudio2022_12"/>
+                </and>
+	        </definition>
         </definitions>
     </supportedOn>
     <categories>
