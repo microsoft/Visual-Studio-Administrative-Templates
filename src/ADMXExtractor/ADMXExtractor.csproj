@@ -31,13 +31,15 @@
       <Authenticode>Microsoft400</Authenticode> 
       <StrongName>StrongName</StrongName> 
     </FilesToSign>
-    <FilesToSign Include="$(OutDir)\localize\CHS\ADMXExtractor.resources.dll">
-      <Authenticode>MicrosoftSha2</Authenticode>
-    </FilesToSign>
-    <FilesToSign Include="$(OutDir)\localize\JPN\ADMXExtractor.resources.dll">
-      <Authenticode>MicrosoftSha2</Authenticode>
-    </FilesToSign>
   </ItemGroup>
+
+  <Target Name="SignLocalizedFiles" AfterTargets="Build">
+    <ItemGroup>
+      <FilesToSign Include="$(OutDir)\localize\**\*.resources.dll">
+        <Authenticode>MicrosoftSha2</Authenticode>
+      </FilesToSign>
+    </ItemGroup>
+  </Target>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudioEng.MicroBuild.Core" Version="1.0.0">
