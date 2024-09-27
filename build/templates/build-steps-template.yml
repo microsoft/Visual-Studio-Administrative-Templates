@@ -77,6 +77,13 @@ steps:
       filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
       arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate\ -ArtifactsDropTarget ${{ parameters.finalDrop }} -OutputNameWithExtension ${{ parameters.outputNameWithExtension }} -Verbose
 
+  - task: DeleteFiles@1
+    displayName: 'Clean up Intermediate folder'
+    inputs:
+      SourceFolder: '$(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate'
+      Contents: '**/*'
+      removeSourceFolder: true
+  
   - task: MSBuild@1
     displayName: Sign packages
     inputs:
@@ -93,11 +100,3 @@ steps:
     displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
     inputs:
       targetPath: ${{ parameters.finalDrop }}
-
-  - task: DeleteFiles@1
-    displayName: 'Clean up Intermediate folder'
-    inputs:
-      SourceFolder: '$(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate'
-      Contents: '**'
-      removeSourceFolder: true
-      artifactName: exe   
