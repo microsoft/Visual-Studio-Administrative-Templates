@@ -31,6 +31,9 @@
       <Authenticode>Microsoft400</Authenticode> 
       <StrongName>StrongName</StrongName> 
     </FilesToSign>
+    <FilesToSign Include="$(OutDir)\localize\**\*.resources.dll">
+      <Authenticode>MicrosoftSha2</Authenticode>
+    </FilesToSign>
   </ItemGroup>
 
   <ItemGroup>
