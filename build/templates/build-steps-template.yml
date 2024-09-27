@@ -4,7 +4,7 @@
 parameters:
   projectName: ADMXExtractor
   finalDrop: $(Build.StagingDirectory)\finalDrop
-  intermediateDirectory: $(SolutionDir)\obj\$(Configuration)\Intermediate
+  intermediateDirectory: $(Pipeline.Workspace)\${{ parameters.projectName }}\Intermediate
   outputNameWithExtension: VisualStudioAdminTemplates.exe
           
 steps:
