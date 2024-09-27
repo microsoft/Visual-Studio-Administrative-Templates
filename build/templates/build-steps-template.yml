@@ -93,4 +93,11 @@ steps:
     displayName: Publish 'VisualStudioAdminTemplates.exe' artifact
     inputs:
       targetPath: ${{ parameters.finalDrop }}
+
+  - task: DeleteFiles@1
+    displayName: 'Clean up Intermediate folder'
+    inputs:
+      SourceFolder: '$(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate'
+      Contents: '**'
+      removeSourceFolder: true
       artifactName: exe   
