@@ -75,7 +75,7 @@ steps:
     inputs:
       workingDirectory: $(Build.SourcesDirectory)
       filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-      arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir -IntermediateDropPath $(Pipeline.Workspace)\${{ parameters.projectName }}\Intermediate\ -ArtifactsDropTarget ${{ parameters.finalDrop }} -OutputNameWithExtension ${{ parameters.outputNameWithExtension }} -Verbose
+      arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Pipeline.Workspace)\${{ parameters.projectName }}\Intermediate\ -ArtifactsDropTarget ${{ parameters.finalDrop }} -OutputNameWithExtension ${{ parameters.outputNameWithExtension }} -Verbose
 
   - task: MSBuild@1
     displayName: Sign packages
