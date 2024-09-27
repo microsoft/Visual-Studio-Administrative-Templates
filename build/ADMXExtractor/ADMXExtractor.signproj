@@ -19,9 +19,6 @@
       <FilesToSign Include="$(TargetFileToSign)">
           <Authenticode>Microsoft400</Authenticode>
       </FilesToSign>
-      <FilesToSign Include="$(LocalizeFileToSign)">
-          <Authenticode>Microsoft400</Authenticode>
-      </FilesToSign>
     </ItemGroup>
   </Target>
 
