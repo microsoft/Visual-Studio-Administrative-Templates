@@ -33,7 +33,7 @@
     </FilesToSign>
   </ItemGroup>
 
-  <Target Name="SignLocalizedFiles" AfterTargets="Build">
+  <Target Name="SignLocalizedFiles" AfterTargets="Localize" BeforeTargets="SignFiles">
     <ItemGroup>
       <FilesToSign Include="$(OutDir)\localize\**\*.resources.dll">
         <Authenticode>MicrosoftSha2</Authenticode>
