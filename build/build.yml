@@ -57,6 +57,10 @@ extends:
         enabled: true
         configFile: $(Build.SourcesDirectory)\.config\tsaoptions.json
         onboard: false # We already onboarded
+      codeSignValidation:
+        enabled: true
+        excludePassesFromLog: true # A *lot* of things pass CSV. Setting this to true avoids the logs ballooning to an outrageous size.
+        additionalTargetsGlobPattern: -|tests\**;-:f|**\boxstub.exe # Tests aren't signed. Boxstub.exe is signed as part of bootstrapper generation.
 
     stages:
       - stage: Build
