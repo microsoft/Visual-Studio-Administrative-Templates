@@ -81,7 +81,7 @@ steps:
     displayName: Sign packages
     inputs:
       solution: build\ADMXExtractor\ADMXExtractor.signproj
-      msbuildArguments: '/v:diag /t:Build /p:OutDir=${{ parameters.finalDrop }} /p:TargetFileToSign=${{ parameters.finalDrop }}\${{ parameters.outputNameWithExtension }} /p:LocalizeFileToSign=$(Build.ArtifactStagingDirectory)\ADMXExtractor\localize\**\*.resources.dll' 
+      msbuildArguments: '/v:diag /t:Build /p:OutDir=${{ parameters.finalDrop }} /p:TargetFileToSign=${{ parameters.finalDrop }}\${{ parameters.outputNameWithExtension }}' 
 
   - task: 1ES.PublishPipelineArtifact@1
     displayName: Publish ADMExtractor
