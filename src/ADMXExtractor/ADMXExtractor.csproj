@@ -31,7 +31,10 @@
       <Authenticode>Microsoft400</Authenticode> 
       <StrongName>StrongName</StrongName> 
     </FilesToSign>
-    <FilesToSign Include="$(OutDir)\localize/CHS/ADMXExtractor.resources.dll">
+    <FilesToSign Include="$(OutDir)\localize\CHS\ADMXExtractor.resources.dll">
+      <Authenticode>MicrosoftSha2</Authenticode>
+    </FilesToSign>
+    <FilesToSign Include="$(OutDir)\localize\JPN\ADMXExtractor.resources.dll">
       <Authenticode>MicrosoftSha2</Authenticode>
     </FilesToSign>
   </ItemGroup>
