@@ -1,0 +1,31 @@
+{
+  "properties": {
+    "helpUri": "https://eng.ms/docs/microsoft-security/security/azure-security/cloudai-security-fundamentals-engineering/security-integration/guardian-wiki/microsoft-guardian/general/baselines"
+  },
+  "version": "1.0.0",
+  "baselines": {
+    "default": {
+      "name": "default",
+      "createdDate": "2024-08-21 03:09:40Z",
+      "lastUpdatedDate": "2024-08-21 03:10:48Z"
+    }
+  },
+  "results": {
+    "139cf9f2054ad15c7470b1d62ebf0d0f2aa4a3e7aa2fd005fd13988ebd8da1f3": {
+      "signature": "139cf9f2054ad15c7470b1d62ebf0d0f2aa4a3e7aa2fd005fd13988ebd8da1f3",
+      "alternativeSignatures": [
+        "3f31af4999ebe150de299555b96d620f9efc9e57f38bc6c01594331a6d1c949c"
+      ],
+      "target": "src/ADMXExtractor/View/MainWindow.xaml.cs",
+      "line": 93,
+      "memberOf": [
+        "default"
+      ],
+      "tool": "roslynanalyzers",
+      "ruleId": "CA1305",
+      "createdDate": "2024-08-21 03:09:40Z",
+      "expirationDate": "2025-02-07 03:13:19Z",
+      "justification": "This error is baselined with an expiration date of 180 days from 2024-08-21 03:13:19Z"
+    }
+  }
+}
