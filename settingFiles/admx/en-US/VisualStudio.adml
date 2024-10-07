@@ -35,7 +35,7 @@
       <string id="VisualStudio2022AndHigher">Visual Studio 2022 and higher.</string>
       <string id="VisualStudio2022_1">Visual Studio 2022, 17.1 and higher.</string>
       <string id="VisualStudio2022_4">Visual Studio 2022, 17.4 and higher.</string>
-      <string id="VisualStudio2022_10">Visual Studio 2022, 17.10 and higher.</string>
+      <string id="VisualStudio2022_10AndHigher">Visual Studio 2022, 17.10 and higher.</string>
       <string id="VisualStudio2022_12">Visual Studio 2022, 17.12 and higher.</string>
 
       <!-- Convey a particular version and distribution. -->

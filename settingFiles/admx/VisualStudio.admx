@@ -40,12 +40,12 @@
                     <reference ref="VisualStudio2022"/>
                 </and>
             </definition>
-            <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10)">
+            <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10AndHigher)">
                 <and>
                     <reference ref="VisualStudio2022_10"/>
                 </and>
             </definition>
-	        <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12)">
+	        <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12AndHigher)">
                 <and>
                     <reference ref="VisualStudio2022_12"/>
                 </and>
