@@ -46,16 +46,16 @@
                     <reference ref="VisualStudio2022_10"/>
                 </and>
             </definition>
-	        <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12AndHigher)">
+            <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12AndHigher)">
                 <and>
                     <reference ref="VisualStudio2022_12"/>
                 </and>
-	        </definition>
+            </definition>
             <definition name="VisualStudio2022_13AndHigher" displayName="$(string.VisualStudio2022_13AndHigher)">
                 <and>
                     <reference ref="VisualStudio2022_13"/>
                 </and>
-	        </definition>
+            </definition>
         </definitions>
     </supportedOn>
     <categories>
