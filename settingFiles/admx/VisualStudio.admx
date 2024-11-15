@@ -386,7 +386,7 @@
           key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
           valueName="AvailableTabProducts">
         <parentCategory ref="InstallandUpdateSettings" />
-        <supportedOn ref="VisualStudio2022_12AndHigher" />
+        <supportedOn ref="VisualStudio2022_13AndHigher" />
         <elements>
           <!--Text is limited to 1023 chars by admx -->
           <text id="AvailableTabProducts_TextBox" valueName="AvailableTabProducts" expandable="true"/>
