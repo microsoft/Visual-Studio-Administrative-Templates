@@ -159,7 +159,7 @@ If set to a 1, the update notification in the Visual Studio IDE will be suppress
 
 For more information, see https://aka.ms/vs/setup/policies.</string>
 
-      <string id="AvailableTabProducts_DisplayName">Filter and restict Available tab products in Visual Studio Installer</string>
+      <string id="AvailableTabProducts_DisplayName">Filter and restrict Available tab products in Visual Studio Installer</string>
       <string id="AvailableTabProducts_Explain">Add product ids to restrict list shown in Available Tab of Visual Studio Installer. e.g. Microsoft.VisualStudio.Product.Professional. For more information, see  https://aka.ms/vs/setup/policies.</string>
 
 
