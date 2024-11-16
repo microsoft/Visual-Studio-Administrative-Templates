@@ -415,6 +415,22 @@
 	    </disabledValue>
 	</policy>
 
+      <policy
+          name="AvailableTabProducts"
+          class="Machine"
+          displayName="$(string.AvailableTabProducts_DisplayName)"
+          explainText="$(string.AvailableTabProducts_Explain)"
+          presentation="$(presentation.AvailableTabProducts_PresentationId)"
+          key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
+          valueName="AvailableTabProducts">
+        <parentCategory ref="InstallandUpdateSettings" />
+        <supportedOn ref="VisualStudio2022_13AndHigher" />
+        <elements>
+          <!--Text is limited to 1023 chars by admx -->
+          <text id="AvailableTabProducts_TextBox" valueName="AvailableTabProducts" expandable="true"/>
+        </elements>
+      </policy>
+
         <!-- LiveShare Settings -->
         <policy 
             name="LiveShareDomainName" 
