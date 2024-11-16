@@ -67,6 +67,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ee1c6b729f794ed9aa2a9a8e896de4b9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Product Ids to display in Available Tab of Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 설치 관리자 ‘사용 가능’ 탭에 표시할 제품 ID]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
   </Item>
   <Item ItemId=";&lt;string&gt;" ItemType="0" PsrId="210" Leaf="false">
     <Disp Icon="Str" Disp="true" LocTbl="false" />
@@ -457,6 +466,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9a5e337d1d595c583b6aff84827d6235" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Control what products are available to install on the Visual Studio Installer's Available tab.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 설치 관리자의 '사용 가능' 탭에 설치 가능한 제품을 제어합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enabled for all installer operations]]></Val>
@@ -471,6 +489,15 @@
         <Val><![CDATA[Privacy Settings]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[개인 정보 설정]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;a8c2d8805cff7ef8258f4c2d7d30f299" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy can be used to restrict which Visual Studio product shows up on the Installer's Available Tab. For example, including Microsoft.VisualStudio.Product.Professional in the list will cause the Visual Studio Professional edition to be the only available option to install. This policy is only applied to client machines that have just the Visual Studio Installer installed. For more information, see  https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책을 사용하여 설치 관리자의 ‘사용 가능’ 탭에 표시되는 Visual Studio 제품을 제한할 수 있습니다. 예를 들어 목록에 Microsoft.VisualStudio.Product.Professional을 포함하면 Visual Studio Professional 버전을 설치할 수 있는 유일한 옵션이 됩니다. 이 정책은 Visual Studio 설치 관리자 설치되어 있는 클라이언트 컴퓨터에만 적용됩니다. 자세한 내용은 https://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -781,6 +808,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="2;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="2;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
@@ -795,6 +831,15 @@
         <Val><![CDATA[Visual Studio 2022]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="2;d6412652c23a433796dd4b61d0f778dd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13 이상.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

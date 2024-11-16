@@ -67,6 +67,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ee1c6b729f794ed9aa2a9a8e896de4b9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Product Ids to display in Available Tab of Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[要顯示在 [可用]5D; 索引標籤之 Visual Studio 安裝程式中的產品識別碼]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
   </Item>
   <Item ItemId=";&lt;string&gt;" ItemType="0" PsrId="210" Leaf="false">
     <Disp Icon="Str" Disp="true" LocTbl="false" />
@@ -457,6 +466,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9a5e337d1d595c583b6aff84827d6235" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Control what products are available to install on the Visual Studio Installer's Available tab.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[控制哪些產品可安裝在 Visual Studio 安裝程式 的 [可用]5D; 索引標籤上。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enabled for all installer operations]]></Val>
@@ -471,6 +489,15 @@
         <Val><![CDATA[Privacy Settings]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[隱私權設定]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;a8c2d8805cff7ef8258f4c2d7d30f299" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy can be used to restrict which Visual Studio product shows up on the Installer's Available Tab. For example, including Microsoft.VisualStudio.Product.Professional in the list will cause the Visual Studio Professional edition to be the only available option to install. This policy is only applied to client machines that have just the Visual Studio Installer installed. For more information, see  https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此原則可用來限制哪些 Visual Studio 產品會顯示在安裝程式的 [可用]5D; 索引標籤上。例如，在清單中包含 Microsoft.VisualStudio.Product.Professional 會使 Visual Studio Professional 版本成為唯一可用的安裝選項。此原則只會套用至已安裝 Visual Studio 安裝程式的用戶端電腦。如需詳細資訊，請參閱 https://aka.ms/vs/setup/policies。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -781,6 +808,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="2;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="2;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
@@ -795,6 +831,15 @@
         <Val><![CDATA[Visual Studio 2022]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="2;d6412652c23a433796dd4b61d0f778dd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13 和更高版本。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
