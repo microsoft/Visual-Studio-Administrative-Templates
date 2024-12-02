@@ -46,16 +46,16 @@
                     <reference ref="VisualStudio2022_10"/>
                 </and>
             </definition>
-	        <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12AndHigher)">
+            <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12AndHigher)">
                 <and>
                     <reference ref="VisualStudio2022_12"/>
                 </and>
-	        </definition>
-          <definition name="VisualStudio2022_13AndHigher" displayName="$(string.VisualStudio2022_13AndHigher)">
+            </definition>
+            <definition name="VisualStudio2022_13AndHigher" displayName="$(string.VisualStudio2022_13AndHigher)">
                 <and>
-                  <reference ref="VisualStudio2022_13"/>
+                    <reference ref="VisualStudio2022_13"/>
                 </and>
-          </definition>
+            </definition>
         </definitions>
     </supportedOn>
     <categories>
@@ -113,7 +113,39 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        
+        <policy 
+            name="ProductFeedbackDisabled"
+            class="Machine"
+            displayName="$(string.ProductFeedbackDisabled_DisplayName)"
+            explainText="$(string.ProductFeedbackDisabled_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Feedback"
+            valueName="ProductFeedbackDisabled">
+            <parentCategory ref="FeedbackSettings" />
+            <supportedOn ref="VisualStudio2022_13AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy 
+            name="SurveysDisabled"
+            class="Machine"
+            displayName="$(string.SurveysDisabled_DisplayName)"
+            explainText="$(string.SurveysDisabled_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Feedback"
+            valueName="SurveysDisabled">
+            <parentCategory ref="FeedbackSettings" />
+            <supportedOn ref="VisualStudio2022_13AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+
         <!-- Install and Update Settings -->
         <policy 
             name="RemoveOutOfSupport" 
