@@ -165,7 +165,11 @@ If set to a 1, the update notification in the Visual Studio IDE will be suppress
 
 For more information, see https://aka.ms/vs/setup/policies.</string>
 
-		<!-- LiveShare -->
+      <string id="AvailableTabProducts_DisplayName">Control what products are available to install on the Visual Studio Installer's Available tab.</string>
+      <string id="AvailableTabProducts_Explain">This policy can be used to restrict which Visual Studio product shows up on the Installer's Available Tab. For example, including Microsoft.VisualStudio.Product.Professional in the list will cause the Visual Studio Professional edition to be the only available option to install. This policy is only applied to client machines that have just the Visual Studio Installer installed. For more information, see  https://aka.ms/vs/setup/policies.</string>
+
+
+      <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
       <string id="LiveShare_DomainName_Explain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com 
 For more information, see: https://aka.ms/vsls-policies </string>
@@ -227,7 +231,11 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <presentation id="AllowStandardUserControl_PresentationId">
          <dropdownList refId="AllowStandardUserControlDropID" noSort="true" defaultItem="0" />
       </presentation>
-
+      <presentation id="AvailableTabProducts_PresentationId">
+        <textBox refId="AvailableTabProducts_TextBox">
+          <label>Product Ids to display in Available Tab of Visual Studio Installer</label>
+        </textBox>
+      </presentation>
       <!-- LiveShare Presentations -->
       <presentation id="LiveShare_DomainName_PresentationId">
       <textBox refId="LiveShare_DomainName_TextBox">
