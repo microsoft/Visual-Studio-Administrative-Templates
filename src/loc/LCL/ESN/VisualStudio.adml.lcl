@@ -358,11 +358,29 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;74c05762f43aea3abc0a76ae7a155502" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables external survey links]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Deshabilita los vínculos de encuestas externas]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;758aafc2e14f4bdf2e51dc3d0fd2f913" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Impide que los hosts permitan que los invitados basados en retransmisión se unan a su sesión. Live Share ya admite la configuración "Live Share: modo de conexión", por lo que esta directiva solo la está aplicando a "direct". Si esta directiva está deshabilitada, el host puede permitir que los invitados basados en retransmisión se unan a su sesión si el host no ha configurado la opción "Live Share: modo de conexión".]D;]A;Para obtener más información, consulte: https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;7c838e50f79b9732a56dcb55c15ce683" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables survey links throughout the IDE, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta directiva deshabilita los vínculos de encuestas en todo el IDE, es decir, en el panel de características de vista previa, boletines y barras de información con vínculos de encuestas.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -628,6 +646,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;cd80ea2bb0db916880b18a514e95b356" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables feedback mechanisms in the IDE]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Deshabilita los mecanismos de comentarios en el IDE]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;ce2f4de5718d647b3f6ce8304041ca50" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.]D;]A;]D;]A;If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.]D;]A;]D;]A;If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTSC channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -732,6 +759,15 @@
         <Val><![CDATA[Enable the Visual Studio Customer Experience Improvement Program]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Habilitar el Programa para la mejora de la experiencia del usuario de Visual Studio]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;fc6db38802f949a179d9b3d4dd5b3f5d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Esta directiva deshabilita los mecanismos de comentarios en todo el IDE, es decir, los pulgares hacia arriba o hacia abajo, el elemento emergente de la ventana de comentarios, la característica enviar una sonrisa, las barras de información sin vínculos de encuesta.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
