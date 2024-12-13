@@ -18,6 +18,7 @@
                     <minorVersion name="VisualStudio2022_4" displayName="$(string.VisualStudioProductName2022_4)" versionIndex="4"/>
                     <minorVersion name="VisualStudio2022_10" displayName="$(string.VisualStudioProductName2022_10)" versionIndex="10"/>
                     <minorVersion name="VisualStudio2022_12" displayName="$(string.VisualStudioProductName2022_12)" versionIndex="12"/>
+                    <minorVersion name="VisualStudio2022_13" displayName="$(string.VisualStudioProductName2022_13)" versionIndex="13"/>
                 </majorVersion>
             </product>
         </products>
@@ -40,10 +41,21 @@
                     <reference ref="VisualStudio2022"/>
                 </and>
             </definition>
-            <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10)">
+            <definition name="VisualStudio2022_10AndHigher" displayName="$(string.VisualStudio2022_10AndHigher)">
+                <and>
+                    <reference ref="VisualStudio2022_10"/>
+                </and>
             </definition>
-	    <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12)">
-	    </definition>
+            <definition name="VisualStudio2022_12AndHigher" displayName="$(string.VisualStudio2022_12AndHigher)">
+                <and>
+                    <reference ref="VisualStudio2022_12"/>
+                </and>
+            </definition>
+            <definition name="VisualStudio2022_13AndHigher" displayName="$(string.VisualStudio2022_13AndHigher)">
+                <and>
+                    <reference ref="VisualStudio2022_13"/>
+                </and>
+            </definition>
         </definitions>
     </supportedOn>
     <categories>
@@ -101,7 +113,39 @@
                 <decimal value="0"/>
             </disabledValue>
         </policy>
-        
+        <policy 
+            name="ProductFeedbackDisabled"
+            class="Machine"
+            displayName="$(string.ProductFeedbackDisabled_DisplayName)"
+            explainText="$(string.ProductFeedbackDisabled_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Feedback"
+            valueName="ProductFeedbackDisabled">
+            <parentCategory ref="FeedbackSettings" />
+            <supportedOn ref="VisualStudio2022_13AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy 
+            name="SurveysDisabled"
+            class="Machine"
+            displayName="$(string.SurveysDisabled_DisplayName)"
+            explainText="$(string.SurveysDisabled_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Feedback"
+            valueName="SurveysDisabled">
+            <parentCategory ref="FeedbackSettings" />
+            <supportedOn ref="VisualStudio2022_13AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+
         <!-- Install and Update Settings -->
         <policy 
             name="RemoveOutOfSupport" 
@@ -370,6 +414,22 @@
 	    	<decimal value="0" />
 	    </disabledValue>
 	</policy>
+
+      <policy
+          name="AvailableTabProducts"
+          class="Machine"
+          displayName="$(string.AvailableTabProducts_DisplayName)"
+          explainText="$(string.AvailableTabProducts_Explain)"
+          presentation="$(presentation.AvailableTabProducts_PresentationId)"
+          key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
+          valueName="AvailableTabProducts">
+        <parentCategory ref="InstallandUpdateSettings" />
+        <supportedOn ref="VisualStudio2022_13AndHigher" />
+        <elements>
+          <!--Text is limited to 1023 chars by admx -->
+          <text id="AvailableTabProducts_TextBox" valueName="AvailableTabProducts" expandable="true"/>
+        </elements>
+      </policy>
 
         <!-- LiveShare Settings -->
         <policy 

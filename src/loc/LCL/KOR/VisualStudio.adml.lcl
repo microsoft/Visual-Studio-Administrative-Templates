@@ -67,6 +67,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ee1c6b729f794ed9aa2a9a8e896de4b9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Product Ids to display in Available Tab of Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 설치 관리자 ‘사용 가능’ 탭에 표시할 제품 ID]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
   </Item>
   <Item ItemId=";&lt;string&gt;" ItemType="0" PsrId="210" Leaf="false">
     <Disp Icon="Str" Disp="true" LocTbl="false" />
@@ -349,11 +358,29 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;74c05762f43aea3abc0a76ae7a155502" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables external survey links]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[외부 설문 조사 링크를 사용하지 않도록 설정합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;758aafc2e14f4bdf2e51dc3d0fd2f913" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[호스트가 릴레이 기반 게스트가 세션에 참여하는 것을 허용하지 않도록 합니다. Live Share는 이미 "Live Share: 연결 모드" 설정을 지원하므로 이 정책은 사실상 "직접"으로 적용하는 것입니다. 이 정책이 비활성화되면 호스트가 "라이브 공유: 연결 모드" 설정을 구성하지 않은 경우 릴레이 기반 게스트가 세션에 참가하도록 허용할 수 있습니다.]D;]A;자세한 내용을 확인하려면 https://aka.ms/vsls-policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;7c838e50f79b9732a56dcb55c15ce683" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables survey links throughout the IDE, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책은 IDE 전체에서 설문 조사 링크를 사용하지 않도록 설정합니다. 즉, 미리 보기 기능 창, 공지, 설문 조사 링크가 있는 정보 표시줄에서 사용할 수 없습니다.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -457,6 +484,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9a5e337d1d595c583b6aff84827d6235" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Control what products are available to install on the Visual Studio Installer's Available tab.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 설치 관리자의 '사용 가능' 탭에 설치 가능한 제품을 제어합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enabled for all installer operations]]></Val>
@@ -471,6 +507,15 @@
         <Val><![CDATA[Privacy Settings]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[개인 정보 설정]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;a8c2d8805cff7ef8258f4c2d7d30f299" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy can be used to restrict which Visual Studio product shows up on the Installer's Available Tab. For example, including Microsoft.VisualStudio.Product.Professional in the list will cause the Visual Studio Professional edition to be the only available option to install. This policy is only applied to client machines that have just the Visual Studio Installer installed. For more information, see  https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책을 사용하여 설치 관리자의 ‘사용 가능’ 탭에 표시되는 Visual Studio 제품을 제한할 수 있습니다. 예를 들어 목록에 Microsoft.VisualStudio.Product.Professional을 포함하면 Visual Studio Professional 버전을 설치할 수 있는 유일한 옵션이 됩니다. 이 정책은 Visual Studio 설치 관리자 설치되어 있는 클라이언트 컴퓨터에만 적용됩니다. 자세한 내용은 https://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -601,6 +646,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;cd80ea2bb0db916880b18a514e95b356" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables feedback mechanisms in the IDE]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[IDE에서 피드백 메커니즘을 사용하지 않도록 설정합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;ce2f4de5718d647b3f6ce8304041ca50" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.]D;]A;]D;]A;If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.]D;]A;]D;]A;If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTSC channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -709,6 +763,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;fc6db38802f949a179d9b3d4dd5b3f5d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책은 IDE 전체에서 피드백 메커니즘(예: 엄지손가락 올리기 또는 아래로, 피드백 창 팝업, 웃는 얼굴 보내기 기능, 설문 조사 링크 없는 정보 표시줄)을 사용하지 않도록 설정합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="1;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
@@ -781,6 +844,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="2;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="2;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
@@ -795,6 +867,15 @@
         <Val><![CDATA[Visual Studio 2022]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="2;d6412652c23a433796dd4b61d0f778dd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13 이상.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
