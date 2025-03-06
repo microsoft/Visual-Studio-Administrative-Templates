@@ -49,10 +49,10 @@
       <string id="DisableFeedbackDialog_Explain">This policy disables the Visual Studio send-a-smile feature.</string>
       <string id="DisableScreenshotCapture_DisplayName">Disables send-a-smile's screenshot capability</string>
       <string id="DisableScreenshotCapture_Explain">This policy disables the screenshot capability in the send-a-smile feature.</string>
-      <string id="ProductFeedbackDisabled_DisplayName">Disables feedback mechanisms in the IDE</string>
-      <string id="ProductFeedbackDisabled_Explain">This policy disables feedback mechanisms throughout the IDE, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.</string>
-      <string id="SurveysDisabled_DisplayName">Disables external survey links</string>
-      <string id="SurveysDisabled_Explain">This policy disables survey links throughout the IDE, i.e. in the preview feature pane, bulletins, info bars with survey links.</string>
+      <string id="ProductFeedbackDisabled_DisplayName">Disables feedback mechanisms in the IDE and installer</string>
+      <string id="ProductFeedbackDisabled_Explain">This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.</string>
+      <string id="SurveysDisabled_DisplayName">Disables external survey links throughout the IDE and installer</string>
+      <string id="SurveysDisabled_Explain">This policy disables survey links throughout the IDE and installer, i.e. in the preview feature pane, bulletins, info bars with survey links.</string>
       
       <!-- Install and Update -->
       <string id="RemoveOutOfSupport_DisplayName">Remove out-of-support components during updates</string>
