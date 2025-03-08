@@ -358,15 +358,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;74c05762f43aea3abc0a76ae7a155502" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Disables external survey links]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[外部アンケートリンクを無効にします]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;758aafc2e14f4bdf2e51dc3d0fd2f913" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -376,11 +367,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;7c838e50f79b9732a56dcb55c15ce683" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;7836b863e79a268caadcf497280a094a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This policy disables survey links throughout the IDE, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Val><![CDATA[Disables feedback mechanisms in the IDE and installer]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[このポリシーでは、IDE 全体のアンケート リンク (プレビュー機能ウィンドウ、セキュリティ情報、アンケート リンクを含む情報バー) を無効にします。]]></Val>
+          <Val><![CDATA[IDE とインストーラーのフィードバック メカニズムを無効にします]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -583,6 +574,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;c23961089719614be8a4fe1625b4dfce" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables external survey links throughout the IDE and installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[IDE とインストーラー全体で外部アンケート リンクを無効にします]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;c29fd413fba24acdfd8d512348effc18" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new server. The policy also enforces “Live Share: Auto Share Servers” setting to false.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -642,15 +642,6 @@
         <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[管理者向け更新プログラムをクライアント コンピューターに表示して適用できるようにします。]D;]A;        ]D;]A;1 (WSUS/SCCM に対して有効) に設定されている場合、WSUS と SCCM を介して配信される管理者向け更新プログラムは、Active Direcotry (AD) 参加クライアント マシンで使用できるようになります。]D;]A;        ]D;]A;2 (WSUS/SCCM および Microsoft Updates/Intune に対して有効) に設定されている場合、WSUS/SCCM または Microsoft Updates/Intune を介して配信される管理者向け更新プログラムは、Windows Update for Business (WUfB) に登録されている Active Directory (AD) または Azure Active Directory (Azure AD) 参加マシンで使用できるようになります。WUfB AllowMUUpdateServicePolicy も有効にする必要があることに注意してください。]D;]A;]D;]A;0 (無効) に設定されている場合、または完全に欠落している場合、管理者向け更新プログラムはマシンで使用できません。      ]D;]A;        ]D;]A;詳細については、https://aka.ms/vs/setup/policies を参照してください。]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;cd80ea2bb0db916880b18a514e95b356" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Disables feedback mechanisms in the IDE]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[IDE のフィードバック メカニズムを無効にします]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -736,6 +727,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ea5d11153baafcb877d7ad7f5df5fb97" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables survey links throughout the IDE and installer, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[このポリシーは、IDE とインストーラー全体 (プレビュー機能ウィンドウ、掲示板、調査リンクを含む情報バーなど) で調査リンクを無効にします。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;eab8df0483f4964609b9babe08458c5c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[このポリシーは、IDE とインストーラー全体でフィードバック メカニズム (サムズ アップまたはダウン、フィードバック ウィンドウ ポップアップ、気に入った機能の報告、調査リンクを含まない情報バーなど) を無効にします。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
@@ -759,15 +768,6 @@
         <Val><![CDATA[Enable the Visual Studio Customer Experience Improvement Program]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio カスタマー エクスペリエンス向上プログラムを有効にする]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;fc6db38802f949a179d9b3d4dd5b3f5d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[このポリシーでは、IDE 全体のフィードバック メカニズム (つまり、親指を上または下に向ける、フィードバック ウィンドウのポップアップ、気に入った機能、アンケート リンクのない情報バー) を無効にします。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
