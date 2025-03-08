@@ -358,15 +358,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;74c05762f43aea3abc0a76ae7a155502" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Disables external survey links]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[停用外部問卷連結]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;758aafc2e14f4bdf2e51dc3d0fd2f913" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -376,11 +367,11 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;7c838e50f79b9732a56dcb55c15ce683" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;7836b863e79a268caadcf497280a094a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[This policy disables survey links throughout the IDE, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Val><![CDATA[Disables feedback mechanisms in the IDE and installer]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[此原則會停用整個 IDE 的問卷連結，例如在預覽功能窗格、布告欄、包含問卷連結的資訊列中。]]></Val>
+          <Val><![CDATA[停用 IDE 和安裝程式中的意見反應機制]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -583,6 +574,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;c23961089719614be8a4fe1625b4dfce" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables external survey links throughout the IDE and installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[停用整個 IDE 和安裝程式的外部問卷連結]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;c29fd413fba24acdfd8d512348effc18" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevent the host from being able to explicitly share a new server. The policy also enforces “Live Share: Auto Share Servers” setting to false.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -642,15 +642,6 @@
         <Val><![CDATA[Allows administrator updates to be visible to and applied to the client computer. ]D;]A;        ]D;]A;If set to 1 (enabled for WSUS/SCCM), then administrator updates delivered through WSUS and SCCM will be available to Active Direcotry (AD) joined client machines.  ]D;]A;        ]D;]A;If set to 2 (enabled for WSUS/SCCM and Microsoft Updates/Intune), then administrator updates delivered through either WSUS/SCCM or Microsoft Updates/Intune will be available to either Active Directory (AD) or Azure Active Directory (Azure AD) joined machines that are enrolled in Windows Update for Business (WUfB). Note that the WUfB AllowMUUpdateServicePolicy must be turned on too.]D;]A;]D;]A;If set to 0 (disabled) or missing entirely, then administrator updates will not be available to the machine.        ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[允許系統管理員更新對用戶端電腦可見並應用至用戶端電腦。]D;]A;        ]D;]A;如果設為 1 (針對 WSUS/SCCM 啟用)，則透過 WSUS 和 SCCM 傳遞的系統管理員更新將可供加入 ActiveCotcotry (AD) 的用戶端電腦使用。]D;]A;        ]D;]A;如果設定為 2 (針對 WSUS/SCCM 和 Microsoft Updates/Intune 啟用)，則透過 WSUS/SCCM 或 Microsoft Updates/Intune 傳遞的系統管理員更新將可供在商務用 Windows Update (WUfB) 中註冊的 Active Directory (AD) 或加入 Azure Active Directory (Azure AD) 的機器使用。請注意，也必須開啟 WUfB AllowMUUpdateServicePolicy。]D;]A;]D;]A;如果設定為 0 (已停用) 或完全遺失，則電腦將無法使用系統管理員更新。      ]D;]A;        ]D;]A;如需詳細資訊，請參閱 https://aka.ms/vs/setup/policies。]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;cd80ea2bb0db916880b18a514e95b356" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[Disables feedback mechanisms in the IDE]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[停用 IDE 中的意見反應機制]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -736,6 +727,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ea5d11153baafcb877d7ad7f5df5fb97" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables survey links throughout the IDE and installer, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此原則會停用整個 IDE 和安裝程式的問卷連結，例如在預覽功能窗格、佈告欄，以及包含問卷連結的資訊列中。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;eab8df0483f4964609b9babe08458c5c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此原則會停用整個 IDE 和安裝程式的意見反應機制，例如拇指向上或向下、意見反應視窗快顯視窗、傳送笑臉功能、不含問卷連結的資訊列。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
@@ -759,15 +768,6 @@
         <Val><![CDATA[Enable the Visual Studio Customer Experience Improvement Program]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[啟用 Visual Studio 客戶經驗改進計畫]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId="0;fc6db38802f949a179d9b3d4dd5b3f5d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[此原則會停用整個 IDE 的意見反應機制，例如大拇指向上或向下、意見反應視窗快顯、傳送微笑功能、沒有問卷連結的資訊列。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
