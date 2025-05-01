@@ -118,7 +118,7 @@ extends:
 
               - task: PublishSecurityAnalysisLogs@3
                 displayName: Publish 'SDLAnalysis-APIScan' artifact
-                condition: succeededOrFailed()
+                condition: always()
                 inputs:
                   ArtifactName: SDLAnalysis-APIScan
                   AllTools: false
