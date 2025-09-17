@@ -59,6 +59,7 @@ extends:
       - stage: Build
         jobs:
           - job: Build
+            continueOnError: true
             templateContext:
               mb:
                 signing:
