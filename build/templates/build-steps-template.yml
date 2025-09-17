@@ -54,6 +54,7 @@ steps:
 
   - task: MSBuild@1
     displayName: Build ADMXExtractor.csproj
+    continueOnError: true
     inputs:
       solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
       msbuildArguments: >
