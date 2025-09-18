@@ -52,7 +52,7 @@ steps:
         Write-Host "Setting Version to $version"
         Write-Host "##vso[task.setvariable variable=Version;]$version"
 
-  - task: VSBuild@1
+  - task: MSBuild@1
     displayName: Build ADMXExtractor.csproj
     inputs:
       solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
