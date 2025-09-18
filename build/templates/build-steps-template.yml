@@ -52,12 +52,16 @@ steps:
         Write-Host "Setting Version to $version"
         Write-Host "##vso[task.setvariable variable=Version;]$version"
 
-  - task: VSBuild@1
+  - task: MSBuild@1
     displayName: Build ADMXExtractor.csproj
+    continueOnError: true
     inputs:
       solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
-      msbuildArguments: '/v:diag /p:OutDir=$(Build.StagingDirectory)\${{ parameters.projectName }}\ /p:Version=$(Version)'
-
+      msbuildArguments: >
+        /v:diag
+        /p:OutDir=$(Build.StagingDirectory)\${{ parameters.projectName }}\
+        /p:Version=$(Version)
+        
   - task: PowerShell@2
     name: PrepareStagingDirectoryForSelfExtractor
     displayName: Prepare the intermediate staging directory for the SelfExtractor.
