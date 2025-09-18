@@ -61,12 +61,12 @@ steps:
         /v:diag
         /p:OutDir=$(Build.StagingDirectory)\${{ parameters.projectName }}\
         /p:Version=$(Version)
-        
+  
   - task: PowerShell@2
     name: PrepareStagingDirectoryForSelfExtractor
     displayName: Prepare the intermediate staging directory for the SelfExtractor.
     inputs:
-      workingDirectory: $(Build.StagingDirectory)
+      workingDirectory: $(Build.SourcesDirectory)
       filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
       arguments:  -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\ -IntermediateDropPath $(Pipeline.Workspace)\${{ parameters.projectName }}\Intermediate\  -Verbose
 
