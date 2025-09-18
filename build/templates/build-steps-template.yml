@@ -62,7 +62,7 @@ steps:
     name: PrepareStagingDirectoryForSelfExtractor
     displayName: Prepare the intermediate staging directory for the SelfExtractor.
     inputs:
-      workingDirectory: $(Build.SourcesDirectory)
+      workingDirectory: $(Build.StagingDirectory)
       filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
       arguments:  -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\ -IntermediateDropPath $(Pipeline.Workspace)\${{ parameters.projectName }}\Intermediate\  -Verbose
 
