@@ -304,6 +304,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;638d0abaf2bfb0a1432d8741f0955f8b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.16]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.16]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;658b057c70d78afbfebb2685ffbd4433" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -484,6 +493,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9d0a8cda0289691f7b5abf9013897d0d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Agent Mode]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Disabilita modalità Agente]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enabled for all installer operations]]></Val>
@@ -561,6 +579,15 @@
         <Val><![CDATA[This policy disables the Visual Studio send-a-smile feature.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Questo criterio disabilita la funzionalità Invia smile di Visual Studio.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;bbb3c5b6456c46052fe6e50fe0587ed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti di usare la modalità Agente di GitHub Copilot. Per altre informazioni, vedere: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -650,7 +677,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.]D;]A;]D;]A;If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.]D;]A;]D;]A;If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTSC channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Consente a un amministratore di controllare la notifica dell’aggiornamento nell'IDE di Visual Studio in situazioni specifiche.]D;]A;]D;]A;Se impostato su 0 (bloccato) o totalmente mancante, le notifiche degli aggiornamenti verranno visualizzate nell'IDE di Visual Studio ogni volta che viene rilevato un aggiornamento.]D;]A;]D;]A;Se impostato su 1, la notifica dell’aggiornamento nell'IDE di Visual Studio verrà eliminata per le edizioni Enterprise e Professional nei canali Release o LTSC, solo se ricevono aggiornamenti da un layout o se sono registrati per ricevere gli aggiornamenti dell’amministratore di Visual Studio.]D;]A;]D;]A;Per altre informazioni, vedere https://aka.ms/vs/setup/policies.]]></Val>
+          <Val><![CDATA[Consente a un amministratore di controllare la notifica dell'aggiornamento nell'IDE di Visual Studio in situazioni specifiche.]D;]A;]D;]A;Se impostato su 0 (bloccato) o totalmente mancante, le notifiche degli aggiornamenti verranno visualizzate nell'IDE di Visual Studio ogni volta che viene rilevato un aggiornamento.]D;]A;]D;]A;Se impostato su 1, la notifica dell’aggiornamento nell'IDE di Visual Studio verrà eliminata per le edizioni Enterprise e Professional nei canali Release o LTSC, solo se ricevono aggiornamenti da un layout o se sono registrati per ricevere gli aggiornamenti dell'amministratore di Visual Studio.]D;]A;]D;]A;Per altre informazioni, vedi https://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -696,6 +723,15 @@
         <Val><![CDATA[Visual Studio 2022, 17.10 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.10 e versioni successive.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;d7a6a531fc83d95eefd8f12fe99da237" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.16 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.16 e versioni successive.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
