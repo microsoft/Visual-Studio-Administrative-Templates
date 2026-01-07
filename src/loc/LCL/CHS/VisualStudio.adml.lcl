@@ -67,6 +67,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ee1c6b729f794ed9aa2a9a8e896de4b9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Product Ids to display in Available Tab of Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[要在 Visual Studio 安装程序的“可用”选项卡中显示的产品 ID]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
   </Item>
   <Item ItemId=";&lt;string&gt;" ItemType="0" PsrId="210" Leaf="false">
     <Disp Icon="Str" Disp="true" LocTbl="false" />
@@ -295,6 +304,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;638d0abaf2bfb0a1432d8741f0955f8b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.16]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022，17.14.16]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;658b057c70d78afbfebb2685ffbd4433" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -354,6 +372,15 @@
         <Val><![CDATA[Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[阻止主机允许基于中继的来宾加入会话。Live Share 已支持“Live Share: 连接模式”设置，因此此策略实际上只是将其强制为“直接”。如果禁用此策略，主机可以允许基于中继的来宾加入会话(如果主机尚未配置“Live Share: 连接模式”设置)。]D;]A;有关详细信息，请参阅: https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;7836b863e79a268caadcf497280a094a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables feedback mechanisms in the IDE and installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[在 IDE 和安装程序中禁用反馈机制]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -457,6 +484,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9a5e337d1d595c583b6aff84827d6235" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Control what products are available to install on the Visual Studio Installer's Available tab.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[控制可在 Visual Studio 安装程序的“可用”选项卡上安装哪些产品。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;9d0a8cda0289691f7b5abf9013897d0d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Agent Mode]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[禁用代理模式]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enabled for all installer operations]]></Val>
@@ -471,6 +516,15 @@
         <Val><![CDATA[Privacy Settings]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[隐私设置]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;a8c2d8805cff7ef8258f4c2d7d30f299" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy can be used to restrict which Visual Studio product shows up on the Installer's Available Tab. For example, including Microsoft.VisualStudio.Product.Professional in the list will cause the Visual Studio Professional edition to be the only available option to install. This policy is only applied to client machines that have just the Visual Studio Installer installed. For more information, see  https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此策略可用于限制哪些 Visual Studio 产品会显示在安装程序的“可用”选项卡上。例如，将 Microsoft.VisualStudio.Product.Professional 包含在列表中将导致 Visual Studio Professional 版本成为唯一可用的安装选项。此策略仅适用于仅安装了 Visual Studio 安装程序的客户端计算机。有关详细信息，请参阅: https://aka.ms/vs/setup/policies。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -529,11 +583,29 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;bbb3c5b6456c46052fe6e50fe0587ed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[如果启用此设置，将阻止用户使用 GitHub Copilot 的代理模式。有关详细信息，请参阅: https://aka.ms/CopilotGroupPolicy]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;bbe02c9b477e81256b19f24a8373b423" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[阻止用户与不属于其公司或已获得访问权限的任何其他公司的任何来宾共享会话。用户必须使用其公司电子邮件登录才能访问 Live Share。如果禁用此策略，任何组织中的任何用户都可以访问共享 Live Share 会话。请使用 ; 来分隔多个域名。例如，将域名设置为 contoso.com 或 contoso.com;foo.com。]D;]A;有关详细信息，请参阅: https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;c23961089719614be8a4fe1625b4dfce" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables external survey links throughout the IDE and installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[在整个 IDE 和安装程序中禁用外部调查链接]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -655,6 +727,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;d7a6a531fc83d95eefd8f12fe99da237" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.16 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022，17.14.16 及更高版本。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
@@ -678,6 +759,24 @@
         <Val><![CDATA[Live Share Settings]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Live Share 设置]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ea5d11153baafcb877d7ad7f5df5fb97" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables survey links throughout the IDE and installer, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此策略在整个 IDE 和安装程序中禁用调查链接，即在预览功能窗格、公告、包含调查链接的信息栏中。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;eab8df0483f4964609b9babe08458c5c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[此策略在整个 IDE 和安装程序中禁用反馈机制，即拇指向上或向下、反馈窗口弹出项、发送微笑功能、不带调查链接的信息栏。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -781,6 +880,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="2;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022，17.13]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="2;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
@@ -795,6 +903,15 @@
         <Val><![CDATA[Visual Studio 2022]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="2;d6412652c23a433796dd4b61d0f778dd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022，17.13 及更高版本。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

@@ -67,6 +67,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ee1c6b729f794ed9aa2a9a8e896de4b9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Product Ids to display in Available Tab of Visual Studio Installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[ID de produit à afficher sous l’onglet Disponible de Visual Studio Installer]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
   </Item>
   <Item ItemId=";&lt;string&gt;" ItemType="0" PsrId="210" Leaf="false">
     <Disp Icon="Str" Disp="true" LocTbl="false" />
@@ -295,6 +304,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;638d0abaf2bfb0a1432d8741f0955f8b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.16]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.16]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;658b057c70d78afbfebb2685ffbd4433" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Guest can join the session only after host approves. Live Share already has the “Live Share: Guest Approval required” setting, and so this policy is effectively just enforcing that to “true”.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
@@ -354,6 +372,15 @@
         <Val><![CDATA[Prevents hosts from allowing relay-based guests from joining their session. Live Share already supports the “Live Share: Connection Mode” setting, and so this policy is effectively just enforcing it to “direct”. If this policy is disabled, the host can allow relay-based guests to join their session if the host has not configured the “Live Share: Connection Mode” setting.]D;]A;For more information, see: https://aka.ms/vsls-policies]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Empêche les hôtes d’autoriser les invités basés sur un relais à rejoindre leur session. Live Share prend déjà en charge le paramètre « Live Share : Mode de connexion ». Cette stratégie l’applique donc simplement à « direct ». Si cette stratégie est désactivée, l’hôte peut autoriser les invités basés sur un relais à rejoindre leur session si l’hôte n’a pas configuré le paramètre « Live Share : Mode de connexion ».]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;7836b863e79a268caadcf497280a094a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables feedback mechanisms in the IDE and installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Permet de désactiver les mécanismes de commentaires dans l’environnement de développement intégré (IDE) et le programme d’installation]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -457,6 +484,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9a5e337d1d595c583b6aff84827d6235" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Control what products are available to install on the Visual Studio Installer's Available tab.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Contrôlez les produits disponibles pour l’installation sous l’onglet Disponible de Visual Studio Installer.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;9d0a8cda0289691f7b5abf9013897d0d" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Agent Mode]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Désactiver le mode Assistant]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;a1f5893b1866063721583662e53fee83" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Enabled for all installer operations]]></Val>
@@ -471,6 +516,15 @@
         <Val><![CDATA[Privacy Settings]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Paramètres de confidentialité]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;a8c2d8805cff7ef8258f4c2d7d30f299" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy can be used to restrict which Visual Studio product shows up on the Installer's Available Tab. For example, including Microsoft.VisualStudio.Product.Professional in the list will cause the Visual Studio Professional edition to be the only available option to install. This policy is only applied to client machines that have just the Visual Studio Installer installed. For more information, see  https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Vous pouvez utiliser cette stratégie pour restreindre le produit Visual Studio affiché sous l’onglet Disponible du programme d’installation. Par exemple, si vous incluez Microsoft.VisualStudio.Product.Professional dans la liste, l’édition Visual Studio Professional sera la seule option disponible pour l’installation. Cette stratégie est appliquée uniquement aux machines clientes qui ont uniquement Visual Studio Installer installé. Pour plus d’informations, consultez : https://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -529,11 +583,29 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;bbb3c5b6456c46052fe6e50fe0587ed9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Si ce paramètre est activé, il empêche vos utilisateurs d’utiliser le mode Assistant de GitHub Copilot. Pour découvrir plus d’informations, consultez : https://aka.ms/CopilotGroupPolicy]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;bbe02c9b477e81256b19f24a8373b423" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com ]D;]A;For more information, see: https://aka.ms/vsls-policies ]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Empêche les utilisateurs de partager leur session avec des invités qui ne font pas partie de leur entreprise ou une autre entreprise à laquelle l’accès a été accordé. Les utilisateurs doivent être connectés à l’aide de leur adresse e-mail d’entreprise pour accéder à Live Share. Si cette stratégie est désactivée, tous les utilisateurs de n’importe quelle organisation peuvent accéder à une session de Live Share partagée. Utilisez ; pour séparer plusieurs domaines. Par exemple, définissez le nom de domaine comme contoso.com ou contoso.com;foo.com ]D;]A;Pour plus d’informations, consultez : https://aka.ms/vsls-policies ]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;c23961089719614be8a4fe1625b4dfce" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disables external survey links throughout the IDE and installer]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Permet de désactiver les liens d’enquête externes dans l’IDE et le programme d’installation]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -655,6 +727,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;d7a6a531fc83d95eefd8f12fe99da237" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.16 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.16 et versions ultérieures.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;de60a135dde4a31de29c572d9cf4cab8" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[The custom file path to the update configuration file used for configuring administrator updates. For more information, see https://aka.ms/vs/admin/updates/configurationfile.]]></Val>
@@ -678,6 +759,24 @@
         <Val><![CDATA[Live Share Settings]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Paramètres de Live Share]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ea5d11153baafcb877d7ad7f5df5fb97" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables survey links throughout the IDE and installer, i.e. in the preview feature pane, bulletins, info bars with survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Cette stratégie désactive les liens d’enquête dans l’ensemble de l’IDE et du programme d’installation, c’est-à-dire dans le volet des fonctionnalités en préversion, les bulletins et les barres d’informations avec des liens d’enquête.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;eab8df0483f4964609b9babe08458c5c" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Cette stratégie désactive les mécanismes de commentaires dans l’ensemble de l’IDE et du programme d’installation, c’est-à-dire les pouces vers le haut ou vers le bas, la fenêtre contextuelle des commentaires, la fonctionnalité Envoyer un sourire et les barres d’informations sans liens d’enquête.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -781,6 +880,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="2;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="2;cc86ac7ece2a1730c6860349d72dbe3a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio]]></Val>
@@ -795,6 +903,15 @@
         <Val><![CDATA[Visual Studio 2022]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="2;d6412652c23a433796dd4b61d0f778dd" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13 et versions ultérieures.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

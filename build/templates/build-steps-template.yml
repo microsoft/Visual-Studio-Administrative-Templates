@@ -54,6 +54,7 @@ steps:
 
   - task: MSBuild@1
     displayName: Build ADMXExtractor.csproj
+    continueOnError: true
     inputs:
       solution: $(Build.SourcesDirectory)\src\ADMXExtractor\ADMXExtractor.sln
       msbuildArguments: >
@@ -67,7 +68,7 @@ steps:
     inputs:
       workingDirectory: $(Build.SourcesDirectory)
       filePath: $(Build.SourcesDirectory)\build\PrepareStagingDirectoryForSelfExtractor.ps1
-      arguments:  -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\ -IntermediateDropPath $(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate\  -Verbose
+      arguments:  -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\ -IntermediateDropPath $(Pipeline.Workspace)\${{ parameters.projectName }}\Intermediate\  -Verbose
 
   - task: PowerShell@2
     name: GenerateSelfExtractor
@@ -75,7 +76,7 @@ steps:
     inputs:
       workingDirectory: $(Build.SourcesDirectory)
       filePath: $(Build.SourcesDirectory)\build\ADMXExtractor\GenerateSelfExtractor.ps1
-      arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Build.StagingDirectory)\${{ parameters.projectName }}\Intermediate\ -ArtifactsDropTarget ${{ parameters.finalDrop }} -OutputNameWithExtension ${{ parameters.outputNameWithExtension }} -Verbose
+      arguments:  -RootDir $(Build.SourcesDirectory) -ArtifactsDir $(Pipeline.Workspace)\${{ parameters.projectName }}\Intermediate\ -ArtifactsDropTarget ${{ parameters.finalDrop }} -OutputNameWithExtension ${{ parameters.outputNameWithExtension }} -Verbose
 
   - task: MSBuild@1
     displayName: Sign packages

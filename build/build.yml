@@ -21,16 +21,9 @@ schedules:
     include:
     - main
 
-parameters:
-- name: signType
-  type: string
-  values:
-    - real
-    - test
-  default: real
-
 variables:
   TeamName: VSSetup
+  SignType: Real
 
 resources:
   repositories:
@@ -57,6 +50,10 @@ extends:
         enabled: true
         configFile: $(Build.SourcesDirectory)\.config\tsaoptions.json
         onboard: false # We already onboarded
+      codeSignValidation:
+        enabled: true
+        excludePassesFromLog: true # A *lot* of things pass CSV. Setting this to true avoids the logs ballooning to an outrageous size.
+        additionalTargetsGlobPattern: -|tests\**;-:f|**\boxstub.exe # Tests aren't signed. Boxstub.exe is signed as part of bootstrapper generation.
 
     stages:
       - stage: Build
@@ -66,8 +63,9 @@ extends:
               mb:
                 signing:
                   enabled: true
-                  signType: ${{ parameters.SignType }}
+                  signType: ${{ variables.SignType }}
                   feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+                  signWithProd: true
               
                 localization:
                   enabled: true
