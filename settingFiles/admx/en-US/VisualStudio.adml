@@ -173,7 +173,7 @@ For more information, see https://aka.ms/vs/setup/policies.</string>
       <string id="AvailableTabProducts_Explain">This policy can be used to restrict which Visual Studio product shows up on the Installer's Available Tab. For example, including Microsoft.VisualStudio.Product.Professional in the list will cause the Visual Studio Professional edition to be the only available option to install. This policy is only applied to client machines that have just the Visual Studio Installer installed. For more information, see  https://aka.ms/vs/setup/policies.</string>
 
       <string id="DisableMigrationDialog_DisplayName">Disable the dialog in the IDE that prompts users to stay on the latest version of Visual Studio.</string>
-      <string id="DisableMigrationDialog_Explain">If this setting is enabled, it will prevent your users from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.</string>
+      <string id="DisableMigrationDialog_Explain">If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.</string>
 
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
