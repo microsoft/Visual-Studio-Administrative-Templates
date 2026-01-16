@@ -88,15 +88,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;02c6ca63206ce72fa02e974be0b82a54" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[If this setting is enabled, it will prevent your users from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 설정을 활성화하면 사용자에게 Visual Studio IDE의 최신 버전을 유지하라는 메시지가 표시되는 대화 상자가 표시되지 않습니다. 자세한 내용은 https://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
@@ -453,6 +444,15 @@
         <Val><![CDATA[Shared installation path]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[공유 설치 경로]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;8b872e68a8a48a6833dc5e990346dc2a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable or LTSC channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 설정을 사용하도록 설정하면 Stable 또는 LTSC 채널의 Enterprise 및 Professional 버전의 사용자가 Visual Studio IDE의 최신 버전을 유지하라는 메시지가 표시되는 대화 상자를 못 보게 됩니다. 자세한 내용은 https://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
