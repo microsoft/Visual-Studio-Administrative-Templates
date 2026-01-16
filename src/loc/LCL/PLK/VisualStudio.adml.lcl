@@ -88,15 +88,6 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;02c6ca63206ce72fa02e974be0b82a54" ItemType="42;XML:Text" PsrId="210" Leaf="true">
-      <Str Cat="AppData">
-        <Val><![CDATA[If this setting is enabled, it will prevent your users from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Jeśli to ustawienie jest włączone, uniemożliwi użytkownikom zobaczenie okna dialogowego z monitem o pozostanie w najnowszej wersji w Visual Studio IDE. Aby uzyskać więcej informacji, sprawdź witrynę https://aka.ms/vs/setup/policies.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId="0;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
@@ -453,6 +444,15 @@
         <Val><![CDATA[Shared installation path]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Ścieżka instalacji udostępnionej]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;8b872e68a8a48a6833dc5e990346dc2a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable or LTSC channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Jeśli to ustawienie jest włączone, uniemożliwi użytkownikom korzystającym z edycji Enterprise i Professional w kanałach Stable lub LTSC zobaczenie okna dialogowego z monitem o pozostanie przy najnowszej wersji w środowisku Visual Studio IDE. Aby uzyskać więcej informacji, sprawdź witrynę https://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
