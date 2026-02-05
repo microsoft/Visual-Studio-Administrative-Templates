@@ -506,7 +506,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[Disable Agent Mode]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[停用代理程式模式]]></Val>
+          <Val><![CDATA[停用 Agent 模式]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
