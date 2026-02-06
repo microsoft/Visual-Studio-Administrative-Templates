@@ -506,7 +506,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[Disable Agent Mode]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Deshabilitar modo de agente]]></Val>
+          <Val><![CDATA[Deshabilitar modo agente]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
