@@ -128,7 +128,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using any GitHub Copilot license (GitHub Copilot for Business, GitHub Copilot for Enterprise, and Copilot for Individual). For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 설정을 사용하도록 설정하면 사용자가 GitHub Copilot 라이선스(GitHub Copilot for Business, GitHub Copilot for Enterprise 및 Copilot for Individual)를 사용할 수 없습니다. 자세한 내용은 다음을 참조하세요. https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[이 설정을 활성화하면 사용자가 GitHub Copilot 라이선스(GitHub Copilot for Business, GitHub Copilot for Enterprise 및 Copilot for Individual)를 사용할 수 없습니다. 자세한 내용은 https://aka.ms/CopilotGroupPolicy를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -146,7 +146,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot for Individual. GitHub Copilot for Business and GitHub Copilot for Enterprise will still be enabled. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 설정을 사용하도록 설정하면 사용자가 GitHub Copilot for Individual을 사용할 수 없습니다. GitHub Copilot for Business 및 GitHub Copilot for Enterprise는 계속 사용할 수 있습니다. 자세한 내용은 다음을 참조하세요. https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[이 설정을 활성화하면 사용자가 GitHub Copilot for Individual을 사용할 수 없습니다. GitHub Copilot for Business 및 GitHub Copilot for Enterprise는 계속 사용할 수 있습니다. 자세한 내용은 https://aka.ms/CopilotGroupPolicy를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -605,7 +605,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[이 설정을 활성화하면 사용자가 GitHub Copilot의 에이전트 모드를 사용할 수 없게 됩니다. 자세한 내용은 다음을 참조하세요. https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[이 설정을 활성화하면 사용자가 GitHub Copilot의 에이전트 모드를 사용할 수 없게 됩니다. 자세한 내용은 https://aka.ms/CopilotGroupPolicy를 참조하세요.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
