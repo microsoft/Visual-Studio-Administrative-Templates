@@ -128,7 +128,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using any GitHub Copilot license (GitHub Copilot for Business, GitHub Copilot for Enterprise, and Copilot for Individual). For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Wenn diese Einstellung aktiviert ist, wird verhindert, dass Ihre Benutzer eine GitHub Copilot-Lizenz (GitHub Copilot for Business, GitHub Copilot for Enterprise und Copilot for Individual) verwenden. Weitere Informationen finden Sie unter: https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[Wenn diese Einstellung aktiviert ist, wird verhindert, dass Ihre Benutzer eine GitHub Copilot-Lizenz (GitHub Copilot für Business, GitHub Copilot für Enterprise und Copilot für Einzelbenutzer) verwenden. Weitere Informationen finden Sie unter: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -146,7 +146,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot for Individual. GitHub Copilot for Business and GitHub Copilot for Enterprise will still be enabled. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Wenn diese Einstellung aktiviert ist, hindert sie Ihre Benutzer daran, GitHub Copilot for Individual zu verwenden. GitHub Copilot for Business und GitHub Copilot for Enterprise sind weiterhin aktiviert. Weitere Informationen finden Sie unter: https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[Wenn diese Einstellung aktiviert ist, hindert sie Ihre Benutzer daran, GitHub Copilot für Einzelbenutzer zu verwenden. GitHub Copilot für Business und GitHub Copilot für Enterprise sind weiterhin aktiviert. Weitere Informationen finden Sie unter: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
