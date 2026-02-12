@@ -506,7 +506,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[Disable Agent Mode]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[停用代理程式模式]]></Val>
+          <Val><![CDATA[停用 Agent 模式]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -605,7 +605,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[如果啟用此設定，您的使用者將無法使用 GitHub Copilot 的代理程式模式。如需詳細資訊，請參閱: https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[如果啟用此設定，您的使用者將無法使用 GitHub Copilot 的 Agent 模式。如需詳細資訊，請參閱: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
