@@ -506,7 +506,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[Disable Agent Mode]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Desabilitar o Modo Agente]]></Val>
+          <Val><![CDATA[Desabilitar o Modo de Agente]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -605,7 +605,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Se esta configuração estiver habilitada, impedirá que seus usuários usem o Modo Agente do GitHub Copilot. Para mais informações, confira: https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[Se esta configuração estiver habilitada, impedirá que seus usuários usem o Modo de Agente do GitHub Copilot. Para mais informações, confira: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
