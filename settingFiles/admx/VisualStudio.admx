@@ -76,6 +76,12 @@
                     <reference ref="VisualStudio2026"/>
                 </and>
             </definition>
+            <definition name="VisualStudio2022_14_31_AndHigher" displayName="$(string.VisualStudio2022_14_31_AndHigher)">
+                <and>
+                    <reference ref="VisualStudio2022_14_31"/>
+                    <reference ref="VisualStudio2026"/>
+                </and>
+            </definition>
             <definition name="VisualStudio2026AndHigher" displayName="$(string.VisualStudio2026AndHigher)">
                 <and>
                     <reference ref="VisualStudio2026"/>
@@ -692,7 +698,7 @@
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Copilot"
             valueName="DisableMCP">
             <parentCategory ref="CopilotSettings" />
-            <supportedOn ref="VisualStudio2022AndHigher" />
+            <supportedOn ref="VisualStudio2022_14_31_AndHigher" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>

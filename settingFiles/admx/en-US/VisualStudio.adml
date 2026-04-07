@@ -42,6 +42,7 @@
       <string id="VisualStudio2022_12AndHigher">Visual Studio 2022, 17.12 and higher.</string>
       <string id="VisualStudio2022_13AndHigher">Visual Studio 2022, 17.13 and higher.</string>
       <string id="VisualStudio2022_14_16_AndHigher">Visual Studio 2022, 17.14.16 and higher.</string>
+      <string id="VisualStudio2022_14_31_AndHigher">Visual Studio 2022, 17.14.31 and higher.</string>
       <string id="VisualStudio2026AndHigher">Visual Studio 2026 and higher.</string>
 
       <!-- Convey a particular version and distribution. -->
@@ -216,7 +217,7 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <string id="DisableAgentMode_DisplayName">Disable Agent Mode</string>
       <string id="DisableAgentMode_Explain">If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy</string>
       <string id="DisableMCP_DisplayName">Disable Model Context Protocol (MCP)</string>
-      <string id="DisableMCP_Explain">If this setting is enabled, it will prevent your users from using MCP for GitHub Copilot.</string>
+      <string id="DisableMCP_Explain">If this setting is enabled, it will prevent your users from using MCP for GitHub Copilot. For more information, see: https://aka.ms/CopilotGroupPolicy</string>
 
     </stringTable>
     <presentationTable>
