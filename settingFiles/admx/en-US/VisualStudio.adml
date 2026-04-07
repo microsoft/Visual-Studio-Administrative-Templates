@@ -31,6 +31,7 @@
       <string id="VisualStudioProductName2022_12">Visual Studio 2022, 17.12</string>
       <string id="VisualStudioProductName2022_13">Visual Studio 2022, 17.13</string>
       <string id="VisualStudioProductName2022_14_16">Visual Studio 2022, 17.14.16</string>
+      <string id="VisualStudioProductName2022_14_31">Visual Studio 2022, 17.14.31</string>
 
       <!-- Convey a particular version and higher. -->
       <string id="VisualStudio2017AndHigher">Visual Studio 2017 and higher.</string>
