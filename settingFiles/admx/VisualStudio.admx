@@ -684,5 +684,21 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
+        <policy
+            name="DisableMCP"
+            class="Machine"
+            displayName="$(string.DisableMCP_DisplayName)"
+            explainText="$(string.DisableMCP_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Copilot"
+            valueName="DisableMCP">
+            <parentCategory ref="CopilotSettings" />
+            <supportedOn ref="VisualStudio2022AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
     </policies>
 </policyDefinitions>

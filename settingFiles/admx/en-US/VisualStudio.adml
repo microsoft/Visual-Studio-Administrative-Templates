@@ -215,6 +215,8 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <string id="DisableCopilotForIndividuals_Explain">If this setting is enabled, it will prevent your users from using GitHub Copilot for Individual. GitHub Copilot for Business and GitHub Copilot for Enterprise will still be enabled. For more information, see: https://aka.ms/CopilotGroupPolicy</string>
       <string id="DisableAgentMode_DisplayName">Disable Agent Mode</string>
       <string id="DisableAgentMode_Explain">If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy</string>
+      <string id="DisableMCP_DisplayName">Disable Model Context Protocol (MCP)</string>
+      <string id="DisableMCP_Explain">If this setting is enabled, it will prevent your users from using MCP for GitHub Copilot.</string>
 
     </stringTable>
     <presentationTable>
