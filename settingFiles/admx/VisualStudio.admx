@@ -20,6 +20,7 @@
                     <minorVersion name="VisualStudio2022_12" displayName="$(string.VisualStudioProductName2022_12)" versionIndex="12"/>
                     <minorVersion name="VisualStudio2022_13" displayName="$(string.VisualStudioProductName2022_13)" versionIndex="13"/>
                     <minorVersion name="VisualStudio2022_14_16" displayName="$(string.VisualStudioProductName2022_14_16)" versionIndex="1416"/>
+                    <minorVersion name="VisualStudio2022_14_31" displayName="$(string.VisualStudioProductName2022_14_31)" versionIndex="1431"/>
                 </majorVersion>
                 <majorVersion name="VisualStudio2026" displayName="$(string.VisualStudioProductName2026)" versionIndex="18" />
             </product>
@@ -52,6 +53,7 @@
                     <reference ref="VisualStudio2022_12"/>
                     <reference ref="VisualStudio2022_13"/>
                     <reference ref="VisualStudio2022_14_16"/>
+                    <reference ref="VisualStudio2022_14_31"/>
                     <reference ref="VisualStudio2026"/>
                 </and>
             </definition>
@@ -60,6 +62,7 @@
                     <reference ref="VisualStudio2022_12"/>
                     <reference ref="VisualStudio2022_13"/>
                     <reference ref="VisualStudio2022_14_16"/>
+                    <reference ref="VisualStudio2022_14_31"/>
                     <reference ref="VisualStudio2026"/>
                 </and>
             </definition>
@@ -67,12 +70,20 @@
                 <and>
                     <reference ref="VisualStudio2022_13"/>
                     <reference ref="VisualStudio2022_14_16"/>
+                    <reference ref="VisualStudio2022_14_31"/>
                     <reference ref="VisualStudio2026"/>
                 </and>
             </definition>
             <definition name="VisualStudio2022_14_16_AndHigher" displayName="$(string.VisualStudio2022_14_16_AndHigher)">
                 <and>
                     <reference ref="VisualStudio2022_14_16"/>
+                    <reference ref="VisualStudio2022_14_31"/>
+                    <reference ref="VisualStudio2026"/>
+                </and>
+            </definition>
+            <definition name="VisualStudio2022_14_31_AndHigher" displayName="$(string.VisualStudio2022_14_31_AndHigher)">
+                <and>
+                    <reference ref="VisualStudio2022_14_31"/>
                     <reference ref="VisualStudio2026"/>
                 </and>
             </definition>
@@ -677,6 +688,22 @@
             valueName="DisableAgentMode">
             <parentCategory ref="CopilotSettings" />
             <supportedOn ref="VisualStudio2022_14_16_AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy
+            name="DisableMCP"
+            class="Machine"
+            displayName="$(string.DisableMCP_DisplayName)"
+            explainText="$(string.DisableMCP_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Copilot"
+            valueName="DisableMCP">
+            <parentCategory ref="CopilotSettings" />
+            <supportedOn ref="VisualStudio2022_14_31_AndHigher" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
