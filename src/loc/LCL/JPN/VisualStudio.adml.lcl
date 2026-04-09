@@ -205,6 +205,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;433bcc3bdd0adfc2850603b2211b7a23" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users from using MCP for GitHub Copilot. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[この設定が有効になっている場合、ユーザーは GitHub Copilot に MCP を使用できなくなります。詳細情報については、https://aka.ms/CopilotGroupPolicy を参照してください]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4687c56b16e89941944bcb1a360db3b0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Package manifest and payload cache path]]></Val>
@@ -556,6 +565,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ae987fbe1c8b56d49ecef37403b5f358" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Model Context Protocol (MCP)]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[モデル コンテキスト プロトコル (MCP) を無効にする]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;b2d83c0ab9583e2e8bb3f7eb03507942" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the dialog in the IDE that prompts users to stay on the latest version of Visual Studio.]]></Val>
@@ -853,6 +871,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="1;638d0abaf2bfb0a1432d8741f0955f8b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.31]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022、17.14.31]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="1;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
@@ -885,6 +912,15 @@
         <Val><![CDATA[Visual Studio 2022, 17.12 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.12 以上。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="1;d7a6a531fc83d95eefd8f12fe99da237" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.31 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022、17.14.31 以上。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
