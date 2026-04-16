@@ -205,6 +205,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;433bcc3bdd0adfc2850603b2211b7a23" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users from using MCP for GitHub Copilot. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Jeśli to ustawienie jest włączone, uniemożliwi użytkownikom korzystanie z protokołu MCP dla usługi GitHub Copilot. Aby uzyskać więcej informacji, zobacz witrynę: https://aka.ms/CopilotGroupPolicy]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;4687c56b16e89941944bcb1a360db3b0" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Package manifest and payload cache path]]></Val>
@@ -448,6 +457,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;8b872e68a8a48a6833dc5e990346dc2a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable or LTSC channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Jeśli to ustawienie jest włączone, uniemożliwi użytkownikom korzystającym z edycji Enterprise i Professional w kanałach Stable lub LTSC zobaczenie okna dialogowego z monitem o pozostanie przy najnowszej wersji w środowisku Visual Studio IDE. Aby uzyskać więcej informacji, sprawdź witrynę https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;961d5786502b0b8670878afd3dd51a2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -543,6 +561,24 @@
         <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Wskazuje, że użytkownik nie chce otrzymywać aktualizacji administratora dla programu Visual Studio. ]D;]A;        ]D;]A;W przypadku ustawienia na wartość 1 (włączone) użytkownik programu Visual Studio nie chce otrzymywać aktualizacji administratora dla programu Visual Studio. Te zasady są ustawiane przez użytkownika dewelopera, jeśli ma on uprawnienia administratora na komputerze klienckim. ]D;]A;        ]D;]A;Aby uzyskać więcej informacji, sprawdź stronę https://aka.ms/vs/admin/updates/control.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ae987fbe1c8b56d49ecef37403b5f358" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Model Context Protocol (MCP)]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Wyłącz protokół kontekstowy modelu (MCP)]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;b2d83c0ab9583e2e8bb3f7eb03507942" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable the dialog in the IDE that prompts users to stay on the latest version of Visual Studio.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Wyłącz okno dialogowe w IDE, które zachęca użytkowników do pozostania przy najnowszej wersji Visual Studio.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -835,6 +871,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="1;638d0abaf2bfb0a1432d8741f0955f8b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.31]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.31]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="1;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
@@ -867,6 +912,15 @@
         <Val><![CDATA[Visual Studio 2022, 17.12 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022 w wersji 17.12 i nowszej.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="1;d7a6a531fc83d95eefd8f12fe99da237" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.31 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.31 i nowsze.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -912,6 +966,24 @@
         <Val><![CDATA[Visual Studio 2022, 17.13 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022 w wersji 17.13 i nowszej.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="3;4701a44e7e21ab9d21f4fc2881fe098a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2026 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026 i nowsze.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="3;d3cacc3fdaa4f137b064ac5f504fc132" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2026]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />

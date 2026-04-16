@@ -128,7 +128,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using any GitHub Copilot license (GitHub Copilot for Business, GitHub Copilot for Enterprise, and Copilot for Individual). For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti di usare qualsiasi licenza GitHub Copilot (GitHub Copilot for Business, GitHub Copilot for Enterprise e Copilot for Individual). Per altre informazioni, vedere: https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti di usare qualsiasi licenza GitHub Copilot (GitHub Copilot for Business, GitHub Copilot for Enterprise e Copilot for Individual). Per altre informazioni, vedi: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -146,7 +146,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot for Individual. GitHub Copilot for Business and GitHub Copilot for Enterprise will still be enabled. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti di usare GitHub Copilot for Individual. GitHub Copilot for Business e GitHub Copilot for Enterprise saranno ancora abilitati. Per altre informazioni, vedere: https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti di usare GitHub Copilot for Individual. GitHub Copilot for Business e GitHub Copilot for Enterprise saranno ancora abilitati. Per altre informazioni, vedi: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -201,6 +201,15 @@
         <Val><![CDATA[Allow only company domain accounts]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Consentire solo account di dominio dell’azienda]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;433bcc3bdd0adfc2850603b2211b7a23" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users from using MCP for GitHub Copilot. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Se l'impostazione è abilitata, impedirà agli utenti di usare MCP per GitHub Copilot. Per altre informazioni, vedere: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -448,6 +457,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;8b872e68a8a48a6833dc5e990346dc2a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable or LTSC channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti delle edizioni Enterprise e Professional dei canali Stable o LTSC di vedere la finestra di dialogo che invita a rimanere aggiornati all'ultima versione nell'IDE di Visual Studio. Per altre informazioni, vedere: https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;961d5786502b0b8670878afd3dd51a2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -497,7 +515,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[Disable Agent Mode]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Disabilita modalità Agente]]></Val>
+          <Val><![CDATA[Disabilita modalità agente]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -547,6 +565,24 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;ae987fbe1c8b56d49ecef37403b5f358" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Model Context Protocol (MCP)]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Disabilita Model Context Protocol (MCP)]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;b2d83c0ab9583e2e8bb3f7eb03507942" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable the dialog in the IDE that prompts users to stay on the latest version of Visual Studio.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Disabilita la finestra di dialogo nell'IDE che invita gli utenti a rimanere aggiornati all'ultima versione di Visual Studio.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;b47c6abc3cdf031a964ff7bf238e39d3" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Install and Update Settings]]></Val>
@@ -587,7 +623,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Agent mode. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti di usare la modalità Agente di GitHub Copilot. Per altre informazioni, vedere: https://aka.ms/CopilotGroupPolicy]]></Val>
+          <Val><![CDATA[Se questa impostazione è abilitata, impedirà agli utenti di usare la modalità Agente di GitHub Copilot. Per altre informazioni, vedi: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -835,6 +871,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="1;638d0abaf2bfb0a1432d8741f0955f8b" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.31]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.31]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="1;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
@@ -867,6 +912,15 @@
         <Val><![CDATA[Visual Studio 2022, 17.12 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.12 e versioni successive.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="1;d7a6a531fc83d95eefd8f12fe99da237" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.31 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.14.31 e versioni successive.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -912,6 +966,24 @@
         <Val><![CDATA[Visual Studio 2022, 17.13 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.13 e versioni successive.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="3;4701a44e7e21ab9d21f4fc2881fe098a" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2026 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026 e versioni successive.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="3;d3cacc3fdaa4f137b064ac5f504fc132" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2026]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
