@@ -90,10 +90,13 @@
     </Item>
     <Item ItemId="0;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
-        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+        <Val><![CDATA[Visual Studio 2026, 18.7]]></Val>
+        <Tgt Cat="AppData" Stat="Update" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -709,6 +712,12 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;cc8f3f3151223ab85cb87b1ed53923b9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.14.31 and higher; Visual Studio 2026, 18.7 and higher.]]></Val>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;ce2f4de5718d647b3f6ce8304041ca50" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Allows an administrator to control the update notification in the Visual Studio IDE in specific situations.]D;]A;]D;]A;If set to 0 (blocked) or missing entirely, update notifications will appear in the Visual Studio IDE whenever an update is detected.]D;]A;]D;]A;If set to a 1, the update notification in the Visual Studio IDE will be suppressed for the Enterprise and Professional editions on the Release or LTSC channels, only if they are either receiving updates from a layout or if they are enrolled to receive Visual Studio Administrator Updates.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -846,10 +855,13 @@
     </Item>
     <Item ItemId="1;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
+        <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
+          <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -921,6 +933,15 @@
         <Val><![CDATA[Visual Studio 2022, 17.14.31 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2022, 17.14.31 i nowsze.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="2;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.4]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
