@@ -23,9 +23,9 @@
       ],
       "tool": "roslynanalyzers",
       "ruleId": "CA1305",
-      "createdDate": "2024-08-21 03:09:40Z",
-      "expirationDate": "2025-02-07 03:13:19Z",
-      "justification": "This error is baselined with an expiration date of 180 days from 2024-08-21 03:13:19Z"
+      "createdDate": "2025-06-04 03:10:29Z",
+      "expirationDate": "2025-11-21 03:15:41Z",
+      "justification": "This error is baselined with an expiration date of 180 days from 2025-06-04 03:15:41Z"
     }
   }
 }
