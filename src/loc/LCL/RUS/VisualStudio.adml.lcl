@@ -91,8 +91,8 @@
     <Item ItemId="0;0631ae4c3eef3e3e1500b80eb38a31f2" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2026, 18.7]]></Val>
-        <Tgt Cat="AppData" Stat="Update" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026, 18.7]]></Val>
         </Tgt>
         <Prev Cat="AppData">
           <Val><![CDATA[Visual Studio 2022, 17.1]]></Val>
@@ -715,6 +715,9 @@
     <Item ItemId="0;cc8f3f3151223ab85cb87b1ed53923b9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.14.31 and higher; Visual Studio 2026, 18.7 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022 версии 17.14.31 и выше; Visual Studio 2026 версии 18.7 и выше.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
