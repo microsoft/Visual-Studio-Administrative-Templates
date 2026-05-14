@@ -14,18 +14,21 @@
     "139cf9f2054ad15c7470b1d62ebf0d0f2aa4a3e7aa2fd005fd13988ebd8da1f3": {
       "signature": "139cf9f2054ad15c7470b1d62ebf0d0f2aa4a3e7aa2fd005fd13988ebd8da1f3",
       "alternativeSignatures": [
-        "3f31af4999ebe150de299555b96d620f9efc9e57f38bc6c01594331a6d1c949c"
+        "3f31af4999ebe150de299555b96d620f9efc9e57f38bc6c01594331a6d1c949c",
+        "9d03dcd4de84e94ccc4c24570e08f62cb20b157d5f64c23999939959c6f47991",
+        "7a379bb54560f013f12920476177ff8d198ab0ec33735b5d4fc0269aa9272c8a"
       ],
       "target": "src/ADMXExtractor/View/MainWindow.xaml.cs",
       "line": 93,
+      "uriBaseId": "file:///D:/a/_work/1/s/",
       "memberOf": [
         "default"
       ],
       "tool": "roslynanalyzers",
       "ruleId": "CA1305",
-      "createdDate": "2025-06-04 03:10:29Z",
-      "expirationDate": "2025-11-21 03:15:41Z",
-      "justification": "This error is baselined with an expiration date of 180 days from 2025-06-04 03:15:41Z"
+      "createdDate": "2026-05-13 03:13:14Z",
+      "expirationDate": "2026-10-30 03:17:37Z",
+      "justification": "This error is baselined with an expiration date of 180 days from 2026-05-13 03:17:37Z"
     }
   }
 }
