@@ -116,6 +116,9 @@
         <category name="CopilotSettings" displayName="$(string.CopilotCategoryName)">
             <parentCategory ref="VisualStudio"/>
         </category>
+        <category name="ExtensionSettings" displayName="$(string.ExtensionSettingsCategoryName)">
+            <parentCategory ref="VisualStudio"/>
+        </category>
     </categories>
     <policies>
         
@@ -712,6 +715,20 @@
             <disabledValue>
                 <decimal value="0" />
             </disabledValue>
+        </policy>
+        <!-- Extension Settings -->
+        <policy
+            name="ExtensionGalleryServiceUrl"
+            class="Machine"
+            displayName="$(string.ExtensionGalleryServiceUrl_DisplayName)"
+            explainText="$(string.ExtensionGalleryServiceUrl_Explain)"
+            presentation="$(presentation.ExtensionGalleryServiceUrl_PresentationId)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Governance\Extensions">
+            <parentCategory ref="ExtensionSettings" />
+            <supportedOn ref="VisualStudio2026AndHigher" />
+            <elements>
+                <text id="ExtensionGalleryServiceUrl_TextBox" valueName="ExtensionGalleryServiceUrl" />
+            </elements>
         </policy>
     </policies>
 </policyDefinitions>

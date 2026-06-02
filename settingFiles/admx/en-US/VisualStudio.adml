@@ -17,6 +17,7 @@
       <string id="PrivacySettingsCategoryName">Privacy Settings</string>
       <string id="VisualStudioDevTunnels">Dev Tunnel Settings</string>
       <string id="CopilotCategoryName">Copilot Settings</string>
+      <string id="ExtensionSettingsCategoryName">Extension Settings</string>
 
       <!-- The VS catalog Product Names. -->
       <string id="VisualStudioProductName2017">Visual Studio 2017</string>
@@ -222,6 +223,14 @@ For more information, see: https://aka.ms/vsls-policies</string>
       <string id="DisableMCP_DisplayName">Disable Model Context Protocol (MCP)</string>
       <string id="DisableMCP_Explain">If this setting is enabled, it will prevent your users from using MCP for GitHub Copilot. For more information, see: https://aka.ms/CopilotGroupPolicy</string>
 
+      <!-- Extensions -->
+      <string id="ExtensionGalleryServiceUrl_DisplayName">Set the extension gallery service URL</string>
+      <string id="ExtensionGalleryServiceUrl_Explain">This policy sets the URL of the extension gallery service that Visual Studio uses to browse and install extensions. Use this to enforce that users obtain extensions from a private marketplace instead of the public Visual Studio Marketplace.
+
+When enabled, Visual Studio will use the specified URL as the extension gallery service endpoint.
+
+When disabled or not configured, Visual Studio will use the default public Visual Studio Marketplace.</string>
+
     </stringTable>
     <presentationTable>
       <presentation id="AdministratorUpdatesEnabled_PresentationId">
@@ -256,6 +265,12 @@ For more information, see: https://aka.ms/vsls-policies</string>
         <label>Enter Domain Name:</label>
         </textBox>
     </presentation>
+      <!-- Extension Settings Presentations -->
+      <presentation id="ExtensionGalleryServiceUrl_PresentationId">
+        <textBox refId="ExtensionGalleryServiceUrl_TextBox">
+          <label>Extension Gallery Service URL</label>
+        </textBox>
+      </presentation>
     </presentationTable>
 </resources>
 </policyDefinitionResources>
