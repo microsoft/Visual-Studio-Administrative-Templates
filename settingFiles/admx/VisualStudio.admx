@@ -183,6 +183,22 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
+        <policy
+            name="InformationDisabled"
+            class="Machine"
+            displayName="$(string.InformationDisabled_DisplayName)"
+            explainText="$(string.InformationDisabled_Explain)"
+            key="Software\Policies\Microsoft\VisualStudio\Feedback"
+            valueName="InformationDisabled">
+            <parentCategory ref="FeedbackSettings" />
+            <supportedOn ref="VisualStudio2026AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
 
         <!-- Install and Update Settings -->
         <policy 

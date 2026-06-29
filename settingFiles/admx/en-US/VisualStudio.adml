@@ -61,6 +61,8 @@
       <string id="ProductFeedbackDisabled_Explain">This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.</string>
       <string id="SurveysDisabled_DisplayName">Disables external survey links throughout the IDE and installer</string>
       <string id="SurveysDisabled_Explain">This policy disables survey links throughout the IDE and installer, i.e. in the preview feature pane, bulletins, info bars with survey links.</string>
+      <string id="InformationDisabled_DisplayName">Disables informational announcements throughout the IDE and installer</string>
+      <string id="InformationDisabled_Explain">This policy disables informational announcements throughout the IDE and installer, such as general product announcements or notices shown via info bars.</string>
       
       <!-- Install and Update -->
       <string id="RemoveOutOfSupport_DisplayName">Remove out-of-support components during updates</string>
