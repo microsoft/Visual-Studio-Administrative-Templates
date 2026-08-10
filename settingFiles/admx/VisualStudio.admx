@@ -697,6 +697,23 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
+        <!-- Bring your own key -->
+        <policy
+            name="DisableBringYourOwnKeyNoAuth"
+            class="Machine"
+            displayName="$(string.DisableBringYourOwnKeyNoAuth_DisplayName)"
+            explainText="$(string.DisableBringYourOwnKeyNoAuth_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Copilot"
+            valueName="DisableBringYourOwnKeyNoAuth">
+            <parentCategory ref="CopilotSettings" />
+            <supportedOn ref="VisualStudio2022_14_16_AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
         <policy
             name="DisableMCP"
             class="Machine"
