@@ -679,8 +679,8 @@
     <Item ItemId="0;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2026, 18.11]]></Val>
-        <Tgt Cat="AppData" Stat="Update" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026，18.11]]></Val>
         </Tgt>
         <Prev Cat="AppData">
           <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
