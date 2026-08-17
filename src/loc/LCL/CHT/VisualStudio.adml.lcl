@@ -400,6 +400,9 @@
     <Item ItemId="0;795119eb6c20a5f186a9c59c12b10fb9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable Bring Your Own Key (No Auth)]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[停用 BYOK (無驗證)]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -577,6 +580,9 @@
     <Item ItemId="0;abc5ae1a47cc0cff78fbdabe0a34c265" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Bring Your Own Key (No Auth) feature. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[如果啟用此設定，將會防止您的使用者使用 GitHub Copilot 的 BYOK (無驗證) 功能。如需詳細資訊，請參閱: https://aka.ms/CopilotGroupPolicy]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -847,6 +853,9 @@
     <Item ItemId="0;f0f20776b9d3afad5a82381811b10d35" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2026, 18.11 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026，18.11 和更新版本。]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
