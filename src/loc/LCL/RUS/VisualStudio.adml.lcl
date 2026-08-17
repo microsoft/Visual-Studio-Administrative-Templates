@@ -400,6 +400,9 @@
     <Item ItemId="0;795119eb6c20a5f186a9c59c12b10fb9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable Bring Your Own Key (No Auth)]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Отключить создание собственных ключей (без проверки подлинности)]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -577,6 +580,9 @@
     <Item ItemId="0;abc5ae1a47cc0cff78fbdabe0a34c265" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Bring Your Own Key (No Auth) feature. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Если этот параметр включен, пользователи не смогут использовать функцию создания собственных ключей (без проверки подлинности) GitHub Copilot. Дополнительные сведения см. в https://aka.ms/CopilotGroupPolicy]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -673,8 +679,8 @@
     <Item ItemId="0;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2026, 18.11]]></Val>
-        <Tgt Cat="AppData" Stat="Update" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026, 18.11]]></Val>
         </Tgt>
         <Prev Cat="AppData">
           <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
@@ -847,6 +853,9 @@
     <Item ItemId="0;f0f20776b9d3afad5a82381811b10d35" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2026, 18.11 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026, 18.11 и более поздних версий.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -919,8 +928,8 @@
     <Item ItemId="1;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
-        <Tgt Cat="AppData" Stat="Update" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
         </Tgt>
         <Prev Cat="AppData">
           <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
