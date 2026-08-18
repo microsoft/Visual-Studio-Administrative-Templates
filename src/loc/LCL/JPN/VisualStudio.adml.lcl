@@ -397,6 +397,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;795119eb6c20a5f186a9c59c12b10fb9" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Disable Bring Your Own Key (No Auth)]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Bring Your Own Key を無効にする (認証なし)]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;7f58436e85e71c282ed642e6f071e5c4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Opt out of administrator updates]]></Val>
@@ -563,7 +572,16 @@
       <Str Cat="AppData">
         <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[ユーザーがVisual Studioに対する管理者の更新プログラムを受信しないことを示します。]D;]A; ]D; ]A;1 (有効) に設定した場合、Visual Studio ユーザーはVisual Studioの管理者アップデートを受信しません。このポリシーは、開発者ユーザーがクライアント コンピューターに対する管理者権限を持っている場合に設定します。]D;]A; ]D;]A;詳細については、「https://aka.ms/vs/admin/updates/control」を参照してください。]]></Val>
+          <Val><![CDATA[ユーザーが Visual Studio への管理者向け更新プログラムの受信を希望していないことを示します。]D;]A;        ]D;]A;1 (有効) に設定されている場合、Visual Studio ユーザーは Visual Studio の管理者向け更新プログラムの受信を希望していません。このポリシーは、開発者ユーザーがクライアント コンピューターに対する管理者アクセス許可を持っているかどうかを設定するためのものです。]D;]A;        ]D;]A;詳細については、https://aka.ms/vs/admin/updates/control を参照してください。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;abc5ae1a47cc0cff78fbdabe0a34c265" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[If this setting is enabled, it will prevent your users from using GitHub Copilot's Bring Your Own Key (No Auth) feature. For more information, see: https://aka.ms/CopilotGroupPolicy]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[この設定を有効にすると、ユーザーは GitHub Copilot の Bring Your Own Key (認証なし) 機能を使用できなくなります。詳細については、次を参照してください: https://aka.ms/CopilotGroupPolicy]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -660,10 +678,13 @@
     </Item>
     <Item ItemId="0;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
+        <Val><![CDATA[Visual Studio 2026, 18.11]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
+          <Val><![CDATA[Visual Studio 2026、18.11]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -829,6 +850,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;f0f20776b9d3afad5a82381811b10d35" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2026, 18.11 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026、18.11 以上。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>
@@ -897,10 +927,13 @@
     </Item>
     <Item ItemId="1;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
+        <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
+          <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -960,10 +993,13 @@
     </Item>
     <Item ItemId="2;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+          <Val><![CDATA[Visual Studio 2022, 17.12]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -999,6 +1035,15 @@
         <Val><![CDATA[Visual Studio 2026 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Visual Studio 2026 以上。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="3;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2022, 17.13]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
