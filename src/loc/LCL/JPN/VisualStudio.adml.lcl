@@ -572,7 +572,7 @@
       <Str Cat="AppData">
         <Val><![CDATA[Indicates that the user does not want to receive administrator updates to Visual Studio. ]D;]A;        ]D;]A;If set to 1 (enabled) then the Visual Studio user does not want to receive administrator updates to Visual Studio. This policy is for the developer user to set if they have admin permissions on the client machine. ]D;]A;        ]D;]A;For more information, see https://aka.ms/vs/admin/updates/control.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[ユーザーがVisual Studioに対する管理者の更新プログラムを受信しないことを示します。]D;]A; ]D; ]A;1 (有効) に設定した場合、Visual Studio ユーザーはVisual Studioの管理者アップデートを受信しません。このポリシーは、開発者ユーザーがクライアント コンピューターに対する管理者権限を持っている場合に設定します。]D;]A; ]D;]A;詳細については、「https://aka.ms/vs/admin/updates/control」を参照してください。]]></Val>
+          <Val><![CDATA[ユーザーが Visual Studio への管理者向け更新プログラムの受信を希望していないことを示します。]D;]A;        ]D;]A;1 (有効) に設定されている場合、Visual Studio ユーザーは Visual Studio の管理者向け更新プログラムの受信を希望していません。このポリシーは、開発者ユーザーがクライアント コンピューターに対する管理者アクセス許可を持っているかどうかを設定するためのものです。]D;]A;        ]D;]A;詳細については、https://aka.ms/vs/admin/updates/control を参照してください。]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
