@@ -678,12 +678,12 @@
     </Item>
     <Item ItemId="0;c561a416cf75578e49ba4aa36ff5bde4" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2026, 18.11]]></Val>
+        <Val><![CDATA[Visual Studio 2026, 18.10]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 2026，18.11]]></Val>
+          <Val><![CDATA[Visual Studio 2026，18.10]]></Val>
         </Tgt>
         <Prev Cat="AppData">
-          <Val><![CDATA[Visual Studio 2022, 17.10]]></Val>
+          <Val><![CDATA[Visual Studio 2026, 18.11]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
@@ -852,10 +852,13 @@
     </Item>
     <Item ItemId="0;f0f20776b9d3afad5a82381811b10d35" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2026, 18.11 and higher.]]></Val>
+        <Val><![CDATA[Visual Studio 2026, 18.10 and higher.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 2026，18.11 及更高版本。]]></Val>
+          <Val><![CDATA[Visual Studio 2026，18.10 及更高版本。]]></Val>
         </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[Visual Studio 2026, 18.11 and higher.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
