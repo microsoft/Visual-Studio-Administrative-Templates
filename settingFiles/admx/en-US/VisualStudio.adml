@@ -181,6 +181,19 @@ For more information, see https://aka.ms/vs/setup/policies.</string>
       <string id="DisableMigrationDialog_DisplayName">Disable the dialog in the IDE that prompts users to stay on the latest version of Visual Studio.</string>
       <string id="DisableMigrationDialog_Explain">If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable or LTSC channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.</string>
 
+      <string id="SkipNgenAfterSetup_DisplayName">Skip immediate background Native Image Generator (NGen) optimization</string>
+      <string id="SkipNgenAfterSetup_Explain">This policy controls whether Visual Studio skips only the immediate background Native Image Generator (NGen) optimization launched as setup finishes. It applies to Visual Studio 2026 and later.
+
+Setup doesn't wait for this optimization, which can continue running after the setup operation finishes.
+
+If set to 1 (enabled), Visual Studio skips this optimization. Skipping it can help avoid interference with automated setup, but might delay native-image generation and affect Visual Studio startup performance until optimization occurs.
+
+If set to 0 (disabled), Visual Studio allows this optimization to run normally.
+
+If not configured, the policy value is removed and Visual Studio uses any local SkipNgenAfterSetup preference. If no preference is set, this optimization is allowed to run normally.
+
+For more information, see https://aka.ms/vs/setup/policies.</string>
+
       <!-- LiveShare -->
       <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
       <string id="LiveShare_DomainName_Explain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com 
