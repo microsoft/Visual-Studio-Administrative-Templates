@@ -182,9 +182,7 @@ For more information, see https://aka.ms/vs/setup/policies.</string>
       <string id="DisableMigrationDialog_Explain">If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable or LTSC channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.</string>
 
       <string id="SkipNgenAfterSetup_DisplayName">Skip immediate background Native Image Generator (NGen) optimization</string>
-      <string id="SkipNgenAfterSetup_Explain">This policy controls whether Visual Studio skips only the immediate background Native Image Generator (NGen) optimization launched as setup finishes. It applies to Visual Studio 2026 and later.
-
-Setup doesn't wait for this optimization, which can continue running after the setup operation finishes.
+      <string id="SkipNgenAfterSetup_Explain">This policy controls whether Visual Studio skips only the immediate background Native Image Generator (NGen) optimization launched as setup finishes.
 
 If set to 1 (enabled), Visual Studio skips this optimization. Skipping it can help avoid interference with automated setup, but might delay native-image generation and affect Visual Studio startup performance until optimization occurs.
 
