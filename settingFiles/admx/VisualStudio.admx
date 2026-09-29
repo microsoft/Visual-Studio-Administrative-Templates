@@ -95,7 +95,7 @@
                     <reference ref="VisualStudio2026_7"/>
                 </and>
             </definition>
-            <definition name="VisualStudio2026_10AndHigher" displayName="$(string.VisualStudio2026_10AndHigher)">
+            <definition name="VisualStudio2026_10AndHigherExcept11" displayName="$(string.VisualStudio2026_10AndHigherExcept11)">
                 <and>
                     <reference ref="VisualStudio2026_10"/>
                 </and>
@@ -728,7 +728,7 @@
             key="SOFTWARE\Policies\Microsoft\VisualStudio\Copilot"
             valueName="DisableBringYourOwnKeyNoAuth">
             <parentCategory ref="CopilotSettings" />
-            <supportedOn ref="VisualStudio2026_10AndHigher" />
+            <supportedOn ref="VisualStudio2026_10AndHigherExcept11" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>

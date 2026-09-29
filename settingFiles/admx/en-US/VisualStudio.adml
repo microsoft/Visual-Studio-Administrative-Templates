@@ -48,7 +48,7 @@
       <string id="VisualStudio2022_14_31_AndHigher">Visual Studio 2022, 17.14.31 and higher.</string>
       <string id="VisualStudio2026AndHigher">Visual Studio 2026 and higher.</string>
       <string id="VisualStudio2022_14_31AndHigher_Or_2026_7AndHigher">Visual Studio 2022, 17.14.31 and higher; Visual Studio 2026, 18.7 and higher.</string>
-      <string id="VisualStudio2026_10AndHigher">Visual Studio 2026, 18.10 and higher.</string>
+      <string id="VisualStudio2026_10AndHigherExcept11">Visual Studio 2026, 18.10 and higher, excluding 18.11.</string>
 
       <!-- Convey a particular version and distribution. -->
       <string id="VisualStudio2022_Enterprise_Professional">At least Visual Studio 2022, Enterprise and Professional only</string>
