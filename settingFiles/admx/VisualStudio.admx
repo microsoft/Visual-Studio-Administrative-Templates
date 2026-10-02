@@ -492,6 +492,23 @@
             </disabledValue>
         </policy>
 
+        <policy
+            name="SkipNgenAfterSetup"
+            class="Machine"
+            displayName="$(string.SkipNgenAfterSetup_DisplayName)"
+            explainText="$(string.SkipNgenAfterSetup_Explain)"
+            key="SOFTWARE\Policies\Microsoft\VisualStudio\Setup"
+            valueName="SkipNgenAfterSetup">
+            <parentCategory ref="InstallandUpdateSettings" />
+            <supportedOn ref="VisualStudio2026AndHigher" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+
         <!-- LiveShare Settings -->
         <policy 
             name="LiveShareDomainName" 
