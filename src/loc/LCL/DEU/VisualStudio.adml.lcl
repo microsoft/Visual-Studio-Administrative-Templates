@@ -478,6 +478,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9054448687d46062aecab1b4064c48eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy controls whether Visual Studio skips only the immediate background Native Image Generator (NGen) optimization launched as setup finishes.]D;]A;]D;]A;If set to 1 (enabled), Visual Studio skips this optimization. Skipping it can help avoid interference with automated setup, but might delay native-image generation and affect Visual Studio startup performance until optimization occurs.]D;]A;]D;]A;If set to 0 (disabled), Visual Studio allows this optimization to run normally.]D;]A;]D;]A;If not configured, the policy value is removed and Visual Studio uses any local SkipNgenAfterSetup preference. If no preference is set, this optimization is allowed to run normally.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Diese Richtlinie legt fest, ob Visual Studio nur die unmittelbare Optimierung des Native Image Generators (NGen) im Hintergrund überspringt, die nach Abschluss der Einrichtung gestartet wird.]D;]A;]D;]A;Wenn die Richtlinie auf 1 (aktiviert) gesetzt ist, überspringt Visual Studio diese Optimierung. Dadurch lassen sich Beeinträchtigungen bei der automatisierten Einrichtung vermeiden. Die Generierung nativer Images kann sich jedoch verzögern, und die Startleistung von Visual Studio kann beeinträchtigt werden, bis die Optimierung ausgeführt wurde.]D;]A;]D;]A;Wenn die Richtlinie auf 0 (deaktiviert) gesetzt ist, kann Visual Studio diese Optimierung wie gewohnt ausführen.]D;]A;]D;]A;Wenn die Richtlinie nicht konfiguriert ist, wird der Richtlinienwert entfernt, und Visual Studio verwendet die lokale Einstellung „SkipNgenAfterSetup“. Wenn keine Einstellung festgelegt ist, kann diese Optimierung wie gewohnt ausgeführt werden.]D;]A;]D;]A;Weitere Informationen finden Sie unter https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;961d5786502b0b8670878afd3dd51a2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -846,6 +855,15 @@
         <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Diese Richtlinie deaktiviert Feedbackmechanismen in der gesamten IDE und im Installationsprogramm, z. B. Daumen hoch oder runter, das Popupelement des Feedbackfensters, die Funktion zum Senden eines Lächelns sowie Infoleisten ohne Umfragelinks.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ef2150bdebb6d9737703d7962889ff49" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Skip immediate background Native Image Generator (NGen) optimization]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Die sofortige Hintergrundoptimierung des Native Image Generators (NGen) überspringen]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
