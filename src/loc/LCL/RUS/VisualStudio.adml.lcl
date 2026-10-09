@@ -478,6 +478,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9054448687d46062aecab1b4064c48eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy controls whether Visual Studio skips only the immediate background Native Image Generator (NGen) optimization launched as setup finishes.]D;]A;]D;]A;If set to 1 (enabled), Visual Studio skips this optimization. Skipping it can help avoid interference with automated setup, but might delay native-image generation and affect Visual Studio startup performance until optimization occurs.]D;]A;]D;]A;If set to 0 (disabled), Visual Studio allows this optimization to run normally.]D;]A;]D;]A;If not configured, the policy value is removed and Visual Studio uses any local SkipNgenAfterSetup preference. If no preference is set, this optimization is allowed to run normally.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Эта политика определяет, пропускает ли Visual Studio только немедленную фоновую оптимизацию Native Image Generator (NGen), которая запускается сразу после завершения установки.]D;]A;]D;]A;Если задано значение "1" (включено), Visual Studio пропускает эту оптимизацию. Пропуск оптимизации поможет избежать конфликтов с автоматической настройкой, но может привести к задержке генерации нативных образов и повлиять на производительность запуска Visual Studio до тех пор, пока оптимизация не будет выполнена.]D;]A;]D;]A;Если задано значение "0" (отключено), Visual Studio позволяет этой оптимизации выполняться в обычном режиме.]D;]A;]D;]A;Если настройка отсутствует, значение политики удаляется, и Visual Studio использует любые локальные настройки параметра SkipNgenAfterSetup. Если параметр не задан, эта оптимизация выполняется в обычном режиме.]D;]A;]D;]A;Дополнительные сведения см. на странице https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;961d5786502b0b8670878afd3dd51a2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -846,6 +855,15 @@
         <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Эта политика отключает механизмы отзывов в IDE и установщики, то есть кнопки "нравится" и "не нравится", всплывающее окно отзывов, функцию "отправить смайлик", информационные панели без ссылок на опросы.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ef2150bdebb6d9737703d7962889ff49" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Skip immediate background Native Image Generator (NGen) optimization]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Пропускать немедленную фоновую оптимизацию Native Image Generator (NGen)]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
