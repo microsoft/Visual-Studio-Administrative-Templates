@@ -877,6 +877,18 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;f0f20776b9d3afad5a82381811b10d35" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2026, 18.10 and higher.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026, 18.10 и более поздних версий.]]></Val>
+        </Tgt>
+        <Prev Cat="AppData">
+          <Val><![CDATA[Visual Studio 2026, 18.11 and higher.]]></Val>
+        </Prev>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;f47cea1f1c13e4f0cf514ed0688dd748" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This policy disables the screenshot capability in the send-a-smile feature.]]></Val>

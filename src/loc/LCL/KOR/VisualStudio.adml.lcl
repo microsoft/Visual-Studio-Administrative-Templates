@@ -478,6 +478,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;9054448687d46062aecab1b4064c48eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy controls whether Visual Studio skips only the immediate background Native Image Generator (NGen) optimization launched as setup finishes.]D;]A;]D;]A;If set to 1 (enabled), Visual Studio skips this optimization. Skipping it can help avoid interference with automated setup, but might delay native-image generation and affect Visual Studio startup performance until optimization occurs.]D;]A;]D;]A;If set to 0 (disabled), Visual Studio allows this optimization to run normally.]D;]A;]D;]A;If not configured, the policy value is removed and Visual Studio uses any local SkipNgenAfterSetup preference. If no preference is set, this optimization is allowed to run normally.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[이 정책은 설정이 완료되면 시작되는 백그라운드 NGen(네이티브 이미지 생성기) 최적화만 Visual Studio에서 건너뛸지 여부를 제어합니다.]D;]A;]D;]A;1(사용)로 설정하면 Visual Studio에서 이 최적화를 건너뜁니다. 최적화를 건너뛰면 자동 설정과의 간섭을 방지할 수 있지만 네이티브 이미지 생성이 지연될 수 있으며 최적화가 완료될 때까지 Visual Studio 시작 성능에 영향을 줄 수 있습니다.]D;]A;]D;]A;0(사용 안 함)으로 설정하면 Visual Studio에서 이 최적화를 정상적으로 실행합니다.]D;]A;]D;]A;구성하지 않으면 정책 값이 제거되고 Visual Studio에서 로컬 SkipNgenAfterSetup 기본 설정을 사용합니다. 기본 설정이 지정되지 않은 경우 이 최적화를 정상적으로 실행합니다.]D;]A;]D;]A;자세한 내용은 https://aka.ms/vs/setup/policies를 참조하세요.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;961d5786502b0b8670878afd3dd51a2f" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[This setting will cause updates to automatically remove all components from all Visual Studio installations that have transitioned to an out-of-support state.]D;]A;        ]D;]A;If set to 1 (enabled), then the Visual Studio installer will remove all out-of-support components during all subsequent updates.  ]D;]A;        ]D;]A;If set to 0 (disabled) or missing entirely, then the remove out-of-support components behavior will respect other locations where this can be configured, such as commandline parameter or the Update Settings dialog.]D;]A;        ]D;]A;This functionality requires the Visual Studio 2022 version 17.4 installer to be installed on the client machine.        ]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
@@ -846,6 +855,15 @@
         <Val><![CDATA[This policy disables feedback mechanisms throughout the IDE and installer, i.e. thumbs up or down, the feedback window pop-up, send-a-smile feature, info bars without survey links.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[이 정책은 IDE 및 설치 관리자 전체에서 피드백 메커니즘(예: 엄지손가락 위로 또는 아래로, 피드백 창 팝업, 웃는 얼굴 보내기 기능, 설문 조사 링크가 없는 정보 표시줄)을 사용하지 않도록 설정합니다.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;ef2150bdebb6d9737703d7962889ff49" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Skip immediate background Native Image Generator (NGen) optimization]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[즉시 백그라운드 NGen(네이티브 이미지 생성기) 최적화 건너뛰기]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
