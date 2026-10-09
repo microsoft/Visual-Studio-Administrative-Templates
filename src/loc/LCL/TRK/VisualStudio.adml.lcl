@@ -172,6 +172,15 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
+    <Item ItemId="0;36749521738ab881f1c9b3781a056852" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[Visual Studio 2026, 18.10 and higher, excluding LTSC 18.11.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Visual Studio 2026, 18.10 ve üstü, LTSC 18.11 hariç.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId="0;3b60c88dda132252ba13d5b5c78d3859" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
         <Val><![CDATA[Disable the send-a-smile feature]]></Val>
@@ -474,6 +483,15 @@
         <Val><![CDATA[If this setting is enabled, it will prevent your users on the Enterprise and Professional editions of the Stable or LTSC channel from seeing the dialog that prompts users to stay on the latest version in the Visual Studio IDE. For more information, see: https://aka.ms/vs/setup/policies.]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
           <Val><![CDATA[Bu ayar etkinleştirildiğinde, Kararlı veya LTSC Kanalı Enterprise ve Professional sürümlerindeki kullanıcılarınızın Visual Studio IDE’de en son sürümde kalmalarını isteyen iletişim kutusunu görmesini engeller. Daha fazla bilgi için şu sayfaya bakın: https://aka.ms/vs/setup/policies.]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
+    <Item ItemId="0;9054448687d46062aecab1b4064c48eb" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+      <Str Cat="AppData">
+        <Val><![CDATA[This policy controls whether Visual Studio skips only the immediate background Native Image Generator (NGen) optimization launched as setup finishes.]D;]A;]D;]A;If set to 1 (enabled), Visual Studio skips this optimization. Skipping it can help avoid interference with automated setup, but might delay native-image generation and affect Visual Studio startup performance until optimization occurs.]D;]A;]D;]A;If set to 0 (disabled), Visual Studio allows this optimization to run normally.]D;]A;]D;]A;If not configured, the policy value is removed and Visual Studio uses any local SkipNgenAfterSetup preference. If no preference is set, this optimization is allowed to run normally.]D;]A;]D;]A;For more information, see https://aka.ms/vs/setup/policies.]]></Val>
+        <Tgt Cat="AppData" Stat="Loc" Orig="New">
+          <Val><![CDATA[Bu ilke, Visual Studio'nun kurulum tamamlandığında başlatılan tek seferlik arka plan Yerel Görüntü Üreticisi (NGen) iyileştirmesini atlayıp atlamayacağını denetler.]D;]A;]D;]A;1 (etkin) olarak ayarlanırsa Visual Studio bu iyileştirmeyi atlar. Bu iyileştirmenin atlanması otomatik kurulumla olası çakışmaları önlemeye yardımcı olabilir ancak yerel görüntü oluşturma işlemini geciktirebilir ve iyileştirme gerçekleşene kadar Visual Studio'nun başlangıç performansını etkileyebilir.]D;]A;]D;]A;0 (devre dışı) olarak ayarlanırsa Visual Studio bu iyileştirmenin normal şekilde çalışmasına izin verir.]D;]A;]D;]A;Yapılandırılmazsa ilke değeri kaldırılır ve Visual Studio yerel SkipNgenAfterSetup tercihini kullanır. Herhangi bir tercih ayarlanmadıysa bu iyileştirmenin normal şekilde çalışmasına izin verilir.]D;]A;]D;]A;Daha fazla bilgi için bkz. https://aka.ms/vs/setup/policies.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
@@ -850,15 +868,12 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId="0;f0f20776b9d3afad5a82381811b10d35" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+    <Item ItemId="0;ef2150bdebb6d9737703d7962889ff49" ItemType="42;XML:Text" PsrId="210" Leaf="true">
       <Str Cat="AppData">
-        <Val><![CDATA[Visual Studio 2026, 18.10 and higher.]]></Val>
+        <Val><![CDATA[Skip immediate background Native Image Generator (NGen) optimization]]></Val>
         <Tgt Cat="AppData" Stat="Loc" Orig="New">
-          <Val><![CDATA[Visual Studio 2026, 18.10 ve üzeri.]]></Val>
+          <Val><![CDATA[Anında arka plan Yerel Görüntü Üreticisi (NGen) iyileştirmesini atla]]></Val>
         </Tgt>
-        <Prev Cat="AppData">
-          <Val><![CDATA[Visual Studio 2026, 18.11 and higher.]]></Val>
-        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
