@@ -37,12 +37,12 @@ extends:
     settings:
       networkIsolationPolicy: DefaultDeny
     pool:
-      name: VSEngSS-MicroBuild2022-1ES
+      name: VSEng-MicroBuildVSStable
     sdl:
       enableAllTools: true
       sourceAnalysisPool:
         name: AzurePipelines-EO
-        image: 1ESPT-Windows2022
+        image: 1ESPT-Windows2025
       binskim:
         scanOutputDirectoryOnly: true
       codeql:
