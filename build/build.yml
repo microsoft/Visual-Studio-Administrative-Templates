@@ -59,6 +59,7 @@ extends:
       - stage: Build
         jobs:
           - job: Build
+            timeoutInMinutes: 120
             templateContext:
               mb:
                 signing:
